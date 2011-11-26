@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS" modelAttribute="OBJEKT_INTSIDENDIS" path="/objekt_intsidendiss" versionField="Version" z="HUVbY0TZVDDD5dWI9169qjfX+84=">
+        <field:input field="objekt_intsidendis_ID" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_objekt_intsidendis_ID" required="true" validationMessageCode="field_invalid_integer" z="bNhoVJPno9sV8PUHp6se4Djc7s4="/>
+        <field:select field="intsident" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_intsident" itemValue="id" items="${intsidents}" path="/intsidents" z="tG2Oq0pN4M3/DKm86KuXXmza654="/>
+        <field:select field="objekt" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_objekt" itemValue="id" items="${intsidents}" path="/intsidents" z="RogSP2zbp5JLlp+SQfritdzX2Xo="/>
+        <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_alates" required="true" z="DhNE/l4krN1rqQ2mhXcjOxuQ2js="/>
+        <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kuni" required="true" z="chPDdHDRIRsiBZz2Y1tZw9gfGzs="/>
+        <field:input field="kirjeldus" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kirjeldus" required="true" z="g6CUE8JruIVjxAmZJ2lco2GJHMU="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kommentaar" z="D3p/FX/z9bBHYUHDBBX1H7AE4jc="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_avaja" required="true" z="ZOf3TGJaubmyGRlNRhh9TFPUsps="/>
+        <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_avatud" required="true" z="xI5LKFGBFpQhpiJpdSEK2nzby18="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_muutja" required="true" z="4zVeFG9qiCoLCsOPQ5CMnYQUzCE="/>
+        <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_muudetud" required="true" z="eScltkE7Bbk5xeIGOszkCFaCGac="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_sulgeja" required="true" z="rAIV+NSC/HhaGeA1NXofGvmSGyo="/>
+        <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_suletud" required="true" z="azEyp/BCNc2ff1I/s5yA6anBt4Q="/>
+    </form:update>
+</div>

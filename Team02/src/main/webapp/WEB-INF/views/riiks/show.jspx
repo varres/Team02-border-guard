@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_team02_entities_RIIK" object="${riik}" path="/riiks" z="UGIJMPqYTH07591SpeW5XGbBLeo=">
+        <field:display field="ISO_kood" id="s_ee_itcollege_team02_entities_RIIK_ISO_kood" object="${riik}" z="NG6CdiAuxAA1BpK65DtSkpjP6FM="/>
+        <field:display field="ANSI_kood" id="s_ee_itcollege_team02_entities_RIIK_ANSI_kood" object="${riik}" z="1P7vIsuAiXJZpYV3Sb6DEk/XeR4="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_RIIK_kommentaar" object="${riik}" z="C5W1BZsmhrRVnCHEP56fHRhrAkk="/>
+        <field:display field="avaja" id="s_ee_itcollege_team02_entities_RIIK_avaja" object="${riik}" z="RWVZHdGYxaryGzDhg+WpoTF0lCE="/>
+        <field:display date="true" dateTimePattern="${RIIK_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_RIIK_avatud" object="${riik}" z="/23roe8i95G+fY6Q7+H5BL262o0="/>
+        <field:display field="muutja" id="s_ee_itcollege_team02_entities_RIIK_muutja" object="${riik}" z="URbOwYZTZXawHmSP5jI6S03GZC8="/>
+        <field:display date="true" dateTimePattern="${RIIK_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_RIIK_muudetud" object="${riik}" z="xKxxcKGc+O6L8zvfigk/zqwvyXM="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_RIIK_sulgeja" object="${riik}" z="wjfV9LydYfTuB9/Pma/VvBIOFHg="/>
+        <field:display date="true" dateTimePattern="${RIIK_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_RIIK_suletud" object="${riik}" z="s4B/iVtXTJ4bLX5KOhk+tCeUqJc="/>
+        <field:display field="RIIK_ID" id="s_ee_itcollege_team02_entities_RIIK_RIIK_ID" object="${riik}" z="bp/BbCDuBCcd6oMrrDRwerCD4kA="/>
+    </page:show>
+</div>

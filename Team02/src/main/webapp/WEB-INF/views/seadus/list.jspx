@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_team02_entities_SEADUS" items="${seadus}" z="yDZKKzV2a1q3dCmpYBv0iluS674=">
+        <table:table data="${seadus}" id="l_ee_itcollege_team02_entities_SEADUS" path="/seadus" z="7WavadG8ynCnoIy6fz8qPc1d4o0=">
+            <table:column id="c_ee_itcollege_team02_entities_SEADUS_seadus_ID" property="seadus_ID" z="Wt61xzuByk0LgBvX/srfRO4DnW8="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUS_kood" property="kood" z="3vpj8/+VvN/lTef220UJIdJvbE4="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUS_nimetus" property="nimetus" z="3ic/kqvB4+C2Y7DybKWsQIETWUE="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUS_kehtiv_alates" property="kehtiv_alates" z="e8lnJymH+YQoOSehZrftOSpgPL4="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUS_kehtiv_kuni" property="kehtiv_kuni" z="43eLaxYyZyEzjMhk04FOgDcHRKI="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUS_kommentaar" property="kommentaar" z="yPR773iXbcAKp89UYAnG7xmGUKQ="/>
+        </table:table>
+    </page:list>
+</div>

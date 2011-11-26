@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_team02_entities_PIIRILOIK" modelAttribute="PIIRILOIK" path="/piiriloiks" versionField="Version" z="IzgAOaT9MIxjw2x/zOKF7rpM5GA=">
+        <field:input field="piiriloik_ID" id="c_ee_itcollege_team02_entities_PIIRILOIK_piiriloik_ID" required="true" validationMessageCode="field_invalid_integer" z="m+mp0kPJqAl/ZV3B7rglv7Kvj1Y="/>
+        <field:input field="kood" id="c_ee_itcollege_team02_entities_PIIRILOIK_kood" max="20" required="true" z="/N43ckw41fvjqMnLJH4x0PMeXhc="/>
+        <field:textarea field="nimetus" id="c_ee_itcollege_team02_entities_PIIRILOIK_nimetus" required="true" z="VQt/2c4rKJuq1JE0Dze5XmoEhRc="/>
+        <field:input field="GPS_koordinaadid" id="c_ee_itcollege_team02_entities_PIIRILOIK_GPS_koordinaadid" required="true" z="JRlX9IYvX7IijUOVDEkZ1XhXY1c="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_PIIRILOIK_kommentaar" required="true" z="USTcL3aRe7I9ycB8RvAxkqY4SnI="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_PIIRILOIK_avaja" required="true" z="eIbFRoiL5HsGljKnff0T7ijlNr8="/>
+        <field:datetime dateTimePattern="${PIIRILOIK_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_PIIRILOIK_avatud" required="true" z="of8zg2ddK3XQzvTxD7HPtSo6Lk4="/>
+        <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_PIIRILOIK_muutja" required="true" z="ej/Y+JMwtPEoobyHW2SYJPXHZi0="/>
+        <field:datetime dateTimePattern="${PIIRILOIK_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_PIIRILOIK_muudetud" required="true" z="ARBdZ0tGhsDVN2ZIlM3al2feqE4="/>
+        <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_PIIRILOIK_sulgeja" required="true" z="mqTs1JmKeuW/WTnnlXuqloUoIIU="/>
+        <field:datetime dateTimePattern="${PIIRILOIK_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_PIIRILOIK_suletud" required="true" z="rMq9uaEdCO+rpYJyfL1nqdNGBEM="/>
+        <field:simple field="INTSIDENTs" id="c_ee_itcollege_team02_entities_PIIRILOIK_INTSIDENTs" messageCode="entity_reference_not_managed" messageCodeAttribute="I N T S I D E N T" z="o3In0TmDdjaChM6kefKWUQRrNvg="/>
+    </form:update>
+</div>
