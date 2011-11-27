@@ -69,6 +69,7 @@
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__intsidendiregistreerimineindex_id" messageCode="global_generic" url="/intsidendiregistreerimine/index" z="br0zAF6IX+kKiWJEfIGOsjaXHp0="/>
+            <menu:item id="i_controller__rikkumisteraportindex_id" messageCode="global_generic" url="/rikkumisteraport/index" z="6XEZw4SftHEWXRlXxLIVpWfbuGI="/>
         </menu:category>
     </menu:menu>
 </div>
