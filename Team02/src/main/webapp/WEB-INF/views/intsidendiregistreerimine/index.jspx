@@ -12,7 +12,7 @@
 		<spring:message code="application_name" htmlEscape="false"
 			var="app_name" />
 		<h3>Intsidendi registreerimine</h3>
-		<form action='http://localhost:8080/Team02/' method='POST'>
+		<form action='http://localhost:8080/Team02/intsidents' method='POST'>
 			<table>
 				<tr>
 					<td>Kood</td>
@@ -35,7 +35,7 @@
 					<td>Piirilõik</td>
 					<td colspan='2'><select name="piiriloik">
 					        <c:forEach items="${piiriloigud}" var="p">
-					        <option value="${p.piiriloik_ID} }">${p.nimetus}</option>	  
+					        <option value="${p.piiriloik_ID}">${p.nimetus}</option>	  
      						</c:forEach>
 					</select></td>
 				</tr>
