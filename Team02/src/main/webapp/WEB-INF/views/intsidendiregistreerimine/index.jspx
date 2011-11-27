@@ -1,12 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
-  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
-  <jsp:output omit-xml-declaration="yes"/>
-  <spring:message code="label_intsidendiregistreerimine_index" htmlEscape="false" var="title"/>
-  <util:panel id="title" title="${title}">
-    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>
-      <spring:message arguments="${app_name}" code="welcome_titlepane"/>
-    </h3>
-  </util:panel>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<spring:message code="label_intsidendiregistreerimine_index"
+		htmlEscape="false" var="title" />
+	<util:panel id="title" title="${title}">
+		<spring:message code="application_name" htmlEscape="false"
+			var="app_name" />
+		<h3>Intsidendi registreerimine</h3>
+		<form action='#' method='POST'>
+			<table>
+				<tr>
+					<td>Kood</td>
+					<td colspan='2'><input type='text' name='kood' size='9' value='R100' />
+					  Liik <select name="relv_liik">
+							<option>Relvad</option>
+							<option>Nuiad</option>
+							<option>Vitsad</option>
+					</select></td>
+					<td>Kirjeldus</td>
+				</tr>
+				<tr>
+					<td>Nimetus</td>
+					<td colspan='2'><input type='text' name='nimetus' size='25' value='Karu lasi jalga' /></td>
+					<td colspan='2' rowspan='2'> 
+					  <textarea cols='30' rows='5' title='kirjeldus' name='kirjeldus' ><jsp:text /></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Piirilõik</td>
+					<td colspan='2'><select name="piiriloik">
+							<option>Narva</option>
+							<option>Koidula</option>
+							<option>Ikla</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>Koordinaadid</td>
+					<td><input type='text' name='latitude' size='9' value='LAT' /></td>
+					<td><input type='text' name='longitude' size='9' value='LON' /></td>
+					<td>Kommentaar</td>
+				</tr>
+				<tr>
+					<td>Algus</td>
+					<td colspan='2'><input type='text' name='algus' size='25' value='21.06.1997' /></td>
+					<td colspan='2' rowspan='2'> 
+						<textarea cols='30' rows='5' title='kommentaar' name='kommentaar' ><jsp:text/></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Lõpp</td>
+					<td colspan='2'><input type='text' name='lopp' size='25' value='21.06.1997' /></td>
+				</tr>
+				<tr>
+					<td colspan='3'></td>
+					<td><input type='submit' name='salvesta' value='Salvesta' />
+						<input type='button' name='loobu' value='Loobu' /></td>
+				</tr>
+			</table>
+
+		</form>
+	</util:panel>
 </div>

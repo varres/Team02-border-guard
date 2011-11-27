@@ -18,6 +18,7 @@ public class IntsidendiRegistreerimineController {
 
     @RequestMapping(method = RequestMethod.POST, value = "{id}")
     public void post(@PathVariable Long id, ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) {
+    	
     }
 
     @RequestMapping
