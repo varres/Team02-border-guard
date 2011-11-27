@@ -10,7 +10,7 @@
 		<spring:message code="application_name" htmlEscape="false"
 			var="app_name" />
 		<h3>Intsidendi registreerimine</h3>
-		<form action='#' method='POST'>
+		<form action='' method='POST'>
 			<table>
 				<tr>
 					<td>Kood</td>
