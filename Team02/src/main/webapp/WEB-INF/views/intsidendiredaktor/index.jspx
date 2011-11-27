@@ -110,7 +110,7 @@
 			</table>
 		</form>
 
-		<p>Paragraph</p>
+		<p>Teen ruumi ...</p>
 		<input type='button' name='tagasi_nupp' value='Tagasi' style='float:right;' />
 
 	</util:panel>

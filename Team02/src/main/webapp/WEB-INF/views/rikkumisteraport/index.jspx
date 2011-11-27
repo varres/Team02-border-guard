@@ -5,8 +5,67 @@
   <spring:message code="label_rikkumisteraport_index" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>
-      <spring:message arguments="${app_name}" code="welcome_titlepane"/>
-    </h3>
+    <h3>Rikkumiste raport</h3>
+    
+    <form action='#' method='POST'>
+    <table>
+      <tr>
+        <td>Alates </td>
+        <td>Kuni </td>
+        <td>Piirilõik </td>
+      </tr>
+      <tr>
+        <td><input type="text" name="alates" value="01.03.2002" /> </td>
+        <td><input type="text" name="kuni" value="31.03.2002" /> </td>
+        <td> <select name="piiriloik">
+                <option>Narva</option>
+                <option>Koidula</option>
+                <option>Ikla</option>
+            </select> </td>
+        <td><input type="submit" value="Värskenda" /></td>
+      </tr>
+    </table>
+  </form>
+  
+    <table border="1">
+      <tr>
+        <th>Piiriseadus</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>Põder läks üle piiri</td>
+        <td><input type="submit" name="vaata_ps_1" value="Vaata" /></td>
+      </tr>
+      <tr>
+        <td>...</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Intsidentide arv kokku - 56</td>
+        <td></td>
+      </tr>
+    </table>
+  
+  <br />
+  
+    <table>
+      <tr>
+        <th>Relvaseadus</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>Karu lasi jalga</td>
+        <td><input type="submit" name="vaata_rs_1" value="Vaata" /></td>
+      </tr>
+      <tr>
+        <td>...</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Intsidentide arv kokku - 100</td>
+        <td></td>
+      </tr>
+    </table>
+    
   </util:panel>
 </div>
