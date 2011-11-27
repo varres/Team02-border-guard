@@ -69,6 +69,8 @@
         </menu:category>
         <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
             <menu:item id="i_controller__intsidendiregistreerimineindex_id" messageCode="global_generic" url="/intsidendiregistreerimine/index" z="br0zAF6IX+kKiWJEfIGOsjaXHp0="/>
+            <menu:item id="i_controller__intsidendiredaktorindex_id" messageCode="global_generic" url="/intsidendiredaktor/index" z="5VJK0hESperNp/QF4ltcYYYJFUU="/>
+            <menu:item id="i_controller__intsidendigaseotudisikudetailideredaktorindex_id" messageCode="global_generic" url="/intsidendigaseotudisikudetailideredaktor/index" z="zFV5QtrdgUs6lj7KIDlvMLJFKqI="/>
         </menu:category>
     </menu:menu>
 </div>
