@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <div xmlns:jsp="http://java.sun.com/JSP/Page"
 	xmlns:spring="http://www.springframework.org/tags"
-	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
 	<spring:message code="label_intsidendiregistreerimine_index"
@@ -14,17 +16,17 @@
 			<table>
 				<tr>
 					<td>Kood</td>
-					<td colspan='2'><input type='text' name='kood' size='9' value='R100' />
+					<td colspan='2'><input type='text' name='kood' size='9' />
 					  Liik <select name="relv_liik">
-							<option>Relvad</option>
-							<option>Nuiad</option>
-							<option>Vitsad</option>
+							<c:forEach items="${liik}" var="l">
+					        <option>${l.nimetus}</option>	  
+     						</c:forEach>
 					</select></td>
 					<td>Kirjeldus</td>
 				</tr>
 				<tr>
 					<td>Nimetus</td>
-					<td colspan='2'><input type='text' name='nimetus' size='25' value='Karu lasi jalga' /></td>
+					<td colspan='2'><input type='text' name='nimetus' size='25' /></td>
 					<td colspan='2' rowspan='2'> 
 					  <textarea cols='30' rows='5' title='kirjeldus' name='kirjeldus' ><jsp:text /></textarea>
 					</td>
@@ -32,27 +34,38 @@
 				<tr>
 					<td>Piirilõik</td>
 					<td colspan='2'><select name="piiriloik">
-							<option>Narva</option>
-							<option>Koidula</option>
-							<option>Ikla</option>
+					        <c:forEach items="${piiriloigud}" var="p">
+					        <option>${p.nimetus}</option>	  
+     						</c:forEach>
 					</select></td>
 				</tr>
 				<tr>
 					<td>Koordinaadid</td>
-					<td><input type='text' name='latitude' size='9' value='LAT' /></td>
-					<td><input type='text' name='longitude' size='9' value='LON' /></td>
+					<td><input type='text' name='latitude' size='9' /></td>
+					<td><input type='text' name='longitude' size='9' /></td>
 					<td>Kommentaar</td>
 				</tr>
 				<tr>
 					<td>Algus</td>
-					<td colspan='2'><input type='text' name='algus' size='25' value='21.06.1997' /></td>
+					<td colspan='2'><input id="startDate" type="text" name="startDate" />
+     				<script type="text/javascript">
+     				Spring.addDecoration(new Spring.ElementDecoration({
+         			elementId  : 'startDate',
+         			widgetType : 'dijit.form.DateTextBox'}));
+  					</script>
+  					</td>
 					<td colspan='2' rowspan='2'> 
 						<textarea cols='30' rows='5' title='kommentaar' name='kommentaar' ><jsp:text/></textarea>
 					</td>
 				</tr>
 				<tr>
 					<td>Lõpp</td>
-					<td colspan='2'><input type='text' name='lopp' size='25' value='21.06.1997' /></td>
+					<td colspan='2'><input id="endDate" type="text" name="endDate" />
+     				<script type="text/javascript">
+     				Spring.addDecoration(new Spring.ElementDecoration({
+         			elementId  : 'endDate',
+         			widgetType : 'dijit.form.DateTextBox'}));
+  					</script></td>
 				</tr>
 				<tr>
 					<td colspan='3'></td>
