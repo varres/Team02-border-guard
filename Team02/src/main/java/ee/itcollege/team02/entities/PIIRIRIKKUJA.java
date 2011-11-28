@@ -24,9 +24,6 @@ import ee.itcollege.team02.entities.ISIK_INTSIDENDIS;
 public class PIIRIRIKKUJA {
 
     @NotNull
-    private Integer piiririkkuja_ID;
-
-    @NotNull
     @Size(max = 20)
     private String isikukood;
 

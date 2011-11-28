@@ -4,20 +4,11 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect PIIRILOIK_Roo_JavaBean {
-    
-    public Integer PIIRILOIK.getPiiriloik_ID() {
-        return this.piiriloik_ID;
-    }
-    
-    public void PIIRILOIK.setPiiriloik_ID(Integer piiriloik_ID) {
-        this.piiriloik_ID = piiriloik_ID;
-    }
     
     public String PIIRILOIK.getKood() {
         return this.kood;

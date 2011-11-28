@@ -4,19 +4,10 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 
 privileged aspect OBJEKT_INTSIDENDIS_Roo_JavaBean {
-    
-    public Integer OBJEKT_INTSIDENDIS.getObjekt_intsidendis_ID() {
-        return this.objekt_intsidendis_ID;
-    }
-    
-    public void OBJEKT_INTSIDENDIS.setObjekt_intsidendis_ID(Integer objekt_intsidendis_ID) {
-        this.objekt_intsidendis_ID = objekt_intsidendis_ID;
-    }
     
     public INTSIDENT OBJEKT_INTSIDENDIS.getIntsident() {
         return this.intsident;

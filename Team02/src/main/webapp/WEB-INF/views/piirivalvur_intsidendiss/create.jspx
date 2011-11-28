@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS" modelAttribute="PIIRIVALVUR_INTSIDENDIS" path="/piirivalvur_intsidendiss" render="${empty dependencies}" z="W6t2fs3mBdVMLOlWCe/CHQv53OQ=">
-        <field:input field="piirivalvur_intsidendis_ID" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_piirivalvur_intsidendis_ID" required="true" validationMessageCode="field_invalid_integer" z="mg69Dayj/hIEq7YWacxB826gAls="/>
         <field:select field="intsident" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_intsident" itemValue="id" items="${intsidents}" path="/intsidents" z="JnPz/C6QDVPoCvS50M9VIgeOj8o="/>
         <field:select field="piirivalvur" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_piirivalvur" itemValue="id" items="${piirivalvurs}" path="/piirivalvurs" z="7Dd6bU4sJRA2OQA/MBJ6BSx+YCk="/>
         <field:select field="vahtkond_intsidendis" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_vahtkond_intsidendis" itemValue="id" items="${vahtkond_intsidendiss}" path="/vahtkond_intsidendiss" required="true" z="JcmTFsFSVbsEfsOIhZ7lg67jnp8="/>

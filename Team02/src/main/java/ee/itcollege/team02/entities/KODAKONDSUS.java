@@ -18,9 +18,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 @RooEntity
 public class KODAKONDSUS {
 
-    @NotNull
-    private Integer kodakondsus_ID;
-
     @ManyToOne
     private PIIRIRIKKUJA piiririkkuja;
 

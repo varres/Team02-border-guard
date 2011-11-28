@@ -5,20 +5,11 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.OBJEKT_INTSIDENDIS;
 import ee.itcollege.team02.entities.PIIRIRIKKUJA;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect OBJEKT_Roo_JavaBean {
-    
-    public Integer OBJEKT.getObjekt_ID() {
-        return this.objekt_ID;
-    }
-    
-    public void OBJEKT.setObjekt_ID(Integer objekt_ID) {
-        this.objekt_ID = objekt_ID;
-    }
     
     public String OBJEKT.getNimetus() {
         return this.nimetus;

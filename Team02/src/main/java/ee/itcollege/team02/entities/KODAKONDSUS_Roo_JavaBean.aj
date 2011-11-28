@@ -5,19 +5,10 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.PIIRIRIKKUJA;
 import ee.itcollege.team02.entities.RIIK;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 
 privileged aspect KODAKONDSUS_Roo_JavaBean {
-    
-    public Integer KODAKONDSUS.getKodakondsus_ID() {
-        return this.kodakondsus_ID;
-    }
-    
-    public void KODAKONDSUS.setKodakondsus_ID(Integer kodakondsus_ID) {
-        this.kodakondsus_ID = kodakondsus_ID;
-    }
     
     public PIIRIRIKKUJA KODAKONDSUS.getPiiririkkuja() {
         return this.piiririkkuja;

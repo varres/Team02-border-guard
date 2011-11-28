@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_team02_entities_VAHTKOND" object="${vahtkond}" path="/vahtkonds" z="l4uVvRRr6B/FqaT1IVR+kXqgmBQ=">
-        <field:display field="vahtkond_ID" id="s_ee_itcollege_team02_entities_VAHTKOND_vahtkond_ID" object="${vahtkond}" z="ycps2vEGRSoQA/Jpvjp5IQFG/UQ="/>
         <field:display field="kood" id="s_ee_itcollege_team02_entities_VAHTKOND_kood" object="${vahtkond}" z="vnHLDWqdrzr+ujubX/u30iU/Br0="/>
         <field:display field="nimetus" id="s_ee_itcollege_team02_entities_VAHTKOND_nimetus" object="${vahtkond}" z="jgA3ZnrC077zSnHBBh5QcJGnhSg="/>
         <field:display date="true" dateTimePattern="${VAHTKOND_alates_date_format}" field="alates" id="s_ee_itcollege_team02_entities_VAHTKOND_alates" object="${vahtkond}" z="J6SOaS4QzY6jAJsbCqzaXJ6/+to="/>

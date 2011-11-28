@@ -19,10 +19,6 @@ import javax.persistence.CascadeType;
 @RooToString
 @RooEntity
 public class SEADUS {
-
-    @NotNull
-    private Integer seadus_ID;
-
     @NotNull
     @Size(max = 20)
     private String kood;

@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS" object="${isiku_seadus_intsidendis}" path="/isiku_seadus_intsidendiss" z="iZN0iIe0zPRZ2P7aJ8V5DrolmRo=">
-        <field:display field="isiku_seadus_intsidendis_ID" id="s_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_isiku_seadus_intsidendis_ID" object="${isiku_seadus_intsidendis}" z="OKxxazJwz2znd0ZPY/6Ejy2G3CI="/>
         <field:display field="seaduse_punkt" id="s_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_seaduse_punkt" object="${isiku_seadus_intsidendis}" z="ydhIdQsUcX1TVjdUUqrX9CMId58="/>
         <field:display field="isik_intsidendis" id="s_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_isik_intsidendis" object="${isiku_seadus_intsidendis}" z="qocseTnhlVxU1KMvD1hIY/ejxsY="/>
         <field:display date="true" dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_alates_date_format}" field="alates" id="s_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_alates" object="${isiku_seadus_intsidendis}" z="4RL+2i79or40FhFhSWDskerjRyA="/>

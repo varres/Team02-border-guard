@@ -28,9 +28,6 @@ import ee.itcollege.team02.entities.ISIK_INTSIDENDIS;
 public class INTSIDENT {
 
     @NotNull
-    private Integer intsident_ID;
-
-    @NotNull
     @Size(max = 20)
     private String kood;
 

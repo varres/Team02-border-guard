@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS" items="${objekt_intsidendiss}" z="6UB1yNwGEDGY9LLvjMkfMshhp4o=">
         <table:table data="${objekt_intsidendiss}" id="l_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS" path="/objekt_intsidendiss" z="6mH+uvuurrDZg+GgNwVINteNRko=">
-            <table:column id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_objekt_intsidendis_ID" property="objekt_intsidendis_ID" z="9WB/mxMByrGvccs8+wUhJu8reoI="/>
             <table:column id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_intsident" property="intsident" z="2Btdmg7zjY2E2y1iSYRIX5Jdz3I="/>
             <table:column id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_objekt" property="objekt" z="Rl/sz6sN+6ppHvBGWl3XjurpYoo="/>
             <table:column date="true" dateTimePattern="${OBJEKT_INTSIDENDIS_alates_date_format}" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_alates" property="alates" z="ueM5UIM9tDS0FmtJMVEGJ1wot7I="/>
             <table:column date="true" dateTimePattern="${OBJEKT_INTSIDENDIS_kuni_date_format}" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kuni" property="kuni" z="j3ylQmiBEc9Zc/ASnVfDCcL/VWM="/>
             <table:column id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kirjeldus" property="kirjeldus" z="ZHDpLwb6d1P3fPwHJv2UbA5OQnc="/>
+            <table:column id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kommentaar" property="kommentaar" z="rK9XA0L5OKmf4Mx1y+zJiFjXY0g="/>
         </table:table>
     </page:list>
 </div>

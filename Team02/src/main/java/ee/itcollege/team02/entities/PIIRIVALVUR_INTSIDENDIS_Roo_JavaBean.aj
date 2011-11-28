@@ -6,19 +6,10 @@ package ee.itcollege.team02.entities;
 import ee.itcollege.team02.entities.INTSIDENT;
 import ee.itcollege.team02.entities.PIIRIVALVUR;
 import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 
 privileged aspect PIIRIVALVUR_INTSIDENDIS_Roo_JavaBean {
-    
-    public Integer PIIRIVALVUR_INTSIDENDIS.getPiirivalvur_intsidendis_ID() {
-        return this.piirivalvur_intsidendis_ID;
-    }
-    
-    public void PIIRIVALVUR_INTSIDENDIS.setPiirivalvur_intsidendis_ID(Integer piirivalvur_intsidendis_ID) {
-        this.piirivalvur_intsidendis_ID = piirivalvur_intsidendis_ID;
-    }
     
     public INTSIDENT PIIRIVALVUR_INTSIDENDIS.getIntsident() {
         return this.intsident;

@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_ee_itcollege_team02_entities_INTSIDENDI_LIIK" object="${intsidendi_liik}" path="/intsidendi_liiks" z="EjjAkp+AcYYXXyW/6FvFbEzjPho=">
-        <field:display field="intsidendi_liik_ID" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_intsidendi_liik_ID" object="${intsidendi_liik}" z="SQ0LpAy1l8sUwGDSdCBIavZFP8M="/>
         <field:display field="kood" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kood" object="${intsidendi_liik}" z="IhgvPmXTwYIwoCT8FUKL5N1fxvE="/>
         <field:display field="nimetus" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_nimetus" object="${intsidendi_liik}" z="HPFtSZPuPXm4nimb6m2dBioffJE="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kommentaar" object="${intsidendi_liik}" z="k4RvrTbz0U0EUlJ9K8TecaN3hGQ="/>

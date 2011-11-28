@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_OBJEKT" modelAttribute="OBJEKT" path="/objekts" versionField="Version" z="ikH6AzbwkzZXZPB5JyDTrfPAaQE=">
-        <field:input field="objekt_ID" id="c_ee_itcollege_team02_entities_OBJEKT_objekt_ID" required="true" validationMessageCode="field_invalid_integer" z="67vaZGm9aMfikN2fBuHEybgtIYw="/>
         <field:textarea field="nimetus" id="c_ee_itcollege_team02_entities_OBJEKT_nimetus" required="true" z="86pujgwkJG6trzUfAgD9Wo4VyHM="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_OBJEKT_kommentaar" z="tl+m6MgpiO+zhwB7isKAtQ8ng/I="/>
         <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_OBJEKT_avaja" required="true" z="J8hRR7Z2oN0ZG4qXHYG+54prdBA="/>

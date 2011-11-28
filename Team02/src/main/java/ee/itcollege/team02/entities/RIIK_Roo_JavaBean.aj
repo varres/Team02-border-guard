@@ -4,7 +4,6 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.KODAKONDSUS;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
@@ -81,14 +80,6 @@ privileged aspect RIIK_Roo_JavaBean {
     
     public void RIIK.setSuletud(Date suletud) {
         this.suletud = suletud;
-    }
-    
-    public Integer RIIK.getRIIK_ID() {
-        return this.RIIK_ID;
-    }
-    
-    public void RIIK.setRIIK_ID(Integer RIIK_ID) {
-        this.RIIK_ID = RIIK_ID;
     }
     
     public Set<KODAKONDSUS> RIIK.getKODAKONDSUSs() {

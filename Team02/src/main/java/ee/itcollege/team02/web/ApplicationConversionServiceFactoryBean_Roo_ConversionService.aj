@@ -51,77 +51,77 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.INTSIDENDI_LIIKConverter implements Converter<INTSIDENDI_LIIK, String> {
         public String convert(INTSIDENDI_LIIK iNTSIDENDI_LIIK) {
-            return new StringBuilder().append(iNTSIDENDI_LIIK.getIntsidendi_liik_ID()).append(" ").append(iNTSIDENDI_LIIK.getKood()).append(" ").append(iNTSIDENDI_LIIK.getNimetus()).append(" ").append(iNTSIDENDI_LIIK.getKommentaar()).toString();
+            return new StringBuilder().append(iNTSIDENDI_LIIK.getKood()).append(" ").append(iNTSIDENDI_LIIK.getNimetus()).append(" ").append(iNTSIDENDI_LIIK.getKommentaar()).append(" ").append(iNTSIDENDI_LIIK.getAvaja()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.INTSIDENTConverter implements Converter<INTSIDENT, String> {
         public String convert(INTSIDENT iNTSIDENT) {
-            return new StringBuilder().append(iNTSIDENT.getIntsident_ID()).append(" ").append(iNTSIDENT.getKood()).append(" ").append(iNTSIDENT.getNimetus()).append(" ").append(iNTSIDENT.getToimumise_algus()).toString();
+            return new StringBuilder().append(iNTSIDENT.getKood()).append(" ").append(iNTSIDENT.getNimetus()).append(" ").append(iNTSIDENT.getToimumise_algus()).append(" ").append(iNTSIDENT.getToimumise_lopp()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.ISIKU_SEADUS_INTSIDENDISConverter implements Converter<ISIKU_SEADUS_INTSIDENDIS, String> {
         public String convert(ISIKU_SEADUS_INTSIDENDIS iSIKU_SEADUS_INTSIDENDIS) {
-            return new StringBuilder().append(iSIKU_SEADUS_INTSIDENDIS.getIsiku_seadus_intsidendis_ID()).append(" ").append(iSIKU_SEADUS_INTSIDENDIS.getAlates()).append(" ").append(iSIKU_SEADUS_INTSIDENDIS.getKuni()).append(" ").append(iSIKU_SEADUS_INTSIDENDIS.getKirjeldus()).toString();
+            return new StringBuilder().append(iSIKU_SEADUS_INTSIDENDIS.getAlates()).append(" ").append(iSIKU_SEADUS_INTSIDENDIS.getKuni()).append(" ").append(iSIKU_SEADUS_INTSIDENDIS.getKirjeldus()).append(" ").append(iSIKU_SEADUS_INTSIDENDIS.getKommentaar()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.ISIK_INTSIDENDISConverter implements Converter<ISIK_INTSIDENDIS, String> {
         public String convert(ISIK_INTSIDENDIS iSIK_INTSIDENDIS) {
-            return new StringBuilder().append(iSIK_INTSIDENDIS.getIsik_intsidendis_ID()).append(" ").append(iSIK_INTSIDENDIS.getAlates()).append(" ").append(iSIK_INTSIDENDIS.getKuni()).append(" ").append(iSIK_INTSIDENDIS.getKirjeldus()).toString();
+            return new StringBuilder().append(iSIK_INTSIDENDIS.getAlates()).append(" ").append(iSIK_INTSIDENDIS.getKuni()).append(" ").append(iSIK_INTSIDENDIS.getKirjeldus()).append(" ").append(iSIK_INTSIDENDIS.getKommentaar()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.KODAKONDSUSConverter implements Converter<KODAKONDSUS, String> {
         public String convert(KODAKONDSUS kODAKONDSUS) {
-            return new StringBuilder().append(kODAKONDSUS.getKodakondsus_ID()).append(" ").append(kODAKONDSUS.getIsikukood()).append(" ").append(kODAKONDSUS.getAlates()).append(" ").append(kODAKONDSUS.getKuni()).toString();
+            return new StringBuilder().append(kODAKONDSUS.getIsikukood()).append(" ").append(kODAKONDSUS.getAlates()).append(" ").append(kODAKONDSUS.getKuni()).append(" ").append(kODAKONDSUS.getKommentaar()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.OBJEKTConverter implements Converter<OBJEKT, String> {
         public String convert(OBJEKT oBJEKT) {
-            return new StringBuilder().append(oBJEKT.getObjekt_ID()).append(" ").append(oBJEKT.getNimetus()).append(" ").append(oBJEKT.getKommentaar()).append(" ").append(oBJEKT.getAvaja()).toString();
+            return new StringBuilder().append(oBJEKT.getNimetus()).append(" ").append(oBJEKT.getKommentaar()).append(" ").append(oBJEKT.getAvaja()).append(" ").append(oBJEKT.getAvatud()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.OBJEKT_INTSIDENDISConverter implements Converter<OBJEKT_INTSIDENDIS, String> {
         public String convert(OBJEKT_INTSIDENDIS oBJEKT_INTSIDENDIS) {
-            return new StringBuilder().append(oBJEKT_INTSIDENDIS.getObjekt_intsidendis_ID()).append(" ").append(oBJEKT_INTSIDENDIS.getAlates()).append(" ").append(oBJEKT_INTSIDENDIS.getKuni()).append(" ").append(oBJEKT_INTSIDENDIS.getKirjeldus()).toString();
+            return new StringBuilder().append(oBJEKT_INTSIDENDIS.getAlates()).append(" ").append(oBJEKT_INTSIDENDIS.getKuni()).append(" ").append(oBJEKT_INTSIDENDIS.getKirjeldus()).append(" ").append(oBJEKT_INTSIDENDIS.getKommentaar()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.PIIRILOIKConverter implements Converter<PIIRILOIK, String> {
         public String convert(PIIRILOIK pIIRILOIK) {
-            return new StringBuilder().append(pIIRILOIK.getPiiriloik_ID()).append(" ").append(pIIRILOIK.getKood()).append(" ").append(pIIRILOIK.getNimetus()).append(" ").append(pIIRILOIK.getGPS_koordinaadid()).toString();
+            return new StringBuilder().append(pIIRILOIK.getKood()).append(" ").append(pIIRILOIK.getNimetus()).append(" ").append(pIIRILOIK.getGPS_koordinaadid()).append(" ").append(pIIRILOIK.getKommentaar()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.PIIRIRIKKUJAConverter implements Converter<PIIRIRIKKUJA, String> {
         public String convert(PIIRIRIKKUJA pIIRIRIKKUJA) {
-            return new StringBuilder().append(pIIRIRIKKUJA.getPiiririkkuja_ID()).append(" ").append(pIIRIRIKKUJA.getIsikukood()).append(" ").append(pIIRIRIKKUJA.getEesnimi()).append(" ").append(pIIRIRIKKUJA.getPerek_nimi()).toString();
+            return new StringBuilder().append(pIIRIRIKKUJA.getIsikukood()).append(" ").append(pIIRIRIKKUJA.getEesnimi()).append(" ").append(pIIRIRIKKUJA.getPerek_nimi()).append(" ").append(pIIRIRIKKUJA.getSugu()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.PIIRIVALVURConverter implements Converter<PIIRIVALVUR, String> {
         public String convert(PIIRIVALVUR pIIRIVALVUR) {
-            return new StringBuilder().append(pIIRIVALVUR.getPiirivalvur_ID()).append(" ").append(pIIRIVALVUR.getIsikukood()).append(" ").append(pIIRIVALVUR.getEesnimed()).append(" ").append(pIIRIVALVUR.getPerekonnanimi()).toString();
+            return new StringBuilder().append(pIIRIVALVUR.getIsikukood()).append(" ").append(pIIRIVALVUR.getEesnimed()).append(" ").append(pIIRIVALVUR.getPerekonnanimi()).append(" ").append(pIIRIVALVUR.getSugu()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.PIIRIVALVUR_INTSIDENDISConverter implements Converter<PIIRIVALVUR_INTSIDENDIS, String> {
         public String convert(PIIRIVALVUR_INTSIDENDIS pIIRIVALVUR_INTSIDENDIS) {
-            return new StringBuilder().append(pIIRIVALVUR_INTSIDENDIS.getPiirivalvur_intsidendis_ID()).append(" ").append(pIIRIVALVUR_INTSIDENDIS.getAlates()).append(" ").append(pIIRIVALVUR_INTSIDENDIS.getKuni()).append(" ").append(pIIRIVALVUR_INTSIDENDIS.getKirjeldus()).toString();
+            return new StringBuilder().append(pIIRIVALVUR_INTSIDENDIS.getAlates()).append(" ").append(pIIRIVALVUR_INTSIDENDIS.getKuni()).append(" ").append(pIIRIVALVUR_INTSIDENDIS.getKirjeldus()).append(" ").append(pIIRIVALVUR_INTSIDENDIS.getKommentaar()).toString();
         }
         
     }
@@ -135,28 +135,28 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.SEADUSConverter implements Converter<SEADUS, String> {
         public String convert(SEADUS sEADUS) {
-            return new StringBuilder().append(sEADUS.getSeadus_ID()).append(" ").append(sEADUS.getKood()).append(" ").append(sEADUS.getNimetus()).append(" ").append(sEADUS.getKehtiv_alates()).toString();
+            return new StringBuilder().append(sEADUS.getKood()).append(" ").append(sEADUS.getNimetus()).append(" ").append(sEADUS.getKehtiv_alates()).append(" ").append(sEADUS.getKehtiv_kuni()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.SEADUSE_PUNKTConverter implements Converter<SEADUSE_PUNKT, String> {
         public String convert(SEADUSE_PUNKT sEADUSE_PUNKT) {
-            return new StringBuilder().append(sEADUSE_PUNKT.getSeaduse_punkt_ID()).append(" ").append(sEADUSE_PUNKT.getParagrahv()).append(" ").append(sEADUSE_PUNKT.getPais()).append(" ").append(sEADUSE_PUNKT.getTekst()).toString();
+            return new StringBuilder().append(sEADUSE_PUNKT.getParagrahv()).append(" ").append(sEADUSE_PUNKT.getPais()).append(" ").append(sEADUSE_PUNKT.getTekst()).append(" ").append(sEADUSE_PUNKT.getKehtiv_alates()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.VAHTKONDConverter implements Converter<VAHTKOND, String> {
         public String convert(VAHTKOND vAHTKOND) {
-            return new StringBuilder().append(vAHTKOND.getVahtkond_ID()).append(" ").append(vAHTKOND.getKood()).append(" ").append(vAHTKOND.getNimetus()).append(" ").append(vAHTKOND.getAlates()).toString();
+            return new StringBuilder().append(vAHTKOND.getKood()).append(" ").append(vAHTKOND.getNimetus()).append(" ").append(vAHTKOND.getAlates()).append(" ").append(vAHTKOND.getKuni()).toString();
         }
         
     }
     
     static class ee.itcollege.team02.web.ApplicationConversionServiceFactoryBean.VAHTKOND_INTSIDENDISConverter implements Converter<VAHTKOND_INTSIDENDIS, String> {
         public String convert(VAHTKOND_INTSIDENDIS vAHTKOND_INTSIDENDIS) {
-            return new StringBuilder().append(vAHTKOND_INTSIDENDIS.getVahtkond_intsidendis_ID()).append(" ").append(vAHTKOND_INTSIDENDIS.getAlates()).append(" ").append(vAHTKOND_INTSIDENDIS.getKuni()).append(" ").append(vAHTKOND_INTSIDENDIS.getKirjeldus()).toString();
+            return new StringBuilder().append(vAHTKOND_INTSIDENDIS.getAlates()).append(" ").append(vAHTKOND_INTSIDENDIS.getKuni()).append(" ").append(vAHTKOND_INTSIDENDIS.getKirjeldus()).append(" ").append(vAHTKOND_INTSIDENDIS.getKommentaar()).toString();
         }
         
     }

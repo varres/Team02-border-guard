@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_team02_entities_VAHTKOND" modelAttribute="VAHTKOND" path="/vahtkonds" render="${empty dependencies}" z="COSVQaAd2f/x0+VEvNOsf8hhjOw=">
-        <field:input field="vahtkond_ID" id="c_ee_itcollege_team02_entities_VAHTKOND_vahtkond_ID" required="true" validationMessageCode="field_invalid_integer" z="UmWppJvv84GZOedV2pZWwNiPMVo="/>
         <field:input field="kood" id="c_ee_itcollege_team02_entities_VAHTKOND_kood" max="20" required="true" z="JD7B3kambWw5MZSLc8f7lPdf9kA="/>
         <field:textarea field="nimetus" id="c_ee_itcollege_team02_entities_VAHTKOND_nimetus" required="true" z="dF20JEgtC3epqw2+qQcV2FuDHNk="/>
         <field:datetime dateTimePattern="${VAHTKOND_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_VAHTKOND_alates" required="true" z="YZA0sYeSILnyHEjQvXTcJ3BwSvE="/>

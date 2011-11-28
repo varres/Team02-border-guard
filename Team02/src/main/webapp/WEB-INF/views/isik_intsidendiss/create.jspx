@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_team02_entities_ISIK_INTSIDENDIS" modelAttribute="ISIK_INTSIDENDIS" path="/isik_intsidendiss" render="${empty dependencies}" z="4iKPpKls2iEqwxyJiiLqzHu3PGo=">
-        <field:input field="isik_intsidendis_ID" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_isik_intsidendis_ID" required="true" validationMessageCode="field_invalid_integer" z="8XS/vNCulF2x2KjQmhgcWgA1dWo="/>
         <field:select field="piiririkkuja" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_piiririkkuja" itemValue="id" items="${piiririkkujas}" path="/piiririkkujas" z="58gqg91OALjMfbaBqDZDlBNcu9E="/>
         <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_alates" required="true" z="rCfmZxZ+uBAzAi+gTErw5iMRJYs="/>
         <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kuni" required="true" z="o9BOw3sWz1Krx/N915rklCP9DEE="/>

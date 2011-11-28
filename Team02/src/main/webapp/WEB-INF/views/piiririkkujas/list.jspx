@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_PIIRIRIKKUJA" items="${piiririkkujas}" z="NXtF9HGmzWyYR5oEWZyQq9191yM=">
         <table:table data="${piiririkkujas}" id="l_ee_itcollege_team02_entities_PIIRIRIKKUJA" path="/piiririkkujas" z="dmoey4ZyJi+P296By+VZwDPy6UU=">
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_piiririkkuja_ID" property="piiririkkuja_ID" z="jRm/tKLqZhaHOyFF2HmKX1OQ+hw="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_isikukood" property="isikukood" z="kpOrKQ8iAGSWVkFd0g5zSV2mNuM="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_eesnimi" property="eesnimi" z="mjyMaUSTahLGbn0MP26/hk/6RtY="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_perek_nimi" property="perek_nimi" z="aJEBFvVw4UEawS8YxO7wM7CHrCc="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_sugu" property="sugu" z="s4nBPXIVulAE10YALqpLraeyNac="/>
             <table:column date="true" dateTimePattern="${PIIRIRIKKUJA_synniaeg_date_format}" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_synniaeg" property="synniaeg" z="4zExxRqRFtdHHa0YA8gSvqW5tW4="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_objekt" property="objekt" z="K/j7AvYFveIVsHpbbT38AruC1JQ="/>
         </table:table>
     </page:list>
 </div>

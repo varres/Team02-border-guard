@@ -12,7 +12,6 @@
         <field:datetime dateTimePattern="${RIIK_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_RIIK_muudetud" required="true" z="v2kvUe0bqNNEHWRRKg55d2enYrQ="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_RIIK_sulgeja" required="true" z="rulvyI5GSKZM0JDHzQwDJTYyGoI="/>
         <field:datetime dateTimePattern="${RIIK_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_RIIK_suletud" required="true" z="gWtJJ3vp/K5bfIClVJDx/iKApi4="/>
-        <field:input field="RIIK_ID" id="c_ee_itcollege_team02_entities_RIIK_RIIK_ID" required="true" validationMessageCode="field_invalid_integer" z="R+HIVSPkZe2lm+U/RS5dVLoP6aU="/>
         <field:simple field="KODAKONDSUSs" id="c_ee_itcollege_team02_entities_RIIK_KODAKONDSUSs" messageCode="entity_reference_not_managed" messageCodeAttribute="K O D A K O N D S U S" z="tBDkA9Xf1N7RNMVlBPmpxzKUFWI="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_team02_entities_RIIK" render="${not empty dependencies}" z="RF4RHJvi6K0Dpc5I0qgCECco0JI="/>

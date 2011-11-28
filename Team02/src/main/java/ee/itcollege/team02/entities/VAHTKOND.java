@@ -16,9 +16,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class VAHTKOND {
 
     @NotNull
-    private Integer vahtkond_ID;
-
-    @NotNull
     @Size(max = 20)
     private String kood;
 

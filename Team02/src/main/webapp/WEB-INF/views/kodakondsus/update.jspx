@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_KODAKONDSUS" modelAttribute="KODAKONDSUS" path="/kodakondsus" versionField="Version" z="GnQLHZxlbQD6vraszhSDWPnQxyI=">
-        <field:input field="kodakondsus_ID" id="c_ee_itcollege_team02_entities_KODAKONDSUS_kodakondsus_ID" required="true" validationMessageCode="field_invalid_integer" z="HkS4ROp5t5C1WrKnu+pIrtnWHcs="/>
         <field:select field="riik" id="c_ee_itcollege_team02_entities_KODAKONDSUS_riik" itemValue="id" items="${riiks}" path="/riiks" z="KFmiA8T8AZDoMR5HKcirrUnv+7k="/>
         <field:input field="isikukood" id="c_ee_itcollege_team02_entities_KODAKONDSUS_isikukood" max="20" required="true" z="W5DSGh+gifkA+W7zb6A36IOCMVY="/>
         <field:datetime dateTimePattern="${KODAKONDSUS_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_KODAKONDSUS_alates" required="true" z="LKbcXG5aBorbepE2H0wu1RxT2HQ="/>

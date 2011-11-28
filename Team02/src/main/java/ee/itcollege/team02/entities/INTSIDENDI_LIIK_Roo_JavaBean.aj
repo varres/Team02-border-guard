@@ -4,20 +4,11 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect INTSIDENDI_LIIK_Roo_JavaBean {
-    
-    public Integer INTSIDENDI_LIIK.getIntsidendi_liik_ID() {
-        return this.intsidendi_liik_ID;
-    }
-    
-    public void INTSIDENDI_LIIK.setIntsidendi_liik_ID(Integer intsidendi_liik_ID) {
-        this.intsidendi_liik_ID = intsidendi_liik_ID;
-    }
     
     public String INTSIDENDI_LIIK.getKood() {
         return this.kood;

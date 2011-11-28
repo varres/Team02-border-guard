@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_SEADUSE_PUNKT" modelAttribute="SEADUSE_PUNKT" path="/seaduse_punkts" versionField="Version" z="ihZlcCN+xl91BAtZaFm+32skV6A=">
-        <field:input field="seaduse_punkt_ID" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_seaduse_punkt_ID" required="true" validationMessageCode="field_invalid_integer" z="VdvWfCwEHdOwpfxijpaRkbJjIMU="/>
         <field:select field="seadus" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_seadus" itemValue="id" items="${seadus}" path="/seadus" required="true" z="3q68gmEZ4LOzD6OjnWMWCpNArqI="/>
         <field:input field="paragrahv" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_paragrahv" max="20" required="true" z="ZbZsElOh1tNsPS6QMGTFf51sdN8="/>
         <field:input field="pais" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_pais" max="20" required="true" z="vso1juDfeYuLx11Lzt1cwQEf7P0="/>

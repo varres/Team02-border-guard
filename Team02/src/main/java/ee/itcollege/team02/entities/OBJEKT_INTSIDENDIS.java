@@ -17,9 +17,6 @@ import javax.validation.constraints.Size;
 @RooEntity
 public class OBJEKT_INTSIDENDIS {
 
-    @NotNull
-    private Integer objekt_intsidendis_ID;
-
     @ManyToOne
     private INTSIDENT intsident;
 

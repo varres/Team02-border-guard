@@ -5,20 +5,11 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
 import ee.itcollege.team02.entities.PIIRIVALVUR_INTSIDENDIS;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect VAHTKOND_INTSIDENDIS_Roo_JavaBean {
-    
-    public Integer VAHTKOND_INTSIDENDIS.getVahtkond_intsidendis_ID() {
-        return this.vahtkond_intsidendis_ID;
-    }
-    
-    public void VAHTKOND_INTSIDENDIS.setVahtkond_intsidendis_ID(Integer vahtkond_intsidendis_ID) {
-        this.vahtkond_intsidendis_ID = vahtkond_intsidendis_ID;
-    }
     
     public Date VAHTKOND_INTSIDENDIS.getAlates() {
         return this.alates;

@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS" items="${vahtkond_intsidendiss}" z="Nd4/7xWEHLGdrL6lGfHNV0tvk94=">
         <table:table data="${vahtkond_intsidendiss}" id="l_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS" path="/vahtkond_intsidendiss" z="B8Za4tTey+0Hj4HTubPH1wUGUrI=">
-            <table:column id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_vahtkond_intsidendis_ID" property="vahtkond_intsidendis_ID" z="bQeLVrHCXnn0JyppBbT0GwJpAVs="/>
             <table:column date="true" dateTimePattern="${VAHTKOND_INTSIDENDIS_alates_date_format}" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_alates" property="alates" z="TM/x2cVOYa+lwz3cVycvc8mEtoc="/>
             <table:column date="true" dateTimePattern="${VAHTKOND_INTSIDENDIS_kuni_date_format}" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kuni" property="kuni" z="NX8CijqctYkfta1tSUAQjpk6pmw="/>
             <table:column id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kirjeldus" property="kirjeldus" z="s5bcSrM+cOBsPTo54Pj8boRmVAM="/>
             <table:column id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kommentaar" property="kommentaar" z="ivEk99KNjrp6LhRvN0Z233qQUKY="/>
             <table:column id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_avaja" property="avaja" z="av2MWi0pUPIOJzodo7YQGAGKkPQ="/>
+            <table:column date="true" dateTimePattern="${VAHTKOND_INTSIDENDIS_avatud_date_format}" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_avatud" property="avatud" z="IKyQkz/dv89OxyYuTEqcQQyK+hs="/>
         </table:table>
     </page:list>
 </div>

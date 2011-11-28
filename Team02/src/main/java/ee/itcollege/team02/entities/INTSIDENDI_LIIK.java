@@ -21,9 +21,6 @@ import javax.persistence.CascadeType;
 public class INTSIDENDI_LIIK {
 
     @NotNull
-    private Integer intsidendi_liik_ID;
-
-    @NotNull
     @Size(max = 20)
     private String kood;
 

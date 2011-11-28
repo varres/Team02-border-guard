@@ -22,9 +22,6 @@ import ee.itcollege.team02.entities.PIIRIRIKKUJA;
 public class OBJEKT {
 
     @NotNull
-    private Integer objekt_ID;
-
-    @NotNull
     @Size(max = 100)
     private String nimetus;
 

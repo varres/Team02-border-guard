@@ -21,9 +21,6 @@ import javax.persistence.CascadeType;
 public class PIIRILOIK {
 
     @NotNull
-    private Integer piiriloik_ID;
-
-    @NotNull
     @Size(max = 20)
     private String kood;
 

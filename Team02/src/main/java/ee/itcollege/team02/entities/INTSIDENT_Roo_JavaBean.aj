@@ -10,20 +10,11 @@ import ee.itcollege.team02.entities.PIIRILOIK;
 import ee.itcollege.team02.entities.PIIRIVALVUR_INTSIDENDIS;
 import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
 import java.lang.Double;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect INTSIDENT_Roo_JavaBean {
-    
-    public Integer INTSIDENT.getIntsident_ID() {
-        return this.intsident_ID;
-    }
-    
-    public void INTSIDENT.setIntsident_ID(Integer intsident_ID) {
-        this.intsident_ID = intsident_ID;
-    }
     
     public String INTSIDENT.getKood() {
         return this.kood;

@@ -22,7 +22,6 @@ privileged aspect SEADUSE_PUNKT_Roo_ToString {
         sb.append("Paragrahv: ").append(getParagrahv()).append(", ");
         sb.append("SEADUSE_PUNKTs: ").append(getSEADUSE_PUNKTs() == null ? "null" : getSEADUSE_PUNKTs().size()).append(", ");
         sb.append("Seadus: ").append(getSeadus()).append(", ");
-        sb.append("Seaduse_punkt_ID: ").append(getSeaduse_punkt_ID()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("Tekst: ").append(getTekst()).append(", ");

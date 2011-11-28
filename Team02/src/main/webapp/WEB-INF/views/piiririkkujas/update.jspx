@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_PIIRIRIKKUJA" modelAttribute="PIIRIRIKKUJA" path="/piiririkkujas" versionField="Version" z="2tiG0ib/pMNLw+40suLWLKX8pMI=">
-        <field:input field="piiririkkuja_ID" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_piiririkkuja_ID" required="true" validationMessageCode="field_invalid_integer" z="6wTCn8/sWq4zsj2uM9HjXS5hvjE="/>
         <field:input field="isikukood" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_isikukood" max="20" required="true" z="W9VWoveBrZbKfWaUw23yrOIl674="/>
         <field:input field="eesnimi" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_eesnimi" max="25" required="true" z="nIwo7uhajEyYa3jfwG55P4XddS0="/>
         <field:textarea field="perek_nimi" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_perek_nimi" required="true" z="dHaGCwFG19hPqWJyxS3yfBh6eEs="/>

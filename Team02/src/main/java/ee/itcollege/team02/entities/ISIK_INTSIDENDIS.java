@@ -22,9 +22,6 @@ import javax.persistence.CascadeType;
 @RooEntity
 public class ISIK_INTSIDENDIS {
 
-    @NotNull
-    private Integer isik_intsidendis_ID;
-
     @ManyToOne
     private PIIRIRIKKUJA piiririkkuja;
     

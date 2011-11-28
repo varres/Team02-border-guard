@@ -23,9 +23,6 @@ import ee.itcollege.team02.entities.ISIKU_SEADUS_INTSIDENDIS;
 public class SEADUSE_PUNKT {
 
     @NotNull
-    private Integer seaduse_punkt_ID;
-
-    @NotNull
     @ManyToOne
     private SEADUS seadus;
 

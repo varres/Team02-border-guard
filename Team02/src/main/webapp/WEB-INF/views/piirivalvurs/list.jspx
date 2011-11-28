@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_PIIRIVALVUR" items="${piirivalvurs}" z="5ejCJk1F4gQBzFHkuqo+rlFDlss=">
         <table:table data="${piirivalvurs}" id="l_ee_itcollege_team02_entities_PIIRIVALVUR" path="/piirivalvurs" z="grkNNIYUlC8e2GKP5z1xoixOB+0=">
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_piirivalvur_ID" property="piirivalvur_ID" z="2rThuqz5LXnJunahzcklBnZimKo="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_isikukood" property="isikukood" z="AppnPDRNXf2NZ6UQHBERqE/qGEg="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_eesnimed" property="eesnimed" z="EVdpcbzolvWCI+6sg7uJd0rG3RM="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_perekonnanimi" property="perekonnanimi" z="vjfKMtwM7OpI1XtP7g3Xm2kLCys="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_sugu" property="sugu" z="Og/ZKC+HHwJ70N8AGxdQAg35sgU="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_soduri_kood" property="soduri_kood" z="I4jRK25vvjlNB+N4TEioV+LxSrU="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_kommentaar" property="kommentaar" z="ooyJB5UMMJRaoGpq0q/VEsvttbU="/>
         </table:table>
     </page:list>
 </div>

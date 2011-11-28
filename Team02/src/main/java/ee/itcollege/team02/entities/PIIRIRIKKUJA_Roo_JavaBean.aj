@@ -6,20 +6,11 @@ package ee.itcollege.team02.entities;
 import ee.itcollege.team02.entities.ISIK_INTSIDENDIS;
 import ee.itcollege.team02.entities.KODAKONDSUS;
 import ee.itcollege.team02.entities.OBJEKT;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect PIIRIRIKKUJA_Roo_JavaBean {
-    
-    public Integer PIIRIRIKKUJA.getPiiririkkuja_ID() {
-        return this.piiririkkuja_ID;
-    }
-    
-    public void PIIRIRIKKUJA.setPiiririkkuja_ID(Integer piiririkkuja_ID) {
-        this.piiririkkuja_ID = piiririkkuja_ID;
-    }
     
     public String PIIRIRIKKUJA.getIsikukood() {
         return this.isikukood;

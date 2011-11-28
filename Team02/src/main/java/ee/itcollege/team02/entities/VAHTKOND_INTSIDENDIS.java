@@ -23,9 +23,6 @@ import javax.persistence.CascadeType;
 public class VAHTKOND_INTSIDENDIS {
 
     @NotNull
-    private Integer vahtkond_intsidendis_ID;
-
-    @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date alates;

@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_INTSIDENDI_LIIK" modelAttribute="INTSIDENDI_LIIK" path="/intsidendi_liiks" versionField="Version" z="K1mQPliS5AH/rxn0C41D8A9bJAA=">
-        <field:input field="intsidendi_liik_ID" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_intsidendi_liik_ID" required="true" validationMessageCode="field_invalid_integer" z="ZvNuVN5sKKZE3Rvv7HfdqjLplc0="/>
         <field:input field="kood" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kood" max="20" required="true" z="eFm0L25hQbeMbcNRPZ3ryUpF9RA="/>
         <field:textarea field="nimetus" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_nimetus" required="true" z="TrQaLyHZcZ6s6j+4qv6iqJmSPeA="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kommentaar" required="true" z="C1nFkecV1CnajrvQsRO70UnD1F0="/>

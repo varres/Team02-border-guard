@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS" modelAttribute="ISIKU_SEADUS_INTSIDENDIS" path="/isiku_seadus_intsidendiss" render="${empty dependencies}" z="+G8N98UeX5phVzOkeYLe0FiOs9g=">
-        <field:input field="isiku_seadus_intsidendis_ID" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_isiku_seadus_intsidendis_ID" required="true" validationMessageCode="field_invalid_integer" z="YjmQTmH1ZSZGqjlAqY0YjHDVgkA="/>
         <field:select field="seaduse_punkt" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_seaduse_punkt" itemValue="id" items="${seaduse_punkts}" path="/seaduse_punkts" z="iPbYK5+mMHKBnkD/rYPBsCqhIwk="/>
         <field:select field="isik_intsidendis" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_isik_intsidendis" itemValue="id" items="${isik_intsidendiss}" path="/isik_intsidendiss" z="7WWfHpxHk8maksiA7lIJFj8rUNM="/>
         <field:datetime dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_alates" required="true" z="UssczsAvm9k0fxFTcLY5sYPy8Ek="/>

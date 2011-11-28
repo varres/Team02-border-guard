@@ -5,19 +5,10 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.ISIK_INTSIDENDIS;
 import ee.itcollege.team02.entities.SEADUSE_PUNKT;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 
 privileged aspect ISIKU_SEADUS_INTSIDENDIS_Roo_JavaBean {
-    
-    public Integer ISIKU_SEADUS_INTSIDENDIS.getIsiku_seadus_intsidendis_ID() {
-        return this.isiku_seadus_intsidendis_ID;
-    }
-    
-    public void ISIKU_SEADUS_INTSIDENDIS.setIsiku_seadus_intsidendis_ID(Integer isiku_seadus_intsidendis_ID) {
-        this.isiku_seadus_intsidendis_ID = isiku_seadus_intsidendis_ID;
-    }
     
     public SEADUSE_PUNKT ISIKU_SEADUS_INTSIDENDIS.getSeaduse_punkt() {
         return this.seaduse_punkt;

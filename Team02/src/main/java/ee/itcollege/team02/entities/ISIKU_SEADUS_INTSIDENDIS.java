@@ -18,9 +18,6 @@ import javax.validation.constraints.Size;
 @RooEntity
 public class ISIKU_SEADUS_INTSIDENDIS {
 
-    @NotNull
-    private Integer isiku_seadus_intsidendis_ID;
-
     @ManyToOne
     private SEADUSE_PUNKT seaduse_punkt;
 

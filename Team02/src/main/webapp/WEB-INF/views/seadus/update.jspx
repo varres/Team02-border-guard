@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_SEADUS" modelAttribute="SEADUS" path="/seadus" versionField="Version" z="FylFZltPQETJ9fr8Xwb5R0LR3Qg=">
-        <field:input field="seadus_ID" id="c_ee_itcollege_team02_entities_SEADUS_seadus_ID" required="true" validationMessageCode="field_invalid_integer" z="ses7idNeQxZnVo2bTc10EEHgbOg="/>
         <field:input field="kood" id="c_ee_itcollege_team02_entities_SEADUS_kood" max="20" required="true" z="7BO6snN4AutJ6VTX6mnufVMbb2c="/>
         <field:input field="nimetus" id="c_ee_itcollege_team02_entities_SEADUS_nimetus" max="20" required="true" z="MszdZk1IsN60lfNfCsIWtpAGkd0="/>
         <field:input field="kehtiv_alates" id="c_ee_itcollege_team02_entities_SEADUS_kehtiv_alates" max="20" required="true" z="uddr3NtCuHm0MOsshO8AaUXtvbo="/>

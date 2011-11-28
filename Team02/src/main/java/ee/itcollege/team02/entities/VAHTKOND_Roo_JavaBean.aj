@@ -3,19 +3,10 @@
 
 package ee.itcollege.team02.entities;
 
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 
 privileged aspect VAHTKOND_Roo_JavaBean {
-    
-    public Integer VAHTKOND.getVahtkond_ID() {
-        return this.vahtkond_ID;
-    }
-    
-    public void VAHTKOND.setVahtkond_ID(Integer vahtkond_ID) {
-        this.vahtkond_ID = vahtkond_ID;
-    }
     
     public String VAHTKOND.getKood() {
         return this.kood;

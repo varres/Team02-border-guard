@@ -4,20 +4,11 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.PIIRIVALVUR_INTSIDENDIS;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect PIIRIVALVUR_Roo_JavaBean {
-    
-    public Integer PIIRIVALVUR.getPiirivalvur_ID() {
-        return this.piirivalvur_ID;
-    }
-    
-    public void PIIRIVALVUR.setPiirivalvur_ID(Integer piirivalvur_ID) {
-        this.piirivalvur_ID = piirivalvur_ID;
-    }
     
     public String PIIRIVALVUR.getIsikukood() {
         return this.isikukood;

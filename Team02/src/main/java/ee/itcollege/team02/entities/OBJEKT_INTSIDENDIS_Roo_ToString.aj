@@ -20,7 +20,6 @@ privileged aspect OBJEKT_INTSIDENDIS_Roo_ToString {
         sb.append("Muudetud: ").append(getMuudetud()).append(", ");
         sb.append("Muutja: ").append(getMuutja()).append(", ");
         sb.append("Objekt: ").append(getObjekt()).append(", ");
-        sb.append("Objekt_intsidendis_ID: ").append(getObjekt_intsidendis_ID()).append(", ");
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("Version: ").append(getVersion());

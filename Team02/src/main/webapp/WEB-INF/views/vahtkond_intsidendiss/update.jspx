@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS" modelAttribute="VAHTKOND_INTSIDENDIS" path="/vahtkond_intsidendiss" versionField="Version" z="ASjrp+OLv8r1Jk7xBU5MuQ6Ca3M=">
-        <field:input field="vahtkond_intsidendis_ID" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_vahtkond_intsidendis_ID" required="true" validationMessageCode="field_invalid_integer" z="ITU3mv6WLUJjlhWwuM20q5HZ96A="/>
         <field:datetime dateTimePattern="${VAHTKOND_INTSIDENDIS_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_alates" required="true" z="AAy1NXbCSOp62y7tc8Al1uVWGwk="/>
         <field:datetime dateTimePattern="${VAHTKOND_INTSIDENDIS_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kuni" required="true" z="hHUIqtREG4N63ihDE9GDF3j2znE="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kirjeldus" required="true" z="mJuOS6wNmvffhjVx5IbLIDGJOhA="/>

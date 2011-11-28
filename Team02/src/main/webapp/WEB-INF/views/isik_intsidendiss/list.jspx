@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_ISIK_INTSIDENDIS" items="${isik_intsidendiss}" z="8tf+pWo4cVT1EH896s54z4CTXJs=">
         <table:table data="${isik_intsidendiss}" id="l_ee_itcollege_team02_entities_ISIK_INTSIDENDIS" path="/isik_intsidendiss" z="cqDMY7LvR2nbZSqBTZOhc7CvU2E=">
-            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_isik_intsidendis_ID" property="isik_intsidendis_ID" z="2CfFa/0p2BtjC3Ko0L3XbtRss5c="/>
             <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_piiririkkuja" property="piiririkkuja" z="mxH1qPZO/yAP7SnEb6oXsZPkkTo="/>
             <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_alates_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_alates" property="alates" z="uh6zWma+ss7xuIBwr3PuOCmoKoc="/>
             <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_kuni_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kuni" property="kuni" z="pXDaG8NUNwGOL9uKesxAwGBAG1M="/>
             <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kirjeldus" property="kirjeldus" z="v8nfQa585wiyeMdMq+MSQ+tCJ2Y="/>
             <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_intsident" property="intsident" z="Rw3fKcYvlwctQUjMTru7bUSlCr0="/>
+            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kommentaar" property="kommentaar" z="mYBIHXjwt4pTn0s9Oh4pfvpXYLA="/>
         </table:table>
     </page:list>
 </div>

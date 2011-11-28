@@ -6,20 +6,11 @@ package ee.itcollege.team02.entities;
 import ee.itcollege.team02.entities.INTSIDENT;
 import ee.itcollege.team02.entities.ISIKU_SEADUS_INTSIDENDIS;
 import ee.itcollege.team02.entities.PIIRIRIKKUJA;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect ISIK_INTSIDENDIS_Roo_JavaBean {
-    
-    public Integer ISIK_INTSIDENDIS.getIsik_intsidendis_ID() {
-        return this.isik_intsidendis_ID;
-    }
-    
-    public void ISIK_INTSIDENDIS.setIsik_intsidendis_ID(Integer isik_intsidendis_ID) {
-        this.isik_intsidendis_ID = isik_intsidendis_ID;
-    }
     
     public PIIRIRIKKUJA ISIK_INTSIDENDIS.getPiiririkkuja() {
         return this.piiririkkuja;

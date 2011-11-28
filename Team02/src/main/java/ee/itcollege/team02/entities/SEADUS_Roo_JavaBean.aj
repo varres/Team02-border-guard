@@ -4,20 +4,11 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.SEADUSE_PUNKT;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect SEADUS_Roo_JavaBean {
-    
-    public Integer SEADUS.getSeadus_ID() {
-        return this.seadus_ID;
-    }
-    
-    public void SEADUS.setSeadus_ID(Integer seadus_ID) {
-        this.seadus_ID = seadus_ID;
-    }
     
     public String SEADUS.getKood() {
         return this.kood;

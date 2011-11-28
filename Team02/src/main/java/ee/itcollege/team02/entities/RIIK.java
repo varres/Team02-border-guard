@@ -57,9 +57,6 @@ public class RIIK {
     @DateTimeFormat(style = "M-")
     private Date suletud;
 
-    @NotNull
-    private Integer RIIK_ID;
-
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "riik")
     private Set<KODAKONDSUS> KODAKONDSUSs = new HashSet<KODAKONDSUS>();
 }

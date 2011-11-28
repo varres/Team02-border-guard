@@ -12,6 +12,5 @@
         <field:display date="true" dateTimePattern="${RIIK_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_RIIK_muudetud" object="${riik}" z="xKxxcKGc+O6L8zvfigk/zqwvyXM="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_RIIK_sulgeja" object="${riik}" z="wjfV9LydYfTuB9/Pma/VvBIOFHg="/>
         <field:display date="true" dateTimePattern="${RIIK_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_RIIK_suletud" object="${riik}" z="s4B/iVtXTJ4bLX5KOhk+tCeUqJc="/>
-        <field:display field="RIIK_ID" id="s_ee_itcollege_team02_entities_RIIK_RIIK_ID" object="${riik}" z="bp/BbCDuBCcd6oMrrDRwerCD4kA="/>
     </page:show>
 </div>

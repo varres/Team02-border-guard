@@ -6,20 +6,11 @@ package ee.itcollege.team02.entities;
 import ee.itcollege.team02.entities.ISIKU_SEADUS_INTSIDENDIS;
 import ee.itcollege.team02.entities.SEADUS;
 import ee.itcollege.team02.entities.SEADUSE_PUNKT;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
 
 privileged aspect SEADUSE_PUNKT_Roo_JavaBean {
-    
-    public Integer SEADUSE_PUNKT.getSeaduse_punkt_ID() {
-        return this.seaduse_punkt_ID;
-    }
-    
-    public void SEADUSE_PUNKT.setSeaduse_punkt_ID(Integer seaduse_punkt_ID) {
-        this.seaduse_punkt_ID = seaduse_punkt_ID;
-    }
     
     public SEADUS SEADUSE_PUNKT.getSeadus() {
         return this.seadus;

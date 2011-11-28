@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_team02_entities_PIIRILOIK" modelAttribute="PIIRILOIK" path="/piiriloiks" render="${empty dependencies}" z="mA4INMI/TvtzmhOUYy225T15w1A=">
-        <field:input field="piiriloik_ID" id="c_ee_itcollege_team02_entities_PIIRILOIK_piiriloik_ID" required="true" validationMessageCode="field_invalid_integer" z="m+mp0kPJqAl/ZV3B7rglv7Kvj1Y="/>
         <field:input field="kood" id="c_ee_itcollege_team02_entities_PIIRILOIK_kood" max="20" required="true" z="/N43ckw41fvjqMnLJH4x0PMeXhc="/>
         <field:textarea field="nimetus" id="c_ee_itcollege_team02_entities_PIIRILOIK_nimetus" required="true" z="VQt/2c4rKJuq1JE0Dze5XmoEhRc="/>
         <field:input field="GPS_koordinaadid" id="c_ee_itcollege_team02_entities_PIIRILOIK_GPS_koordinaadid" required="true" z="JRlX9IYvX7IijUOVDEkZ1XhXY1c="/>
