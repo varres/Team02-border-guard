@@ -18,6 +18,8 @@ public class RikkumisteRaportController {
 
     @RequestMapping(method = RequestMethod.POST, value = "{id}")
     public void post(@PathVariable Long id, ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) {
+    	
+    	// String kood = request.getParameter("kood")==null ? "" : request.getParameter("kood");
     }
 
     @RequestMapping
