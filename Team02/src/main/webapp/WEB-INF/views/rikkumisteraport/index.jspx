@@ -10,7 +10,15 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
     <h3>Rikkumiste raport</h3>
     
-    <form action='http://localhost:8080/Team02/rikkumisteraport/index' method='POST'>
+    <script type="text/javascript">
+		Spring.addDecoration(new Spring.ValidateAllDecoration({
+		elementId:'proceed',
+		event:'onclick'}));
+	</script>
+	
+	<input type="submit" value="Tekita andmed" />
+	
+    <form action="" id='proceed' method='POST'>
     <table>
       <tr>
         <td>Alates </td>
@@ -18,69 +26,96 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
         <td>Piirilõik </td>
       </tr>
       <tr>
-        <td><input id="startDate" type="text" name="startDate"/>
+      			
+				<td colspan='0.5'><input id="startDate" type="text" name="startDate" />
      				<script type="text/javascript">
-     				Spring.addDecoration(new Spring.ElementDecoration({
-         			elementId  : 'startDate',
-         			widgetType : 'dijit.form.DateTextBox'}));
+	     				Spring.addDecoration(new Spring.ElementDecoration({
+	         			elementId  : 'startDate',
+	         			widgetType : 'dijit.form.DateTextBox',
+	         			widgetAttrs : {promptMessage: "Sisesta algus", required : true}}));
   					</script>
-  		</td>
-  			 <td><input id="endDate" type="text" name="endDate" />
-     				<script type="text/javascript">
-     				Spring.addDecoration(new Spring.ElementDecoration({
-         			elementId  : 'endDate',
-         			widgetType : 'dijit.form.DateTextBox'}));
-  					</script>
-  		</td>
-        		<td colspan='2'><select name="piiriloik">
+  				</td>
+  					
+       
+		  		
+				<td colspan='0.5'><input id="endDate" type="text" name="endDate" />
+		     				<script type="text/javascript">
+			     				Spring.addDecoration(new Spring.ElementDecoration({
+			         			elementId  : 'endDate',
+			         			widgetType : 'dijit.form.DateTextBox',
+			         			widgetAttrs : {promptMessage: "Sisesta lõpp", required : true}}));
+		  					</script>
+		  		</td>
+        	
+					<td colspan='0.5'><select id='piiriloik' name="piiriloik">
 					        <c:forEach items="${piiriloigud}" var="p">
-					        <option>${p.nimetus}</option>	  
+					        <option value="${p.id}">${p.nimetus}</option>	  
      						</c:forEach>
-					</select></td>                
+					</select></td>
+					<script type="text/javascript">
+					Spring.addDecoration(new Spring.ElementDecoration({
+ 					elementId : 'piiriloik',
+ 					widgetType : 'dijit.form.ComboBox',
+ 					widgetAttrs : {promptMessage: "Vali piirilõik", required : true}}));
+					</script>               
         <td><input type="submit" value="Värskenda" /></td>
       </tr>
     </table>
   </form>
   
-    <table border="1">
-      <tr>
-        <th>Piiriseadus</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Põder läks üle piiri</td>
-        <td><input type="submit" name="vaata_ps_1" value="Vaata" /></td>
-      </tr>
-      <tr>
-        <td>...</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Intsidentide arv kokku - 56</td>
-        <td></td>
-      </tr>
-    </table>
-  
-  <br />
-  
-    <table>
-      <tr>
-        <th>Relvaseadus</th>
-        <th></th>
-      </tr>
-      <tr>
-        <td>Karu lasi jalga</td>
-        <td><input type="submit" name="vaata_rs_1" value="Vaata" /></td>
-      </tr>
-      <tr>
-        <td>...</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Intsidentide arv kokku - 100</td>
-        <td></td>
-      </tr>
-    </table>
-    
+     <c:forEach items="${seadus}" var="p">
+   
+					        
+			<table border="1">
+		      <tr>
+		        <th>${p.nimetus}</th>
+		        <th></th>
+		      </tr>
+		      		     
+		      
+		      <c:forEach items="${intsident}" var="intsi">
+		      
+		      
+  					
+  					<!-- 
+  					
+  					 
+  					 if (date > algus && date < lõpp) 
+  					
+  					 -->
+				
+				
+				
+					
+  					
+  					<!--
+				
+		      		 <c:if ${intsi.PIIRLOIK} ="">
+		      	
+				      	<tr>
+					        <td>${intsi.nimetus}</td>
+					        			        
+					        <td><input type="submit" name="${intsi.id}" value="Vaata" /></td>
+					      
+					      </tr>
+		      		 
+		      		 </c:if>
+		      	
+		      		-->
+					
+		      	
+			     
+			      
+		      </c:forEach>
+		      
+		      <tr>
+		        <td>Intsidentide arv kokku - ??</td>
+		        <td></td>
+		      </tr>
+		    </table>
+		    	  
+     		 <br />
+     </c:forEach>
+ 
   </util:panel>
 </div>
