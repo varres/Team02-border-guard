@@ -31,7 +31,7 @@
             <menu:item id="i_kodakondsus_new" messageCode="global_menu_new" url="/kodakondsus?form" z="u76rrIGxYtz1irk3eDw1RE/n+28="/>
             <menu:item id="i_kodakondsus_list" messageCode="global_menu_list" url="/kodakondsus?page=1&amp;size=${empty param.size ? 10 : param.size}" z="XVxtfy/+DNf3Kc/zcajORxb4IlE="/>
         </menu:category>
-        <menu:category id="c_piiririkkuja" render="false" z="user-managed">
+        <menu:category id="c_piiririkkuja" render="true" z="user-managed">
             <menu:item id="i_piiririkkuja_new" messageCode="global_menu_new" url="/piiririkkujas?form" z="SCaVFfGzCq9PMaYCiefQM+0Hir8="/>
             <menu:item id="i_piiririkkuja_list" messageCode="global_menu_list" url="/piiririkkujas?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZtbTlYCoTxzaDW+jM5SusvFZgK8="/>
         </menu:category>
@@ -72,6 +72,7 @@
             <menu:item id="i_controller__rikkumisteraportindex_id" messageCode="global_generic" url="/rikkumisteraport/index" z="6XEZw4SftHEWXRlXxLIVpWfbuGI="/>
             <menu:item id="i_controller__intsidendiredaktorindex_id" messageCode="global_generic" url="/intsidendiredaktor/index" z="5VJK0hESperNp/QF4ltcYYYJFUU="/>
             <menu:item id="i_controller__intsidendigaseotudisikudetailideredaktorindex_id" messageCode="global_generic" url="/intsidendigaseotudisikudetailideredaktor/index" z="zFV5QtrdgUs6lj7KIDlvMLJFKqI="/>
+            <menu:item id="i_controller__piiririkkujalisamineindex_id" messageCode="global_generic" url="/piiririkkujalisamine/index" z="WCJfUMCCMoKkR4KyMKH6lMHwcOs="/>
         </menu:category>
     </menu:menu>
 </div>

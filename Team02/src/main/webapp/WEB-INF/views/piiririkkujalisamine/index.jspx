@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <jsp:output omit-xml-declaration="yes"/>
+  <spring:message code="label_piiririkkujalisamine_index" htmlEscape="false" var="title"/>
+  <util:panel id="title" title="${title}">
+    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+    <h3>Piiririkkuja lisamine</h3>
+    <form action="" id='proceed' method='POST'>
+		<script type="text/javascript">
+		Spring.addDecoration(new Spring.ValidateAllDecoration({
+		elementId:'proceed',
+		event:'onclick'}));
+		</script>
+			<table>
+				<tr>
+					<td>Isikukood</td>
+					<td><input type='text' id='isikukood' name='isikukood' />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'isikukood', 
+						widgetType : 'dijit.form.ValidationTextBox', 
+						widgetAttrs : {promptMessage: "Sisesta isikukood", required : true}})); 
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Eesnimi</td>
+					<td><input type='text' id='eesnimi' name='eesnimi' />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'eesnimi', 
+						widgetType : 'dijit.form.ValidationTextBox', 
+						widgetAttrs : {promptMessage: "Sisesta eesnimi", required : true}})); 
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Perenimi</td>
+					<td><input type='text' id='perenimi' name='perenimi' />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'perenimi', 
+						widgetType : 'dijit.form.ValidationTextBox', 
+						widgetAttrs : {promptMessage: "Sisesta perenimi", required : true}})); 
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Sugu</td>
+					<td><input type='text' id='sugu' name='sugu' />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'sugu', 
+						widgetType : 'dijit.form.ValidationTextBox', 
+						widgetAttrs : {promptMessage: "Sisesta sugu", required : true}})); 
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Sünniaeg</td>
+					<td><input id="synniaeg" type="text" name="synniaeg" />
+     				<script type="text/javascript">
+     				Spring.addDecoration(new Spring.ElementDecoration({
+         			elementId  : 'synniaeg',
+         			widgetType : 'dijit.form.DateTextBox',
+         			widgetAttrs : {promptMessage: "Sisesta sünniaeg", required : true}}));
+  					</script></td>
+				</tr>
+				<tr>
+					<td>Objekt</td>
+					<td><select id='objekt' name='objekt'>
+						<c:forEach items="${objektid}" var="o">
+					       <option value="${o.id}">${o.nimetus}</option>	  
+     					</c:forEach>
+						</select>
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+ 						elementId : 'objekt',
+ 						widgetType : 'dijit.form.ComboBox',
+ 						widgetAttrs : {promptMessage: "Vali objekt", required : true}}));
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Kommentaar</td>
+					<td><textarea cols='20' rows='3' title='kommentaar' name='kommentaar' ><jsp:text/></textarea></td>
+				</tr>
+				<tr>
+					<td>Avaja</td>
+					<td><input type='text' id='avaja' name='avaja' />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'avaja', 
+						widgetType : 'dijit.form.ValidationTextBox', 
+						widgetAttrs : {promptMessage: "Sisesta avaja", required : true}})); 
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Avatud</td>
+					<td><input id='avatud' type='text' name='avatud' />
+     				<script type="text/javascript">
+     				Spring.addDecoration(new Spring.ElementDecoration({
+         			elementId  : 'avatud',
+         			widgetType : 'dijit.form.DateTextBox',
+         			widgetAttrs : {promptMessage: "Sisesta avatud", required : true}}));
+  					</script></td>
+				</tr>
+				<tr>
+					<td>Muutja</td>
+					<td><input type='text' id='muutja' name='muutja' />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'muutja', 
+						widgetType : 'dijit.form.ValidationTextBox', 
+						widgetAttrs : {promptMessage: "Sisesta muutja", required : true}})); 
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Muudetud</td>
+					<td><input id='muudetud' type='text' name='muudetud' />
+     				<script type="text/javascript">
+     				Spring.addDecoration(new Spring.ElementDecoration({
+         			elementId  : 'muudetud',
+         			widgetType : 'dijit.form.DateTextBox',
+         			widgetAttrs : {promptMessage: "Sisesta muudetud", required : true}}));
+  					</script></td>
+				</tr>
+				<tr>
+					<td>Sulgeja</td>
+					<td><input type='text' id='sulgeja' name='sulgeja' />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'sulgeja', 
+						widgetType : 'dijit.form.ValidationTextBox', 
+						widgetAttrs : {promptMessage: "Sisesta sulgeja", required : true}})); 
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>Suletud</td>
+					<td><input id='suletud' type='text' name='suletud' />
+     				<script type="text/javascript">
+     				Spring.addDecoration(new Spring.ElementDecoration({
+         			elementId  : 'suletud',
+         			widgetType : 'dijit.form.DateTextBox',
+         			widgetAttrs : {promptMessage: "Sisesta suletud", required : true}}));
+  					</script></td>
+				</tr>
+				<tr>
+					<td>Kodakondsus</td>
+					<td>TODO</td>
+				</tr>
+				<tr><td><input type="hidden" name="id" value="${id}" /></td></tr>
+				<tr>
+					<td colspan='2'><input type='submit' name='Lisa' value='Lisa' /></td>
+				</tr>
+			</table>
+			
+	</form>
+  </util:panel>
+</div>
