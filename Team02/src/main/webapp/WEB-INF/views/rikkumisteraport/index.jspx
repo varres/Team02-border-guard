@@ -76,6 +76,12 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
 		      <c:forEach items="${intsident}" var="intsi">
 		      
 		      
+		      			<tr>
+					        <td>${intsi.nimetus}</td>
+					        			        
+					        <td><input type="submit" name="${intsi.id}" value="Vaata" /></td>
+					      
+					      </tr>
   					
   					<!-- 
   					
@@ -92,12 +98,7 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
 				
 		      		 <c:if ${intsi.PIIRLOIK} ="">
 		      	
-				      	<tr>
-					        <td>${intsi.nimetus}</td>
-					        			        
-					        <td><input type="submit" name="${intsi.id}" value="Vaata" /></td>
-					      
-					      </tr>
+				      
 		      		 
 		      		 </c:if>
 		      	
