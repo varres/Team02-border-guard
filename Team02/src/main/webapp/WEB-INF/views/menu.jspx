@@ -72,6 +72,9 @@
             <menu:item id="i_controller__rikkumisteraportindex_id" messageCode="global_generic" url="/rikkumisteraport/index" z="6XEZw4SftHEWXRlXxLIVpWfbuGI="/>
             <menu:item id="i_controller__intsidendiredaktorindex_id" messageCode="global_generic" url="/intsidendiredaktor/index" z="5VJK0hESperNp/QF4ltcYYYJFUU="/>
             <menu:item id="i_controller__intsidendigaseotudisikudetailideredaktorindex_id" messageCode="global_generic" url="/intsidendigaseotudisikudetailideredaktor/index" z="zFV5QtrdgUs6lj7KIDlvMLJFKqI="/>
+            <menu:item id="i_controller__isikuandmedindex_id" messageCode="global_generic" url="/isikuandmed/index" z="Pja9KbRvX4vks49nz/eU7W5By70="/>
+            <menu:item id="i_controller__lisaseadusindex_id" messageCode="global_generic" url="/lisaseadus/index" z="OJfPOLWU43vFjxDvhgii8kZN8tA="/>
+            <menu:item id="i_controller__muudaseadustindex_id" messageCode="global_generic" url="/muudaseadust/index" z="sPfe4hT4Om5Pborh1GKDrMeYuZ0="/>
         </menu:category>
     </menu:menu>
 </div>
