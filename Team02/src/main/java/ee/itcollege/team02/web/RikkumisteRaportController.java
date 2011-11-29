@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashSet;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,10 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import ee.itcollege.team02.entities.INTSIDENDI_LIIK;
-import ee.itcollege.team02.entities.INTSIDENT;
-import ee.itcollege.team02.entities.PIIRILOIK;
-import ee.itcollege.team02.entities.PIIRIRIKKUJA;
+import ee.itcollege.team02.entities.*;
 
 @RequestMapping("/rikkumisteraport/**")
 @Controller
@@ -64,7 +62,6 @@ public class RikkumisteRaportController {
     	uusINTSIDENDI_LIIK.setSulgeja("test3");
     	uusINTSIDENDI_LIIK.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
     	
-    	uusINTSIDENDI_LIIK.setId((long) 1);
     	
     	// uusINTSIDENDI_LIIK.setINTSIDENTs(INTSIDENTs);
     	uusINTSIDENDI_LIIK.setKommentaar("Mittedeklareeritud reisijate/ainete üleveo üritus");
@@ -84,7 +81,6 @@ public class RikkumisteRaportController {
     	
        	uusINTSIDENDI_LIIK2.setSulgeja("test3");
     	uusINTSIDENDI_LIIK2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-    	uusINTSIDENDI_LIIK2.setId((long) 2);
     	
     	// uusINTSIDENDI_LIIK.setINTSIDENTs(INTSIDENTs);
     	uusINTSIDENDI_LIIK2.setKommentaar("piirivalve ründamine relvaga/relvata");
@@ -92,25 +88,99 @@ public class RikkumisteRaportController {
     	uusINTSIDENDI_LIIK2.setNimetus("Rünnak");
     	///2 END
     	
+    	/// 3 START
+    	RIIK uusRIIK = new RIIK();
     	
-    	///3 START
+    	uusRIIK.setAvaja("Merli Maja");
+    	uusRIIK.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+    	
+    	uusRIIK.setMuutja("test2");
+    	uusRIIK.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusRIIK.setSulgeja("test3");
+    	uusRIIK.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	uusRIIK.setISO_kood("ISO-8859-5");
+    	uusRIIK.setANSI_kood("IBM855");
+    	/// 3 END
+    	
+    	
+    	/// 4 START
+    	RIIK uusRIIK1 = new RIIK();
+    	
+    	uusRIIK1.setAvaja("Marli Kaja");
+    	uusRIIK1.setAvatud(new GregorianCalendar(2006, 04, 05, 00, 00).getTime());
+    	
+    	uusRIIK1.setMuutja("test2");
+    	uusRIIK1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusRIIK1.setSulgeja("test3");
+    	uusRIIK1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	uusRIIK1.setISO_kood("ISO 3166-2");
+    	uusRIIK1.setANSI_kood("IA5 Swedish");
+    	/// 4 END
+    	
+    	
+
+    	/// 5 START  	
+    	OBJEKT uusOBJEKT = new OBJEKT();
+    	
+    	uusOBJEKT.setAvaja("Merli Maja");
+    	uusOBJEKT.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+    	
+    	uusOBJEKT.setMuutja("test2");
+    	uusOBJEKT.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusOBJEKT.setSulgeja("test3");
+    	uusOBJEKT.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusOBJEKT.setNimetus("Küün");
+    	/// 5 END
+    	
+    	
+    	///6 START
     	PIIRIRIKKUJA uusPIIRIRIKKUJA = new PIIRIRIKKUJA();
     	
     	uusPIIRIRIKKUJA.setAvaja("Merli Maja");
     	uusPIIRIRIKKUJA.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
     	
-    	uusINTSIDENDI_LIIK.setMuutja("test2");
-    	uusINTSIDENDI_LIIK.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	uusPIIRIRIKKUJA.setMuutja("test2");
+    	uusPIIRIRIKKUJA.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
     	
-    	uusINTSIDENDI_LIIK.setSulgeja("test3");
-    	uusINTSIDENDI_LIIK.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	uusPIIRIRIKKUJA.setSulgeja("test3");
+    	uusPIIRIRIKKUJA.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
     	
-    	uusPIIRIRIKKUJA.setId((long) 1);
-    	uusPIIRIRIKKUJA.setEesnimi("Karu");
-    	///3 END
+    	uusPIIRIRIKKUJA.setEesnimi("Fedja");
+    	uusPIIRIRIKKUJA.setObjekt(uusOBJEKT);
+    	uusPIIRIRIKKUJA.setPerek_nimi("Kuzmin");
+    	uusPIIRIRIKKUJA.setSugu("M");
+    	uusPIIRIRIKKUJA.setIsikukood("M327232372");
+    	uusPIIRIRIKKUJA.setSynniaeg(new GregorianCalendar(1926, 04, 05, 00, 00).getTime());
+    	// uusPIIRIRIKKUJA.setIsikukood("Puurist 1A");
+    	///6 END
+    	
+
+    	/// 7 START
+    	KODAKONDSUS uusKODAKONDSUS = new KODAKONDSUS ();
+    	
+    	uusKODAKONDSUS.setAvaja("Kaido Muru");
+    	uusKODAKONDSUS.setAvatud(new GregorianCalendar(2002, 04, 07, 00, 00).getTime());
+    	
+    	uusKODAKONDSUS.setMuutja("test2");
+    	uusKODAKONDSUS.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+       	uusKODAKONDSUS.setSulgeja("test3");
+    	uusKODAKONDSUS.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusKODAKONDSUS.setPiiririkkuja(uusPIIRIRIKKUJA);
+    	uusKODAKONDSUS.setIsikukood("327232372");
+    	
+    	uusKODAKONDSUS.setAlates(new GregorianCalendar(1950, 01, 01, 00, 00).getTime());
+    	uusKODAKONDSUS.setKuni(new GregorianCalendar(2020, 01, 01, 00, 00).getTime());
+    	uusKODAKONDSUS.setRiik(uusRIIK1);
+    	/// 7 END
     	
     	
-    	///4 START
+    	///8 START
     	PIIRILOIK uusPIIRILOIK1 = new PIIRILOIK();
     	
     	uusPIIRILOIK1.setAvaja("Margus Mets"); 
@@ -121,16 +191,17 @@ public class RikkumisteRaportController {
     	
     	uusPIIRILOIK1.setSulgeja("test3");
     	uusPIIRILOIK1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-    	
-    	
-    	uusPIIRILOIK1.setId((long) 1);
+    	   	
+    	uusPIIRILOIK1.setNimetus("Narva Raba");
     	uusPIIRILOIK1.setGPS_koordinaadid("37 long 47 lat");
-    	// uusPIIRILOIK1.setINTSIDENTs(INTSIDENTs)
+    	uusPIIRILOIK1.setKommentaar("Suur soo ja raba");
+    	// uusPIIRILOIK1.setINTSIDENTs(new HashSet<INTSIDENT>());
     	uusPIIRILOIK1.setKood("Narva 1A");
-    	///4 END
+
+    	///8 END
     	
     	
-    	///5 START
+    	///9 START
     	INTSIDENT newIntsident1 = new INTSIDENT();
     	
     	newIntsident1.setAvaja("Kaido Kivi"); 
@@ -158,7 +229,7 @@ public class RikkumisteRaportController {
     	newIntsident1.setKirjeldus("Kohutav oli");
     	newIntsident1.setKommentaar("Polnudki võibolla põder");;
     	
-    	///5 END
+    	///9 END
     	
     	
     	
@@ -166,7 +237,11 @@ public class RikkumisteRaportController {
     	uusINTSIDENDI_LIIK.persist();
     	uusINTSIDENDI_LIIK2.persist();
     	uusPIIRILOIK1.persist();   	
-    	uusPIIRIRIKKUJA.persist();   	
+    	uusRIIK.persist();
+    	uusRIIK1.persist();
+    	uusOBJEKT.persist();
+    	uusPIIRIRIKKUJA.persist();
+    	uusKODAKONDSUS.persist();
     	newIntsident1.persist();
     	
     	
@@ -175,7 +250,7 @@ public class RikkumisteRaportController {
 
     @RequestMapping
     public String index() {
-    	
+    	addAndmed();
         return "rikkumisteraport/index";
     }
 }
