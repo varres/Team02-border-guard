@@ -42,7 +42,9 @@ public class IsikuAndmedController {
     	Date synd = null;
 		try {
 			synd = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("startDate")==null ? "" : request.getParameter("startDate"));
-		}catch(Exception e){}
+		}catch(Exception e){
+			synd = new Date();
+		}
 		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
     	
 		ISIK_INTSIDENDIS isik = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
@@ -55,7 +57,7 @@ public class IsikuAndmedController {
     	rikkuja.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
     	rikkuja.merge();
     	
-    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?id=" + id;
+    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?modify=" + id;
     }
 
     @RequestMapping(params = "id", method = RequestMethod.GET)

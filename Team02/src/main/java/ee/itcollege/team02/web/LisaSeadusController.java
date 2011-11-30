@@ -43,7 +43,6 @@ public class LisaSeadusController {
 		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
 		Long seadus_ID = Long.parseLong(request.getParameter("seadus")==null ? "0" : request.getParameter("seadus"));
     	
-		ISIK_INTSIDENDIS isik = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
 		ISIKU_SEADUS_INTSIDENDIS uusSeadus = new ISIKU_SEADUS_INTSIDENDIS();
 		uusSeadus.setKirjeldus(kirjeldus);
 		uusSeadus.setKommentaar(kommentaar);
@@ -60,7 +59,7 @@ public class LisaSeadusController {
 		uusSeadus.persist();
 		
     	
-    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?id=" + id;
+    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?modify=" + id;
     }
     
     

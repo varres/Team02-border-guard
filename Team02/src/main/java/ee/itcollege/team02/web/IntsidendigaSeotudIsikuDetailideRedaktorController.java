@@ -35,7 +35,15 @@ public class IntsidendigaSeotudIsikuDetailideRedaktorController {
     @RequestMapping(method = RequestMethod.POST)
     public String post(ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) 
     {
-        return null;
+		String kirjeldus = request.getParameter("kirjeldus")==null ? "" : request.getParameter("kirjeldus");
+		String kommentaar = request.getParameter("kommentaar")==null ? "" : request.getParameter("kommentaar");
+		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
+		ISIK_INTSIDENDIS isiku_intsident = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
+		isiku_intsident.setKirjeldus(kirjeldus);
+		isiku_intsident.setKommentaar(kommentaar);
+		isiku_intsident.merge();
+		
+		return "redirect:/intsidendiredaktor/index?id=" + isiku_intsident.getIntsident().getId();		
     }
     
     @RequestMapping(params = "delete",method = RequestMethod.GET)
