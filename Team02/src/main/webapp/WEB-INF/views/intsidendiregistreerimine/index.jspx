@@ -28,12 +28,12 @@
 					        <option value="${l.id}">${l.nimetus}</option>	  
      						</c:forEach>
 					</select></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
- 					elementId : 'liik',
- 					widgetType : 'dijit.form.ComboBox',
- 					widgetAttrs : {promptMessage: "Vali liik", required : true}}));
-					</script>
+<!-- 					<script type="text/javascript">
+// 					Spring.addDecoration(new Spring.ElementDecoration({
+//  					elementId : 'liik',
+//  					widgetType : 'dijit.form.ComboBox',
+//  					widgetAttrs : {promptMessage: "Vali liik", required : true}}));
+ 					</script> -->
 					<td>Kirjeldus</td>
 				</tr>
 				<tr>
@@ -56,12 +56,12 @@
 					        <option value="${p.id}">${p.nimetus}</option>	  
      						</c:forEach>
 					</select></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
- 					elementId : 'piiriloik',
- 					widgetType : 'dijit.form.ComboBox',
- 					widgetAttrs : {promptMessage: "Vali piirilõik", required : true}}));
-					</script>
+<!-- 					<script type="text/javascript">
+// 					Spring.addDecoration(new Spring.ElementDecoration({
+//  					elementId : 'piiriloik',
+//  					widgetType : 'dijit.form.ComboBox',
+//  					widgetAttrs : {promptMessage: "Vali piirilõik", required : true}}));
+ 					</script> -->
 				</tr>
 				<tr>
 					<td>Koordinaadid</td>

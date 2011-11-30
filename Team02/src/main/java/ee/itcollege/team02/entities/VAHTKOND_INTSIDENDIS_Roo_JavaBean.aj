@@ -5,6 +5,7 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
 import ee.itcollege.team02.entities.PIIRIVALVUR_INTSIDENDIS;
+import ee.itcollege.team02.entities.VAHTKOND;
 import java.lang.String;
 import java.util.Date;
 import java.util.Set;
@@ -97,6 +98,14 @@ privileged aspect VAHTKOND_INTSIDENDIS_Roo_JavaBean {
     
     public void VAHTKOND_INTSIDENDIS.setIntsident(INTSIDENT intsident) {
         this.intsident = intsident;
+    }
+    
+    public VAHTKOND VAHTKOND_INTSIDENDIS.getVahtkond() {
+        return this.vahtkond;
+    }
+    
+    public void VAHTKOND_INTSIDENDIS.setVahtkond(VAHTKOND vahtkond) {
+        this.vahtkond = vahtkond;
     }
     
     public Set<PIIRIVALVUR_INTSIDENDIS> VAHTKOND_INTSIDENDIS.getPIIRIVALVUR_INTSIDENDISs() {

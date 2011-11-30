@@ -25,15 +25,15 @@
 					</tr>
 					<tr>
 						<td>Sugu</td>
-						<td>${sugu}<input style='float: right;' type='button' name='muuda_isiku_andmeid' value='Muuda' onClick="location.href='/isikuandmed/index?id=${id}'" /> </td>
+						<td>${sugu}<input style='float: right;' type='button' name='muuda_isiku_andmeid' value='Muuda' onClick="location.href='/Team02/isikuandmed/index?id=${id}'" /> </td>
 					</tr>					
 					<tr>
 						<td>Kodakondsused</td>
 						<td>
 							<table border='1' width='25' rules='rows' frame='box'>
 								<tr><th>Riik</th></tr>
-								<c:forEach items="${kodakons.riik}" var="r">
-									<tr><td>${r.ISO_kood}</td></tr>
+								<c:forEach items="${kodakons}" var="k">
+									<tr><td>${k.riik.ISO_kood}</td></tr>
 								</c:forEach>
 							</table>
 						</td>
@@ -42,9 +42,9 @@
 							<tr>
 								<th>Seadus</th>
 							</tr>
-							<c:forEach items="${isiku_seadus.seaduse_punkt}" var="s">
+							<c:forEach items="${isiku_seadus}" var="s">
 								<tr>
-							    	<td>${s.paragrahv}</td>
+							    	<td>${s.seaduse_punkt.paragrahv}</td>
 									<td><input style='float: right;' type='button' name='info_s1' value='Info' /></td>
 									<td><input style='float: right;' type='button' name='eemalda_s1' value='Eemalda' /></td>
 								</tr>
@@ -75,7 +75,7 @@
 						<textarea name='kommentaar' value="${isik_intsident.kommentaar}"  rows='4' cols='20'><jsp:text /></textarea>
 					</td>
 						<td style='vertical-align: bottom;'>
-							<input type='button' name='loobu' value='Loobu' style='float: right;' onClick="location.href='/intsidendiredaktor/index?id=${ints.id}' />
+							<input type='button' name='loobu' value='Loobu' style='float: right;' onClick="location.href='/Team02/intsidendiredaktor/index?id=${ints.id}'" />
 							<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
 					</td>
 				</tr>

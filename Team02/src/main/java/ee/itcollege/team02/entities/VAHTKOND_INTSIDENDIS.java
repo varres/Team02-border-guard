@@ -66,6 +66,9 @@ public class VAHTKOND_INTSIDENDIS {
 
     @ManyToOne
     private INTSIDENT intsident;
+    
+    @ManyToOne
+    private VAHTKOND vahtkond;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "vahtkond_intsidendis")
     private Set<PIIRIVALVUR_INTSIDENDIS> PIIRIVALVUR_INTSIDENDISs = new HashSet<PIIRIVALVUR_INTSIDENDIS>();

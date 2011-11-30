@@ -75,12 +75,12 @@
 					       <option value="${o.id}">${o.nimetus}</option>	  
      					</c:forEach>
 						</select>
-						<script type="text/javascript">
-						Spring.addDecoration(new Spring.ElementDecoration({
- 						elementId : 'objekt',
- 						widgetType : 'dijit.form.ComboBox',
- 						widgetAttrs : {promptMessage: "Vali objekt", required : true}}));
-						</script>
+<!-- 						<script type="text/javascript">
+// 						Spring.addDecoration(new Spring.ElementDecoration({
+//  						elementId : 'objekt',
+//  						widgetType : 'dijit.form.ComboBox',
+//  						widgetAttrs : {promptMessage: "Vali objekt", required : true}}));
+						</script> -->
 					</td>
 				</tr>
 				<tr>

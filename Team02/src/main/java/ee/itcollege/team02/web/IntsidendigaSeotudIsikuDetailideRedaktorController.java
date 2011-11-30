@@ -1,5 +1,6 @@
 package ee.itcollege.team02.web;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -37,30 +38,39 @@ public class IntsidendigaSeotudIsikuDetailideRedaktorController {
         return null;
     }
     
-    @RequestMapping(params = "id", method = RequestMethod.GET)
-    public void getIsikIntsident(@RequestParam("id") Long id, Model uiModel)
+    @RequestMapping(params = "delete",method = RequestMethod.GET)
+    public String deleteIsikIntsident(@RequestParam("delete") Long id, Model uiModel)
     {
-    	ISIK_INTSIDENDIS isiku_intsident = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
-    	INTSIDENT ints = isiku_intsident.getIntsident();
-    	PIIRIRIKKUJA piiririkkuja = isiku_intsident.getPiiririkkuja();
-    	String sugu = null;
-    	if(piiririkkuja.getSugu().equals("M")){
-    		sugu = "Mees";
-    	}else if(piiririkkuja.getSugu().equals("N")){
-    		sugu = "Naine";
-    	}
-    	Set<KODAKONDSUS> kodakons = piiririkkuja.getKODAKONDSUSs();
-    	
-    	Set<ISIKU_SEADUS_INTSIDENDIS> isiku_seadus = isiku_intsident.getISIKU_SEADUS_INTSIDENDISs();
-    	
-        uiModel.addAttribute("isik_intsident", isiku_intsident);
-        uiModel.addAttribute("piiririkkuja", piiririkkuja);
-        uiModel.addAttribute("id", id);
-        uiModel.addAttribute("kodakons", kodakons);
-        uiModel.addAttribute("sugu", sugu);
-        uiModel.addAttribute("isiku_seadus", isiku_seadus);
-        uiModel.addAttribute("ints", ints);
-
+    		ISIK_INTSIDENDIS isiku_intsident = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
+    		isiku_intsident.setSuletud(new Date());
+    		isiku_intsident.merge();
+    		
+    		return "redirect:/intsidendiredaktor/index?id=" + id;
+    }
+    
+    @RequestMapping(params = "modify",method = RequestMethod.GET)
+    public void getIsikIntsident(@RequestParam("modify") Long id, Model uiModel)
+    {
+	    	ISIK_INTSIDENDIS isiku_intsident = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
+	    	INTSIDENT ints = isiku_intsident.getIntsident();
+	    	PIIRIRIKKUJA piiririkkuja = isiku_intsident.getPiiririkkuja();
+	    	String sugu = null;
+	    	if(piiririkkuja.getSugu().equals("M")){
+	    		sugu = "Mees";
+	    	}else if(piiririkkuja.getSugu().equals("N")){
+	    		sugu = "Naine";
+	    	}
+	    	Set<KODAKONDSUS> kodakons = piiririkkuja.getKODAKONDSUSs();
+	    	
+	    	Set<ISIKU_SEADUS_INTSIDENDIS> isiku_seadus = isiku_intsident.getISIKU_SEADUS_INTSIDENDISs();
+	    	
+	        uiModel.addAttribute("isik_intsident", isiku_intsident);
+	        uiModel.addAttribute("piiririkkuja", piiririkkuja);
+	        uiModel.addAttribute("id", id);
+	        uiModel.addAttribute("kodakons", kodakons);
+	        uiModel.addAttribute("sugu", sugu);
+	        uiModel.addAttribute("isiku_seadus", isiku_seadus);
+	        uiModel.addAttribute("ints", ints);
     }
 
     @RequestMapping

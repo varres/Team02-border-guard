@@ -15,6 +15,7 @@
         <field:datetime dateTimePattern="${VAHTKOND_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_suletud" required="true" z="JTnSWqUkglpQC4rmhEae621UXVc="/>
         <field:select field="intsident" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_intsident" itemValue="id" items="${intsidents}" path="/intsidents" z="luO3qDVW+u8qItRyxeBB4nafnOU="/>
         <field:simple field="PIIRIVALVUR_INTSIDENDISs" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_PIIRIVALVUR_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ I N T S I D E N D I S" z="xi+Hp1CQp12/dvZIpXULN1+rzMk="/>
+        <field:select field="vahtkond" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_vahtkond" itemValue="id" items="${vahtkonds}" path="/vahtkonds" z="xmc+11NJN3qHqdPFMMeucc3HjCI="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS" render="${not empty dependencies}" z="WHo67P0nr/zvjoZKgB5I0owbxkQ="/>
 </div>

@@ -3,8 +3,10 @@
 
 package ee.itcollege.team02.entities;
 
+import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
 import java.lang.String;
 import java.util.Date;
+import java.util.Set;
 
 privileged aspect VAHTKOND_Roo_JavaBean {
     
@@ -94,6 +96,14 @@ privileged aspect VAHTKOND_Roo_JavaBean {
     
     public void VAHTKOND.setSuletud(Date suletud) {
         this.suletud = suletud;
+    }
+    
+    public Set<VAHTKOND_INTSIDENDIS> VAHTKOND.getVAHTKOND_INTSIDENDISs() {
+        return this.VAHTKOND_INTSIDENDISs;
+    }
+    
+    public void VAHTKOND.setVAHTKOND_INTSIDENDISs(Set<VAHTKOND_INTSIDENDIS> VAHTKOND_INTSIDENDISs) {
+        this.VAHTKOND_INTSIDENDISs = VAHTKOND_INTSIDENDISs;
     }
     
 }
