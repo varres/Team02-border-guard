@@ -49,13 +49,10 @@
 				</tr>
 				<tr>
 					<td>Sugu</td>
-					<td><input type='text' id='sugu' name='sugu' />
-						<script type="text/javascript">
-						Spring.addDecoration(new Spring.ElementDecoration({
-						elementId : 'sugu', 
-						widgetType : 'dijit.form.ValidationTextBox', 
-						widgetAttrs : {promptMessage: "Sisesta sugu", required : true}})); 
-						</script>
+					<td><select id='sugu' name='sugu'>
+						  <option value='M'>M</option>
+						  <option value='N'>N</option>
+						</select>
 					</td>
 				</tr>
 				<tr>
@@ -152,7 +149,22 @@
 				</tr>
 				<tr>
 					<td>Kodakondsus</td>
-					<td>TODO</td>
+					<td><input type="checkbox" name="riik" value="EST" id="est" />
+					    <label for="est">EST</label>
+					    <br />
+					    <input type="checkbox" name="riik" value="RUS" id="rus" />
+					    <label for="rus">RUS</label>
+					    <br />
+					    <c:forEach items="${riigid}" var="riik">
+					      <input type="checkbox" name="${riik.id}" value="${riik.ISO_kood}" />
+					    </c:forEach>
+					    <br />
+					    <select name="riik" >
+					    <c:forEach items="${riigid}" var="riik">
+					      <option value="${riik.id}">${riik.ISO_kood}</option>
+					    </c:forEach>
+					    </select>
+					</td>
 				</tr>
 				<tr><td><input type="hidden" name="id" value="${id}" /></td></tr>
 				<tr>

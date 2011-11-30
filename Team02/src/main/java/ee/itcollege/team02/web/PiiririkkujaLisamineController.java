@@ -24,6 +24,7 @@ import ee.itcollege.team02.entities.KODAKONDSUS;
 import ee.itcollege.team02.entities.OBJEKT;
 import ee.itcollege.team02.entities.PIIRILOIK;
 import ee.itcollege.team02.entities.PIIRIRIKKUJA;
+import ee.itcollege.team02.entities.RIIK;
 
 @RequestMapping("/piiririkkujalisamine/**")
 @Controller
@@ -108,11 +109,13 @@ public class PiiririkkujaLisamineController {
     public String index(Model uiModel) 
     {
     	List<OBJEKT> objektid = OBJEKT.findAllOBJEKTS();
-    	List<KODAKONDSUS> kodakondsused = KODAKONDSUS.findAllKODAKONDSUS();
-    	
+    	List<RIIK> riigid = RIIK.findAllRIIKS();
+    	// List<KODAKONDSUS> kodakondsused = KODAKONDSUS.findAllKODAKONDSUS();
     	
     	uiModel.addAttribute("objektid", objektid);
-    	uiModel.addAttribute("kodakondsused", kodakondsused);
+    	uiModel.addAttribute("riigid", riigid);
+    	// uiModel.addAttribute("kodakondsused", kodakondsused);
+    	
     	
         return "piiririkkujalisamine/index";
     }
