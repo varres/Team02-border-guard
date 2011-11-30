@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
+	xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
 	<spring:message code="label_intsidendigaseotudisikudetailideredaktor_index" htmlEscape="false" var="title" />
@@ -7,86 +11,76 @@
 		<spring:message code="application_name" htmlEscape="false" var="app_name" />
 		<h3>Intsidendiga seotud isiku detailide redaktor</h3>
 
-		<p>Intsident R100 - Narva - Karu lasi jalga</p>
-
-		<form action='' method='POST'>
+		<p>Intsident ${ints.kood} - ${ints.piiriloik.nimetus} - ${ints.nimetus}</p>		
 			<table>
-				<tr>
-					<td>Nimi</td>
-					<td>Karu, Mati</td>
-					<td rowspan='4'>
-						<table style='background-color: #dddddd'>
+			<tr>
+				<td>
+					<tr>
+						<td>Nimi</td>
+						<td>${piiririkkuja.perek_nimi}, ${piiririkkuja.eesnimi}</td>
+					</tr>
+					<tr>
+						<td>Sünniaeg</td>
+						<td>${piiririkkuja.synniaeg}</td>
+					</tr>
+					<tr>
+						<td>Sugu</td>
+						<td>${sugu}<input style='float: right;' type='button' name='muuda_isiku_andmeid' value='Muuda' onClick="location.href='/isikuandmed/index?id=${id}'" /> </td>
+					</tr>					
+					<tr>
+						<td>Kodakondsused</td>
+						<td>
+							<table border='1' width='25' rules='rows' frame='box'>
+								<tr><th>Riik</th></tr>
+								<c:forEach items="${kodakons.riik}" var="r">
+									<tr><td>${r.ISO_kood}</td></tr>
+								</c:forEach>
+							</table>
+						</td>
+						<td>
+		      			<table style='background-color: #dddddd'>
 							<tr>
 								<th>Seadus</th>
-								<th></th>
 							</tr>
-							<tr>
-								<td>Relvaseadus $21 lg6</td>
-								<td><input style='float: right;' type='submit' name='info_s1' value='Info' /></td>
-								<td><input style='float: right;' type='submit' name='eemalda_s1' value='Eemalda' /></td>
-							</tr>
-							<tr>
-								<td>Piiriseadus $254 lg1</td>
-								<td><input style='float: right;' type='submit' name='info_s2' value='Info' /></td>
-								<td><input style='float: right;' type='submit' name='eemalda_s2' value='Eemalda' /></td>
-							</tr>
-							<tr>
-								<td>...</td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<td colspan="3">
-									<input style="float: right;" type='submit' name='lisa_seadus' value='Lisa' />
-								</td>
-							</tr>
+							<c:forEach items="${isiku_seadus.seaduse_punkt}" var="s">
+								<tr>
+							    	<td>${s.paragrahv}</td>
+									<td><input style='float: right;' type='button' name='info_s1' value='Info' /></td>
+									<td><input style='float: right;' type='button' name='eemalda_s1' value='Eemalda' /></td>
+								</tr>
+							</c:forEach>
+								<tr>
+									<td colspan="3">
+										<input style="float: right;" type='button' name='lisa_seadus' value='Lisa' />
+									</td>
+							    </tr>
 						</table>
-					</td>
-				</tr>
-				<tr>
-					<td>Sünniaeg</td>
-					<td>12.10.1970</td>
-				</tr>
-				<tr>
-					<td>Sugu</td>
-					<td>Mees <input style='float: right;' type='submit' name='muuda_sugu' value='Muuda' /> </td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Kodakondsused</td>
-					<td>
-						<table border='1' width='25' rules='rows' frame='box'>
-							<tr>
-								<th>Riik</th>
-							</tr>
-							<tr>
-								<td>EST</td>
-							</tr>
-							<tr>
-								<td>RUS</td>
-							</tr>
-						</table>
-					</td>
-
-				</tr>
+		                 </td>
+				 </tr>
+           	  </td>
+              
+		</tr>
+		<tr>
+			<td>
 				<tr>
 					<td>Kirjeldus</td>
 					<td>
-						<textarea name='kirjeldus' rows='4' cols='20'><jsp:text /></textarea>
+						<textarea name='kirjeldus' value="${isik_intsident.kirjeldus}" rows='4' cols='20'><jsp:text /></textarea>
 					</td>
+					<td></td>
 				</tr>
 				<tr>
 					<td>Kommentaar</td>
 					<td>
-						<textarea name='kommentaar' rows='4' cols='20'><jsp:text /></textarea>
+						<textarea name='kommentaar' value="${isik_intsident.kommentaar}"  rows='4' cols='20'><jsp:text /></textarea>
 					</td>
-					<td style='vertical-align: bottom;'>
-						<input type='button' name='loobu' value='Loobu' style='float: right;' />
-						<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
+						<td style='vertical-align: bottom;'>
+							<input type='button' name='loobu' value='Loobu' style='float: right;' onClick="location.href='/intsidendiredaktor/index?id=${ints.id}' />
+							<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
 					</td>
 				</tr>
-			</table>
-		</form>
-
+			</td>
+		</tr>
+	</table>
 	</util:panel>
 </div>
