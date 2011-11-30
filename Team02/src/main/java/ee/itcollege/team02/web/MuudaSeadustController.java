@@ -48,20 +48,27 @@ public class MuudaSeadustController {
 		seadus.setKuni(kuni);
 		seadus.setIsik_intsidendis(ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id));
 		seadus.setSeaduse_punkt(SEADUSE_PUNKT.findSEADUSE_PUNKT(seadus_ID));
-		seadus.setAvaja("test");
-		seadus.setAvatud(new Date());
 		seadus.setMuutja("test2");
-		seadus.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-		seadus.setSulgeja("test3");
-		seadus.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-		seadus.persist();
+		seadus.setMuudetud(new Date());
+		seadus.merge();
 		
     	
-    	return "redirect:/intsidendigaseotudisikudetailideredaktor/modify?id=" + ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id).getId();
+    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?modify=" + ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id).getId();
+    }
+    
+    @RequestMapping(params = "delete",method = RequestMethod.GET)
+    public String deleteSeadus(@RequestParam("delete") Long id, Model uiModel)
+    {
+    		ISIKU_SEADUS_INTSIDENDIS seadus = ISIKU_SEADUS_INTSIDENDIS.findISIKU_SEADUS_INTSIDENDIS(id);
+    		Long intsidentID = seadus.getIsik_intsidendis().getId();
+    		seadus.setSuletud(new Date());
+    		seadus.merge();
+    		
+    		return "redirect:/intsidendigaseotudisikudetailideredaktor/index?modify=" + intsidentID;
     }
     
     @RequestMapping(params = "id", method = RequestMethod.GET)
-    public void InsertRule(@RequestParam("id") Long id, Model uiModel)
+    public void ShowRule(@RequestParam("id") Long id, Model uiModel)
     {
     	List<SEADUSE_PUNKT> seadus = SEADUSE_PUNKT.findAllSEADUSE_PUNKTs();
     	for (int i = seadus.size() - 1; i >= 0; i--) 
@@ -71,8 +78,11 @@ public class MuudaSeadustController {
     	    	seadus.remove(i); 
     	    }    	
     	} 
+    	
+    	ISIKU_SEADUS_INTSIDENDIS isk_seadus = ISIKU_SEADUS_INTSIDENDIS.findISIKU_SEADUS_INTSIDENDIS(id);
 
     	uiModel.addAttribute("seadus", seadus);
+    	uiModel.addAttribute("isk_seadus", isk_seadus);
     	uiModel.addAttribute("id", id);
     }
 

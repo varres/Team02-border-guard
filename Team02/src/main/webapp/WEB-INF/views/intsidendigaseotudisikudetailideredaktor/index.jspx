@@ -42,7 +42,7 @@
 							<tr>
 								<th>Seadus</th>
 							</tr>
-							<c:forEach items="${isiku_seadus}" var="s">
+							<c:forEach items="${seadused}" var="s">
 								<tr>
 							    	<td>${s.seaduse_punkt.paragrahv}</td>
 									<td><input style='float: right;' type='button' onClick="location.href='/Team02/muudaseadust/index?modify=${s.id}'" value='Info' /></td>
