@@ -149,14 +149,16 @@
 				</tr>
 				<tr>
 					<td>Kodakondsus</td>
-					<td><input type="checkbox" name="riik" value="EST" id="est" />
+					<td><!-- <input type="checkbox" name="riik" value="EST" id="est" />
 					    <label for="est">EST</label>
 					    <br />
 					    <input type="checkbox" name="riik" value="RUS" id="rus" />
 					    <label for="rus">RUS</label>
-					    <br />
+					    <br />  -->
 					    <c:forEach items="${riigid}" var="riik">
-					      <input type="checkbox" name="${riik.id}" value="${riik.ISO_kood}" />
+					      <input type="checkbox" name="${riik.id}" value="${riik.ISO_kood}" id="riik_${riik.id}" />
+					      <label for="riik_${riik.id}">${riik.ISO_kood}</label>
+					      <br />
 					    </c:forEach>
 					    <br />
 					    <select name="riik" >

@@ -65,9 +65,11 @@ public class IsikuAndmedController {
     {
     	ISIK_INTSIDENDIS isik = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
     	PIIRIRIKKUJA rikkuja = isik.getPiiririkkuja();
+    	Date synnipaev = rikkuja.getSynniaeg();
     	
     	uiModel.addAttribute("r", rikkuja);
     	uiModel.addAttribute("id", isik.getId());
+    	//uiModel.addAttribute("synniaeg", synnipaev);
     }
 
     @RequestMapping
