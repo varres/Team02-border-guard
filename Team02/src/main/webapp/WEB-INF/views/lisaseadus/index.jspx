@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+xmlns:c="http://java.sun.com/jsp/jstl/core"  version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
   <spring:message code="label_lisaseadus_index" htmlEscape="false" var="title"/>
@@ -14,19 +15,21 @@
 		</script>
 			<table>
 				<tr>
-					 <td colspan='2' rowspan='2'> 
-					  <textarea cols='30' rows='5' id='kirjeldus' title='kirjeldus' name='kirjeldus' ><jsp:text /></textarea>
+					<td>Kirjeldus</td>
+					 <td colspan='2' rowspan='1'> 
+					  <textarea cols='30' rows='2' id='kirjeldus' title='kirjeldus' name='kirjeldus' ><jsp:text /></textarea>
 					</td>
 				</tr>
 				<tr>
-					 <td colspan='2' rowspan='2'> 
-					  <textarea cols='30' rows='5' id='kommentaar' title='kommentaar' name='kommentaar' ><jsp:text /></textarea>
+					<td>Kommentaar</td>
+					 <td colspan='2' rowspan='1'> 
+					  <textarea cols='30' rows='2' id='kommentaar' title='kommentaar' name='kommentaar' ><jsp:text /></textarea>
 					</td>
 				</tr>
 				
 				<tr>
 					<td>Alates</td>
-					<td colspan='2'><input id="alates" type="text" name="alates"' /></td>
+					<td colspan='2'><input id="alates" type="text" name="alates" /></td>
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'alates',
@@ -36,7 +39,7 @@
 				</tr>
 				<tr>
 					<td>Kuni</td>
-					<td colspan='2'><input id="kuni" type="text" name="kuni"' /></td>
+					<td colspan='2'><input id="kuni" type="text" name="kuni" /></td>
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'kuni',
@@ -51,17 +54,17 @@
 					        <option value="${s.id}">${s.seadus.nimetus}-${s.paragrahv}-${s.pais}</option>	  
      						</c:forEach>
 					</select></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
- 					elementId : 'seadus',
- 					widgetType : 'dijit.form.ComboBox',
- 					widgetAttrs : {promptMessage: "Vali seadus", required : true}}));
-					</script>
+<!-- 					<script type="text/javascript">
+// 					Spring.addDecoration(new Spring.ElementDecoration({
+//  					elementId : 'seadus',
+//  					widgetType : 'dijit.form.ComboBox',
+//  					widgetAttrs : {promptMessage: "Vali seadus", required : true}}));
+					</script> -->
 				</tr>
 				<tr>
-				<td><input type="hidden" name="id" value="${id}" /><</td>
+				<td><input type="hidden" name="id" value="${id}" /></td>
 				<td>
-					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?id=${id}'"/>
+					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?modify=${id}'"/>
 					<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
 				</td>
 				</tr>

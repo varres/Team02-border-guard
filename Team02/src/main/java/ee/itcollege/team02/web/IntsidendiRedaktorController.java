@@ -1,5 +1,9 @@
 package ee.itcollege.team02.web;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -10,7 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import ee.itcollege.team02.common.Helper;
 import ee.itcollege.team02.entities.INTSIDENT;
+import ee.itcollege.team02.entities.ISIK_INTSIDENDIS;
+import ee.itcollege.team02.entities.PIIRILOIK;
 
 @RequestMapping("/intsidendiredaktor/**")
 @Controller
@@ -30,8 +37,20 @@ public class IntsidendiRedaktorController {
     @RequestMapping(params = "id", method = RequestMethod.GET)
     public void getIntsident(@RequestParam("id") Long id, Model uiModel)
     {
+    	
     	INTSIDENT intsident = INTSIDENT.findINTSIDENT(id);
         uiModel.addAttribute("intsident", intsident);
+        
+    	List<ISIK_INTSIDENDIS> isik_ins = ISIK_INTSIDENDIS.findAllISIK_INTSIDENDISs();
+    	for (int i = isik_ins.size() - 1; i >= 0; i--) 
+    	{ 
+    		ISIK_INTSIDENDIS ints = isik_ins.get(i);
+    	    if (!Helper.IsSurrogateDate(ints.getSuletud())|| ints.getIntsident().getId() != id){ 
+    	    	isik_ins.remove(i); 
+    	    }    	
+    	} 
+
+    	uiModel.addAttribute("isik_ins", isik_ins);
     }
 
     @RequestMapping

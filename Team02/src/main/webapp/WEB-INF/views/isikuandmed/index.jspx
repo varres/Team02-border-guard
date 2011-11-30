@@ -25,7 +25,7 @@
 				</tr>
 				<tr>
 					<td>Perenimi</td>
-					<td colspan='2'><input type='text' id='perenimi' name='perenimi' value='${r.perenimi}' size='9' /></td>
+					<td colspan='2'><input type='text' id='perenimi' name='perenimi' value='${r.perek_nimi}' size='9' /></td>
 					<script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
 					elementId : 'perenimi', 
@@ -57,9 +57,9 @@
 					</script>
 				</tr>
 				<tr>
-				<td><input type="hidden" name="id" value="${id}" /><</td>
+				<td><input type="hidden" name="id" value="${id}" /></td>
 				<td>
-					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?id=${id}'"/>
+					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?modify=${id}'"/>
 					<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
 				</td>
 				</tr>

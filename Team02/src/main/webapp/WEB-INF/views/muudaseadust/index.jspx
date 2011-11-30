@@ -26,7 +26,7 @@
 				
 				<tr>
 					<td>Alates</td>
-					<td colspan='2'><input id="alates" type="text" value='${seadus.alates}' name="alates"' /></td>
+					<td colspan='2'><input id="alates" type="text" value='${seadus.alates}' name="alates" /></td>
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'alates',
@@ -36,7 +36,7 @@
 				</tr>
 				<tr>
 					<td>Kuni</td>
-					<td colspan='2'><input id="kuni" type="text" value='${seadus.kuni}' name="kuni"' /></td>
+					<td colspan='2'><input id="kuni" type="text" value='${seadus.kuni}' name="kuni" /></td>
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'kuni',
@@ -51,17 +51,17 @@
 					        <option value="${s.id}">${s.seadus.nimetus}-${s.paragrahv}-${s.pais}</option>	  
      						</c:forEach>
 					</select></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
- 					elementId : 'seadus',
- 					widgetType : 'dijit.form.ComboBox',
- 					widgetAttrs : {promptMessage: "Vali seadus", required : true}}));
-					</script>
+<!-- 					<script type="text/javascript">
+// 					Spring.addDecoration(new Spring.ElementDecoration({
+//  					elementId : 'seadus',
+//  					widgetType : 'dijit.form.ComboBox',
+//  					widgetAttrs : {promptMessage: "Vali seadus", required : true}}));
+					</script> -->
 				</tr>
 				<tr>
-				<td><input type="hidden" name="id" value="${id}" /><</td>
+				<td><input type="hidden" name="id" value="${id}" /></td>
 				<td>
-					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?id=${id}'"/>
+					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/modify?id=${id}'"/>
 					<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
 				</td>
 				</tr>

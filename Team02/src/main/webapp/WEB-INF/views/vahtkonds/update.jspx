@@ -14,5 +14,6 @@
         <field:datetime dateTimePattern="${VAHTKOND_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_VAHTKOND_muudetud" required="true" z="hvgNUNwzJV+BaoiD9y4Dr0YZWVs="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_VAHTKOND_sulgeja" required="true" z="TXDQc8slHbfFo+xOLk+1fBR1seM="/>
         <field:datetime dateTimePattern="${VAHTKOND_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_VAHTKOND_suletud" required="true" z="c8pFwVL9xoMJXOCt7jVD5M0guIc="/>
+        <field:simple field="VAHTKOND_INTSIDENDISs" id="c_ee_itcollege_team02_entities_VAHTKOND_VAHTKOND_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N D_ I N T S I D E N D I S" z="viDbl6uNIkZrb7wLokqbiTkL/Z8="/>
     </form:update>
 </div>

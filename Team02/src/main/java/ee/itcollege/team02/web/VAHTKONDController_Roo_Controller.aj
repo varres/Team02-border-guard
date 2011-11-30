@@ -4,6 +4,7 @@
 package ee.itcollege.team02.web;
 
 import ee.itcollege.team02.entities.VAHTKOND;
+import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.Long;
@@ -97,6 +98,11 @@ privileged aspect VAHTKONDController_Roo_Controller {
     @ModelAttribute("vahtkonds")
     public Collection<VAHTKOND> VAHTKONDController.populateVAHTKONDS() {
         return VAHTKOND.findAllVAHTKONDS();
+    }
+    
+    @ModelAttribute("vahtkond_intsidendiss")
+    public Collection<VAHTKOND_INTSIDENDIS> VAHTKONDController.populateVAHTKOND_INTSIDENDISs() {
+        return VAHTKOND_INTSIDENDIS.findAllVAHTKOND_INTSIDENDISs();
     }
     
     void VAHTKONDController.addDateTimeFormatPatterns(Model uiModel) {

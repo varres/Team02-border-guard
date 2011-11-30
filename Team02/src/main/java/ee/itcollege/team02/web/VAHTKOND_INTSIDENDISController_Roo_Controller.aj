@@ -5,6 +5,7 @@ package ee.itcollege.team02.web;
 
 import ee.itcollege.team02.entities.INTSIDENT;
 import ee.itcollege.team02.entities.PIIRIVALVUR_INTSIDENDIS;
+import ee.itcollege.team02.entities.VAHTKOND;
 import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
@@ -104,6 +105,11 @@ privileged aspect VAHTKOND_INTSIDENDISController_Roo_Controller {
     @ModelAttribute("piirivalvur_intsidendiss")
     public Collection<PIIRIVALVUR_INTSIDENDIS> VAHTKOND_INTSIDENDISController.populatePIIRIVALVUR_INTSIDENDISs() {
         return PIIRIVALVUR_INTSIDENDIS.findAllPIIRIVALVUR_INTSIDENDISs();
+    }
+    
+    @ModelAttribute("vahtkonds")
+    public Collection<VAHTKOND> VAHTKOND_INTSIDENDISController.populateVAHTKONDS() {
+        return VAHTKOND.findAllVAHTKONDS();
     }
     
     @ModelAttribute("vahtkond_intsidendiss")

@@ -40,25 +40,24 @@ public class MuudaSeadustController {
 		}catch(Exception e){}
 		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
 		Long seadus_ID = Long.parseLong(request.getParameter("seadus")==null ? "0" : request.getParameter("seadus"));
-    	
-		ISIK_INTSIDENDIS isik = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
-		ISIKU_SEADUS_INTSIDENDIS uusSeadus = new ISIKU_SEADUS_INTSIDENDIS();
-		uusSeadus.setKirjeldus(kirjeldus);
-		uusSeadus.setKommentaar(kommentaar);
-		uusSeadus.setAlates(alates);
-		uusSeadus.setKuni(kuni);
-		uusSeadus.setIsik_intsidendis(ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id));
-		uusSeadus.setSeaduse_punkt(SEADUSE_PUNKT.findSEADUSE_PUNKT(seadus_ID));
-		uusSeadus.setAvaja("test");
-		uusSeadus.setAvatud(new Date());
-		uusSeadus.setMuutja("test2");
-		uusSeadus.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-		uusSeadus.setSulgeja("test3");
-		uusSeadus.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-		uusSeadus.persist();
+   
+		ISIKU_SEADUS_INTSIDENDIS seadus = ISIKU_SEADUS_INTSIDENDIS.findISIKU_SEADUS_INTSIDENDIS(id);
+		seadus.setKirjeldus(kirjeldus);
+		seadus.setKommentaar(kommentaar);
+		seadus.setAlates(alates);
+		seadus.setKuni(kuni);
+		seadus.setIsik_intsidendis(ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id));
+		seadus.setSeaduse_punkt(SEADUSE_PUNKT.findSEADUSE_PUNKT(seadus_ID));
+		seadus.setAvaja("test");
+		seadus.setAvatud(new Date());
+		seadus.setMuutja("test2");
+		seadus.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+		seadus.setSulgeja("test3");
+		seadus.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+		seadus.persist();
 		
     	
-    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?id=" + id;
+    	return "redirect:/intsidendigaseotudisikudetailideredaktor/modify?id=" + ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id).getId();
     }
     
     @RequestMapping(params = "id", method = RequestMethod.GET)

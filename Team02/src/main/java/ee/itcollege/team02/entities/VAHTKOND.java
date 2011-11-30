@@ -6,6 +6,11 @@ import org.springframework.roo.addon.tostring.RooToString;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -62,4 +67,7 @@ public class VAHTKOND {
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date suletud;
+    
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "vahtkond")
+    private Set<VAHTKOND_INTSIDENDIS> VAHTKOND_INTSIDENDISs = new HashSet<VAHTKOND_INTSIDENDIS>();
 }
