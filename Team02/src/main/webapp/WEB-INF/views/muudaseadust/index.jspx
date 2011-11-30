@@ -15,35 +15,37 @@
 		</script>
 			<table>
 				<tr>
-					 <td colspan='2' rowspan='2'> 
-					  <textarea cols='30' rows='5' id='kirjeldus' title='kirjeldus' value='${isk_seadus.kirjeldus}' name='kirjeldus' ><jsp:text /></textarea>
+					<td>Kirjeldus</td>
+					 <td colspan='2' rowspan='1'> 
+					  <textarea cols='30' rows='2' id='kirjeldus' title='kirjeldus' name='kirjeldus' ><jsp:text>${isk_seadus.kirjeldus}</jsp:text></textarea>
 					</td>
 				</tr>
 				<tr>
-					 <td colspan='2' rowspan='2'> 
-					  <textarea cols='30' rows='5' id='kommentaar' title='kommentaar' value='${isk_seadus.kommentaar}' name='kommentaar' ><jsp:text /></textarea>
+					<td>Kommentaar</td>
+					 <td colspan='2' rowspan='1'> 
+					  <textarea cols='30' rows='2' id='kommentaar' title='kommentaar' name='kommentaar' ><jsp:text>${isk_seadus.kommentaar}</jsp:text></textarea>
 					</td>
 				</tr>
 				
 				<tr>
 					<td>Alates</td>
 					<td colspan='2'><input id="alates" type="text" value='${isk_seadus.alates}' name="alates" /></td>
-     				<script type="text/javascript">
-     				Spring.addDecoration(new Spring.ElementDecoration({
-         			elementId  : 'alates',
-         			widgetType : 'dijit.form.DateTextBox',
-         			widgetAttrs : {promptMessage: "Alates", required : true}}));
-  					</script>
+<!--      				<script type="text/javascript">
+//      				Spring.addDecoration(new Spring.ElementDecoration({
+//          			elementId  : 'alates',
+//          			widgetType : 'dijit.form.DateTextBox',
+//          			widgetAttrs : {promptMessage: "Alates", required : true}}));
+ 					</script> -->
 				</tr>
 				<tr>
 					<td>Kuni</td>
 					<td colspan='2'><input id="kuni" type="text" value='${isk_seadus.kuni}' name="kuni" /></td>
-     				<script type="text/javascript">
-     				Spring.addDecoration(new Spring.ElementDecoration({
-         			elementId  : 'kuni',
-         			widgetType : 'dijit.form.DateTextBox',
-         			widgetAttrs : {promptMessage: "Kuni", required : true}}));
-  					</script>
+<!--      				<script type="text/javascript">
+//      				Spring.addDecoration(new Spring.ElementDecoration({
+//          			elementId  : 'kuni',
+//          			widgetType : 'dijit.form.DateTextBox',
+//          			widgetAttrs : {promptMessage: "Kuni", required : true}}));
+  					</script> -->
 				</tr>
 				<tr>
 					<td>Seadus</td>
@@ -62,7 +64,7 @@
 				<tr>
 				<td><input type="hidden" name="id" value="${id}" /></td>
 				<td>
-					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/modify?id=${id}'"/>
+					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?modify=${backID}'"/>
 					<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
 				</td>
 				</tr>

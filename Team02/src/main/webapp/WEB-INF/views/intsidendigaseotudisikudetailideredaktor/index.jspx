@@ -45,7 +45,7 @@
 							<c:forEach items="${seadused}" var="s">
 								<tr>
 							    	<td>${s.seaduse_punkt.paragrahv}</td>
-									<td><input style='float: right;' type='button' onClick="location.href='/Team02/muudaseadust/index?modify=${s.id}'" value='Info' /></td>
+									<td><input style='float: right;' type='button' onClick="location.href='/Team02/muudaseadust/index?id=${s.id}'" value='Info' /></td>
 									<td><input style='float: right;' type='button' onClick="location.href='/Team02/muudaseadust/index?delete=${s.id}'" value='Eemalda' /></td>
 								</tr>
 							</c:forEach>

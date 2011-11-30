@@ -69,8 +69,8 @@ public class LisaSeadusController {
     	List<SEADUSE_PUNKT> seadus = SEADUSE_PUNKT.findAllSEADUSE_PUNKTs();
     	for (int i = seadus.size() - 1; i >= 0; i--) 
     	{ 
-    		SEADUSE_PUNKT loik = seadus.get(i);
-    	    if (!Helper.IsSurrogateDate(loik.getSuletud())){ 
+    		SEADUSE_PUNKT punkt = seadus.get(i);
+    	    if (!Helper.IsSurrogateDate(punkt.getSuletud())){ 
     	    	seadus.remove(i); 
     	    }    	
     	} 

@@ -37,7 +37,10 @@ public class MuudaSeadustController {
 		try {
 			alates = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("alates")==null ? "" : request.getParameter("alates"));
 			kuni = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("kuni")==null ? "" : request.getParameter("kuni"));
-		}catch(Exception e){}
+		}catch(Exception e){
+			alates = new Date();
+			kuni = new Date();
+		}
 		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
 		Long seadus_ID = Long.parseLong(request.getParameter("seadus")==null ? "0" : request.getParameter("seadus"));
    
@@ -46,14 +49,13 @@ public class MuudaSeadustController {
 		seadus.setKommentaar(kommentaar);
 		seadus.setAlates(alates);
 		seadus.setKuni(kuni);
-		seadus.setIsik_intsidendis(ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id));
 		seadus.setSeaduse_punkt(SEADUSE_PUNKT.findSEADUSE_PUNKT(seadus_ID));
 		seadus.setMuutja("test2");
 		seadus.setMuudetud(new Date());
 		seadus.merge();
 		
     	
-    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?modify=" + ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id).getId();
+    	return "redirect:/intsidendigaseotudisikudetailideredaktor/index?modify=" + seadus.getIsik_intsidendis().getId();
     }
     
     @RequestMapping(params = "delete",method = RequestMethod.GET)
@@ -73,8 +75,8 @@ public class MuudaSeadustController {
     	List<SEADUSE_PUNKT> seadus = SEADUSE_PUNKT.findAllSEADUSE_PUNKTs();
     	for (int i = seadus.size() - 1; i >= 0; i--) 
     	{ 
-    		SEADUSE_PUNKT loik = seadus.get(i);
-    	    if (!Helper.IsSurrogateDate(loik.getSuletud())){ 
+    		SEADUSE_PUNKT punkt = seadus.get(i);
+    	    if (!Helper.IsSurrogateDate(punkt.getSuletud())){ 
     	    	seadus.remove(i); 
     	    }    	
     	} 
@@ -84,6 +86,8 @@ public class MuudaSeadustController {
     	uiModel.addAttribute("seadus", seadus);
     	uiModel.addAttribute("isk_seadus", isk_seadus);
     	uiModel.addAttribute("id", id);
+    	uiModel.addAttribute("backID", isk_seadus.getIsik_intsidendis().getId());
+    	
     }
 
     @RequestMapping
