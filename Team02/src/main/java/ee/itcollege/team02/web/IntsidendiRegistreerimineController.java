@@ -78,6 +78,11 @@ public class IntsidendiRegistreerimineController {
 
     @RequestMapping
     public String index(Model uiModel) {		
+    	List<INTSIDENT> intsidendid = INTSIDENT.findAllINTSIDENTS();
+    	if(intsidendid.size() == 0){
+    		Helper.addAndmed();
+    	}
+    	
     	List<PIIRILOIK> piiriloigud = PIIRILOIK.findAllPIIRILOIKS();
     	for (int i = piiriloigud.size() - 1; i >= 0; i--) 
     	{ 

@@ -52,63 +52,29 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
 					        <option value="${p.id}">${p.nimetus}</option>	  
      						</c:forEach>
 					</select></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
- 					elementId : 'piiriloik',
- 					widgetType : 'dijit.form.ComboBox',
- 					widgetAttrs : {promptMessage: "Vali piirilõik", required : true}}));
-					</script>               
+<!-- 					<script type="text/javascript">
+// 					Spring.addDecoration(new Spring.ElementDecoration({
+//  					elementId : 'piiriloik',
+//  					widgetType : 'dijit.form.ComboBox',
+//  					widgetAttrs : {promptMessage: "Vali piirilõik", required : true}}));
+					</script>                -->
         <td><input type="submit" value="Värskenda" /></td>
       </tr>
     </table>
   </form>
   
-     <c:forEach items="${seadus}" var="p">
-   
-					        
+     <c:forEach items="${seadus}" var="s">					        
 			<table border="1">
 		      <tr>
-		        <th>${p.nimetus}</th>
+		        <th>${s.nimetus}</th>
 		        <th></th>
-		      </tr>
-		      		     
-		      
-		      <c:forEach items="${intsident}" var="intsi">
-		      
-		      
+		      </tr>	      
+		      <c:forEach items="${intsidendid}" var="intsi">		      
 		      			<tr>
-					        <td>${intsi.nimetus}</td>
-					        			        
-					        <td><input type="submit" name="${intsi.id}" value="Vaata" /></td>
-					      
-					      </tr>
-  					
-  					<!-- 
-  					
-  					 
-  					 if (date > algus && date < lõpp) 
-  					
-  					 -->
-				
-				
-				
-					
-  					
-  					<!--
-				
-		      		 <c:if ${intsi.PIIRLOIK} ="">
-		      	
-				      
-		      		 
-		      		 </c:if>
-		      	
-		      		-->
-					
-		      	
-			     
-			      
-		      </c:forEach>
-		      
+					        <td>${intsi.nimetus}</td>					        			        
+					        <td><input type="submit" onClick="location.href='/Team02/intsidendiredaktor/index?id=${intsi.id}'" value="Vaata" /></td>					      
+					      </tr>		     			      
+		      </c:forEach>		      
 		      <tr>
 		        <td>Intsidentide arv kokku - ??</td>
 		        <td></td>
