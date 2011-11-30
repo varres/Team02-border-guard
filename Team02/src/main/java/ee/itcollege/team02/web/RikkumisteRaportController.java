@@ -172,6 +172,47 @@ public class RikkumisteRaportController {
     	uusPIIRIRIKKUJA.setSynniaeg(new GregorianCalendar(1926, 04, 05, 00, 00).getTime());
     	///6 END
     	
+    	///6 START
+    	PIIRIRIKKUJA uusPIIRIRIKKUJA1 = new PIIRIRIKKUJA();
+    	
+    	uusPIIRIRIKKUJA1.setAvaja("Signe Savi");
+    	uusPIIRIRIKKUJA1.setAvatud(new GregorianCalendar(2007, 02, 05, 00, 00).getTime());
+    	
+    	uusPIIRIRIKKUJA1.setMuutja("test2");
+    	uusPIIRIRIKKUJA1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusPIIRIRIKKUJA1.setSulgeja("test3");
+    	uusPIIRIRIKKUJA1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusPIIRIRIKKUJA1.setEesnimi("AKE");   	
+    	uusPIIRIRIKKUJA1.setObjekt(uusOBJEKT); //SEOS!
+    	uusPIIRIRIKKUJA1.setPerek_nimi("HAMMSTRJOM");
+    	uusPIIRIRIKKUJA1.setSugu("M");
+    	uusPIIRIRIKKUJA1.setIsikukood("SW2300003");
+    	uusPIIRIRIKKUJA1.setSynniaeg(new GregorianCalendar(1976, 04, 05, 00, 00).getTime());
+    	///6 END
+    	
+    	///6 START
+    	PIIRIRIKKUJA uusPIIRIRIKKUJA2 = new PIIRIRIKKUJA();
+    	
+    	uusPIIRIRIKKUJA2.setAvaja("Kim Tame");
+    	uusPIIRIRIKKUJA2.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+    	
+    	uusPIIRIRIKKUJA2.setMuutja("test2");
+    	uusPIIRIRIKKUJA2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusPIIRIRIKKUJA2.setSulgeja("test3");
+    	uusPIIRIRIKKUJA2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusPIIRIRIKKUJA2.setEesnimi("Parmo");   	
+    	uusPIIRIRIKKUJA2.setObjekt(uusOBJEKT); //SEOS!
+    	uusPIIRIRIKKUJA2.setPerek_nimi("Muhvilainen");
+    	uusPIIRIRIKKUJA2.setSugu("M");
+    	uusPIIRIRIKKUJA2.setIsikukood("778800230");
+    	uusPIIRIRIKKUJA2.setSynniaeg(new GregorianCalendar(1944, 02, 02, 00, 00).getTime());
+    	///6 END
+    	
+
 
     	/// 7 START
     	KODAKONDSUS uusKODAKONDSUS = new KODAKONDSUS ();
@@ -649,6 +690,293 @@ public class RikkumisteRaportController {
     	uusPIIRIVALVUR3.setSugu("M");
     	///17 END
     	
+    	
+    	///18 START
+    	VAHTKOND uusVAHTKOND = new VAHTKOND();
+    	uusVAHTKOND.setAvaja("Margus Mägi"); 
+    	uusVAHTKOND.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+    	  	
+    	uusVAHTKOND.setMuutja("Mihkel Soo");
+    	uusVAHTKOND.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusVAHTKOND.setSulgeja("test3");
+    	uusVAHTKOND.setMuudetud(new GregorianCalendar(2006, 04, 07, 00, 00).getTime());
+    	uusVAHTKOND.setKommentaar("Vihased vennad");
+    	uusVAHTKOND.setKood("ZZBBZZ");
+    	uusVAHTKOND.setAlates(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+    	uusVAHTKOND.setKuni(new GregorianCalendar(2012, 05, 06, 10, 00).getTime());
+    	uusVAHTKOND.setNimetus("Jäärgibrigaad");
+    	///18 END
+    	
+    	
+    	///19 START
+    	VAHTKOND uusVAHTKOND1 = new VAHTKOND();
+    	uusVAHTKOND1.setAvaja("Siim Sammal"); 
+    	uusVAHTKOND1.setAvatud(new GregorianCalendar(2007, 02, 04, 12, 00).getTime());
+    	  	
+    	uusVAHTKOND1.setMuutja("Vildeku Valdeku");
+    	uusVAHTKOND1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusVAHTKOND1.setSulgeja("test3");
+    	uusVAHTKOND1.setMuudetud(new GregorianCalendar(2008, 01, 01, 20, 00).getTime());
+    	uusVAHTKOND1.setKommentaar("Vajab lisamehi");
+    	uusVAHTKOND1.setKood("T82KILL");
+    	uusVAHTKOND1.setAlates(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+    	uusVAHTKOND1.setKuni(new GregorianCalendar(2012, 05, 06, 10, 00).getTime());
+    	uusVAHTKOND1.setNimetus("Tankipatrull");
+    	///19 END
+    	
+    	
+    	///20 START
+    	VAHTKOND_INTSIDENDIS uusVAHTKOND_INTSIDENDIS = new VAHTKOND_INTSIDENDIS();
+    	
+    	uusVAHTKOND_INTSIDENDIS.setAvaja("Rasmus Tuvike"); 
+    	uusVAHTKOND_INTSIDENDIS.setAvatud(new GregorianCalendar(2008, 03, 05, 12, 00).getTime());
+    	  	
+    	uusVAHTKOND_INTSIDENDIS.setMuutja("Metsik Sammalhabe");
+    	uusVAHTKOND_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS.setSulgeja("test3");
+    	uusVAHTKOND_INTSIDENDIS.setMuudetud(new GregorianCalendar(2009, 04, 04, 20, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS.setIntsident(newIntsident1); //SEOS
+    	uusVAHTKOND_INTSIDENDIS.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS.setKirjeldus("Kõik olid väga vaprad");
+    	uusVAHTKOND_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
+    	///20 END
+    	
+    	///21 START
+    	VAHTKOND_INTSIDENDIS uusVAHTKOND_INTSIDENDIS1 = new VAHTKOND_INTSIDENDIS();
+    	
+    	uusVAHTKOND_INTSIDENDIS1.setAvaja("Riivo Mägine"); 
+    	uusVAHTKOND_INTSIDENDIS1.setAvatud(new GregorianCalendar(2002, 01, 01, 9, 37).getTime());
+    	  	
+    	uusVAHTKOND_INTSIDENDIS1.setMuutja("Hannes Pooltoob");
+    	uusVAHTKOND_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS1.setSulgeja("test3");
+    	uusVAHTKOND_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2002, 04, 04, 20, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS1.setIntsident(newIntsident4); //SEOS
+    	uusVAHTKOND_INTSIDENDIS1.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS1.setKirjeldus("Kus, mis, kes?");
+    	uusVAHTKOND_INTSIDENDIS1.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
+    	///21 END
+    	
+    	///22 START
+    	VAHTKOND_INTSIDENDIS uusVAHTKOND_INTSIDENDIS2 = new VAHTKOND_INTSIDENDIS();
+    	
+    	uusVAHTKOND_INTSIDENDIS2.setAvaja("Siim Kuupea"); 
+    	uusVAHTKOND_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusVAHTKOND_INTSIDENDIS2.setMuutja("Merit Merkel");
+    	uusVAHTKOND_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS2.setSulgeja("test3");
+    	uusVAHTKOND_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS2.setIntsident(newIntsident2); //SEOS
+    	uusVAHTKOND_INTSIDENDIS2.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
+    	
+    	uusVAHTKOND_INTSIDENDIS2.setKirjeldus("Relvad ei töödanud");
+    	uusVAHTKOND_INTSIDENDIS2.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
+    	///22 END
+    	
+    	
+    	//23 START
+    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS = new ISIK_INTSIDENDIS();
+    	
+    	uusISIK_INTSIDENDIS.setAvaja("Maili Murakas"); 
+    	uusISIK_INTSIDENDIS.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIK_INTSIDENDIS.setMuutja("Jaan Kork");
+    	uusISIK_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIK_INTSIDENDIS.setSulgeja("test3");
+    	uusISIK_INTSIDENDIS.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIK_INTSIDENDIS.setIntsident(newIntsident1); // SEOS
+    	uusISIK_INTSIDENDIS.setKirjeldus("Tuuker võitis");
+    	uusISIK_INTSIDENDIS.setPiiririkkuja(uusPIIRIRIKKUJA1); //SEOS
+    	uusISIK_INTSIDENDIS.setAlates(new GregorianCalendar(2010, 03, 03, 5, 00).getTime());
+    	uusISIK_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 02, 02, 12, 00).getTime());
+    	uusISIK_INTSIDENDIS.setKommentaar("Tuleb allveelaev muretseda");
+    	//23 END
+    	
+    	
+    	//24 START
+    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS1 = new ISIK_INTSIDENDIS();
+    	
+    	uusISIK_INTSIDENDIS1.setAvaja("Siimo Suurjärv"); 
+    	uusISIK_INTSIDENDIS1.setAvatud(new GregorianCalendar(2001, 04, 05, 9, 37).getTime());
+    	  	
+    	uusISIK_INTSIDENDIS1.setMuutja("Raido Külm");
+    	uusISIK_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIK_INTSIDENDIS1.setSulgeja("test3");
+    	uusISIK_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2002, 02, 03, 12, 30).getTime());
+    	
+    	uusISIK_INTSIDENDIS1.setIntsident(newIntsident3); // SEOS
+    	uusISIK_INTSIDENDIS1.setKirjeldus("Laulsid koos");
+    	uusISIK_INTSIDENDIS1.setPiiririkkuja(uusPIIRIRIKKUJA2); //SEOS
+    	uusISIK_INTSIDENDIS1.setAlates(new GregorianCalendar(2010, 03, 03, 5, 00).getTime());
+    	uusISIK_INTSIDENDIS1.setKuni(new GregorianCalendar(2011, 02, 02, 12, 00).getTime());
+    	uusISIK_INTSIDENDIS1.setKommentaar("Tuleb laulma õpetada");
+    	//24 END
+    	
+    	//25 START
+    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS2 = new ISIK_INTSIDENDIS();
+    	
+    	uusISIK_INTSIDENDIS2.setAvaja("Riho Rõõm"); 
+    	uusISIK_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIK_INTSIDENDIS2.setMuutja("Kerli Piim");
+    	uusISIK_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIK_INTSIDENDIS2.setSulgeja("test3");
+    	uusISIK_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIK_INTSIDENDIS2.setIntsident(newIntsident4); // SEOS
+    	uusISIK_INTSIDENDIS2.setKirjeldus("Jälle ta oma salaviinaga");
+    	uusISIK_INTSIDENDIS2.setPiiririkkuja(uusPIIRIRIKKUJA1); //SEOS
+    	uusISIK_INTSIDENDIS2.setAlates(new GregorianCalendar(2009, 03, 03, 5, 00).getTime());
+    	uusISIK_INTSIDENDIS2.setKuni(new GregorianCalendar(2009, 03, 03, 12, 00).getTime());
+    	uusISIK_INTSIDENDIS2.setKommentaar("Saime ta õnneks kätte. *HIC*!");
+    	//25 END
+    	
+    	//26 START
+    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS3 = new ISIK_INTSIDENDIS();
+    	
+    	uusISIK_INTSIDENDIS3.setAvaja("Rando Maru"); 
+    	uusISIK_INTSIDENDIS3.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIK_INTSIDENDIS3.setMuutja("Kivi Karu");
+    	uusISIK_INTSIDENDIS3.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIK_INTSIDENDIS3.setSulgeja("test3");
+    	uusISIK_INTSIDENDIS3.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIK_INTSIDENDIS3.setIntsident(newIntsident5); // SEOS
+    	uusISIK_INTSIDENDIS3.setKirjeldus("Kus suitsu, seal tuld");
+    	uusISIK_INTSIDENDIS3.setPiiririkkuja(uusPIIRIRIKKUJA1); //SEOS
+    	uusISIK_INTSIDENDIS3.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
+    	uusISIK_INTSIDENDIS3.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
+    	uusISIK_INTSIDENDIS3.setKommentaar("Seekord oli vaid suitsu");
+    	//26 END
+    	
+    	
+    	//27 START
+    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS = new ISIKU_SEADUS_INTSIDENDIS();
+    	uusISIKU_SEADUS_INTSIDENDIS.setAvaja("Mihkel Muru"); 
+    	uusISIKU_SEADUS_INTSIDENDIS.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIKU_SEADUS_INTSIDENDIS.setMuutja("Marti Haro");
+    	uusISIKU_SEADUS_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS.setSulgeja("test3");
+    	uusISIKU_SEADUS_INTSIDENDIS.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
+    	uusISIKU_SEADUS_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS.setIsik_intsidendis(uusISIK_INTSIDENDIS3); //SEOS
+    	uusISIKU_SEADUS_INTSIDENDIS.setSeaduse_punkt(uusSEADUSE_PUNKT3);  //SEOS
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS.setKirjeldus("Valus seadus");
+    	uusISIKU_SEADUS_INTSIDENDIS.setKommentaar("Ära tee kui ei tohi");
+    	//27 END
+    	
+    	//28 START
+    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS1 = new ISIKU_SEADUS_INTSIDENDIS();
+    	uusISIKU_SEADUS_INTSIDENDIS1.setAvaja("Siim Kaev"); 
+    	uusISIKU_SEADUS_INTSIDENDIS1.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIKU_SEADUS_INTSIDENDIS1.setMuutja("Ester Kreem");
+    	uusISIKU_SEADUS_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS1.setSulgeja("test3");
+    	uusISIKU_SEADUS_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS1.setAlates(new GregorianCalendar(205, 01, 01, 1, 00).getTime());
+    	uusISIKU_SEADUS_INTSIDENDIS1.setKuni(new GregorianCalendar(2005, 04, 04, 9, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS1.setIsik_intsidendis(uusISIK_INTSIDENDIS1);  //SEOS
+    	uusISIKU_SEADUS_INTSIDENDIS1.setSeaduse_punkt(uusSEADUSE_PUNKT);  //SEOS
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS1.setKirjeldus("Tore seadus");
+    	uusISIKU_SEADUS_INTSIDENDIS1.setKommentaar("Vangi paneme järgmine kord");
+    	//28 END
+    	
+    	//29 START
+    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS2 = new ISIKU_SEADUS_INTSIDENDIS();
+    	uusISIKU_SEADUS_INTSIDENDIS2.setAvaja("Epp Pain"); 
+    	uusISIKU_SEADUS_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIKU_SEADUS_INTSIDENDIS2.setMuutja("Kristi Torture");
+    	uusISIKU_SEADUS_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS2.setSulgeja("test3");
+    	uusISIKU_SEADUS_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS2.setAlates(new GregorianCalendar(209, 01, 01, 1, 00).getTime());
+    	uusISIKU_SEADUS_INTSIDENDIS2.setKuni(new GregorianCalendar(209, 04, 04, 9, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS2.setIsik_intsidendis(uusISIK_INTSIDENDIS2);  //SEOS
+    	uusISIKU_SEADUS_INTSIDENDIS2.setSeaduse_punkt(uusSEADUSE_PUNKT2);  //SEOS
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS2.setKirjeldus("Rumal seadus");
+    	uusISIKU_SEADUS_INTSIDENDIS2.setKommentaar("Ära torgi");
+    	//29 END
+    	
+    	
+    	//30 START
+    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS3 = new ISIKU_SEADUS_INTSIDENDIS();
+    	uusISIKU_SEADUS_INTSIDENDIS3.setAvaja("Rasmus Kraav"); 
+    	uusISIKU_SEADUS_INTSIDENDIS3.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIKU_SEADUS_INTSIDENDIS3.setMuutja("Signe Hai");
+    	uusISIKU_SEADUS_INTSIDENDIS3.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS3.setSulgeja("test3");
+    	uusISIKU_SEADUS_INTSIDENDIS3.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS3.setAlates(new GregorianCalendar(2002, 02, 02, 1, 00).getTime());
+    	uusISIKU_SEADUS_INTSIDENDIS3.setKuni(new GregorianCalendar(2022, 03, 03, 9, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS3.setIsik_intsidendis(uusISIK_INTSIDENDIS3);  //SEOS
+    	uusISIKU_SEADUS_INTSIDENDIS3.setSeaduse_punkt(uusSEADUSE_PUNKT3);  //SEOS
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS3.setKirjeldus("Valus seadus");
+    	uusISIKU_SEADUS_INTSIDENDIS3.setKommentaar("Ära tee kui ei tohi");
+    	//30 END
+    	
+    	
+    	//31 START
+    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS4 = new ISIKU_SEADUS_INTSIDENDIS();
+    	uusISIKU_SEADUS_INTSIDENDIS4.setAvaja("Viktor Räim"); 
+    	uusISIKU_SEADUS_INTSIDENDIS4.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+    	  	
+    	uusISIKU_SEADUS_INTSIDENDIS4.setMuutja("Epp Loom");
+    	uusISIKU_SEADUS_INTSIDENDIS4.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS4.setSulgeja("test3");
+    	uusISIKU_SEADUS_INTSIDENDIS4.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS4.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
+    	uusISIKU_SEADUS_INTSIDENDIS4.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS4.setIsik_intsidendis(uusISIK_INTSIDENDIS);
+    	uusISIKU_SEADUS_INTSIDENDIS4.setSeaduse_punkt(uusSEADUSE_PUNKT);
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS4.setKirjeldus("Raske rakendada");
+    	uusISIKU_SEADUS_INTSIDENDIS4.setKommentaar("Aga rakendasime ikkagi");
+    	//31 END
+    	
+    	
+    	
+    	
     	/// Anmdebaasi kirjutamine, järjekord tähtis, kõige lõpus kirjutamine seepärast et linkida valmistehtud objekte omavahel enne andmebaasi kirjutamist
     	uusPIIRIVALVUR.persist();
     	uusPIIRIVALVUR2.persist();
@@ -672,6 +1000,9 @@ public class RikkumisteRaportController {
     	uusRIIK1.persist();
     	uusOBJEKT.persist();
     	uusPIIRIRIKKUJA.persist();
+    	uusPIIRIRIKKUJA1.persist();
+    	uusPIIRIRIKKUJA2.persist();
+    	
     	uusKODAKONDSUS.persist();
     	newIntsident1.persist();
     	newIntsident2.persist();
@@ -680,7 +1011,25 @@ public class RikkumisteRaportController {
     	newIntsident5.persist();
     	newIntsident6.persist();
     	newIntsident7.persist();
+    	
+    	uusVAHTKOND.persist();
+    	uusVAHTKOND1.persist();
+    	
+    	// SEOS VAHTKONNA ja VAHTKOND_INTSIDENDIS vahel puudub?
+    	uusVAHTKOND_INTSIDENDIS.persist();
+    	uusVAHTKOND_INTSIDENDIS1.persist();
+    	uusVAHTKOND_INTSIDENDIS2.persist();
 
+    	uusISIK_INTSIDENDIS.persist();
+    	uusISIK_INTSIDENDIS1.persist();
+    	uusISIK_INTSIDENDIS2.persist();
+    	uusISIK_INTSIDENDIS3.persist();
+    	
+    	uusISIKU_SEADUS_INTSIDENDIS.persist();
+    	uusISIKU_SEADUS_INTSIDENDIS1.persist();
+    	uusISIKU_SEADUS_INTSIDENDIS2.persist();
+    	uusISIKU_SEADUS_INTSIDENDIS3.persist();
+    	uusISIKU_SEADUS_INTSIDENDIS4.persist();
     	
     }
     
