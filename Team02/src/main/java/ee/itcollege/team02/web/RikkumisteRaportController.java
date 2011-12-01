@@ -2,6 +2,7 @@ package ee.itcollege.team02.web;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import ee.itcollege.team02.common.Helper;
+import ee.itcollege.team02.common.Raport;
 import ee.itcollege.team02.entities.*;
 
 @RequestMapping("/rikkumisteraport/**")
@@ -96,6 +98,23 @@ public class RikkumisteRaportController {
     	    }    	
     	} 
     	uiModel.addAttribute("piiriloigud", piiriloigud);
+    	
+    	List<Raport> raps = new ArrayList<Raport>();
+    	Raport rap = new Raport();
+    	List<SEADUS> seadus = SEADUS.findAllSEADUS();
+    	for (int i = seadus.size() - 1; i >= 0; i--) 
+    	{ 
+    		SEADUS tempSeadus = seadus.get(i);
+    	    if (!Helper.IsSurrogateDate(tempSeadus.getSuletud())){ 
+    	    	seadus.remove(i); 
+    	    }    	
+    	} 
+    	
+    	rap.seadus = seadus.get(0);
+    	rap.intsidendid = intsidendid;
+    	raps.add(rap);
+    	uiModel.addAttribute("rap", raps);
+    	
         return "rikkumisteraport/index";
     }
     

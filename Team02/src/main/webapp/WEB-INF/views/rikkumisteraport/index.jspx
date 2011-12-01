@@ -63,13 +63,13 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
     </table>
   </form>
   
-     <c:forEach items="${seadus}" var="s">					        
+     <c:forEach items="${rap}" var="s">					        
 			<table border="1">
 		      <tr>
-		        <th>${s.nimetus}</th>
+		        <th>${s.seadus.nimetus}</th>
 		        <th></th>
 		      </tr>	      
-		      <c:forEach items="${intsidendid}" var="intsi">		      
+		      <c:forEach items="${s.intsidendid}" var="intsi">		      
 		      			<tr>
 					        <td>${intsi.nimetus}</td>					        			        
 					        <td><input type="submit" onClick="location.href='/Team02/intsidendiredaktor/index?id=${intsi.id}'" value="Vaata" /></td>					      
