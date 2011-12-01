@@ -71,8 +71,11 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
 		      </tr>	      
 		      <c:forEach items="${s.intsidendid}" var="intsi">		      
 		      			<tr>
-					        <td>${intsi.nimetus}</td>					        			        
-					        <td><input type="submit" onClick="location.href='/Team02/intsidendiredaktor/index?id=${intsi.id}'" value="Vaata" /></td>					      
+					        <td>${intsi.nimetus}</td>	
+					<spring:url value="/intsidendiredaktor/index" var="url">
+    				<spring:param name="id" value="${intsi.id}" />
+  				    </spring:url>				        			        
+					        <td><input type="submit" onClick="location.href='${url}'" value="Vaata" /></td>					      
 					      </tr>		     			      
 		      </c:forEach>		      
 		      <tr>
