@@ -5,7 +5,6 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
 import java.lang.String;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect INTSIDENDI_LIIK_Roo_JavaBean {
@@ -32,54 +31,6 @@ privileged aspect INTSIDENDI_LIIK_Roo_JavaBean {
     
     public void INTSIDENDI_LIIK.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String INTSIDENDI_LIIK.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void INTSIDENDI_LIIK.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date INTSIDENDI_LIIK.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void INTSIDENDI_LIIK.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String INTSIDENDI_LIIK.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void INTSIDENDI_LIIK.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date INTSIDENDI_LIIK.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void INTSIDENDI_LIIK.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String INTSIDENDI_LIIK.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void INTSIDENDI_LIIK.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date INTSIDENDI_LIIK.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void INTSIDENDI_LIIK.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
     public Set<INTSIDENT> INTSIDENDI_LIIK.getINTSIDENTs() {

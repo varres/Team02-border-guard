@@ -118,10 +118,10 @@ privileged aspect PIIRIRIKKUJAController_Roo_Controller {
     }
     
     void PIIRIRIKKUJAController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("PIIRIRIKKUJA_synniaeg_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("PIIRIRIKKUJA_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("PIIRIRIKKUJA_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("PIIRIRIKKUJA_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("PIIRIRIKKUJA_synniaeg_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String PIIRIRIKKUJAController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

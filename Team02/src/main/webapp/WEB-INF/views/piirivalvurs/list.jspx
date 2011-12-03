@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_PIIRIVALVUR" items="${piirivalvurs}" z="5ejCJk1F4gQBzFHkuqo+rlFDlss=">
         <table:table data="${piirivalvurs}" id="l_ee_itcollege_team02_entities_PIIRIVALVUR" path="/piirivalvurs" z="grkNNIYUlC8e2GKP5z1xoixOB+0=">
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_isikukood" property="isikukood" z="AppnPDRNXf2NZ6UQHBERqE/qGEg="/>
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_eesnimed" property="eesnimed" z="EVdpcbzolvWCI+6sg7uJd0rG3RM="/>
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_perekonnanimi" property="perekonnanimi" z="vjfKMtwM7OpI1XtP7g3Xm2kLCys="/>
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_sugu" property="sugu" z="Og/ZKC+HHwJ70N8AGxdQAg35sgU="/>
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_soduri_kood" property="soduri_kood" z="I4jRK25vvjlNB+N4TEioV+LxSrU="/>
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_kommentaar" property="kommentaar" z="ooyJB5UMMJRaoGpq0q/VEsvttbU="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avaja" property="avaja" z="VIjoAQmiRT2ckcB5W8JhmdP1cno="/>
+            <table:column date="true" dateTimePattern="${PIIRIVALVUR_avatud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avatud" property="avatud" z="naTv1tDCrsC3irHyHX0wyJx60C8="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_muutja" property="muutja" z="a4dve9Jisq5fi5mEk8ihGjdfxkM="/>
+            <table:column date="true" dateTimePattern="${PIIRIVALVUR_muudetud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_muudetud" property="muudetud" z="E2dD+lHBW+WWrOFCRX8RFjFRwLk="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_sulgeja" property="sulgeja" z="QOu4/m1X+TOXc2Tt7meaz998Mro="/>
+            <table:column date="true" dateTimePattern="${PIIRIVALVUR_suletud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_suletud" property="suletud" z="fjVCTvvRa7tHZwoX32xEMwF7Itk="/>
         </table:table>
     </page:list>
 </div>

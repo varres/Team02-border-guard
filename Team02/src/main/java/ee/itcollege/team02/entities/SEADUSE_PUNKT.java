@@ -4,6 +4,8 @@ import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
 import javax.validation.constraints.NotNull;
+
+import ee.itcollege.team02.common.Helper;
 import ee.itcollege.team02.entities.SEADUS;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.Size;
@@ -11,6 +13,8 @@ import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.List;
 import java.util.Set;
 import java.util.HashSet;
 import javax.persistence.OneToMany;
@@ -20,7 +24,7 @@ import ee.itcollege.team02.entities.ISIKU_SEADUS_INTSIDENDIS;
 @RooJavaBean
 @RooToString
 @RooEntity
-public class SEADUSE_PUNKT {
+public class SEADUSE_PUNKT extends BaseEntity {
 
     @NotNull
     @ManyToOne
@@ -50,32 +54,66 @@ public class SEADUSE_PUNKT {
     @Size(max = 20)
     private String kommentaar;
 
-    @NotNull
-    @Size(max = 32)
-    private String avaja;
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date avatud;
+	public String getAvaja() {
+		return avaja;
+	}
 
-    @NotNull
-    @Size(max = 32)
-    private String muutja;
+	public void setAvaja(String avaja) {
+		this.avaja = avaja;
+	}
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date muudetud;
+	public Date getAvatud() {
+		return avatud;
+	}
 
-    @NotNull
-    @Size(max = 32)
-    private String sulgeja;
+	public void setAvatud(Date avatud) {
+		this.avatud = avatud;
+	}
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date suletud;
+	public String getMuutja() {
+		return muutja;
+	}
+
+	public void setMuutja(String muutja) {
+		this.muutja = muutja;
+	}
+
+	public Date getMuudetud() {
+		return muudetud;
+	}
+
+	public void setMuudetud(Date muudetud) {
+		this.muudetud = muudetud;
+	}
+
+	public String getSulgeja() {
+		return sulgeja;
+	}
+
+	public void setSulgeja(String sulgeja) {
+		this.sulgeja = sulgeja;
+	}
+
+	public Date getSuletud() {
+		return suletud;
+	}
+
+	public void setSuletud(Date suletud) {
+		this.suletud = suletud;
+	}
+	
+    public static List<SEADUSE_PUNKT> findAllSEADUSE_PUNKTs() {
+    	List<SEADUSE_PUNKT> items = entityManager().createQuery("SELECT o FROM SEADUSE_PUNKT o", SEADUSE_PUNKT.class).getResultList();
+    	for (int i = items.size() - 1; i >= 0; i--) 
+    	{ 
+    		SEADUSE_PUNKT item = (SEADUSE_PUNKT) items.get(i);
+    	    if (!Helper.IsSurrogateDate(item.getSuletud())){ 
+    	    	items.remove(i); 
+    	    }    	
+    	} 
+    	return items;
+    }
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "ylemus_seaduse_punkt")
     private Set<ee.itcollege.team02.entities.SEADUSE_PUNKT> SEADUSE_PUNKTs = new HashSet<ee.itcollege.team02.entities.SEADUSE_PUNKT>();

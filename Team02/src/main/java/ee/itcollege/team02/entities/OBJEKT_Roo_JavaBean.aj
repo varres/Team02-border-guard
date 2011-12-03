@@ -6,7 +6,6 @@ package ee.itcollege.team02.entities;
 import ee.itcollege.team02.entities.OBJEKT_INTSIDENDIS;
 import ee.itcollege.team02.entities.PIIRIRIKKUJA;
 import java.lang.String;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect OBJEKT_Roo_JavaBean {
@@ -25,54 +24,6 @@ privileged aspect OBJEKT_Roo_JavaBean {
     
     public void OBJEKT.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String OBJEKT.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void OBJEKT.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date OBJEKT.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void OBJEKT.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String OBJEKT.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void OBJEKT.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date OBJEKT.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void OBJEKT.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String OBJEKT.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void OBJEKT.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date OBJEKT.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void OBJEKT.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
     public Set<OBJEKT_INTSIDENDIS> OBJEKT.getOBJEKT_INTSIDENDISs() {

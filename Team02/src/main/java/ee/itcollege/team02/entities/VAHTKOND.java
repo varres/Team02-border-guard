@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -15,10 +16,12 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import ee.itcollege.team02.common.Helper;
+
 @RooJavaBean
 @RooToString
 @RooEntity
-public class VAHTKOND {
+public class VAHTKOND extends BaseEntity {
 
     @NotNull
     @Size(max = 20)
@@ -41,32 +44,66 @@ public class VAHTKOND {
     @NotNull
     private String kommentaar;
 
-    @NotNull
-    @Size(max = 32)
-    private String avaja;
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date avatud;
+	public String getAvaja() {
+		return avaja;
+	}
 
-    @NotNull
-    @Size(max = 32)
-    private String muutja;
+	public void setAvaja(String avaja) {
+		this.avaja = avaja;
+	}
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date muudetud;
+	public Date getAvatud() {
+		return avatud;
+	}
 
-    @NotNull
-    @Size(max = 32)
-    private String sulgeja;
+	public void setAvatud(Date avatud) {
+		this.avatud = avatud;
+	}
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date suletud;
+	public String getMuutja() {
+		return muutja;
+	}
+
+	public void setMuutja(String muutja) {
+		this.muutja = muutja;
+	}
+
+	public Date getMuudetud() {
+		return muudetud;
+	}
+
+	public void setMuudetud(Date muudetud) {
+		this.muudetud = muudetud;
+	}
+
+	public String getSulgeja() {
+		return sulgeja;
+	}
+
+	public void setSulgeja(String sulgeja) {
+		this.sulgeja = sulgeja;
+	}
+
+	public Date getSuletud() {
+		return suletud;
+	}
+
+	public void setSuletud(Date suletud) {
+		this.suletud = suletud;
+	}
+	
+    public static List<VAHTKOND> findAllVAHTKONDS() {
+    	List<VAHTKOND> items = entityManager().createQuery("SELECT o FROM VAHTKOND o", VAHTKOND.class).getResultList();
+    	for (int i = items.size() - 1; i >= 0; i--) 
+    	{ 
+    		VAHTKOND item = (VAHTKOND) items.get(i);
+    	    if (!Helper.IsSurrogateDate(item.getSuletud())){ 
+    	    	items.remove(i); 
+    	    }    	
+    	} 
+    	return items;
+    }
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "vahtkond")
     private Set<VAHTKOND_INTSIDENDIS> VAHTKOND_INTSIDENDISs = new HashSet<VAHTKOND_INTSIDENDIS>();

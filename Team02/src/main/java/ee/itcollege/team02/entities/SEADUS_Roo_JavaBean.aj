@@ -5,7 +5,6 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.SEADUSE_PUNKT;
 import java.lang.String;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect SEADUS_Roo_JavaBean {
@@ -48,54 +47,6 @@ privileged aspect SEADUS_Roo_JavaBean {
     
     public void SEADUS.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String SEADUS.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void SEADUS.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date SEADUS.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void SEADUS.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String SEADUS.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void SEADUS.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date SEADUS.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void SEADUS.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String SEADUS.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void SEADUS.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date SEADUS.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void SEADUS.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
     public Set<SEADUSE_PUNKT> SEADUS.getSEADUSE_PUNKTs() {

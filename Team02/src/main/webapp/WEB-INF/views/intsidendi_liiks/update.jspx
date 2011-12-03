@@ -6,12 +6,12 @@
         <field:input field="kood" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kood" max="20" required="true" z="eFm0L25hQbeMbcNRPZ3ryUpF9RA="/>
         <field:textarea field="nimetus" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_nimetus" required="true" z="TrQaLyHZcZ6s6j+4qv6iqJmSPeA="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kommentaar" required="true" z="C1nFkecV1CnajrvQsRO70UnD1F0="/>
+        <field:simple field="INTSIDENTs" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_INTSIDENTs" messageCode="entity_reference_not_managed" messageCodeAttribute="I N T S I D E N T" z="fOlGcf5I9w6OLaAODcjPGjpa4Bw="/>
         <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_avaja" required="true" z="/ahGpRjnkv7HCSlTMOYKxab4Pmg="/>
         <field:datetime dateTimePattern="${INTSIDENDI_LIIK_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_avatud" required="true" z="eFIItDSxAo2y3jOo06R2FBxL26Y="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_muutja" required="true" z="SHSeExcL5anNz3neBlFhHOV1wvY="/>
         <field:datetime dateTimePattern="${INTSIDENDI_LIIK_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_muudetud" required="true" z="mA9tb7gfbSZzJAmaW2PPkp3UGFM="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_sulgeja" required="true" z="aL3GTv13TWS5IVByZ2AyXfVM1NQ="/>
         <field:datetime dateTimePattern="${INTSIDENDI_LIIK_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_suletud" required="true" z="K+uCOflWdJiMGhbza2W4CTabFVo="/>
-        <field:simple field="INTSIDENTs" id="c_ee_itcollege_team02_entities_INTSIDENDI_LIIK_INTSIDENTs" messageCode="entity_reference_not_managed" messageCodeAttribute="I N T S I D E N T" z="fOlGcf5I9w6OLaAODcjPGjpa4Bw="/>
     </form:update>
 </div>

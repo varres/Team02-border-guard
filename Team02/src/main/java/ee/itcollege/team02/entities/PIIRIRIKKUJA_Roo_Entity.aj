@@ -4,100 +4,16 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.PIIRIRIKKUJA;
-import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Version;
-import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect PIIRIRIKKUJA_Roo_Entity {
     
     declare @type: PIIRIRIKKUJA: @Entity;
     
-    @PersistenceContext
-    transient EntityManager PIIRIRIKKUJA.entityManager;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long PIIRIRIKKUJA.id;
-    
-    @Version
-    @Column(name = "version")
-    private Integer PIIRIRIKKUJA.version;
-    
-    public Long PIIRIRIKKUJA.getId() {
-        return this.id;
-    }
-    
-    public void PIIRIRIKKUJA.setId(Long id) {
-        this.id = id;
-    }
-    
-    public Integer PIIRIRIKKUJA.getVersion() {
-        return this.version;
-    }
-    
-    public void PIIRIRIKKUJA.setVersion(Integer version) {
-        this.version = version;
-    }
-    
-    @Transactional
-    public void PIIRIRIKKUJA.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void PIIRIRIKKUJA.remove() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        if (this.entityManager.contains(this)) {
-            this.entityManager.remove(this);
-        } else {
-            PIIRIRIKKUJA attached = PIIRIRIKKUJA.findPIIRIRIKKUJA(this.id);
-            this.entityManager.remove(attached);
-        }
-    }
-    
-    @Transactional
-    public void PIIRIRIKKUJA.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void PIIRIRIKKUJA.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
-    }
-    
-    @Transactional
-    public PIIRIRIKKUJA PIIRIRIKKUJA.merge() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        PIIRIRIKKUJA merged = this.entityManager.merge(this);
-        this.entityManager.flush();
-        return merged;
-    }
-    
-    public static final EntityManager PIIRIRIKKUJA.entityManager() {
-        EntityManager em = new PIIRIRIKKUJA().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
-    
     public static long PIIRIRIKKUJA.countPIIRIRIKKUJAS() {
         return entityManager().createQuery("SELECT COUNT(o) FROM PIIRIRIKKUJA o", Long.class).getSingleResult();
-    }
-    
-    public static List<PIIRIRIKKUJA> PIIRIRIKKUJA.findAllPIIRIRIKKUJAS() {
-        return entityManager().createQuery("SELECT o FROM PIIRIRIKKUJA o", PIIRIRIKKUJA.class).getResultList();
     }
     
     public static PIIRIRIKKUJA PIIRIRIKKUJA.findPIIRIRIKKUJA(Long id) {

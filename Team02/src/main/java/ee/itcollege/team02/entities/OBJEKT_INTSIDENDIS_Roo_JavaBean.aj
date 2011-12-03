@@ -4,6 +4,7 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
+import ee.itcollege.team02.entities.OBJEKT;
 import java.lang.String;
 import java.util.Date;
 
@@ -17,11 +18,11 @@ privileged aspect OBJEKT_INTSIDENDIS_Roo_JavaBean {
         this.intsident = intsident;
     }
     
-    public INTSIDENT OBJEKT_INTSIDENDIS.getObjekt() {
+    public OBJEKT OBJEKT_INTSIDENDIS.getObjekt() {
         return this.objekt;
     }
     
-    public void OBJEKT_INTSIDENDIS.setObjekt(INTSIDENT objekt) {
+    public void OBJEKT_INTSIDENDIS.setObjekt(OBJEKT objekt) {
         this.objekt = objekt;
     }
     
@@ -55,54 +56,6 @@ privileged aspect OBJEKT_INTSIDENDIS_Roo_JavaBean {
     
     public void OBJEKT_INTSIDENDIS.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String OBJEKT_INTSIDENDIS.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void OBJEKT_INTSIDENDIS.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date OBJEKT_INTSIDENDIS.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void OBJEKT_INTSIDENDIS.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String OBJEKT_INTSIDENDIS.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void OBJEKT_INTSIDENDIS.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date OBJEKT_INTSIDENDIS.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void OBJEKT_INTSIDENDIS.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String OBJEKT_INTSIDENDIS.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void OBJEKT_INTSIDENDIS.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date OBJEKT_INTSIDENDIS.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void OBJEKT_INTSIDENDIS.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
 }

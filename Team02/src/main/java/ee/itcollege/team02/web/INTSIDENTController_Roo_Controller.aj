@@ -136,11 +136,11 @@ privileged aspect INTSIDENTController_Roo_Controller {
     }
     
     void INTSIDENTController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("INTSIDENT_toimumise_algus_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("INTSIDENT_toimumise_lopp_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("INTSIDENT_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("INTSIDENT_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("INTSIDENT_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("INTSIDENT_toimumise_algus_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("INTSIDENT_toimumise_lopp_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String INTSIDENTController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

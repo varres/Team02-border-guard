@@ -4,100 +4,16 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
-import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Version;
-import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect INTSIDENT_Roo_Entity {
     
     declare @type: INTSIDENT: @Entity;
     
-    @PersistenceContext
-    transient EntityManager INTSIDENT.entityManager;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long INTSIDENT.id;
-    
-    @Version
-    @Column(name = "version")
-    private Integer INTSIDENT.version;
-    
-    public Long INTSIDENT.getId() {
-        return this.id;
-    }
-    
-    public void INTSIDENT.setId(Long id) {
-        this.id = id;
-    }
-    
-    public Integer INTSIDENT.getVersion() {
-        return this.version;
-    }
-    
-    public void INTSIDENT.setVersion(Integer version) {
-        this.version = version;
-    }
-    
-    @Transactional
-    public void INTSIDENT.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void INTSIDENT.remove() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        if (this.entityManager.contains(this)) {
-            this.entityManager.remove(this);
-        } else {
-            INTSIDENT attached = INTSIDENT.findINTSIDENT(this.id);
-            this.entityManager.remove(attached);
-        }
-    }
-    
-    @Transactional
-    public void INTSIDENT.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void INTSIDENT.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
-    }
-    
-    @Transactional
-    public INTSIDENT INTSIDENT.merge() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        INTSIDENT merged = this.entityManager.merge(this);
-        this.entityManager.flush();
-        return merged;
-    }
-    
-    public static final EntityManager INTSIDENT.entityManager() {
-        EntityManager em = new INTSIDENT().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
-    
     public static long INTSIDENT.countINTSIDENTS() {
         return entityManager().createQuery("SELECT COUNT(o) FROM INTSIDENT o", Long.class).getSingleResult();
-    }
-    
-    public static List<INTSIDENT> INTSIDENT.findAllINTSIDENTS() {
-        return entityManager().createQuery("SELECT o FROM INTSIDENT o", INTSIDENT.class).getResultList();
     }
     
     public static INTSIDENT INTSIDENT.findINTSIDENT(Long id) {

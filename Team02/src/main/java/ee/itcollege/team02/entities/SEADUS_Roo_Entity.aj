@@ -4,100 +4,16 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.SEADUS;
-import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Version;
-import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect SEADUS_Roo_Entity {
     
     declare @type: SEADUS: @Entity;
     
-    @PersistenceContext
-    transient EntityManager SEADUS.entityManager;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long SEADUS.id;
-    
-    @Version
-    @Column(name = "version")
-    private Integer SEADUS.version;
-    
-    public Long SEADUS.getId() {
-        return this.id;
-    }
-    
-    public void SEADUS.setId(Long id) {
-        this.id = id;
-    }
-    
-    public Integer SEADUS.getVersion() {
-        return this.version;
-    }
-    
-    public void SEADUS.setVersion(Integer version) {
-        this.version = version;
-    }
-    
-    @Transactional
-    public void SEADUS.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void SEADUS.remove() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        if (this.entityManager.contains(this)) {
-            this.entityManager.remove(this);
-        } else {
-            SEADUS attached = SEADUS.findSEADUS(this.id);
-            this.entityManager.remove(attached);
-        }
-    }
-    
-    @Transactional
-    public void SEADUS.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void SEADUS.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
-    }
-    
-    @Transactional
-    public SEADUS SEADUS.merge() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        SEADUS merged = this.entityManager.merge(this);
-        this.entityManager.flush();
-        return merged;
-    }
-    
-    public static final EntityManager SEADUS.entityManager() {
-        EntityManager em = new SEADUS().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
-    
     public static long SEADUS.countSEADUS() {
         return entityManager().createQuery("SELECT COUNT(o) FROM SEADUS o", Long.class).getSingleResult();
-    }
-    
-    public static List<SEADUS> SEADUS.findAllSEADUS() {
-        return entityManager().createQuery("SELECT o FROM SEADUS o", SEADUS.class).getResultList();
     }
     
     public static SEADUS SEADUS.findSEADUS(Long id) {

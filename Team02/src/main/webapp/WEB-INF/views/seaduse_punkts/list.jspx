@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_SEADUSE_PUNKT" items="${seaduse_punkts}" z="teQB5ea7T7ury9ut5mTdrcjL/qQ=">
         <table:table data="${seaduse_punkts}" id="l_ee_itcollege_team02_entities_SEADUSE_PUNKT" path="/seaduse_punkts" z="jWskvtt1GAEQJqOZt/TXLpNvIno=">
-            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_seadus" property="seadus" z="LFmCYMw2XhcWicMHiws6/hRP3Mg="/>
-            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_paragrahv" property="paragrahv" z="lQB2hbVJNzWk6niK+hkNq6XXFos="/>
-            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_pais" property="pais" z="NyRDzpDpb39K4qmhQvrbeVwRRkw="/>
-            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_tekst" property="tekst" z="rCwO22VVDJIVYdYg1Zc+kuyMzoo="/>
-            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_kehtiv_alates" property="kehtiv_alates" z="GEYaVzzp+VUwUzP0fG99EH8YmHY="/>
-            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_kehtiv_kuni" property="kehtiv_kuni" z="2pD+LZUNNJ6lSmHtJ5lYff4i1tU="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_avaja" property="avaja" z="I58QAkOKFPRW48+2/tYnJ6mdzf0="/>
+            <table:column date="true" dateTimePattern="${SEADUSE_PUNKT_avatud_date_format}" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_avatud" property="avatud" z="+6DXx5ilMaqK6WPEangAf6eb7XU="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_muutja" property="muutja" z="CF0/TEr4cUngK6x/4t26XOS4IfQ="/>
+            <table:column date="true" dateTimePattern="${SEADUSE_PUNKT_muudetud_date_format}" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_muudetud" property="muudetud" z="C68uPg33sODCz5aWjXNKSYb/iD4="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_sulgeja" property="sulgeja" z="mF9hFvkeZcDPvkhzhSELjCifY6o="/>
+            <table:column date="true" dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_suletud" property="suletud" z="q+1annYdehqp56Mnaha+FRB8qxQ="/>
         </table:table>
     </page:list>
 </div>

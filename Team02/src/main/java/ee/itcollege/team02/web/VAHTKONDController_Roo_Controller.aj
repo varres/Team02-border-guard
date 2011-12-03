@@ -106,11 +106,11 @@ privileged aspect VAHTKONDController_Roo_Controller {
     }
     
     void VAHTKONDController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("VAHTKOND_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("VAHTKOND_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("VAHTKOND_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("VAHTKOND_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("VAHTKOND_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("VAHTKOND_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("VAHTKOND_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String VAHTKONDController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

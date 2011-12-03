@@ -7,7 +7,6 @@ import ee.itcollege.team02.entities.ISIKU_SEADUS_INTSIDENDIS;
 import ee.itcollege.team02.entities.SEADUS;
 import ee.itcollege.team02.entities.SEADUSE_PUNKT;
 import java.lang.String;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect SEADUSE_PUNKT_Roo_JavaBean {
@@ -66,54 +65,6 @@ privileged aspect SEADUSE_PUNKT_Roo_JavaBean {
     
     public void SEADUSE_PUNKT.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String SEADUSE_PUNKT.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void SEADUSE_PUNKT.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date SEADUSE_PUNKT.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void SEADUSE_PUNKT.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String SEADUSE_PUNKT.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void SEADUSE_PUNKT.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date SEADUSE_PUNKT.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void SEADUSE_PUNKT.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String SEADUSE_PUNKT.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void SEADUSE_PUNKT.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date SEADUSE_PUNKT.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void SEADUSE_PUNKT.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
     public Set<SEADUSE_PUNKT> SEADUSE_PUNKT.getSEADUSE_PUNKTs() {

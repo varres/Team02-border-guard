@@ -8,12 +8,12 @@
         <field:display date="true" dateTimePattern="${KODAKONDSUS_alates_date_format}" field="alates" id="s_ee_itcollege_team02_entities_KODAKONDSUS_alates" object="${kodakondsus}" z="D/iCXMkG6hAKJfkpcMxdxfAzVEI="/>
         <field:display date="true" dateTimePattern="${KODAKONDSUS_kuni_date_format}" field="kuni" id="s_ee_itcollege_team02_entities_KODAKONDSUS_kuni" object="${kodakondsus}" z="UsImOjfVEiwQDnbyGJzELQ86yVc="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_KODAKONDSUS_kommentaar" object="${kodakondsus}" z="UbWqffLYgNm9eHUjr3EsWeiM+Ao="/>
+        <field:display field="piiririkkuja" id="s_ee_itcollege_team02_entities_KODAKONDSUS_piiririkkuja" object="${kodakondsus}" z="K89ErX5qpeFLk/bZajtXJ/oJQJ4="/>
         <field:display field="avaja" id="s_ee_itcollege_team02_entities_KODAKONDSUS_avaja" object="${kodakondsus}" z="v/QaPCg9nTTskNA/fIwmrepoE4E="/>
         <field:display date="true" dateTimePattern="${KODAKONDSUS_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_KODAKONDSUS_avatud" object="${kodakondsus}" z="a0BM8AzI7FB5YuMT/l7sFpMJr48="/>
         <field:display field="muutja" id="s_ee_itcollege_team02_entities_KODAKONDSUS_muutja" object="${kodakondsus}" z="RRSTNtCOMDj7l0KuqmsHfrqhzBE="/>
         <field:display date="true" dateTimePattern="${KODAKONDSUS_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_KODAKONDSUS_muudetud" object="${kodakondsus}" z="utDlmK8o3juk0ScOx+vrJfgWM7k="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_KODAKONDSUS_sulgeja" object="${kodakondsus}" z="D9WbAnoXeJHUFqdNftB9qfpynnI="/>
         <field:display date="true" dateTimePattern="${KODAKONDSUS_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_KODAKONDSUS_suletud" object="${kodakondsus}" z="SVE9+Ds4f/QYirRrcmGsZNoebZo="/>
-        <field:display field="piiririkkuja" id="s_ee_itcollege_team02_entities_KODAKONDSUS_piiririkkuja" object="${kodakondsus}" z="K89ErX5qpeFLk/bZajtXJ/oJQJ4="/>
     </page:show>
 </div>

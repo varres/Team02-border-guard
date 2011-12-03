@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS" modelAttribute="OBJEKT_INTSIDENDIS" path="/objekt_intsidendiss" versionField="Version" z="HUVbY0TZVDDD5dWI9169qjfX+84=">
         <field:select field="intsident" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_intsident" itemValue="id" items="${intsidents}" path="/intsidents" z="tG2Oq0pN4M3/DKm86KuXXmza654="/>
-        <field:select field="objekt" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_objekt" itemValue="id" items="${intsidents}" path="/intsidents" z="RogSP2zbp5JLlp+SQfritdzX2Xo="/>
+        <field:select field="objekt" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_objekt" itemValue="id" items="${objekts}" path="/objekts" z="IX8Lzf04OG7kwjDBfnv71AU1EN8="/>
         <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_alates" required="true" z="DhNE/l4krN1rqQ2mhXcjOxuQ2js="/>
         <field:datetime dateTimePattern="${OBJEKT_INTSIDENDIS_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kuni" required="true" z="chPDdHDRIRsiBZz2Y1tZw9gfGzs="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_team02_entities_OBJEKT_INTSIDENDIS_kirjeldus" required="true" z="g6CUE8JruIVjxAmZJ2lco2GJHMU="/>

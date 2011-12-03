@@ -64,14 +64,7 @@ public class IntsidendiRegistreerimineController {
     	newIntsident.setToimumise_algus(algus);
     	newIntsident.setToimumise_lopp(lopp);
     	newIntsident.setKirjeldus(kirjeldus);
-    	newIntsident.setKommentaar(kommentaar);
-    	newIntsident.setAvaja(principal.getName());
-    	newIntsident.setAvatud(new Date());
-    	newIntsident.setMuutja("username");
-    	newIntsident.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
-    	newIntsident.setSulgeja("username");
-    	newIntsident.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
-    	
+    	newIntsident.setKommentaar(kommentaar);    	
     	newIntsident.persist();
     	
     	 return "redirect:/intsidendiredaktor/index?id=" + newIntsident.getId();
@@ -81,7 +74,7 @@ public class IntsidendiRegistreerimineController {
     public String index(Model uiModel) {		
     	List<INTSIDENT> intsidendid = INTSIDENT.findAllINTSIDENTS();
     	if(intsidendid.size() == 0){
-    		Helper.addAndmed();
+    		//Helper.addAndmed();
     	}
     	
     	List<PIIRILOIK> piiriloigud = PIIRILOIK.findAllPIIRILOIKS();

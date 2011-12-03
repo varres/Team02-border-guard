@@ -4,100 +4,16 @@
 package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.SEADUSE_PUNKT;
-import java.lang.Integer;
 import java.lang.Long;
 import java.util.List;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Version;
-import org.springframework.transaction.annotation.Transactional;
 
 privileged aspect SEADUSE_PUNKT_Roo_Entity {
     
     declare @type: SEADUSE_PUNKT: @Entity;
     
-    @PersistenceContext
-    transient EntityManager SEADUSE_PUNKT.entityManager;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long SEADUSE_PUNKT.id;
-    
-    @Version
-    @Column(name = "version")
-    private Integer SEADUSE_PUNKT.version;
-    
-    public Long SEADUSE_PUNKT.getId() {
-        return this.id;
-    }
-    
-    public void SEADUSE_PUNKT.setId(Long id) {
-        this.id = id;
-    }
-    
-    public Integer SEADUSE_PUNKT.getVersion() {
-        return this.version;
-    }
-    
-    public void SEADUSE_PUNKT.setVersion(Integer version) {
-        this.version = version;
-    }
-    
-    @Transactional
-    public void SEADUSE_PUNKT.persist() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.persist(this);
-    }
-    
-    @Transactional
-    public void SEADUSE_PUNKT.remove() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        if (this.entityManager.contains(this)) {
-            this.entityManager.remove(this);
-        } else {
-            SEADUSE_PUNKT attached = SEADUSE_PUNKT.findSEADUSE_PUNKT(this.id);
-            this.entityManager.remove(attached);
-        }
-    }
-    
-    @Transactional
-    public void SEADUSE_PUNKT.flush() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.flush();
-    }
-    
-    @Transactional
-    public void SEADUSE_PUNKT.clear() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        this.entityManager.clear();
-    }
-    
-    @Transactional
-    public SEADUSE_PUNKT SEADUSE_PUNKT.merge() {
-        if (this.entityManager == null) this.entityManager = entityManager();
-        SEADUSE_PUNKT merged = this.entityManager.merge(this);
-        this.entityManager.flush();
-        return merged;
-    }
-    
-    public static final EntityManager SEADUSE_PUNKT.entityManager() {
-        EntityManager em = new SEADUSE_PUNKT().entityManager;
-        if (em == null) throw new IllegalStateException("Entity manager has not been injected (is the Spring Aspects JAR configured as an AJC/AJDT aspects library?)");
-        return em;
-    }
-    
     public static long SEADUSE_PUNKT.countSEADUSE_PUNKTs() {
         return entityManager().createQuery("SELECT COUNT(o) FROM SEADUSE_PUNKT o", Long.class).getSingleResult();
-    }
-    
-    public static List<SEADUSE_PUNKT> SEADUSE_PUNKT.findAllSEADUSE_PUNKTs() {
-        return entityManager().createQuery("SELECT o FROM SEADUSE_PUNKT o", SEADUSE_PUNKT.class).getResultList();
     }
     
     public static SEADUSE_PUNKT SEADUSE_PUNKT.findSEADUSE_PUNKT(Long id) {

@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_INTSIDENT" items="${intsidents}" z="3PMI44wlGK0ft6nIE0AvPNtZQcs=">
         <table:table data="${intsidents}" id="l_ee_itcollege_team02_entities_INTSIDENT" path="/intsidents" z="+ZEaTvByvwdOspCj6SBpg+B78p8=">
-            <table:column id="c_ee_itcollege_team02_entities_INTSIDENT_kood" property="kood" z="DHwISFfhKqZEJQcBpeveLbKvtQc="/>
-            <table:column id="c_ee_itcollege_team02_entities_INTSIDENT_nimetus" property="nimetus" z="5xtR9PQHkZHOhodIv73SU+UiZl8="/>
-            <table:column id="c_ee_itcollege_team02_entities_INTSIDENT_piiriloik" property="piiriloik" z="QxKGAXjmeXyNqjQEZVSAPMDtkJI="/>
-            <table:column date="true" dateTimePattern="${INTSIDENT_toimumise_algus_date_format}" id="c_ee_itcollege_team02_entities_INTSIDENT_toimumise_algus" property="toimumise_algus" z="ddltvTtArh3tpCMboLBKY9t30CY="/>
-            <table:column date="true" dateTimePattern="${INTSIDENT_toimumise_lopp_date_format}" id="c_ee_itcollege_team02_entities_INTSIDENT_toimumise_lopp" property="toimumise_lopp" z="mKpumFP7DrezIcT6tfSm7rg+4oU="/>
-            <table:column id="c_ee_itcollege_team02_entities_INTSIDENT_GPS_longituud" property="GPS_longituud" z="Hn2MvDJmRWrPeMo0Q2hXPLVnAFM="/>
+            <table:column id="c_ee_itcollege_team02_entities_INTSIDENT_avaja" property="avaja" z="AdIGrJsU3InTd7c5YckyNikHrC0="/>
+            <table:column date="true" dateTimePattern="${INTSIDENT_avatud_date_format}" id="c_ee_itcollege_team02_entities_INTSIDENT_avatud" property="avatud" z="31uJWWkU85zD1YNFGcI60+ybts4="/>
+            <table:column id="c_ee_itcollege_team02_entities_INTSIDENT_muutja" property="muutja" z="hqPoKuSQHgs998q+Kv2X2iXwfXc="/>
+            <table:column date="true" dateTimePattern="${INTSIDENT_muudetud_date_format}" id="c_ee_itcollege_team02_entities_INTSIDENT_muudetud" property="muudetud" z="m3d01k3KxYLMK0FTyjsiUQbFmgQ="/>
+            <table:column id="c_ee_itcollege_team02_entities_INTSIDENT_sulgeja" property="sulgeja" z="d2JkKEv+KtOcV2LSq4AjzDefdaQ="/>
+            <table:column date="true" dateTimePattern="${INTSIDENT_suletud_date_format}" id="c_ee_itcollege_team02_entities_INTSIDENT_suletud" property="suletud" z="fUAkBVU3io5u2uyF/D88ckwSAo8="/>
         </table:table>
     </page:list>
 </div>

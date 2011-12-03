@@ -5,7 +5,6 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.INTSIDENT;
 import java.lang.String;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect PIIRILOIK_Roo_JavaBean {
@@ -40,54 +39,6 @@ privileged aspect PIIRILOIK_Roo_JavaBean {
     
     public void PIIRILOIK.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String PIIRILOIK.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void PIIRILOIK.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date PIIRILOIK.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void PIIRILOIK.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String PIIRILOIK.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void PIIRILOIK.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date PIIRILOIK.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void PIIRILOIK.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String PIIRILOIK.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void PIIRILOIK.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date PIIRILOIK.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void PIIRILOIK.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
     public Set<INTSIDENT> PIIRILOIK.getINTSIDENTs() {

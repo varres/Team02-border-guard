@@ -60,54 +60,6 @@ privileged aspect ISIK_INTSIDENDIS_Roo_JavaBean {
         this.kommentaar = kommentaar;
     }
     
-    public String ISIK_INTSIDENDIS.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void ISIK_INTSIDENDIS.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date ISIK_INTSIDENDIS.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void ISIK_INTSIDENDIS.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String ISIK_INTSIDENDIS.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void ISIK_INTSIDENDIS.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date ISIK_INTSIDENDIS.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void ISIK_INTSIDENDIS.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String ISIK_INTSIDENDIS.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void ISIK_INTSIDENDIS.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date ISIK_INTSIDENDIS.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void ISIK_INTSIDENDIS.setSuletud(Date suletud) {
-        this.suletud = suletud;
-    }
-    
     public Set<ISIKU_SEADUS_INTSIDENDIS> ISIK_INTSIDENDIS.getISIKU_SEADUS_INTSIDENDISs() {
         return this.ISIKU_SEADUS_INTSIDENDISs;
     }

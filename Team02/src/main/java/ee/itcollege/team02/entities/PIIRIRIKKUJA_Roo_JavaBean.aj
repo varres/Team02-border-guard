@@ -68,54 +68,6 @@ privileged aspect PIIRIRIKKUJA_Roo_JavaBean {
         this.kommentaar = kommentaar;
     }
     
-    public String PIIRIRIKKUJA.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void PIIRIRIKKUJA.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date PIIRIRIKKUJA.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void PIIRIRIKKUJA.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String PIIRIRIKKUJA.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void PIIRIRIKKUJA.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date PIIRIRIKKUJA.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void PIIRIRIKKUJA.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String PIIRIRIKKUJA.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void PIIRIRIKKUJA.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date PIIRIRIKKUJA.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void PIIRIRIKKUJA.setSuletud(Date suletud) {
-        this.suletud = suletud;
-    }
-    
     public Set<KODAKONDSUS> PIIRIRIKKUJA.getKODAKONDSUSs() {
         return this.KODAKONDSUSs;
     }

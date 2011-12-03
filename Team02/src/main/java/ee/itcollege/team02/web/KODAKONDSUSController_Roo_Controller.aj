@@ -112,11 +112,11 @@ privileged aspect KODAKONDSUSController_Roo_Controller {
     }
     
     void KODAKONDSUSController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("KODAKONDSUS_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("KODAKONDSUS_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("KODAKONDSUS_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("KODAKONDSUS_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("KODAKONDSUS_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("KODAKONDSUS_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("KODAKONDSUS_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String KODAKONDSUSController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

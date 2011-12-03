@@ -3,13 +3,21 @@ package ee.itcollege.team02.entities;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.tostring.RooToString;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Set;
+
+import ee.itcollege.team02.common.Helper;
 import ee.itcollege.team02.entities.INTSIDENT;
 import java.util.HashSet;
 import javax.persistence.OneToMany;
@@ -18,7 +26,7 @@ import javax.persistence.CascadeType;
 @RooJavaBean
 @RooToString
 @RooEntity
-public class INTSIDENDI_LIIK {
+public class INTSIDENDI_LIIK extends BaseEntity {
 
     @NotNull
     @Size(max = 20)
@@ -30,34 +38,69 @@ public class INTSIDENDI_LIIK {
 
     @NotNull
     private String kommentaar;
+    
+	public String getAvaja() {
+		return avaja;
+	}
 
-    @NotNull
-    @Size(max = 32)
-    private String avaja;
+	public void setAvaja(String avaja) {
+		this.avaja = avaja;
+	}
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date avatud;
+	public Date getAvatud() {
+		return avatud;
+	}
 
-    @NotNull
-    @Size(max = 32)
-    private String muutja;
+	public void setAvatud(Date avatud) {
+		this.avatud = avatud;
+	}
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date muudetud;
+	public String getMuutja() {
+		return muutja;
+	}
 
-    @NotNull
-    @Size(max = 32)
-    private String sulgeja;
+	public void setMuutja(String muutja) {
+		this.muutja = muutja;
+	}
 
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
-    private Date suletud;
+	public Date getMuudetud() {
+		return muudetud;
+	}
+
+	public void setMuudetud(Date muudetud) {
+		this.muudetud = muudetud;
+	}
+
+	public String getSulgeja() {
+		return sulgeja;
+	}
+
+	public void setSulgeja(String sulgeja) {
+		this.sulgeja = sulgeja;
+	}
+
+	public Date getSuletud() {
+		return suletud;
+	}
+
+	public void setSuletud(Date suletud) {
+		this.suletud = suletud;
+	}
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "intsidendi_liik")
     private Set<INTSIDENT> INTSIDENTs = new HashSet<INTSIDENT>();
+
+    
+    public static List<INTSIDENDI_LIIK> findAllINTSIDENDI_LIIKs() {
+    	List<INTSIDENDI_LIIK> items = entityManager().createQuery("SELECT o FROM INTSIDENDI_LIIK o", INTSIDENDI_LIIK.class).getResultList();
+    	for (int i = items.size() - 1; i >= 0; i--) 
+    	{ 
+    		INTSIDENDI_LIIK item = (INTSIDENDI_LIIK) items.get(i);
+    	    if (!Helper.IsSurrogateDate(item.getSuletud())){ 
+    	    	items.remove(i); 
+    	    }    	
+    	} 
+    	return items;
+    }
+
 }

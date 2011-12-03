@@ -88,54 +88,6 @@ privileged aspect INTSIDENT_Roo_JavaBean {
         this.kommentaar = kommentaar;
     }
     
-    public String INTSIDENT.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void INTSIDENT.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date INTSIDENT.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void INTSIDENT.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String INTSIDENT.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void INTSIDENT.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date INTSIDENT.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void INTSIDENT.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String INTSIDENT.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void INTSIDENT.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date INTSIDENT.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void INTSIDENT.setSuletud(Date suletud) {
-        this.suletud = suletud;
-    }
-    
     public INTSIDENDI_LIIK INTSIDENT.getIntsidendi_liik() {
         return this.intsidendi_liik;
     }

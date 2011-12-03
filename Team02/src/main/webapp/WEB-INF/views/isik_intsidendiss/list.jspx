@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_ISIK_INTSIDENDIS" items="${isik_intsidendiss}" z="8tf+pWo4cVT1EH896s54z4CTXJs=">
         <table:table data="${isik_intsidendiss}" id="l_ee_itcollege_team02_entities_ISIK_INTSIDENDIS" path="/isik_intsidendiss" z="cqDMY7LvR2nbZSqBTZOhc7CvU2E=">
-            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_piiririkkuja" property="piiririkkuja" z="mxH1qPZO/yAP7SnEb6oXsZPkkTo="/>
-            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_alates_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_alates" property="alates" z="uh6zWma+ss7xuIBwr3PuOCmoKoc="/>
-            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_kuni_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kuni" property="kuni" z="pXDaG8NUNwGOL9uKesxAwGBAG1M="/>
-            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kirjeldus" property="kirjeldus" z="v8nfQa585wiyeMdMq+MSQ+tCJ2Y="/>
-            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_intsident" property="intsident" z="Rw3fKcYvlwctQUjMTru7bUSlCr0="/>
-            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kommentaar" property="kommentaar" z="mYBIHXjwt4pTn0s9Oh4pfvpXYLA="/>
+            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avaja" property="avaja" z="MzGPEmVcjJRcgqa0PriFZ0a5xQU="/>
+            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_avatud_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avatud" property="avatud" z="12DULR/M43QYlRt2wrMkb5q4fnk="/>
+            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_muutja" property="muutja" z="MqhYMM6FaaitvVDapHY8V4XKi9Q="/>
+            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_muudetud_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_muudetud" property="muudetud" z="5mD6LlJBMcsXgkxrP2UK5XMO40Q="/>
+            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_sulgeja" property="sulgeja" z="LtrXx0n8B45QPBw1NyZ1t4DvPWY="/>
+            <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_suletud_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_suletud" property="suletud" z="/pm9crh6AgNsB1N295SJJiokyik="/>
         </table:table>
     </page:list>
 </div>

@@ -5,7 +5,6 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.PIIRIVALVUR_INTSIDENDIS;
 import java.lang.String;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect PIIRIVALVUR_Roo_JavaBean {
@@ -56,54 +55,6 @@ privileged aspect PIIRIVALVUR_Roo_JavaBean {
     
     public void PIIRIVALVUR.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String PIIRIVALVUR.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void PIIRIVALVUR.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date PIIRIVALVUR.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void PIIRIVALVUR.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String PIIRIVALVUR.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void PIIRIVALVUR.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date PIIRIVALVUR.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void PIIRIVALVUR.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String PIIRIVALVUR.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void PIIRIVALVUR.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date PIIRIVALVUR.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void PIIRIVALVUR.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
     public Set<PIIRIVALVUR_INTSIDENDIS> PIIRIVALVUR.getPIIRIVALVUR_INTSIDENDISs() {

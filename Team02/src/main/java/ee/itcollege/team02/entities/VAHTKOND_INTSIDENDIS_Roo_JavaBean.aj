@@ -44,54 +44,6 @@ privileged aspect VAHTKOND_INTSIDENDIS_Roo_JavaBean {
         this.kommentaar = kommentaar;
     }
     
-    public String VAHTKOND_INTSIDENDIS.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void VAHTKOND_INTSIDENDIS.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date VAHTKOND_INTSIDENDIS.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void VAHTKOND_INTSIDENDIS.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String VAHTKOND_INTSIDENDIS.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void VAHTKOND_INTSIDENDIS.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date VAHTKOND_INTSIDENDIS.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void VAHTKOND_INTSIDENDIS.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String VAHTKOND_INTSIDENDIS.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void VAHTKOND_INTSIDENDIS.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date VAHTKOND_INTSIDENDIS.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void VAHTKOND_INTSIDENDIS.setSuletud(Date suletud) {
-        this.suletud = suletud;
-    }
-    
     public INTSIDENT VAHTKOND_INTSIDENDIS.getIntsident() {
         return this.intsident;
     }

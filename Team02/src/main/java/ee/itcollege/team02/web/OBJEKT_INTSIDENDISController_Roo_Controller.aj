@@ -4,6 +4,7 @@
 package ee.itcollege.team02.web;
 
 import ee.itcollege.team02.entities.INTSIDENT;
+import ee.itcollege.team02.entities.OBJEKT;
 import ee.itcollege.team02.entities.OBJEKT_INTSIDENDIS;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
@@ -100,17 +101,22 @@ privileged aspect OBJEKT_INTSIDENDISController_Roo_Controller {
         return INTSIDENT.findAllINTSIDENTS();
     }
     
+    @ModelAttribute("objekts")
+    public Collection<OBJEKT> OBJEKT_INTSIDENDISController.populateOBJEKTS() {
+        return OBJEKT.findAllOBJEKTS();
+    }
+    
     @ModelAttribute("objekt_intsidendiss")
     public Collection<OBJEKT_INTSIDENDIS> OBJEKT_INTSIDENDISController.populateOBJEKT_INTSIDENDISs() {
         return OBJEKT_INTSIDENDIS.findAllOBJEKT_INTSIDENDISs();
     }
     
     void OBJEKT_INTSIDENDISController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("OBJEKT_INTSIDENDIS_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("OBJEKT_INTSIDENDIS_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("OBJEKT_INTSIDENDIS_avatud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("OBJEKT_INTSIDENDIS_muudetud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
         uiModel.addAttribute("OBJEKT_INTSIDENDIS_suletud_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("OBJEKT_INTSIDENDIS_alates_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("OBJEKT_INTSIDENDIS_kuni_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
     }
     
     String OBJEKT_INTSIDENDISController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

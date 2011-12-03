@@ -5,7 +5,6 @@ package ee.itcollege.team02.entities;
 
 import ee.itcollege.team02.entities.KODAKONDSUS;
 import java.lang.String;
-import java.util.Date;
 import java.util.Set;
 
 privileged aspect RIIK_Roo_JavaBean {
@@ -32,54 +31,6 @@ privileged aspect RIIK_Roo_JavaBean {
     
     public void RIIK.setKommentaar(String kommentaar) {
         this.kommentaar = kommentaar;
-    }
-    
-    public String RIIK.getAvaja() {
-        return this.avaja;
-    }
-    
-    public void RIIK.setAvaja(String avaja) {
-        this.avaja = avaja;
-    }
-    
-    public Date RIIK.getAvatud() {
-        return this.avatud;
-    }
-    
-    public void RIIK.setAvatud(Date avatud) {
-        this.avatud = avatud;
-    }
-    
-    public String RIIK.getMuutja() {
-        return this.muutja;
-    }
-    
-    public void RIIK.setMuutja(String muutja) {
-        this.muutja = muutja;
-    }
-    
-    public Date RIIK.getMuudetud() {
-        return this.muudetud;
-    }
-    
-    public void RIIK.setMuudetud(Date muudetud) {
-        this.muudetud = muudetud;
-    }
-    
-    public String RIIK.getSulgeja() {
-        return this.sulgeja;
-    }
-    
-    public void RIIK.setSulgeja(String sulgeja) {
-        this.sulgeja = sulgeja;
-    }
-    
-    public Date RIIK.getSuletud() {
-        return this.suletud;
-    }
-    
-    public void RIIK.setSuletud(Date suletud) {
-        this.suletud = suletud;
     }
     
     public Set<KODAKONDSUS> RIIK.getKODAKONDSUSs() {
