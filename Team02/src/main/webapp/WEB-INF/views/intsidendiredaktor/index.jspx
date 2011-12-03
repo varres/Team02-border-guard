@@ -10,6 +10,39 @@
 
 		<p>Intsident ${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</p>
 
+
+		<c:set var="upperCount" scope="page" value="${isik_ins.size()}"/>
+		
+			
+		<c:choose>
+		
+          	<c:when test='${isik_ins.size() > obj_ins.size()}'>
+          
+          		<c:set var="upperCount" value="${isik_ins.size()}"/>
+          		      
+        	</c:when>
+        	
+		      <c:otherwise>
+		      
+		       <c:set var="upperCount" value="${obj_ins.size()}"/>
+		       
+		      </c:otherwise>
+      	
+      	</c:choose>
+      	
+      	<!-- 
+      		-->
+      		
+      	<c:out value='${upperCount}'>
+      	
+      	</c:out>
+      
+	
+		
+		
+		
+		
+		
 		<table>
 		<tr>
 		<td>
@@ -17,6 +50,7 @@
 				<tr>
 					<th colspan='3'>Isikud</th>
 				</tr>
+
 				<c:forEach items="${isik_ins}" var="i">
 				<tr>
 					<td width='140'>${i.piiririkkuja.perek_nimi}, ${i.piiririkkuja.eesnimi}</td>
@@ -36,7 +70,7 @@
 				<tr>
 					<th colspan='3'>Objektid</th>
 				</tr>
-				<c:forEach items="${intsident.OBJEKT_INTSIDENDISs}" var="o">
+				<c:forEach items="${obj_ins}" var="o">
 				<tr>
 					<td width='140'>${o.objekt.nimetus}</td>
 					<td><input type='button' onClick='alert("Seda funktsionaalsust ei pidanud me antud projekti raames realiseerima.")' value='Info' /></td>

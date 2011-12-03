@@ -4,20 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import ee.itcollege.team02.entities.INTSIDENDI_LIIK;
-import ee.itcollege.team02.entities.INTSIDENT;
-import ee.itcollege.team02.entities.ISIKU_SEADUS_INTSIDENDIS;
-import ee.itcollege.team02.entities.ISIK_INTSIDENDIS;
-import ee.itcollege.team02.entities.KODAKONDSUS;
-import ee.itcollege.team02.entities.OBJEKT;
-import ee.itcollege.team02.entities.PIIRILOIK;
-import ee.itcollege.team02.entities.PIIRIRIKKUJA;
-import ee.itcollege.team02.entities.PIIRIVALVUR;
-import ee.itcollege.team02.entities.RIIK;
-import ee.itcollege.team02.entities.SEADUS;
-import ee.itcollege.team02.entities.SEADUSE_PUNKT;
-import ee.itcollege.team02.entities.VAHTKOND;
-import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
+import ee.itcollege.team02.entities.*;
+
 
 public class Helper {
 	public static boolean IsSurrogateDate(Date date){
@@ -29,7 +17,8 @@ public class Helper {
 		String month = simpleDateformatMonth.format(date);
 		String day = simpleDateformatDay.format(date);
 		
-		if(year.equals("9999") && month.equals("12") && day.equals("31")){
+		// System.out.println("Testing IsSurrogateDate YEAR:" + year + " Month:" + month + " Day:" +day);
+		if(year.equals("9999") && month.equals("12") && day.equals("31")){		
 			return true;
 		}else{
 			return false;
@@ -42,14 +31,14 @@ public class Helper {
 	    	///1 START
 	    	INTSIDENDI_LIIK uusINTSIDENDI_LIIK = new INTSIDENDI_LIIK();
 	    	
-	    	uusINTSIDENDI_LIIK.setAvaja("Margus Mets");  
-	    	uusINTSIDENDI_LIIK.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());    
-	    	  
-	    	uusINTSIDENDI_LIIK.setMuutja("test2");
-	    	uusINTSIDENDI_LIIK.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
-	    	
-	    	uusINTSIDENDI_LIIK.setSulgeja("test3");
-	    	uusINTSIDENDI_LIIK.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	uusINTSIDENDI_LIIK.setAvaja("Margus Mets");  
+//	    	uusINTSIDENDI_LIIK.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());    
+//
+//	    	uusINTSIDENDI_LIIK.setMuutja("test2");
+//	    	uusINTSIDENDI_LIIK.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//
+//	    	uusINTSIDENDI_LIIK.setSulgeja("test3");
+//	    	uusINTSIDENDI_LIIK.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	  	
 	    	uusINTSIDENDI_LIIK.setKommentaar("Mittedeklareeritud reisijate/ainete üleveo üritus");
 	    	uusINTSIDENDI_LIIK.setKood("38E");
@@ -60,14 +49,14 @@ public class Helper {
 	    	///2 START
 	    	INTSIDENDI_LIIK uusINTSIDENDI_LIIK1 = new INTSIDENDI_LIIK();
 	    	
-	    	uusINTSIDENDI_LIIK1.setAvaja("Heli Põld");
-	    	uusINTSIDENDI_LIIK1.setAvatud(new GregorianCalendar(2000, 01, 02, 00, 00).getTime());
-	    	
-	    	uusINTSIDENDI_LIIK1.setMuutja("Kaido Maru");
-	    	uusINTSIDENDI_LIIK1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	       	uusINTSIDENDI_LIIK1.setSulgeja("test3");
-	    	uusINTSIDENDI_LIIK1.setMuudetud(new GregorianCalendar(2001, 04, 02, 12, 05).getTime());
+//	    	uusINTSIDENDI_LIIK1.setAvaja("Heli Põld");
+//	    	uusINTSIDENDI_LIIK1.setAvatud(new GregorianCalendar(2000, 01, 02, 00, 00).getTime());
+//	    	
+//	    	uusINTSIDENDI_LIIK1.setMuutja("Kaido Maru");
+//	    	uusINTSIDENDI_LIIK1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	       	uusINTSIDENDI_LIIK1.setSulgeja("test3");
+//	    	uusINTSIDENDI_LIIK1.setMuudetud(new GregorianCalendar(2001, 04, 02, 12, 05).getTime());
 	    	
 	    	uusINTSIDENDI_LIIK1.setKommentaar("piiri ületamine vales kohas");
 	    	uusINTSIDENDI_LIIK1.setKood("42A");
@@ -78,14 +67,14 @@ public class Helper {
 	    	///2 START
 	    	INTSIDENDI_LIIK uusINTSIDENDI_LIIK2 = new INTSIDENDI_LIIK();
 	    	
-	    	uusINTSIDENDI_LIIK2.setAvaja("Kaido Muru");
-	    	uusINTSIDENDI_LIIK2.setAvatud(new GregorianCalendar(2002, 04, 07, 00, 00).getTime());
-	    	
-	    	uusINTSIDENDI_LIIK2.setMuutja("test2");
-	    	uusINTSIDENDI_LIIK2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	       	uusINTSIDENDI_LIIK2.setSulgeja("test3");
-	    	uusINTSIDENDI_LIIK2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusINTSIDENDI_LIIK2.setAvaja("Kaido Muru");
+//	    	uusINTSIDENDI_LIIK2.setAvatud(new GregorianCalendar(2002, 04, 07, 00, 00).getTime());
+//	    	
+//	    	uusINTSIDENDI_LIIK2.setMuutja("test2");
+//	    	uusINTSIDENDI_LIIK2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	       	uusINTSIDENDI_LIIK2.setSulgeja("test3");
+//	    	uusINTSIDENDI_LIIK2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusINTSIDENDI_LIIK2.setKommentaar("piirivalve ründamine relvaga/relvata");
 	    	uusINTSIDENDI_LIIK2.setKood("42A");
@@ -94,15 +83,15 @@ public class Helper {
 	    	
 	    	/// 3 START
 	    	RIIK uusRIIK = new RIIK();
-	    	
-	    	uusRIIK.setAvaja("Merli Maja");
-	    	uusRIIK.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
-	    	
-	    	uusRIIK.setMuutja("test2");
-	    	uusRIIK.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusRIIK.setSulgeja("test3");
-	    	uusRIIK.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	
+//	    	uusRIIK.setAvaja("Merli Maja");
+//	    	uusRIIK.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+//	    	
+//	    	uusRIIK.setMuutja("test2");
+//	    	uusRIIK.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusRIIK.setSulgeja("test3");
+//	    	uusRIIK.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	uusRIIK.setISO_kood("ISO-8859-5");
 	    	uusRIIK.setANSI_kood("IBM855");
 	    	/// 3 END
@@ -111,14 +100,14 @@ public class Helper {
 	    	/// 4 START
 	    	RIIK uusRIIK1 = new RIIK();
 	    	
-	    	uusRIIK1.setAvaja("Marli Kaja");
-	    	uusRIIK1.setAvatud(new GregorianCalendar(2006, 04, 05, 00, 00).getTime());
-	    	
-	    	uusRIIK1.setMuutja("test2");
-	    	uusRIIK1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusRIIK1.setSulgeja("test3");
-	    	uusRIIK1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusRIIK1.setAvaja("Marli Kaja");
+//	    	uusRIIK1.setAvatud(new GregorianCalendar(2006, 04, 05, 00, 00).getTime());
+//	    	
+//	    	uusRIIK1.setMuutja("test2");
+//	    	uusRIIK1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusRIIK1.setSulgeja("test3");
+//	    	uusRIIK1.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	uusRIIK1.setISO_kood("ISO 3166-2");
 	    	uusRIIK1.setANSI_kood("IA5 Swedish");
 	    	/// 4 END
@@ -128,30 +117,60 @@ public class Helper {
 	    	/// 5 START  	
 	    	OBJEKT uusOBJEKT = new OBJEKT();
 	    	
-	    	uusOBJEKT.setAvaja("Merli Maja");
-	    	uusOBJEKT.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
-	    	
-	    	uusOBJEKT.setMuutja("test2");
-	    	uusOBJEKT.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusOBJEKT.setSulgeja("test3");
-	    	uusOBJEKT.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusOBJEKT.setAvaja("Merli Maja");
+//	    	uusOBJEKT.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+//	    	
+//	    	uusOBJEKT.setMuutja("test2");
+//	    	uusOBJEKT.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusOBJEKT.setSulgeja("test3");
+//	    	uusOBJEKT.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusOBJEKT.setNimetus("Küün");
+	    	/// 5 END
+	    	
+	    	/// 5 START  	
+	    	OBJEKT uusOBJEKT1 = new OBJEKT();
+	    	
+//	    	uusOBJEKT1.setAvaja("Sigrid Männik");
+//	    	uusOBJEKT1.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+//	    	
+//	    	uusOBJEKT1.setMuutja("test2");
+//	    	uusOBJEKT1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusOBJEKT1.setSulgeja("test3");
+//	    	uusOBJEKT1.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+	    	
+	    	uusOBJEKT1.setNimetus("Kahtlane kott");
+	    	/// 5 END
+	    	
+	    	/// 5 START  	
+	    	OBJEKT uusOBJEKT2 = new OBJEKT();
+	    	
+//	    	uusOBJEKT2.setAvaja("Aro Põder");
+//	    	uusOBJEKT2.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+//	    	
+//	    	uusOBJEKT2.setMuutja("test2");
+//	    	uusOBJEKT2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusOBJEKT2.setSulgeja("test3");
+//	    	uusOBJEKT2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+	    	
+	    	uusOBJEKT2.setNimetus("Sõnnikuhark");
 	    	/// 5 END
 	    	
 	    	
 	    	///6 START
 	    	PIIRIRIKKUJA uusPIIRIRIKKUJA = new PIIRIRIKKUJA();
 	    	
-	    	uusPIIRIRIKKUJA.setAvaja("Merli Maja");
-	    	uusPIIRIRIKKUJA.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
-	    	
-	    	uusPIIRIRIKKUJA.setMuutja("test2");
-	    	uusPIIRIRIKKUJA.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRIRIKKUJA.setSulgeja("test3");
-	    	uusPIIRIRIKKUJA.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRIRIKKUJA.setAvaja("Merli Maja");
+//	    	uusPIIRIRIKKUJA.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIRIKKUJA.setMuutja("test2");
+//	    	uusPIIRIRIKKUJA.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIRIKKUJA.setSulgeja("test3");
+//	    	uusPIIRIRIKKUJA.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusPIIRIRIKKUJA.setEesnimi("Fedja");   	
 	    	uusPIIRIRIKKUJA.setObjekt(uusOBJEKT); //SEOS!
@@ -164,14 +183,14 @@ public class Helper {
 	    	///6 START
 	    	PIIRIRIKKUJA uusPIIRIRIKKUJA1 = new PIIRIRIKKUJA();
 	    	
-	    	uusPIIRIRIKKUJA1.setAvaja("Signe Savi");
-	    	uusPIIRIRIKKUJA1.setAvatud(new GregorianCalendar(2007, 02, 05, 00, 00).getTime());
-	    	
-	    	uusPIIRIRIKKUJA1.setMuutja("test2");
-	    	uusPIIRIRIKKUJA1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRIRIKKUJA1.setSulgeja("test3");
-	    	uusPIIRIRIKKUJA1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRIRIKKUJA1.setAvaja("Signe Savi");
+//	    	uusPIIRIRIKKUJA1.setAvatud(new GregorianCalendar(2007, 02, 05, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIRIKKUJA1.setMuutja("test2");
+//	    	uusPIIRIRIKKUJA1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIRIKKUJA1.setSulgeja("test3");
+//	    	uusPIIRIRIKKUJA1.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusPIIRIRIKKUJA1.setEesnimi("AKE");   	
 	    	uusPIIRIRIKKUJA1.setObjekt(uusOBJEKT); //SEOS!
@@ -184,14 +203,14 @@ public class Helper {
 	    	///6 START
 	    	PIIRIRIKKUJA uusPIIRIRIKKUJA2 = new PIIRIRIKKUJA();
 	    	
-	    	uusPIIRIRIKKUJA2.setAvaja("Kim Tame");
-	    	uusPIIRIRIKKUJA2.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
-	    	
-	    	uusPIIRIRIKKUJA2.setMuutja("test2");
-	    	uusPIIRIRIKKUJA2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRIRIKKUJA2.setSulgeja("test3");
-	    	uusPIIRIRIKKUJA2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRIRIKKUJA2.setAvaja("Kim Tame");
+//	    	uusPIIRIRIKKUJA2.setAvatud(new GregorianCalendar(2006, 02, 05, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIRIKKUJA2.setMuutja("test2");
+//	    	uusPIIRIRIKKUJA2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIRIKKUJA2.setSulgeja("test3");
+//	    	uusPIIRIRIKKUJA2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusPIIRIRIKKUJA2.setEesnimi("Parmo");   	
 	    	uusPIIRIRIKKUJA2.setObjekt(uusOBJEKT); //SEOS!
@@ -206,14 +225,14 @@ public class Helper {
 	    	/// 7 START
 	    	KODAKONDSUS uusKODAKONDSUS = new KODAKONDSUS ();
 	    	
-	    	uusKODAKONDSUS.setAvaja("Kaido Muru");
-	    	uusKODAKONDSUS.setAvatud(new GregorianCalendar(2002, 04, 07, 00, 00).getTime());
-	    	
-	    	uusKODAKONDSUS.setMuutja("test2");
-	    	uusKODAKONDSUS.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	       	uusKODAKONDSUS.setSulgeja("test3");
-	    	uusKODAKONDSUS.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusKODAKONDSUS.setAvaja("Kaido Muru");
+//	    	uusKODAKONDSUS.setAvatud(new GregorianCalendar(2002, 04, 07, 00, 00).getTime());
+//	    	
+//	    	uusKODAKONDSUS.setMuutja("test2");
+//	    	uusKODAKONDSUS.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	       	uusKODAKONDSUS.setSulgeja("test3");
+//	    	uusKODAKONDSUS.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusKODAKONDSUS.setPiiririkkuja(uusPIIRIRIKKUJA);  //SEOS!
 	    	uusKODAKONDSUS.setIsikukood("327232372");
@@ -228,14 +247,14 @@ public class Helper {
 	    	///8 START
 	    	PIIRILOIK uusPIIRILOIK1 = new PIIRILOIK();
 	    	
-	    	uusPIIRILOIK1.setAvaja("Margus Mets"); 
-	    	uusPIIRILOIK1.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
-	    	  	
-	    	uusPIIRILOIK1.setMuutja("test2");
-	    	uusPIIRILOIK1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRILOIK1.setSulgeja("test3");
-	    	uusPIIRILOIK1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRILOIK1.setAvaja("Margus Mets"); 
+//	    	uusPIIRILOIK1.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
+//	    	  	
+//	    	uusPIIRILOIK1.setMuutja("test2");
+//	    	uusPIIRILOIK1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRILOIK1.setSulgeja("test3");
+//	    	uusPIIRILOIK1.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	   	
 	    	uusPIIRILOIK1.setNimetus("Narva Raba");
 	    	uusPIIRILOIK1.setGPS_koordinaadid("22 long 11 lat");
@@ -247,14 +266,14 @@ public class Helper {
 	    	///8 START
 	    	PIIRILOIK uusPIIRILOIK2 = new PIIRILOIK();
 	    	
-	    	uusPIIRILOIK2.setAvaja("Siim Sikk"); 
-	    	uusPIIRILOIK2.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
-	    	  	
-	    	uusPIIRILOIK2.setMuutja("test2");
-	    	uusPIIRILOIK2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRILOIK2.setSulgeja("test3");
-	    	uusPIIRILOIK2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRILOIK2.setAvaja("Siim Sikk"); 
+//	    	uusPIIRILOIK2.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
+//	    	  	
+//	    	uusPIIRILOIK2.setMuutja("test2");
+//	    	uusPIIRILOIK2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRILOIK2.setSulgeja("test3");
+//	    	uusPIIRILOIK2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	   	
 	    	uusPIIRILOIK2.setNimetus("Peipsi järv");
 	    	uusPIIRILOIK2.setGPS_koordinaadid("31 long 48 lat");
@@ -266,14 +285,14 @@ public class Helper {
 	    	///8 START
 	    	PIIRILOIK uusPIIRILOIK3 = new PIIRILOIK();
 	    	
-	    	uusPIIRILOIK3.setAvaja("Reimo Mudilane"); 
-	    	uusPIIRILOIK3.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
-	    	  	
-	    	uusPIIRILOIK3.setMuutja("test2");
-	    	uusPIIRILOIK3.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRILOIK3.setSulgeja("test3");
-	    	uusPIIRILOIK3.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRILOIK3.setAvaja("Reimo Mudilane"); 
+//	    	uusPIIRILOIK3.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
+//	    	  	
+//	    	uusPIIRILOIK3.setMuutja("test2");
+//	    	uusPIIRILOIK3.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRILOIK3.setSulgeja("test3");
+//	    	uusPIIRILOIK3.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	   	
 	    	uusPIIRILOIK3.setNimetus("Narva tee");
 	    	uusPIIRILOIK3.setGPS_koordinaadid("37 long 47 lat");
@@ -284,14 +303,14 @@ public class Helper {
 	    	///8 START
 	    	PIIRILOIK uusPIIRILOIK4 = new PIIRILOIK();
 	    	
-	    	uusPIIRILOIK4.setAvaja("Ilmar Jänes"); 
-	    	uusPIIRILOIK4.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
-	    	  	
-	    	uusPIIRILOIK4.setMuutja("test2");
-	    	uusPIIRILOIK4.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRILOIK4.setSulgeja("test3");
-	    	uusPIIRILOIK4.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRILOIK4.setAvaja("Ilmar Jänes"); 
+//	    	uusPIIRILOIK4.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());
+//	    	  	
+//	    	uusPIIRILOIK4.setMuutja("test2");
+//	    	uusPIIRILOIK4.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRILOIK4.setSulgeja("test3");
+//	    	uusPIIRILOIK4.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	   	
 	    	uusPIIRILOIK4.setNimetus("Võru mets");
 	    	uusPIIRILOIK4.setGPS_koordinaadid("66 long 17 lat");
@@ -304,14 +323,14 @@ public class Helper {
 	    	///9 START
 	    	INTSIDENT newIntsident1 = new INTSIDENT();
 	    	
-	    	newIntsident1.setAvaja("Kaido Kivi"); 
-	    	newIntsident1.setAvatud(new GregorianCalendar(2002, 07, 07, 10, 00).getTime());
-	    	  	
-	    	newIntsident1.setMuutja("test2");
-	    	newIntsident1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	newIntsident1.setSulgeja("test3");
-	    	newIntsident1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	newIntsident1.setAvaja("Kaido Kivi"); 
+//	    	newIntsident1.setAvatud(new GregorianCalendar(2002, 07, 07, 10, 00).getTime());
+//	    	  	
+//	    	newIntsident1.setMuutja("test2");
+//	    	newIntsident1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	newIntsident1.setSulgeja("test3");
+//	    	newIntsident1.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	
 	    	newIntsident1.setKood("A12-S-2");
@@ -332,14 +351,14 @@ public class Helper {
 	    	///9 START
 	    	INTSIDENT newIntsident2 = new INTSIDENT();
 	    	
-	    	newIntsident2.setAvaja("Paavo Sammal"); 
-	    	newIntsident2.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	newIntsident2.setMuutja("test2");
-	    	newIntsident2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	newIntsident2.setSulgeja("test3");
-	    	newIntsident2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	newIntsident2.setAvaja("Paavo Sammal"); 
+//	    	newIntsident2.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	newIntsident2.setMuutja("test2");
+//	    	newIntsident2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	newIntsident2.setSulgeja("test3");
+//	    	newIntsident2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	
 	    	newIntsident2.setKood("F15-N-2");
@@ -360,15 +379,15 @@ public class Helper {
 	    	///9 START
 	    	INTSIDENT newIntsident3 = new INTSIDENT();
 	    	
-	    	newIntsident3.setAvaja("Kaido Kivi"); 
-	    	newIntsident3.setAvatud(new GregorianCalendar(2010, 01, 01, 30, 00).getTime());
-	    	  	
-	    	newIntsident3.setMuutja("test2");
-	    	newIntsident3.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	newIntsident3.setSulgeja("test3");
-	    	newIntsident3.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
+//	    	newIntsident3.setAvaja("Kaido Kivi"); 
+//	    	newIntsident3.setAvatud(new GregorianCalendar(2010, 01, 01, 30, 00).getTime());
+//	    	  	
+//	    	newIntsident3.setMuutja("test2");
+//	    	newIntsident3.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	newIntsident3.setSulgeja("test3");
+//	    	newIntsident3.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
 	    	
 	    	newIntsident3.setKood("P32-S-6");
 	    	newIntsident3.setIntsidendi_liik(uusINTSIDENDI_LIIK2);     	//SEOS!
@@ -388,14 +407,14 @@ public class Helper {
 	    	///9 START
 	    	INTSIDENT newIntsident4 = new INTSIDENT();
 	    	
-	    	newIntsident4.setAvaja("Anne Samakas"); 
-	    	newIntsident4.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	newIntsident4.setMuutja("Kuiv Pohlik");
-	    	newIntsident4.setSuletud(new GregorianCalendar(2004, 06, 06, 12, 30).getTime());
-	    	
-	    	newIntsident4.setSulgeja("Anne Samakas");
-	    	newIntsident4.setMuudetud(new GregorianCalendar(2004, 06, 06, 12, 50).getTime());
+//	    	newIntsident4.setAvaja("Anne Samakas"); 
+//	    	newIntsident4.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	newIntsident4.setMuutja("Kuiv Pohlik");
+//	    	newIntsident4.setSuletud(new GregorianCalendar(2004, 06, 06, 12, 30).getTime());
+//	    	
+//	    	newIntsident4.setSulgeja("Anne Samakas");
+//	    	newIntsident4.setMuudetud(new GregorianCalendar(2004, 06, 06, 12, 50).getTime());
 	    	
 	    	
 	    	newIntsident4.setKood("R2-D2");
@@ -416,14 +435,14 @@ public class Helper {
 	    	///9 START
 	    	INTSIDENT newIntsident5 = new INTSIDENT();
 	    	
-	    	newIntsident5.setAvaja("Voldemar Must"); 
-	    	newIntsident5.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	newIntsident5.setMuutja("test2");
-	    	newIntsident5.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	newIntsident5.setSulgeja("test3");
-	    	newIntsident5.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	newIntsident5.setAvaja("Voldemar Must"); 
+//	    	newIntsident5.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	newIntsident5.setMuutja("test2");
+//	    	newIntsident5.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	newIntsident5.setSulgeja("test3");
+//	    	newIntsident5.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	
 	    	newIntsident5.setKood("B10-10-1");
@@ -444,14 +463,14 @@ public class Helper {
 	    	///9 START
 	    	INTSIDENT newIntsident6 = new INTSIDENT();
 	    	
-	    	newIntsident6.setAvaja("Marko Mägi"); 
-	    	newIntsident6.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	newIntsident6.setMuutja("test2");
-	    	newIntsident6.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	newIntsident6.setSulgeja("test3");
-	    	newIntsident6.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	newIntsident6.setAvaja("Marko Mägi"); 
+//	    	newIntsident6.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	newIntsident6.setMuutja("test2");
+//	    	newIntsident6.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	newIntsident6.setSulgeja("test3");
+//	    	newIntsident6.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	
 	    	newIntsident6.setKood("U-96-2");
@@ -472,14 +491,14 @@ public class Helper {
 	    	///9 START
 	    	INTSIDENT newIntsident7 = new INTSIDENT();
 	    	
-	    	newIntsident7.setAvaja("Kaido Sammalselg"); 
-	    	newIntsident7.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	newIntsident7.setMuutja("test2");
-	    	newIntsident7.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	newIntsident7.setSulgeja("test3");
-	    	newIntsident7.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	newIntsident7.setAvaja("Kaido Sammalselg"); 
+//	    	newIntsident7.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	newIntsident7.setMuutja("test2");
+//	    	newIntsident7.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	newIntsident7.setSulgeja("test3");
+//	    	newIntsident7.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	
 	    	newIntsident7.setKood("PPP-1-5");
@@ -500,15 +519,15 @@ public class Helper {
 	    	
 	    	///10 START
 	    	SEADUS uusSEADUS = new SEADUS();
-	    	
-	    	uusSEADUS.setAvaja("Margus Meri"); 
-	    	uusSEADUS.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	uusSEADUS.setMuutja("test2");
-	    	uusSEADUS.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusSEADUS.setSulgeja("test3");
-	    	uusSEADUS.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	
+//	    	uusSEADUS.setAvaja("Margus Meri"); 
+//	    	uusSEADUS.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusSEADUS.setMuutja("test2");
+//	    	uusSEADUS.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusSEADUS.setSulgeja("test3");
+//	    	uusSEADUS.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusSEADUS.setKood("BFG");
 	    	uusSEADUS.setKehtiv_alates("12.10.2003");
@@ -521,14 +540,14 @@ public class Helper {
 	    	///11 START
 	    	SEADUS uusSEADUS1 = new SEADUS();
 	    	
-	    	uusSEADUS1.setAvaja("Vilja Põld"); 
-	    	uusSEADUS1.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	uusSEADUS1.setMuutja("test2");
-	    	uusSEADUS1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusSEADUS1.setSulgeja("test3");
-	    	uusSEADUS1.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusSEADUS1.setAvaja("Vilja Põld"); 
+//	    	uusSEADUS1.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusSEADUS1.setMuutja("test2");
+//	    	uusSEADUS1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusSEADUS1.setSulgeja("test3");
+//	    	uusSEADUS1.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusSEADUS1.setKood("DND");
 	    	uusSEADUS1.setKehtiv_alates("1.1.2002");
@@ -541,14 +560,14 @@ public class Helper {
 	    	///11 START
 	    	SEADUS uusSEADUS2 = new SEADUS();
 	    	
-	    	uusSEADUS2.setAvaja("Marja Väli"); 
-	    	uusSEADUS2.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	uusSEADUS2.setMuutja("test2");
-	    	uusSEADUS2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusSEADUS2.setSulgeja("test3");
-	    	uusSEADUS2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusSEADUS2.setAvaja("Marja Väli"); 
+//	    	uusSEADUS2.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusSEADUS2.setMuutja("test2");
+//	    	uusSEADUS2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusSEADUS2.setSulgeja("test3");
+//	    	uusSEADUS2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusSEADUS2.setKood("MRR");
 	    	uusSEADUS2.setKehtiv_alates("2.7.2001");
@@ -561,14 +580,14 @@ public class Helper {
 	    	
 	    	///12 START
 	    	SEADUSE_PUNKT uusSEADUSE_PUNKT = new SEADUSE_PUNKT();
-	    	uusSEADUSE_PUNKT.setAvaja("Külli Li Käru"); 
-	    	uusSEADUSE_PUNKT.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
-	    	  	
-	    	uusSEADUSE_PUNKT.setMuutja("test2");
-	    	uusSEADUSE_PUNKT.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusSEADUSE_PUNKT.setSulgeja("test3");
-	    	uusSEADUSE_PUNKT.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusSEADUSE_PUNKT.setAvaja("Külli Li Käru"); 
+//	    	uusSEADUSE_PUNKT.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusSEADUSE_PUNKT.setMuutja("test2");
+//	    	uusSEADUSE_PUNKT.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusSEADUSE_PUNKT.setSulgeja("test3");
+//	    	uusSEADUSE_PUNKT.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	uusSEADUSE_PUNKT.setKehtiv_alates("2.7.2001");
 	    	uusSEADUSE_PUNKT.setKehtiv_kuni("5.3.2045");
 	    	uusSEADUSE_PUNKT.setPais("4.3");
@@ -581,14 +600,15 @@ public class Helper {
 	    	
 	    	///13 START
 	    	SEADUSE_PUNKT uusSEADUSE_PUNKT2 = new SEADUSE_PUNKT();
-	    	uusSEADUSE_PUNKT2.setAvaja("Kesse Siim Käib"); 
-	    	uusSEADUSE_PUNKT2.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
-	    	  	
-	    	uusSEADUSE_PUNKT2.setMuutja("test2");
-	    	uusSEADUSE_PUNKT2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
 	    	
-	    	uusSEADUSE_PUNKT2.setSulgeja("test3");
-	    	uusSEADUSE_PUNKT2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusSEADUSE_PUNKT2.setAvaja("Kesse Siim Käib"); 
+//	    	uusSEADUSE_PUNKT2.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusSEADUSE_PUNKT2.setMuutja("test2");
+//	    	uusSEADUSE_PUNKT2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusSEADUSE_PUNKT2.setSulgeja("test3");
+//	    	uusSEADUSE_PUNKT2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	uusSEADUSE_PUNKT2.setKehtiv_alates("2.7.1921");
 	    	uusSEADUSE_PUNKT2.setKehtiv_kuni("5.3.2045");
 	    	uusSEADUSE_PUNKT2.setPais("2.3");
@@ -601,14 +621,14 @@ public class Helper {
 	    	
 	    	///14 START
 	    	SEADUSE_PUNKT uusSEADUSE_PUNKT3 = new SEADUSE_PUNKT();
-	    	uusSEADUSE_PUNKT3.setAvaja("Kusti Põlev"); 
-	    	uusSEADUSE_PUNKT3.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
-	    	  	
-	    	uusSEADUSE_PUNKT3.setMuutja("test2");
-	    	uusSEADUSE_PUNKT3.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusSEADUSE_PUNKT3.setSulgeja("test3");
-	    	uusSEADUSE_PUNKT3.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusSEADUSE_PUNKT3.setAvaja("Kusti Põlev"); 
+//	    	uusSEADUSE_PUNKT3.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusSEADUSE_PUNKT3.setMuutja("test2");
+//	    	uusSEADUSE_PUNKT3.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusSEADUSE_PUNKT3.setSulgeja("test3");
+//	    	uusSEADUSE_PUNKT3.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	uusSEADUSE_PUNKT3.setKehtiv_alates("1.1.1935");
 	    	uusSEADUSE_PUNKT3.setKehtiv_kuni("4.12.2025");
 	    	uusSEADUSE_PUNKT3.setPais("6.3");
@@ -622,15 +642,15 @@ public class Helper {
 	    	
 	    	///15 START
 	    	PIIRIVALVUR uusPIIRIVALVUR = new PIIRIVALVUR();
-	    	uusPIIRIVALVUR.setAvaja("Koju Keri"); 
-	    	uusPIIRIVALVUR.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	uusPIIRIVALVUR.setMuutja("test2");
-	    	uusPIIRIVALVUR.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRIVALVUR.setSulgeja("test3");
-	    	uusPIIRIVALVUR.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
+//	    	uusPIIRIVALVUR.setAvaja("Koju Keri"); 
+//	    	uusPIIRIVALVUR.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusPIIRIVALVUR.setMuutja("test2");
+//	    	uusPIIRIVALVUR.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIVALVUR.setSulgeja("test3");
+//	    	uusPIIRIVALVUR.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
 	    	uusPIIRIVALVUR.setEesnimed("Karl Kusti");
 	    	uusPIIRIVALVUR.setIsikukood("37603046765");
 	    	uusPIIRIVALVUR.setKommentaar("Kusti on väga tulbli olnud");
@@ -642,14 +662,14 @@ public class Helper {
 	    	
 	    	///16 START
 	    	PIIRIVALVUR uusPIIRIVALVUR2 = new PIIRIVALVUR();
-	    	uusPIIRIVALVUR2.setAvaja("Signe Laut"); 
-	    	uusPIIRIVALVUR2.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	uusPIIRIVALVUR2.setMuutja("test2");
-	    	uusPIIRIVALVUR2.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRIVALVUR2.setSulgeja("test3");
-	    	uusPIIRIVALVUR2.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRIVALVUR2.setAvaja("Signe Laut"); 
+//	    	uusPIIRIVALVUR2.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusPIIRIVALVUR2.setMuutja("test2");
+//	    	uusPIIRIVALVUR2.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIVALVUR2.setSulgeja("test3");
+//	    	uusPIIRIVALVUR2.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusPIIRIVALVUR2.setEesnimed("Voldemart");
 	    	uusPIIRIVALVUR2.setIsikukood("37204041112");
@@ -662,14 +682,14 @@ public class Helper {
 	    	
 	    	///17 START
 	    	PIIRIVALVUR uusPIIRIVALVUR3 = new PIIRIVALVUR();
-	    	uusPIIRIVALVUR3.setAvaja("Margus Mägi"); 
-	    	uusPIIRIVALVUR3.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	uusPIIRIVALVUR3.setMuutja("test2");
-	    	uusPIIRIVALVUR3.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusPIIRIVALVUR3.setSulgeja("test3");
-	    	uusPIIRIVALVUR3.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+//	    	uusPIIRIVALVUR3.setAvaja("Margus Mägi"); 
+//	    	uusPIIRIVALVUR3.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusPIIRIVALVUR3.setMuutja("test2");
+//	    	uusPIIRIVALVUR3.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusPIIRIVALVUR3.setSulgeja("test3");
+//	    	uusPIIRIVALVUR3.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusPIIRIVALVUR3.setEesnimed("Mihkel");
 	    	uusPIIRIVALVUR3.setIsikukood("39102124461");
@@ -682,14 +702,14 @@ public class Helper {
 	    	
 	    	///18 START
 	    	VAHTKOND uusVAHTKOND = new VAHTKOND();
-	    	uusVAHTKOND.setAvaja("Margus Mägi"); 
-	    	uusVAHTKOND.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	  	
-	    	uusVAHTKOND.setMuutja("Mihkel Soo");
-	    	uusVAHTKOND.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusVAHTKOND.setSulgeja("test3");
-	    	uusVAHTKOND.setMuudetud(new GregorianCalendar(2006, 04, 07, 00, 00).getTime());
+//	    	uusVAHTKOND.setAvaja("Margus Mägi"); 
+//	    	uusVAHTKOND.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusVAHTKOND.setMuutja("Mihkel Soo");
+//	    	uusVAHTKOND.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusVAHTKOND.setSulgeja("test3");
+//	    	uusVAHTKOND.setMuudetud(new GregorianCalendar(2006, 04, 07, 00, 00).getTime());
 	    	uusVAHTKOND.setKommentaar("Vihased vennad");
 	    	uusVAHTKOND.setKood("ZZBBZZ");
 	    	uusVAHTKOND.setAlates(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
@@ -700,14 +720,14 @@ public class Helper {
 	    	
 	    	///19 START
 	    	VAHTKOND uusVAHTKOND1 = new VAHTKOND();
-	    	uusVAHTKOND1.setAvaja("Siim Sammal"); 
-	    	uusVAHTKOND1.setAvatud(new GregorianCalendar(2007, 02, 04, 12, 00).getTime());
-	    	  	
-	    	uusVAHTKOND1.setMuutja("Vildeku Valdeku");
-	    	uusVAHTKOND1.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusVAHTKOND1.setSulgeja("test3");
-	    	uusVAHTKOND1.setMuudetud(new GregorianCalendar(2008, 01, 01, 20, 00).getTime());
+//	    	uusVAHTKOND1.setAvaja("Siim Sammal"); 
+//	    	uusVAHTKOND1.setAvatud(new GregorianCalendar(2007, 02, 04, 12, 00).getTime());
+//	    	  	
+//	    	uusVAHTKOND1.setMuutja("Vildeku Valdeku");
+//	    	uusVAHTKOND1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusVAHTKOND1.setSulgeja("test3");
+//	    	uusVAHTKOND1.setMuudetud(new GregorianCalendar(2008, 01, 01, 20, 00).getTime());
 	    	uusVAHTKOND1.setKommentaar("Vajab lisamehi");
 	    	uusVAHTKOND1.setKood("T82KILL");
 	    	uusVAHTKOND1.setAlates(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
@@ -719,37 +739,38 @@ public class Helper {
 	    	///20 START
 	    	VAHTKOND_INTSIDENDIS uusVAHTKOND_INTSIDENDIS = new VAHTKOND_INTSIDENDIS();
 	    	
-	    	uusVAHTKOND_INTSIDENDIS.setAvaja("Rasmus Tuvike"); 
-	    	uusVAHTKOND_INTSIDENDIS.setAvatud(new GregorianCalendar(2008, 03, 05, 12, 00).getTime());
-	    	  	
-	    	uusVAHTKOND_INTSIDENDIS.setMuutja("Metsik Sammalhabe");
-	    	uusVAHTKOND_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-	    	
-	    	uusVAHTKOND_INTSIDENDIS.setSulgeja("test3");
-	    	uusVAHTKOND_INTSIDENDIS.setMuudetud(new GregorianCalendar(2009, 04, 04, 20, 00).getTime());
+//	    	uusVAHTKOND_INTSIDENDIS.setAvaja("Rasmus Tuvike"); 
+//	    	uusVAHTKOND_INTSIDENDIS.setAvatud(new GregorianCalendar(2008, 03, 05, 12, 00).getTime());
+//	    	  	
+//	    	uusVAHTKOND_INTSIDENDIS.setMuutja("Metsik Sammalhabe");
+//	    	uusVAHTKOND_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusVAHTKOND_INTSIDENDIS.setSulgeja("test3");
+//	    	uusVAHTKOND_INTSIDENDIS.setMuudetud(new GregorianCalendar(2009, 04, 04, 20, 00).getTime());
 	    	
 	    	uusVAHTKOND_INTSIDENDIS.setIntsident(newIntsident1); //SEOS
 	    	uusVAHTKOND_INTSIDENDIS.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
 	    	
 	    	uusVAHTKOND_INTSIDENDIS.setKirjeldus("Kõik olid väga vaprad");
+	    	uusVAHTKOND_INTSIDENDIS.setVahtkond(uusVAHTKOND1);
 	    	uusVAHTKOND_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
 	    	///20 END
 	    	
 	    	///21 START
 	    	VAHTKOND_INTSIDENDIS uusVAHTKOND_INTSIDENDIS1 = new VAHTKOND_INTSIDENDIS();
 	    	
-	    	uusVAHTKOND_INTSIDENDIS1.setAvaja("Riivo Mägine"); 
-	    	uusVAHTKOND_INTSIDENDIS1.setAvatud(new GregorianCalendar(2002, 01, 01, 9, 37).getTime());
-	    	  	
-	    	uusVAHTKOND_INTSIDENDIS1.setMuutja("Hannes Pooltoob");
-	    	uusVAHTKOND_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusVAHTKOND_INTSIDENDIS1.setSulgeja("test3");
-	    	uusVAHTKOND_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2002, 04, 04, 20, 00).getTime());
+//	    	uusVAHTKOND_INTSIDENDIS1.setAvaja("Riivo Mägine"); 
+//	    	uusVAHTKOND_INTSIDENDIS1.setAvatud(new GregorianCalendar(2002, 01, 01, 9, 37).getTime());
+//	    	  	
+//	    	uusVAHTKOND_INTSIDENDIS1.setMuutja("Hannes Pooltoob");
+//	    	uusVAHTKOND_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusVAHTKOND_INTSIDENDIS1.setSulgeja("test3");
+//	    	uusVAHTKOND_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2002, 04, 04, 20, 00).getTime());
 	    	
 	    	uusVAHTKOND_INTSIDENDIS1.setIntsident(newIntsident4); //SEOS
 	    	uusVAHTKOND_INTSIDENDIS1.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
-	    	
+	    	uusVAHTKOND_INTSIDENDIS1.setVahtkond(uusVAHTKOND);
 	    	uusVAHTKOND_INTSIDENDIS1.setKirjeldus("Kus, mis, kes?");
 	    	uusVAHTKOND_INTSIDENDIS1.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
 	    	///21 END
@@ -757,18 +778,18 @@ public class Helper {
 	    	///22 START
 	    	VAHTKOND_INTSIDENDIS uusVAHTKOND_INTSIDENDIS2 = new VAHTKOND_INTSIDENDIS();
 	    	
-	    	uusVAHTKOND_INTSIDENDIS2.setAvaja("Siim Kuupea"); 
-	    	uusVAHTKOND_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusVAHTKOND_INTSIDENDIS2.setMuutja("Merit Merkel");
-	    	uusVAHTKOND_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusVAHTKOND_INTSIDENDIS2.setSulgeja("test3");
-	    	uusVAHTKOND_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusVAHTKOND_INTSIDENDIS2.setAvaja("Siim Kuupea"); 
+//	    	uusVAHTKOND_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusVAHTKOND_INTSIDENDIS2.setMuutja("Merit Merkel");
+//	    	uusVAHTKOND_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusVAHTKOND_INTSIDENDIS2.setSulgeja("test3");
+//	    	uusVAHTKOND_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusVAHTKOND_INTSIDENDIS2.setIntsident(newIntsident2); //SEOS
 	    	uusVAHTKOND_INTSIDENDIS2.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
-	    	
+	    	uusVAHTKOND_INTSIDENDIS2.setVahtkond(uusVAHTKOND);
 	    	uusVAHTKOND_INTSIDENDIS2.setKirjeldus("Relvad ei töödanud");
 	    	uusVAHTKOND_INTSIDENDIS2.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
 	    	///22 END
@@ -777,14 +798,14 @@ public class Helper {
 	    	//23 START
 	    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS = new ISIK_INTSIDENDIS();
 	    	
-	    	uusISIK_INTSIDENDIS.setAvaja("Maili Murakas"); 
-	    	uusISIK_INTSIDENDIS.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIK_INTSIDENDIS.setMuutja("Jaan Kork");
-	    	uusISIK_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIK_INTSIDENDIS.setSulgeja("test3");
-	    	uusISIK_INTSIDENDIS.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIK_INTSIDENDIS.setAvaja("Maili Murakas"); 
+//	    	uusISIK_INTSIDENDIS.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIK_INTSIDENDIS.setMuutja("Jaan Kork");
+//	    	uusISIK_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIK_INTSIDENDIS.setSulgeja("test3");
+//	    	uusISIK_INTSIDENDIS.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIK_INTSIDENDIS.setIntsident(newIntsident1); // SEOS
 	    	uusISIK_INTSIDENDIS.setKirjeldus("Tuuker võitis");
@@ -798,14 +819,14 @@ public class Helper {
 	    	//24 START
 	    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS1 = new ISIK_INTSIDENDIS();
 	    	
-	    	uusISIK_INTSIDENDIS1.setAvaja("Siimo Suurjärv"); 
-	    	uusISIK_INTSIDENDIS1.setAvatud(new GregorianCalendar(2001, 04, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIK_INTSIDENDIS1.setMuutja("Raido Külm");
-	    	uusISIK_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIK_INTSIDENDIS1.setSulgeja("test3");
-	    	uusISIK_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2002, 02, 03, 12, 30).getTime());
+//	    	uusISIK_INTSIDENDIS1.setAvaja("Siimo Suurjärv"); 
+//	    	uusISIK_INTSIDENDIS1.setAvatud(new GregorianCalendar(2001, 04, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIK_INTSIDENDIS1.setMuutja("Raido Külm");
+//	    	uusISIK_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIK_INTSIDENDIS1.setSulgeja("test3");
+//	    	uusISIK_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2002, 02, 03, 12, 30).getTime());
 	    	
 	    	uusISIK_INTSIDENDIS1.setIntsident(newIntsident3); // SEOS
 	    	uusISIK_INTSIDENDIS1.setKirjeldus("Laulsid koos");
@@ -818,14 +839,14 @@ public class Helper {
 	    	//25 START
 	    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS2 = new ISIK_INTSIDENDIS();
 	    	
-	    	uusISIK_INTSIDENDIS2.setAvaja("Riho Rõõm"); 
-	    	uusISIK_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIK_INTSIDENDIS2.setMuutja("Kerli Piim");
-	    	uusISIK_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIK_INTSIDENDIS2.setSulgeja("test3");
-	    	uusISIK_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIK_INTSIDENDIS2.setAvaja("Riho Rõõm"); 
+//	    	uusISIK_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIK_INTSIDENDIS2.setMuutja("Kerli Piim");
+//	    	uusISIK_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIK_INTSIDENDIS2.setSulgeja("test3");
+//	    	uusISIK_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIK_INTSIDENDIS2.setIntsident(newIntsident4); // SEOS
 	    	uusISIK_INTSIDENDIS2.setKirjeldus("Jälle ta oma salaviinaga");
@@ -838,14 +859,14 @@ public class Helper {
 	    	//26 START
 	    	ISIK_INTSIDENDIS uusISIK_INTSIDENDIS3 = new ISIK_INTSIDENDIS();
 	    	
-	    	uusISIK_INTSIDENDIS3.setAvaja("Rando Maru"); 
-	    	uusISIK_INTSIDENDIS3.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIK_INTSIDENDIS3.setMuutja("Kivi Karu");
-	    	uusISIK_INTSIDENDIS3.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIK_INTSIDENDIS3.setSulgeja("test3");
-	    	uusISIK_INTSIDENDIS3.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIK_INTSIDENDIS3.setAvaja("Rando Maru"); 
+//	    	uusISIK_INTSIDENDIS3.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIK_INTSIDENDIS3.setMuutja("Kivi Karu");
+//	    	uusISIK_INTSIDENDIS3.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIK_INTSIDENDIS3.setSulgeja("test3");
+//	    	uusISIK_INTSIDENDIS3.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIK_INTSIDENDIS3.setIntsident(newIntsident5); // SEOS
 	    	uusISIK_INTSIDENDIS3.setKirjeldus("Kus suitsu, seal tuld");
@@ -858,14 +879,14 @@ public class Helper {
 	    	
 	    	//27 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS = new ISIKU_SEADUS_INTSIDENDIS();
-	    	uusISIKU_SEADUS_INTSIDENDIS.setAvaja("Mihkel Muru"); 
-	    	uusISIKU_SEADUS_INTSIDENDIS.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIKU_SEADUS_INTSIDENDIS.setMuutja("Marti Haro");
-	    	uusISIKU_SEADUS_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIKU_SEADUS_INTSIDENDIS.setSulgeja("test3");
-	    	uusISIKU_SEADUS_INTSIDENDIS.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIKU_SEADUS_INTSIDENDIS.setAvaja("Mihkel Muru"); 
+//	    	uusISIKU_SEADUS_INTSIDENDIS.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIKU_SEADUS_INTSIDENDIS.setMuutja("Marti Haro");
+//	    	uusISIKU_SEADUS_INTSIDENDIS.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIKU_SEADUS_INTSIDENDIS.setSulgeja("test3");
+//	    	uusISIKU_SEADUS_INTSIDENDIS.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
 	    	uusISIKU_SEADUS_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
@@ -879,14 +900,14 @@ public class Helper {
 	    	
 	    	//28 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS1 = new ISIKU_SEADUS_INTSIDENDIS();
-	    	uusISIKU_SEADUS_INTSIDENDIS1.setAvaja("Siim Kaev"); 
-	    	uusISIKU_SEADUS_INTSIDENDIS1.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIKU_SEADUS_INTSIDENDIS1.setMuutja("Ester Kreem");
-	    	uusISIKU_SEADUS_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIKU_SEADUS_INTSIDENDIS1.setSulgeja("test3");
-	    	uusISIKU_SEADUS_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIKU_SEADUS_INTSIDENDIS1.setAvaja("Siim Kaev"); 
+//	    	uusISIKU_SEADUS_INTSIDENDIS1.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIKU_SEADUS_INTSIDENDIS1.setMuutja("Ester Kreem");
+//	    	uusISIKU_SEADUS_INTSIDENDIS1.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIKU_SEADUS_INTSIDENDIS1.setSulgeja("test3");
+//	    	uusISIKU_SEADUS_INTSIDENDIS1.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS1.setAlates(new GregorianCalendar(205, 01, 01, 1, 00).getTime());
 	    	uusISIKU_SEADUS_INTSIDENDIS1.setKuni(new GregorianCalendar(2005, 04, 04, 9, 00).getTime());
@@ -900,14 +921,14 @@ public class Helper {
 	    	
 	    	//29 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS2 = new ISIKU_SEADUS_INTSIDENDIS();
-	    	uusISIKU_SEADUS_INTSIDENDIS2.setAvaja("Epp Pain"); 
-	    	uusISIKU_SEADUS_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIKU_SEADUS_INTSIDENDIS2.setMuutja("Kristi Torture");
-	    	uusISIKU_SEADUS_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIKU_SEADUS_INTSIDENDIS2.setSulgeja("test3");
-	    	uusISIKU_SEADUS_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIKU_SEADUS_INTSIDENDIS2.setAvaja("Epp Pain"); 
+//	    	uusISIKU_SEADUS_INTSIDENDIS2.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIKU_SEADUS_INTSIDENDIS2.setMuutja("Kristi Torture");
+//	    	uusISIKU_SEADUS_INTSIDENDIS2.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIKU_SEADUS_INTSIDENDIS2.setSulgeja("test3");
+//	    	uusISIKU_SEADUS_INTSIDENDIS2.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS2.setAlates(new GregorianCalendar(209, 01, 01, 1, 00).getTime());
 	    	uusISIKU_SEADUS_INTSIDENDIS2.setKuni(new GregorianCalendar(209, 04, 04, 9, 00).getTime());
@@ -922,14 +943,14 @@ public class Helper {
 	    	
 	    	//30 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS3 = new ISIKU_SEADUS_INTSIDENDIS();
-	    	uusISIKU_SEADUS_INTSIDENDIS3.setAvaja("Rasmus Kraav"); 
-	    	uusISIKU_SEADUS_INTSIDENDIS3.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIKU_SEADUS_INTSIDENDIS3.setMuutja("Signe Hai");
-	    	uusISIKU_SEADUS_INTSIDENDIS3.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIKU_SEADUS_INTSIDENDIS3.setSulgeja("test3");
-	    	uusISIKU_SEADUS_INTSIDENDIS3.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIKU_SEADUS_INTSIDENDIS3.setAvaja("Rasmus Kraav"); 
+//	    	uusISIKU_SEADUS_INTSIDENDIS3.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIKU_SEADUS_INTSIDENDIS3.setMuutja("Signe Hai");
+//	    	uusISIKU_SEADUS_INTSIDENDIS3.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIKU_SEADUS_INTSIDENDIS3.setSulgeja("test3");
+//	    	uusISIKU_SEADUS_INTSIDENDIS3.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS3.setAlates(new GregorianCalendar(2002, 02, 02, 1, 00).getTime());
 	    	uusISIKU_SEADUS_INTSIDENDIS3.setKuni(new GregorianCalendar(2022, 03, 03, 9, 00).getTime());
@@ -944,14 +965,14 @@ public class Helper {
 	    	
 	    	//31 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS4 = new ISIKU_SEADUS_INTSIDENDIS();
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setAvaja("Viktor Räim"); 
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	  	
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setMuutja("Epp Loom");
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setSuletud(new GregorianCalendar(9999, 01, 01, 11, 00).getTime());
-	    	
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setSulgeja("test3");
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
+//	    	uusISIKU_SEADUS_INTSIDENDIS4.setAvaja("Viktor Räim"); 
+//	    	uusISIKU_SEADUS_INTSIDENDIS4.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+//	    	  	
+//	    	uusISIKU_SEADUS_INTSIDENDIS4.setMuutja("Epp Loom");
+//	    	uusISIKU_SEADUS_INTSIDENDIS4.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
+//	    	
+//	    	uusISIKU_SEADUS_INTSIDENDIS4.setSulgeja("test3");
+//	    	uusISIKU_SEADUS_INTSIDENDIS4.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
 	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
@@ -962,6 +983,30 @@ public class Helper {
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setKirjeldus("Raske rakendada");
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setKommentaar("Aga rakendasime ikkagi");
 	    	//31 END
+	    	
+	    	
+	    	//32 START
+	    	OBJEKT_INTSIDENDIS uusOBJEKT_INTSIDENDIS= new OBJEKT_INTSIDENDIS();
+	    	uusOBJEKT_INTSIDENDIS.setAlates(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+	    	uusOBJEKT_INTSIDENDIS.setKuni(new GregorianCalendar(2005, 02, 05, 9, 47).getTime());	    	
+	    	uusOBJEKT_INTSIDENDIS.setIntsident(newIntsident2);
+	    	uusOBJEKT_INTSIDENDIS.setObjekt(uusOBJEKT);
+	    	uusOBJEKT_INTSIDENDIS.setKirjeldus("");
+	    	uusOBJEKT_INTSIDENDIS.setKommentaar("");
+	    	//32 END
+	    	
+	    	
+	    	//33 START
+	    	OBJEKT_INTSIDENDIS uusOBJEKT_INTSIDENDIS1= new OBJEKT_INTSIDENDIS();	    	
+	    	uusOBJEKT_INTSIDENDIS1.setAlates(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+	    	uusOBJEKT_INTSIDENDIS1.setKuni(new GregorianCalendar(2005, 02, 05, 9, 47).getTime());
+	    	uusOBJEKT_INTSIDENDIS1.setIntsident(newIntsident1);
+	    	uusOBJEKT_INTSIDENDIS1.setObjekt(uusOBJEKT2);
+	    	uusOBJEKT_INTSIDENDIS1.setKirjeldus("");
+	    	uusOBJEKT_INTSIDENDIS1.setKommentaar("");
+	    	//33 END
+	    	
+	    	
 	    	
 	    	
 	    	
@@ -988,6 +1033,8 @@ public class Helper {
 	    	uusRIIK.persist();
 	    	uusRIIK1.persist();
 	    	uusOBJEKT.persist();
+	    	uusOBJEKT1.persist();
+	    	uusOBJEKT2.persist();
 	    	uusPIIRIRIKKUJA.persist();
 	    	uusPIIRIRIKKUJA1.persist();
 	    	uusPIIRIRIKKUJA2.persist();
@@ -1019,6 +1066,9 @@ public class Helper {
 	    	uusISIKU_SEADUS_INTSIDENDIS2.persist();
 	    	uusISIKU_SEADUS_INTSIDENDIS3.persist();
 	    	uusISIKU_SEADUS_INTSIDENDIS4.persist();
+	    	
+	    	uusOBJEKT_INTSIDENDIS.persist();
+	    	uusOBJEKT_INTSIDENDIS1.persist();
 	    	
 	    }
 
