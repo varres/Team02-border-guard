@@ -55,13 +55,15 @@ public class IntsidendiRedaktorController {
 		
         } // end for 
  	
+        uiModel.addAttribute("isik_ins", isik_ins);
+        
     }
+    
+    
 
     @RequestMapping
     public String index() 
     {
-    	// Helper.addAndmed();
-    	return "redirect:/intsidendiredaktor/index?id=" + 2;
-       //  return "intsidendiredaktor/index?id=" + 2;
+    	return "intsidendiredaktor/index";     
     }
 }

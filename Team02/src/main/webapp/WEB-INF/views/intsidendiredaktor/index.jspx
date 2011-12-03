@@ -6,8 +6,9 @@
 	<spring:message code="label_intsidendiredaktor_index" htmlEscape="false" var="title" />
 	<util:panel id="title" title="${title}">
 		<spring:message code="application_name" htmlEscape="false" var="app_name" />
-		<h3>Intsidendi redaktor</h3>
-
+		
+		<!-- 
+		
 		<p>Intsident ${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</p>
 
 
@@ -30,12 +31,14 @@
       	
       	</c:choose>
       	   	    		
-      	<!-- 	
+      		
       	<c:out value='${upperCount}'>
       	
       	</c:out>
-      	-->
-		
+      	
+      	--> 
+
+		<h3>Intsidendi redaktor</h3>
 		<table>
 		<tr>
 		<td>
