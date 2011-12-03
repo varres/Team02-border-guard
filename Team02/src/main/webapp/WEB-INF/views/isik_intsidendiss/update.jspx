@@ -8,13 +8,13 @@
         <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kuni" required="true" z="o9BOw3sWz1Krx/N915rklCP9DEE="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kirjeldus" required="true" z="qrVEYv2AZOQV6mR2ihR6R1aeZwE="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_kommentaar" z="j29dfPuCDgaJLnVZtlftTvw7h8g="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avaja" required="true" z="il41IOazktNLPM33rsJTP3NSBlk="/>
         <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avatud" required="true" z="ilFhY4vqJevkwfP9FwxYRAXdbuw="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_muutja" required="true" z="Xo23/rCoy8/fHQOFEVaPi//x97g="/>
         <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_muudetud" required="true" z="VGBetnzBHWVujQbOuKdzBH/bur8="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_sulgeja" required="true" z="+X2XYTGRSfvJA5r/PR3fMiHOICc="/>
-        <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_suletud" required="true" z="VE7gIzilTrO3XMgaxHLFw4vRDl8="/>
         <field:simple field="ISIKU_SEADUS_INTSIDENDISs" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_ISIKU_SEADUS_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="I S I K U_ S E A D U S_ I N T S I D E N D I S" z="D4g82gn9T2028KM8VmmRV7OGuKw="/>
         <field:select field="intsident" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_intsident" itemValue="id" items="${intsidents}" path="/intsidents" z="WvWwr9dH2NGGM2ZmWgperEmqa1o="/>
+        <field:datetime dateTimePattern="${ISIK_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_suletud" required="true" z="VE7gIzilTrO3XMgaxHLFw4vRDl8="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avaja" required="true" z="il41IOazktNLPM33rsJTP3NSBlk="/>
     </form:update>
 </div>

@@ -7,7 +7,6 @@
         <field:datetime dateTimePattern="${VAHTKOND_INTSIDENDIS_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kuni" required="true" z="hHUIqtREG4N63ihDE9GDF3j2znE="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kirjeldus" required="true" z="mJuOS6wNmvffhjVx5IbLIDGJOhA="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_kommentaar" z="TMO1mybDJR549QjfNh4bO1Oi/IU="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_avaja" required="true" z="bpp9rQSTsMByHJh5BWzNdX28sk8="/>
         <field:datetime dateTimePattern="${VAHTKOND_INTSIDENDIS_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_avatud" required="true" z="K8S16RDxAeWSQ7K0dJkicLDdcDQ="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_muutja" required="true" z="Y/TsNUQVenijW56yf/OSavjEY/s="/>
         <field:datetime dateTimePattern="${VAHTKOND_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_muudetud" required="true" z="e4HyFrzJmy2shTkGg6rifi/JpQg="/>
@@ -16,5 +15,6 @@
         <field:select field="intsident" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_intsident" itemValue="id" items="${intsidents}" path="/intsidents" z="luO3qDVW+u8qItRyxeBB4nafnOU="/>
         <field:simple field="PIIRIVALVUR_INTSIDENDISs" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_PIIRIVALVUR_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ I N T S I D E N D I S" z="xi+Hp1CQp12/dvZIpXULN1+rzMk="/>
         <field:select field="vahtkond" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_vahtkond" itemValue="id" items="${vahtkonds}" path="/vahtkonds" z="xmc+11NJN3qHqdPFMMeucc3HjCI="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_VAHTKOND_INTSIDENDIS_avaja" required="true" z="bpp9rQSTsMByHJh5BWzNdX28sk8="/>
     </form:update>
 </div>

@@ -10,12 +10,12 @@
         <field:display field="kehtiv_alates" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_kehtiv_alates" object="${seaduse_punkt}" z="RAgXwCE/dnjAB4MbNCQ3TBXLInU="/>
         <field:display field="kehtiv_kuni" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_kehtiv_kuni" object="${seaduse_punkt}" z="eB5EY21e0xCM0kl/AO8esTCSlzI="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_kommentaar" object="${seaduse_punkt}" z="ujbgfq9RCM5wMtH8l9y6dHTak4U="/>
-        <field:display field="avaja" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_avaja" object="${seaduse_punkt}" z="RItt311jaI9fQ83gBgKUukNVI68="/>
         <field:display date="true" dateTimePattern="${SEADUSE_PUNKT_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_avatud" object="${seaduse_punkt}" z="3plVmS97Rx8ty1cOqochdif8FGU="/>
         <field:display field="muutja" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_muutja" object="${seaduse_punkt}" z="lh04K7d1rnjQ8ZEepSYudabQFBI="/>
         <field:display date="true" dateTimePattern="${SEADUSE_PUNKT_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_muudetud" object="${seaduse_punkt}" z="oHo3WnwsPU8MAq7sfnSSzhPcsOg="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_sulgeja" object="${seaduse_punkt}" z="4Kb0Mr7SYxZOh7HbNMsix+Y7d3g="/>
-        <field:display date="true" dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_suletud" object="${seaduse_punkt}" z="J5yDj3X/0tKPJorwH/EZllbiK2Q="/>
         <field:display field="ylemus_seaduse_punkt" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_ylemus_seaduse_punkt" object="${seaduse_punkt}" z="PWEoqjz7NYCF/wHfkGri8YvthEY="/>
+        <field:display date="true" dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_suletud" object="${seaduse_punkt}" z="J5yDj3X/0tKPJorwH/EZllbiK2Q="/>
+        <field:display field="avaja" id="s_ee_itcollege_team02_entities_SEADUSE_PUNKT_avaja" object="${seaduse_punkt}" z="RItt311jaI9fQ83gBgKUukNVI68="/>
     </page:show>
 </div>

@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_ISIK_INTSIDENDIS" items="${isik_intsidendiss}" z="8tf+pWo4cVT1EH896s54z4CTXJs=">
         <table:table data="${isik_intsidendiss}" id="l_ee_itcollege_team02_entities_ISIK_INTSIDENDIS" path="/isik_intsidendiss" z="cqDMY7LvR2nbZSqBTZOhc7CvU2E=">
-            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avaja" property="avaja" z="MzGPEmVcjJRcgqa0PriFZ0a5xQU="/>
             <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_avatud_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avatud" property="avatud" z="12DULR/M43QYlRt2wrMkb5q4fnk="/>
             <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_muutja" property="muutja" z="MqhYMM6FaaitvVDapHY8V4XKi9Q="/>
             <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_muudetud_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_muudetud" property="muudetud" z="5mD6LlJBMcsXgkxrP2UK5XMO40Q="/>
             <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_sulgeja" property="sulgeja" z="LtrXx0n8B45QPBw1NyZ1t4DvPWY="/>
             <table:column date="true" dateTimePattern="${ISIK_INTSIDENDIS_suletud_date_format}" id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_suletud" property="suletud" z="/pm9crh6AgNsB1N295SJJiokyik="/>
+            <table:column id="c_ee_itcollege_team02_entities_ISIK_INTSIDENDIS_avaja" property="avaja" z="MzGPEmVcjJRcgqa0PriFZ0a5xQU="/>
         </table:table>
     </page:list>
 </div>

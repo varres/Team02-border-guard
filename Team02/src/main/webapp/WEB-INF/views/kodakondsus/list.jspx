@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_KODAKONDSUS" items="${kodakondsus}" z="3bZmnfxet7e8/6Ho4qfSzARYAt8=">
         <table:table data="${kodakondsus}" id="l_ee_itcollege_team02_entities_KODAKONDSUS" path="/kodakondsus" z="+eVO83FGj7kMi6YWj7jNqJYL2qA=">
-            <table:column id="c_ee_itcollege_team02_entities_KODAKONDSUS_avaja" property="avaja" z="iUHO8LekfES0P0EeLhAYV09Uf+s="/>
             <table:column date="true" dateTimePattern="${KODAKONDSUS_avatud_date_format}" id="c_ee_itcollege_team02_entities_KODAKONDSUS_avatud" property="avatud" z="7HHMddfitmCXl2d/8UHDLCRdH38="/>
             <table:column id="c_ee_itcollege_team02_entities_KODAKONDSUS_muutja" property="muutja" z="SrboG9lfa/lkp2W4fl3K+5cM3WQ="/>
             <table:column date="true" dateTimePattern="${KODAKONDSUS_muudetud_date_format}" id="c_ee_itcollege_team02_entities_KODAKONDSUS_muudetud" property="muudetud" z="iOK+IT+ZzfyOrc08HcULOg1G/ng="/>
             <table:column id="c_ee_itcollege_team02_entities_KODAKONDSUS_sulgeja" property="sulgeja" z="PjJSBOiVs1J0+gFnEFSLB2KSfyo="/>
             <table:column date="true" dateTimePattern="${KODAKONDSUS_suletud_date_format}" id="c_ee_itcollege_team02_entities_KODAKONDSUS_suletud" property="suletud" z="SrKM5yQHXxHyp/P0luMsZFcWTfU="/>
+            <table:column id="c_ee_itcollege_team02_entities_KODAKONDSUS_avaja" property="avaja" z="iUHO8LekfES0P0EeLhAYV09Uf+s="/>
         </table:table>
     </page:list>
 </div>

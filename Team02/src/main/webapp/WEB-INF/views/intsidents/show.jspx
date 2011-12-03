@@ -13,11 +13,11 @@
         <field:display field="kirjeldus" id="s_ee_itcollege_team02_entities_INTSIDENT_kirjeldus" object="${intsident}" z="fd/N9M48cOQR9sIElgqHyWJPb0I="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_INTSIDENT_kommentaar" object="${intsident}" z="YFR37RMdEvvT+dt2weTJRB1bV2o="/>
         <field:display field="intsidendi_liik" id="s_ee_itcollege_team02_entities_INTSIDENT_intsidendi_liik" object="${intsident}" z="F7+foKFAg1fCLyjMtIsyPjwVbH8="/>
-        <field:display field="avaja" id="s_ee_itcollege_team02_entities_INTSIDENT_avaja" object="${intsident}" z="3KAniqpApS5NFdW02n3Nw99SEt0="/>
         <field:display date="true" dateTimePattern="${INTSIDENT_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_INTSIDENT_avatud" object="${intsident}" z="yzpEzXfkf0NhxlzWz7ML4WpKP4I="/>
         <field:display field="muutja" id="s_ee_itcollege_team02_entities_INTSIDENT_muutja" object="${intsident}" z="D1rY/AsljNftBDeQoJd4ekpnQpc="/>
         <field:display date="true" dateTimePattern="${INTSIDENT_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_INTSIDENT_muudetud" object="${intsident}" z="j/E4JH3Nk0m/VZusAKw8Ky01erk="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_INTSIDENT_sulgeja" object="${intsident}" z="JYeniVh1qikoYZB1PXVLVmkOh38="/>
         <field:display date="true" dateTimePattern="${INTSIDENT_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_INTSIDENT_suletud" object="${intsident}" z="oY9w4mFkb5H7rb84mlvhXno6mfQ="/>
+        <field:display field="avaja" id="s_ee_itcollege_team02_entities_INTSIDENT_avaja" object="${intsident}" z="3KAniqpApS5NFdW02n3Nw99SEt0="/>
     </page:show>
 </div>

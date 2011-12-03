@@ -86,32 +86,79 @@ public abstract class BaseEntity {
     
 	@NotNull
     @Size(max = 32)
-    public String avaja;
-
-
+	private String avaja;
+	
 
 	@NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
-    public Date avatud;
+    private Date avatud;
 
     @NotNull
     @Size(max = 32)
-    public String muutja;
+    private String muutja;
 
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
-    public Date muudetud;
+    private Date muudetud;
 
     @NotNull
     @Size(max = 32)
-    public String sulgeja;
+    private String sulgeja;
 
     @NotNull
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
-    public Date suletud;
+    private Date suletud;
+    
+	public String getAvaja() {
+		return avaja;
+	}
+
+	public void setAvaja(String avaja) {
+		this.avaja = avaja;
+	}
+
+	public Date getAvatud() {
+		return avatud;
+	}
+
+	public void setAvatud(Date avatud) {
+		this.avatud = avatud;
+	}
+
+	public String getMuutja() {
+		return muutja;
+	}
+
+	public void setMuutja(String muutja) {
+		this.muutja = muutja;
+	}
+
+	public Date getMuudetud() {
+		return muudetud;
+	}
+
+	public void setMuudetud(Date muudetud) {
+		this.muudetud = muudetud;
+	}
+
+	public String getSulgeja() {
+		return sulgeja;
+	}
+
+	public void setSulgeja(String sulgeja) {
+		this.sulgeja = sulgeja;
+	}
+
+	public Date getSuletud() {
+		return suletud;
+	}
+
+	public void setSuletud(Date suletud) {
+		this.suletud = suletud;
+	}
 
     
     @Transactional

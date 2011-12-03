@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS" items="${piirivalvur_intsidendiss}" z="RTRWYWitF+M7zO4flttM46Eo9kA=">
         <table:table data="${piirivalvur_intsidendiss}" id="l_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS" path="/piirivalvur_intsidendiss" z="7LKaxD9lBp6ZocN9vm3eINTr9iI=">
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_avaja" property="avaja" z="IZVaOGY+wHns8q+Jl44fnShXATw="/>
             <table:column date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_avatud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_avatud" property="avatud" z="/n+Z2F8UIdLMGCHCBQ/4aNguAzg="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_muutja" property="muutja" z="8bpKWQeYE3p/D18N89AtWx6UnTY="/>
             <table:column date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_muudetud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_muudetud" property="muudetud" z="oYks1HfRHfrN5yhzc4n9T4fSE2Y="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_sulgeja" property="sulgeja" z="1w6R8oEDuLto0dK5MgBP0pYi81Y="/>
             <table:column date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_suletud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_suletud" property="suletud" z="tirg0gekOC7KND52KgjrizJGbNk="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_avaja" property="avaja" z="IZVaOGY+wHns8q+Jl44fnShXATw="/>
         </table:table>
     </page:list>
 </div>

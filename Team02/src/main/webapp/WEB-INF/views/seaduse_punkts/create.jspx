@@ -10,15 +10,15 @@
         <field:input field="kehtiv_alates" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_kehtiv_alates" max="20" required="true" z="CXQVEPzX5TjvvD52qst5DG3y9Fs="/>
         <field:input field="kehtiv_kuni" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_kehtiv_kuni" max="20" required="true" z="p7EK6Fr3HhSNyWHfNSx9UR4w/Qg="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_kommentaar" max="20" required="true" z="gQOuJR984SGN1S7XEjTeNjEEZcA="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_avaja" required="true" z="H9RDkidW4P62RHTf/CihmiT9tnY="/>
         <field:datetime dateTimePattern="${SEADUSE_PUNKT_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_avatud" required="true" z="TiRop/wuf8xHFU2FoLM9H4NmfmQ="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_muutja" required="true" z="RAifV6Aiu2EbEjqY9pI8BfIAWHA="/>
         <field:datetime dateTimePattern="${SEADUSE_PUNKT_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_muudetud" required="true" z="j03v7NQac6+5PKvGQ4uckHPn9Cw="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_sulgeja" required="true" z="7+vekW6toaxbzb0ozFXdokIit8c="/>
-        <field:datetime dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_suletud" required="true" z="Z0GCPBrB9cdUsgLbqMeoyphXt7E="/>
         <field:simple field="SEADUSE_PUNKTs" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_SEADUSE_PUNKTs" messageCode="entity_reference_not_managed" messageCodeAttribute="S E A D U S E_ P U N K T" z="xamhwJpQgkrdnRwtVFIQ0dZBWY8="/>
         <field:select field="ylemus_seaduse_punkt" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_ylemus_seaduse_punkt" itemValue="id" items="${seadus}" path="/seadus" z="wsjGZ05zjgE+r+XACPXeaTAT4M4="/>
         <field:simple field="ISIKU_SEADUS_INTSIDENDISs" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_ISIKU_SEADUS_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="I S I K U_ S E A D U S_ I N T S I D E N D I S" z="tUmAAEKcbm8AXp2qqVrV/xFhgKQ="/>
+        <field:datetime dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_suletud" required="true" z="Z0GCPBrB9cdUsgLbqMeoyphXt7E="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_avaja" required="true" z="H9RDkidW4P62RHTf/CihmiT9tnY="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_team02_entities_SEADUSE_PUNKT" render="${not empty dependencies}" z="0Hcu1KgmxpfTGeXakEL8xnEyRm4="/>
 </div>

@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_SEADUS" items="${seadus}" z="yDZKKzV2a1q3dCmpYBv0iluS674=">
         <table:table data="${seadus}" id="l_ee_itcollege_team02_entities_SEADUS" path="/seadus" z="7WavadG8ynCnoIy6fz8qPc1d4o0=">
-            <table:column id="c_ee_itcollege_team02_entities_SEADUS_avaja" property="avaja" z="UpWYAeU0dC3OQLeDyLNe9Ed33X4="/>
             <table:column date="true" dateTimePattern="${SEADUS_avatud_date_format}" id="c_ee_itcollege_team02_entities_SEADUS_avatud" property="avatud" z="aXSShfxLbykDgdkY6mqECmIDMz0="/>
             <table:column id="c_ee_itcollege_team02_entities_SEADUS_muutja" property="muutja" z="lh7ENDsZkLOCfYh5Q+ni8uz7oMA="/>
             <table:column date="true" dateTimePattern="${SEADUS_muudetud_date_format}" id="c_ee_itcollege_team02_entities_SEADUS_muudetud" property="muudetud" z="Pr1aeRkXyQPmpCTSq1wbVvli6Dk="/>
             <table:column id="c_ee_itcollege_team02_entities_SEADUS_sulgeja" property="sulgeja" z="GdY/jE7q53pDvRSButsPufDLigM="/>
             <table:column date="true" dateTimePattern="${SEADUS_suletud_date_format}" id="c_ee_itcollege_team02_entities_SEADUS_suletud" property="suletud" z="2Ji0ZVUP2oLgBjBxe8BojzXfRVw="/>
+            <table:column id="c_ee_itcollege_team02_entities_SEADUS_avaja" property="avaja" z="UpWYAeU0dC3OQLeDyLNe9Ed33X4="/>
         </table:table>
     </page:list>
 </div>

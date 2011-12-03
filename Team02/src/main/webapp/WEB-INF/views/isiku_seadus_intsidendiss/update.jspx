@@ -9,11 +9,11 @@
         <field:datetime dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_kuni" required="true" z="qnYCLSM25LUUqB5vfnKgNh4Eh38="/>
         <field:input field="kirjeldus" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_kirjeldus" required="true" z="sk8nWOztUdOEld40zXJaEnXLL+w="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_kommentaar" z="cvURLq3XydRbFHmcjfx40IgivBM="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_avaja" required="true" z="XFmB51qJsyvD0R7yCWwev0BqIuk="/>
         <field:datetime dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_avatud" required="true" z="rGVmQC88i4eInJlOeCwRh12s7N0="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_muutja" required="true" z="L4btGYgGio8A3qC9l35lqtwpeMk="/>
         <field:datetime dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_muudetud" required="true" z="TGiNN8G9hbXQt9qCMdjE/ijHB9o="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_sulgeja" required="true" z="lP9XRMGTtCNLfJYec0FDZQ/3n+4="/>
         <field:datetime dateTimePattern="${ISIKU_SEADUS_INTSIDENDIS_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_suletud" required="true" z="bl/9Ujik9HQ5TxkyuLJ2fOrmgdM="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_ISIKU_SEADUS_INTSIDENDIS_avaja" required="true" z="XFmB51qJsyvD0R7yCWwev0BqIuk="/>
     </form:update>
 </div>

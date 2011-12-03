@@ -5,11 +5,11 @@
     <page:show id="ps_ee_itcollege_team02_entities_OBJEKT" object="${objekt}" path="/objekts" z="7bOVyQHXVWOWXAk4LqCnigMTUSA=">
         <field:display field="nimetus" id="s_ee_itcollege_team02_entities_OBJEKT_nimetus" object="${objekt}" z="pas1A099CKa3yUhIALwivFtGa2M="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_OBJEKT_kommentaar" object="${objekt}" z="KeIdr17DGPeOIpPl/ZwS4ZhGhRE="/>
-        <field:display field="avaja" id="s_ee_itcollege_team02_entities_OBJEKT_avaja" object="${objekt}" z="USgOLXUeRueBzJFVAqbSqIa9r8U="/>
         <field:display date="true" dateTimePattern="${OBJEKT_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_OBJEKT_avatud" object="${objekt}" z="/9OPKvRRyviGf7QXyXs+Bl+KPVM="/>
         <field:display field="muutja" id="s_ee_itcollege_team02_entities_OBJEKT_muutja" object="${objekt}" z="6ycGB9WiOh+vdRiGvJllI1y5XyY="/>
         <field:display date="true" dateTimePattern="${OBJEKT_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_OBJEKT_muudetud" object="${objekt}" z="O8riO6TgcxD+cENRSupn4TRshow="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_OBJEKT_sulgeja" object="${objekt}" z="6gFOzfRRN311GaKI39RnKGWPR68="/>
         <field:display date="true" dateTimePattern="${OBJEKT_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_OBJEKT_suletud" object="${objekt}" z="4DWyRz6Eon1zXEtoBrubX6wvGBs="/>
+        <field:display field="avaja" id="s_ee_itcollege_team02_entities_OBJEKT_avaja" object="${objekt}" z="USgOLXUeRueBzJFVAqbSqIa9r8U="/>
     </page:show>
 </div>

@@ -9,11 +9,11 @@
         <field:display field="sugu" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_sugu" object="${piirivalvur}" z="GVvEfyZ2/i3IXp/S4COMXfOeQ84="/>
         <field:display field="soduri_kood" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_soduri_kood" object="${piirivalvur}" z="gAmWpV9Jq1m3syVzBj1O3YaQTi0="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_kommentaar" object="${piirivalvur}" z="GfNs8TJHLj5Y3k2RxcMM4soTPho="/>
-        <field:display field="avaja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_avaja" object="${piirivalvur}" z="FPd9V2MmlY2nth0egvVvhN8jZr8="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_avatud" object="${piirivalvur}" z="TOa4z7v2Xbkdn0JnACd9tytGov4="/>
         <field:display field="muutja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_muutja" object="${piirivalvur}" z="fzMGV/ogCsG/k+OZB2QFX9cdb14="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_muudetud" object="${piirivalvur}" z="YCoW/h7i5pQiSWFzN51OoGM4Dl4="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_sulgeja" object="${piirivalvur}" z="zUn11pgulrt0aTNpJsS90r1FrQs="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_suletud" object="${piirivalvur}" z="fyea1vBlS/9alxL27Xq1VJx9QJc="/>
+        <field:display field="avaja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_avaja" object="${piirivalvur}" z="FPd9V2MmlY2nth0egvVvhN8jZr8="/>
     </page:show>
 </div>

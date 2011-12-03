@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_PIIRIRIKKUJA" items="${piiririkkujas}" z="NXtF9HGmzWyYR5oEWZyQq9191yM=">
         <table:table data="${piiririkkujas}" id="l_ee_itcollege_team02_entities_PIIRIRIKKUJA" path="/piiririkkujas" z="dmoey4ZyJi+P296By+VZwDPy6UU=">
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_avaja" property="avaja" z="nG82Ihcg24RivbmZ1HpPgsHNo+s="/>
             <table:column date="true" dateTimePattern="${PIIRIRIKKUJA_avatud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_avatud" property="avatud" z="+wZeFIxfhF0KXRBuZs/mc+iJ2Cw="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_muutja" property="muutja" z="+uHQgz4Gf4Jho88sc99A6SfYmL0="/>
             <table:column date="true" dateTimePattern="${PIIRIRIKKUJA_muudetud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_muudetud" property="muudetud" z="/84DjaBQk2sGNQgLpHqFHmtFIsA="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_sulgeja" property="sulgeja" z="wrS7r/K/tzh22TaG2nV+/3t33Po="/>
             <table:column date="true" dateTimePattern="${PIIRIRIKKUJA_suletud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_suletud" property="suletud" z="Ooy4zJtsAaHsMMTNbO0lc6Kbbdc="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_avaja" property="avaja" z="nG82Ihcg24RivbmZ1HpPgsHNo+s="/>
         </table:table>
     </page:list>
 </div>

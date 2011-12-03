@@ -10,7 +10,6 @@
         <field:datetime dateTimePattern="${PIIRIRIKKUJA_synniaeg_date_format}" field="synniaeg" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_synniaeg" z="JV50FRO6VkfMdDQACABdGpoCcUY="/>
         <field:select field="objekt" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_objekt" itemValue="id" items="${objekts}" path="/objekts" z="+N1tr3gqB8cs6LXzbvDQKCldE7c="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_kommentaar" z="IkcAifmGZ1q1Fps8D856eQWmxbI="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_avaja" required="true" z="9KMqO9+k7Hl/5mmVCCQRar3lKDU="/>
         <field:datetime dateTimePattern="${PIIRIRIKKUJA_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_avatud" required="true" z="MtHLAtYm52bF0LD3LqvJvKv4Blc="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_muutja" required="true" z="u6DXyhBSRbqhyJn0iVYcydvudG4="/>
         <field:datetime dateTimePattern="${PIIRIRIKKUJA_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_muudetud" required="true" z="5DsG844PG2/OTXfNKGMhkXzecdU="/>
@@ -18,5 +17,6 @@
         <field:datetime dateTimePattern="${PIIRIRIKKUJA_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_suletud" required="true" z="8bsFp4xaTDRuVdABre0FU/nNU8E="/>
         <field:simple field="KODAKONDSUSs" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_KODAKONDSUSs" messageCode="entity_reference_not_managed" messageCodeAttribute="K O D A K O N D S U S" z="TqQeu2Y0tQrudHtb3mYIVQ24A0M="/>
         <field:simple field="ISIK_INTSIDENDISs" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_ISIK_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="I S I K_ I N T S I D E N D I S" z="JsnNOoApWUqO6TotfspAJB8US/o="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_PIIRIRIKKUJA_avaja" required="true" z="9KMqO9+k7Hl/5mmVCCQRar3lKDU="/>
     </form:update>
 </div>

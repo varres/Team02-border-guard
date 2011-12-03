@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_PIIRIVALVUR" items="${piirivalvurs}" z="5ejCJk1F4gQBzFHkuqo+rlFDlss=">
         <table:table data="${piirivalvurs}" id="l_ee_itcollege_team02_entities_PIIRIVALVUR" path="/piirivalvurs" z="grkNNIYUlC8e2GKP5z1xoixOB+0=">
-            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avaja" property="avaja" z="VIjoAQmiRT2ckcB5W8JhmdP1cno="/>
             <table:column date="true" dateTimePattern="${PIIRIVALVUR_avatud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avatud" property="avatud" z="naTv1tDCrsC3irHyHX0wyJx60C8="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_muutja" property="muutja" z="a4dve9Jisq5fi5mEk8ihGjdfxkM="/>
             <table:column date="true" dateTimePattern="${PIIRIVALVUR_muudetud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_muudetud" property="muudetud" z="E2dD+lHBW+WWrOFCRX8RFjFRwLk="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_sulgeja" property="sulgeja" z="QOu4/m1X+TOXc2Tt7meaz998Mro="/>
             <table:column date="true" dateTimePattern="${PIIRIVALVUR_suletud_date_format}" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_suletud" property="suletud" z="fjVCTvvRa7tHZwoX32xEMwF7Itk="/>
+            <table:column id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avaja" property="avaja" z="VIjoAQmiRT2ckcB5W8JhmdP1cno="/>
         </table:table>
     </page:list>
 </div>

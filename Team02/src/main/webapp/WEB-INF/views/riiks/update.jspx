@@ -6,12 +6,12 @@
         <field:input field="ISO_kood" id="c_ee_itcollege_team02_entities_RIIK_ISO_kood" max="20" required="true" z="XR2DphUPcn3DttLkW5ZhvgJvM/I="/>
         <field:input field="ANSI_kood" id="c_ee_itcollege_team02_entities_RIIK_ANSI_kood" max="20" required="true" z="t1FmLQsF1aWoHAKftIPInJBCSVQ="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_RIIK_kommentaar" z="WLSeoQApDahGRdsiPs40UvPpUdY="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_RIIK_avaja" required="true" z="+zfo/RaJwfvZTUpwPCtFSL1x2qc="/>
         <field:datetime dateTimePattern="${RIIK_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_RIIK_avatud" required="true" z="CU/7xMS4HuQ7rBZ2mTKPTJDik3Q="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_RIIK_muutja" required="true" z="JX8Z5ryCZ9nE1c6qLY2uGZTdvcg="/>
         <field:datetime dateTimePattern="${RIIK_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_RIIK_muudetud" required="true" z="v2kvUe0bqNNEHWRRKg55d2enYrQ="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_RIIK_sulgeja" required="true" z="rulvyI5GSKZM0JDHzQwDJTYyGoI="/>
-        <field:datetime dateTimePattern="${RIIK_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_RIIK_suletud" required="true" z="gWtJJ3vp/K5bfIClVJDx/iKApi4="/>
         <field:simple field="KODAKONDSUSs" id="c_ee_itcollege_team02_entities_RIIK_KODAKONDSUSs" messageCode="entity_reference_not_managed" messageCodeAttribute="K O D A K O N D S U S" z="tBDkA9Xf1N7RNMVlBPmpxzKUFWI="/>
+        <field:datetime dateTimePattern="${RIIK_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_RIIK_suletud" required="true" z="gWtJJ3vp/K5bfIClVJDx/iKApi4="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_RIIK_avaja" required="true" z="+zfo/RaJwfvZTUpwPCtFSL1x2qc="/>
     </form:update>
 </div>

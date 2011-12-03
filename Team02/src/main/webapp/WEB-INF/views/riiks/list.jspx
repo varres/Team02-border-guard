@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_RIIK" items="${riiks}" z="WBfjQG6CHY6JqlXLjNNqBqRZwEE=">
         <table:table data="${riiks}" id="l_ee_itcollege_team02_entities_RIIK" path="/riiks" z="J6GGmhu1Ps3+Xu1baAsnSvQzWIQ=">
-            <table:column id="c_ee_itcollege_team02_entities_RIIK_avaja" property="avaja" z="MDTdph/7nauDoHq2USVxqcu28u4="/>
             <table:column date="true" dateTimePattern="${RIIK_avatud_date_format}" id="c_ee_itcollege_team02_entities_RIIK_avatud" property="avatud" z="elSlRiJNXQTK3tqkJJy7GIAoJLk="/>
             <table:column id="c_ee_itcollege_team02_entities_RIIK_muutja" property="muutja" z="eApiH1wEYkloTJUGfLbL6KJKV5E="/>
             <table:column date="true" dateTimePattern="${RIIK_muudetud_date_format}" id="c_ee_itcollege_team02_entities_RIIK_muudetud" property="muudetud" z="D/xSXVwrbKgzFTzVZawUq7+rcfA="/>
             <table:column id="c_ee_itcollege_team02_entities_RIIK_sulgeja" property="sulgeja" z="dyoQud+3HnzRRQ5GCdURSpI6Vfk="/>
             <table:column date="true" dateTimePattern="${RIIK_suletud_date_format}" id="c_ee_itcollege_team02_entities_RIIK_suletud" property="suletud" z="CWFg3Oz5so/EiQBS6MRY0KYz+uM="/>
+            <table:column id="c_ee_itcollege_team02_entities_RIIK_avaja" property="avaja" z="MDTdph/7nauDoHq2USVxqcu28u4="/>
         </table:table>
     </page:list>
 </div>

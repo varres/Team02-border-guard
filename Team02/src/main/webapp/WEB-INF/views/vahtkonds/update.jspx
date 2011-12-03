@@ -8,12 +8,12 @@
         <field:datetime dateTimePattern="${VAHTKOND_alates_date_format}" field="alates" id="c_ee_itcollege_team02_entities_VAHTKOND_alates" required="true" z="YZA0sYeSILnyHEjQvXTcJ3BwSvE="/>
         <field:datetime dateTimePattern="${VAHTKOND_kuni_date_format}" field="kuni" id="c_ee_itcollege_team02_entities_VAHTKOND_kuni" required="true" z="CxPsc1GRIAjSMhjF99nSo7gFB1M="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_VAHTKOND_kommentaar" required="true" z="rMzw5fprl9cuT+mVQQcwr90iQYY="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_VAHTKOND_avaja" required="true" z="jlyqC9vJeofI0jFqiAPPBtjDJ60="/>
         <field:datetime dateTimePattern="${VAHTKOND_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_VAHTKOND_avatud" required="true" z="udFGQ16TaSML1AkSbxEFAIEp0cI="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_VAHTKOND_muutja" required="true" z="CGAsQHoV0F3DKItKXsHuLiBCNLE="/>
         <field:datetime dateTimePattern="${VAHTKOND_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_VAHTKOND_muudetud" required="true" z="hvgNUNwzJV+BaoiD9y4Dr0YZWVs="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_VAHTKOND_sulgeja" required="true" z="TXDQc8slHbfFo+xOLk+1fBR1seM="/>
-        <field:datetime dateTimePattern="${VAHTKOND_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_VAHTKOND_suletud" required="true" z="c8pFwVL9xoMJXOCt7jVD5M0guIc="/>
         <field:simple field="VAHTKOND_INTSIDENDISs" id="c_ee_itcollege_team02_entities_VAHTKOND_VAHTKOND_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="V A H T K O N D_ I N T S I D E N D I S" z="viDbl6uNIkZrb7wLokqbiTkL/Z8="/>
+        <field:datetime dateTimePattern="${VAHTKOND_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_VAHTKOND_suletud" required="true" z="c8pFwVL9xoMJXOCt7jVD5M0guIc="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_VAHTKOND_avaja" required="true" z="jlyqC9vJeofI0jFqiAPPBtjDJ60="/>
     </form:update>
 </div>

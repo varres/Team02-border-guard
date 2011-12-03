@@ -9,12 +9,12 @@
         <field:input field="sugu" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_sugu" max="1" required="true" z="07PWfLMzvqZCGhn7Kx6V2qwCqVQ="/>
         <field:input field="soduri_kood" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_soduri_kood" max="20" required="true" z="RfUqHbmcnkvvxvoloXQF7pSInTM="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_kommentaar" required="true" z="8gTWF+PjCmMxrt7nqrp70xlbzUo="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avaja" required="true" z="9HG+HvcbXTlHUMN7l0uJMk8YaH0="/>
         <field:datetime dateTimePattern="${PIIRIVALVUR_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avatud" required="true" z="tuxhxsTv4ASnz7mC4W1NftmQTO4="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_muutja" required="true" z="CCV8CP+prQMcAiKB+C1vMPMiPKU="/>
         <field:datetime dateTimePattern="${PIIRIVALVUR_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_muudetud" required="true" z="JGs7sacaCv9lWAFnhSBvT3dKxdQ="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_sulgeja" required="true" z="Xfq+OeyfGKlqZm3tl8BuTIvqsWE="/>
-        <field:datetime dateTimePattern="${PIIRIVALVUR_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_suletud" required="true" z="Uj9VvYgeSFRAtJ7XJSJq3R2/vvQ="/>
         <field:simple field="PIIRIVALVUR_INTSIDENDISs" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_PIIRIVALVUR_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="P I I R I V A L V U R_ I N T S I D E N D I S" z="om4NM6aVGJ9bqqOH+dHWdUHdG9s="/>
+        <field:datetime dateTimePattern="${PIIRIVALVUR_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_suletud" required="true" z="Uj9VvYgeSFRAtJ7XJSJq3R2/vvQ="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_PIIRIVALVUR_avaja" required="true" z="9HG+HvcbXTlHUMN7l0uJMk8YaH0="/>
     </form:update>
 </div>

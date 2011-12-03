@@ -8,12 +8,12 @@
         <field:input field="kehtiv_alates" id="c_ee_itcollege_team02_entities_SEADUS_kehtiv_alates" max="20" required="true" z="uddr3NtCuHm0MOsshO8AaUXtvbo="/>
         <field:input field="kehtiv_kuni" id="c_ee_itcollege_team02_entities_SEADUS_kehtiv_kuni" max="20" required="true" z="aUIgKA12OtqiEeBIv9ibXaEIf4Y="/>
         <field:input field="kommentaar" id="c_ee_itcollege_team02_entities_SEADUS_kommentaar" max="20" required="true" z="YmKT9mFezWezwMUJ2IS+ruNvKlM="/>
-        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_SEADUS_avaja" required="true" z="Z9jU5sf6B8maZNaMGthCaZsdAx8="/>
         <field:datetime dateTimePattern="${SEADUS_avatud_date_format}" field="avatud" id="c_ee_itcollege_team02_entities_SEADUS_avatud" required="true" z="unCnpNnzx6cciC9qkI/YS7phbnY="/>
         <field:textarea field="muutja" id="c_ee_itcollege_team02_entities_SEADUS_muutja" required="true" z="PmDu77M6AitC2C5RR4OBhRovlJ8="/>
         <field:datetime dateTimePattern="${SEADUS_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_SEADUS_muudetud" required="true" z="1aYjNSUpPTL/1niBK64Mf5Gyids="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_SEADUS_sulgeja" required="true" z="VhPM4JcGO0WB1DnFV3ehVNjSqZc="/>
-        <field:datetime dateTimePattern="${SEADUS_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_SEADUS_suletud" required="true" z="R6aiMeNTzAu7Fgeio18bWTLbG7g="/>
         <field:simple field="SEADUSE_PUNKTs" id="c_ee_itcollege_team02_entities_SEADUS_SEADUSE_PUNKTs" messageCode="entity_reference_not_managed" messageCodeAttribute="S E A D U S E_ P U N K T" z="wfd+VpHD0SA7YP/krUmnQNUWeSs="/>
+        <field:datetime dateTimePattern="${SEADUS_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_SEADUS_suletud" required="true" z="R6aiMeNTzAu7Fgeio18bWTLbG7g="/>
+        <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_SEADUS_avaja" required="true" z="Z9jU5sf6B8maZNaMGthCaZsdAx8="/>
     </form:update>
 </div>

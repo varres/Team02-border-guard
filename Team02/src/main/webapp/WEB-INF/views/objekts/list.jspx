@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_OBJEKT" items="${objekts}" z="7gxDKwCn5It0RewQ/YVQxVWz7mU=">
         <table:table data="${objekts}" id="l_ee_itcollege_team02_entities_OBJEKT" path="/objekts" z="vFm7ShZX+fCAZV0IIj+IH4feBYg=">
-            <table:column id="c_ee_itcollege_team02_entities_OBJEKT_avaja" property="avaja" z="p+0Sv2eNtLqirUvlb43FUsakDQQ="/>
             <table:column date="true" dateTimePattern="${OBJEKT_avatud_date_format}" id="c_ee_itcollege_team02_entities_OBJEKT_avatud" property="avatud" z="SsbPAxP5HcCqI9apoWpsIDiQfiI="/>
             <table:column id="c_ee_itcollege_team02_entities_OBJEKT_muutja" property="muutja" z="QJhn0G84SFG5a82QB4q0449z/tw="/>
             <table:column date="true" dateTimePattern="${OBJEKT_muudetud_date_format}" id="c_ee_itcollege_team02_entities_OBJEKT_muudetud" property="muudetud" z="X9+mO0Fq7+3lK4lDg8py6d95qoU="/>
             <table:column id="c_ee_itcollege_team02_entities_OBJEKT_sulgeja" property="sulgeja" z="gVMHoWprf6jOZxOFFzAarWQ5xb0="/>
             <table:column date="true" dateTimePattern="${OBJEKT_suletud_date_format}" id="c_ee_itcollege_team02_entities_OBJEKT_suletud" property="suletud" z="uxFsVsq2LoIyAjwUUwOyMNAqNgU="/>
+            <table:column id="c_ee_itcollege_team02_entities_OBJEKT_avaja" property="avaja" z="p+0Sv2eNtLqirUvlb43FUsakDQQ="/>
         </table:table>
     </page:list>
 </div>

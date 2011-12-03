@@ -6,11 +6,11 @@
         <field:display field="kood" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kood" object="${intsidendi_liik}" z="IhgvPmXTwYIwoCT8FUKL5N1fxvE="/>
         <field:display field="nimetus" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_nimetus" object="${intsidendi_liik}" z="HPFtSZPuPXm4nimb6m2dBioffJE="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_kommentaar" object="${intsidendi_liik}" z="k4RvrTbz0U0EUlJ9K8TecaN3hGQ="/>
-        <field:display field="avaja" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_avaja" object="${intsidendi_liik}" z="jmXdHh53cXsmADnDxchr3xRSiIg="/>
         <field:display date="true" dateTimePattern="${INTSIDENDI_LIIK_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_avatud" object="${intsidendi_liik}" z="NOwRJSek1yyl7k47s+IjWSxjA6k="/>
         <field:display field="muutja" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_muutja" object="${intsidendi_liik}" z="SWuypg7VNclVz1T0Bi6E8sFJ0qc="/>
         <field:display date="true" dateTimePattern="${INTSIDENDI_LIIK_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_muudetud" object="${intsidendi_liik}" z="a7USR4KOLKmomTwF81hDvUZnZ0s="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_sulgeja" object="${intsidendi_liik}" z="B2x7NsSaauXxmeck0f0ha8Wv670="/>
         <field:display date="true" dateTimePattern="${INTSIDENDI_LIIK_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_suletud" object="${intsidendi_liik}" z="5CVs1hDPK0gXvLPvymC93E7pBuU="/>
+        <field:display field="avaja" id="s_ee_itcollege_team02_entities_INTSIDENDI_LIIK_avaja" object="${intsidendi_liik}" z="jmXdHh53cXsmADnDxchr3xRSiIg="/>
     </page:show>
 </div>

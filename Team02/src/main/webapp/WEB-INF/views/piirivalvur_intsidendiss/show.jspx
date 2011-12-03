@@ -10,11 +10,11 @@
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_kuni_date_format}" field="kuni" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_kuni" object="${piirivalvur_intsidendis}" z="UucUTMffI8/Vzb6gdLt4TcUfZuY="/>
         <field:display field="kirjeldus" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_kirjeldus" object="${piirivalvur_intsidendis}" z="i8x/u+AOkygwDjg+2sKevPL8304="/>
         <field:display field="kommentaar" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_kommentaar" object="${piirivalvur_intsidendis}" z="/ysUE8oT/kI+qvjZeIrgPc7Ol7Q="/>
-        <field:display field="avaja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_avaja" object="${piirivalvur_intsidendis}" z="6vJG/rSdQg26YGE9Gcv4pIbesIo="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_avatud_date_format}" field="avatud" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_avatud" object="${piirivalvur_intsidendis}" z="Hr3Nw+VIWyIcss5TyvRHgJRvhc8="/>
         <field:display field="muutja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_muutja" object="${piirivalvur_intsidendis}" z="jYF2ho+F9+dcbQ8fMjo4LulhY+o="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_muudetud" object="${piirivalvur_intsidendis}" z="5AnRLdypGL4FS0rrOpBXkB7XvGo="/>
         <field:display field="sulgeja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_sulgeja" object="${piirivalvur_intsidendis}" z="A9WaoQ5ANzKTs2kFIWjtHl61Vrs="/>
         <field:display date="true" dateTimePattern="${PIIRIVALVUR_INTSIDENDIS_suletud_date_format}" field="suletud" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_suletud" object="${piirivalvur_intsidendis}" z="yyn7uKPNQAntPFiypxP4oxrqRLw="/>
+        <field:display field="avaja" id="s_ee_itcollege_team02_entities_PIIRIVALVUR_INTSIDENDIS_avaja" object="${piirivalvur_intsidendis}" z="6vJG/rSdQg26YGE9Gcv4pIbesIo="/>
     </page:show>
 </div>
