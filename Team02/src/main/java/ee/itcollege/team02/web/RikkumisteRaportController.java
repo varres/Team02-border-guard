@@ -80,7 +80,7 @@ public class RikkumisteRaportController {
       						break;
       					}
       				}
-      				if(!intsidentOlemas && (algus.after(ints.getToimumise_algus()) || lopp.before(ints.getToimumise_algus())) 
+      				if(!intsidentOlemas && ints.getToimumise_algus().after(algus) && ints.getToimumise_algus().before(lopp)
       						&& ints.getPiiriloik().getId() == piiriloik_ID){
       					hetkeRaport.intsidendid.add(ints);
       				}
