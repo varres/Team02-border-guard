@@ -16,8 +16,6 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
 		event:'onclick'}));
 	</script>
 	
-	<input type="submit" value="Tekita andmed" />
-	
     <form action="" id='proceed' method='POST'>
     <table>
       <tr>
@@ -79,7 +77,7 @@ xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
 					      </tr>		     			      
 		      </c:forEach>		      
 		      <tr>
-		        <td>Intsidentide arv kokku - ??</td>
+		        <td>Intsidentide arv kokku - ${s.count}</td>
 		        <td></td>
 		      </tr>
 		    </table>

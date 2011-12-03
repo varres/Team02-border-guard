@@ -44,89 +44,117 @@ public class RikkumisteRaportController {
 			lopp = new Date();
 			e.printStackTrace();
 		}
-		
-    	List<INTSIDENT> intsidendid = INTSIDENT.findAllINTSIDENTS();
-    	for (int i = intsidendid.size() - 1; i >= 0; i--) 
-    	{ 
-    		INTSIDENT ints = intsidendid.get(i);
-    	    if (!Helper.IsSurrogateDate(ints.getSuletud()) || algus.compareTo(ints.getToimumise_algus()) > 0 || lopp.compareTo(ints.getToimumise_lopp()) < 0 || ints.getPiiriloik().getId() != piiriloik_ID){ 
-    	    	intsidendid.remove(i); 
-    	    }    	
-    	} 
+
     	
-    	List<SEADUS> seadus = SEADUS.findAllSEADUS();
-    	for (int i = seadus.size() - 1; i >= 0; i--) 
+    	List<Raport> raps = new ArrayList<Raport>();
+    	
+    	List<ISIKU_SEADUS_INTSIDENDIS> isis = ISIKU_SEADUS_INTSIDENDIS.findAllISIKU_SEADUS_INTSIDENDISs();
+      	for (int i = isis.size() - 1; i >= 0; i--) 
     	{ 
-    		SEADUS tempSeadus = seadus.get(i);
-    	    if (!Helper.IsSurrogateDate(tempSeadus.getSuletud())){ 
-    	    	seadus.remove(i); 
-    	    }    	
-    	} 	
+      		ISIKU_SEADUS_INTSIDENDIS isi = isis.get(i);
+      		if(Helper.IsSurrogateDate(isi.getSeaduse_punkt().getSuletud()) && Helper.IsSurrogateDate(isi.getSeaduse_punkt().getSeadus().getSuletud())){
+      			SEADUS se = isi.getSeaduse_punkt().getSeadus();
+      			boolean onOlemas = false;
+      			Raport hetkeRaport = null;
+      			for(Raport ra: raps){
+      				if(ra.seadus.getId() == se.getId()){
+      					onOlemas = true;
+      					hetkeRaport = ra;      					
+      					break;
+      				}
+      			}
+      			if(!onOlemas){
+      				hetkeRaport = new Raport();
+      				hetkeRaport.seadus = se;
+      				hetkeRaport.intsidendid = new ArrayList<INTSIDENT>();
+      				raps.add(hetkeRaport);
+      			}
+      			
+      			if(Helper.IsSurrogateDate(isi.getIsik_intsidendis().getSuletud()) && Helper.IsSurrogateDate(isi.getIsik_intsidendis().getIntsident().getSuletud())){
+      			
+      				INTSIDENT ints = isi.getIsik_intsidendis().getIntsident();
+      				boolean intsidentOlemas = false;
+      				for(INTSIDENT in: hetkeRaport.intsidendid){
+      					if(in.getId() == ints.getId()){
+      						intsidentOlemas = true;
+      						break;
+      					}
+      				}
+      				if(!intsidentOlemas && (algus.after(ints.getToimumise_algus()) || lopp.before(ints.getToimumise_algus())) 
+      						&& ints.getPiiriloik().getId() == piiriloik_ID){
+      					hetkeRaport.intsidendid.add(ints);
+      				}
+      			}
+      		}      		 	
+    	}
+      	for(Raport rapo: raps){
+      		rapo.count = rapo.intsidendid.size();
+      	}
+      	modelMap.addAttribute("rap", raps);	
     	
     	List<PIIRILOIK> piiriloigud = PIIRILOIK.findAllPIIRILOIKS();
-    	for (int i = piiriloigud.size() - 1; i >= 0; i--) 
-    	{ 
-    		PIIRILOIK loik = piiriloigud.get(i);
-    	    if (!Helper.IsSurrogateDate(loik.getSuletud())){ 
-    	    	piiriloigud.remove(i); 
-    	    }    	
-    	} 
     	modelMap.addAttribute("piiriloigud", piiriloigud);
-		
-		
-		
-		modelMap.addAttribute("seadus", seadus);
-		modelMap.addAttribute("intsidendid", intsidendid); 
 		
 		return "rikkumisteraport/index";
     }
     
     @RequestMapping
     public String index(Model uiModel) {
-    	
-    	List<INTSIDENT> intsidendid = INTSIDENT.findAllINTSIDENTS();
+       	List<INTSIDENT> intsidendid = INTSIDENT.findAllINTSIDENTS();
     	if(intsidendid.size() == 0){
     		Helper.addAndmed();
     	}
     	
-    	List<PIIRILOIK> piiriloigud = PIIRILOIK.findAllPIIRILOIKS();
-   		for (int i = piiriloigud.size() - 1; i >= 0; i--) 
-   		{ 
-   			PIIRILOIK loik = piiriloigud.get(i);
-   			if (!Helper.IsSurrogateDate(loik.getSuletud())){ 
-   				piiriloigud.remove(i); 
-   			}    	
-   		} 
-    	uiModel.addAttribute("piiriloigud", piiriloigud);
-    	
     	List<Raport> raps = new ArrayList<Raport>();
-    	Raport rap = new Raport();
-    	List<SEADUS> seadus = SEADUS.findAllSEADUS();
-    	for (int i = seadus.size() - 1; i >= 0; i--) 
-   		{ 
-   			SEADUS tempSeadus = seadus.get(i);
-   	    	if (!Helper.IsSurrogateDate(tempSeadus.getSuletud())){ 
-   	    		seadus.remove(i); 
-        	}    	
-    	} 
     	
-    	if(seadus.size() != 0){
-    		rap.seadus = seadus.get(0);
+    	List<ISIKU_SEADUS_INTSIDENDIS> isis = ISIKU_SEADUS_INTSIDENDIS.findAllISIKU_SEADUS_INTSIDENDISs();
+      	for (int i = isis.size() - 1; i >= 0; i--) 
+    	{ 
+      		ISIKU_SEADUS_INTSIDENDIS isi = isis.get(i);
+      		if(Helper.IsSurrogateDate(isi.getSeaduse_punkt().getSuletud()) && Helper.IsSurrogateDate(isi.getSeaduse_punkt().getSeadus().getSuletud())){
+      			SEADUS se = isi.getSeaduse_punkt().getSeadus();
+      			boolean onOlemas = false;
+      			Raport hetkeRaport = null;
+      			for(Raport ra: raps){
+      				if(ra.seadus.getId() == se.getId()){
+      					onOlemas = true;
+      					hetkeRaport = ra;      					
+      					break;
+      				}
+      			}
+      			if(!onOlemas){
+      				hetkeRaport = new Raport();
+      				hetkeRaport.seadus = se;
+      				hetkeRaport.intsidendid = new ArrayList<INTSIDENT>();
+      				raps.add(hetkeRaport);
+      			}
+      			
+      			if(Helper.IsSurrogateDate(isi.getIsik_intsidendis().getSuletud()) && Helper.IsSurrogateDate(isi.getIsik_intsidendis().getIntsident().getSuletud())){
+      			
+      				INTSIDENT ints = isi.getIsik_intsidendis().getIntsident();
+      				boolean intsidentOlemas = false;
+      				for(INTSIDENT in: hetkeRaport.intsidendid){
+      					if(in.getId() == ints.getId()){
+      						intsidentOlemas = true;
+      						break;
+      					}
+      				}
+      				if(!intsidentOlemas){
+      					hetkeRaport.intsidendid.add(ints);
+      				}
+      			}
+      		}      		 	
     	}
-    	
-    	for (int i = intsidendid.size() - 1; i >= 0; i--) 
-   		{ 
-   			INTSIDENT tempIntsident = intsidendid.get(i);
-   	    	if (!Helper.IsSurrogateDate(tempIntsident.getSuletud())){ 
-   	    		intsidendid.remove(i); 
-        	}    	
-    	} 
-    	
-    	rap.intsidendid = intsidendid;
-    	raps.add(rap);
+      	for(Raport rapo: raps){
+      		rapo.count = rapo.intsidendid.size();
+      	}
+      	
     	uiModel.addAttribute("rap", raps);
     	
-        return "rikkumisteraport/index";
+     	List<PIIRILOIK> piiriloigud = PIIRILOIK.findAllPIIRILOIKS();
+    	uiModel.addAttribute("piiriloigud", piiriloigud);
+    	
+        return "rikkumisteraport/index";        
     }
     
    
