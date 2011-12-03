@@ -39,79 +39,22 @@ public class IntsidendiRedaktorController {
     @RequestMapping(params = "id", method = RequestMethod.GET)
     public void getIntsident(@RequestParam("id") Long id, Model uiModel)
     {
-    	boolean testAddAll = true;
-    	
-    	
-    	
+
     	INTSIDENT intsident = INTSIDENT.findINTSIDENT(id);
         uiModel.addAttribute("intsident", intsident);
         
         List<ISIK_INTSIDENDIS> isik_ins =  new ArrayList<ISIK_INTSIDENDIS>();
 
         for (ISIK_INTSIDENDIS current_isik_intsidendis : ISIK_INTSIDENDIS.findAllISIK_INTSIDENDISs()) {
-        
-        	if (testAddAll) {
-        		
-        		isik_ins.add(current_isik_intsidendis);
-        		
-        	} else {
-        		
-	        		if (current_isik_intsidendis.getIntsident().getId() == id){
-	           		 
-	           		 System.out.println("Triggeris isik_ins.add(current_isik_intsidendis)");
+   	
+	        		if (current_isik_intsidendis.getIntsident().getId() == id){	           		 	           		
 	           		 
 	           		 isik_ins.add(current_isik_intsidendis);
+	           		 
 	        		}
-        		
-        	} // end if (testAddAll) {
-        	
-    	
+		
         } // end for 
-        
-//    	List<ISIK_INTSIDENDIS> isik_ins = ISIK_INTSIDENDIS.findAllISIK_INTSIDENDISs();
-//    	for (int i = isik_ins.size() - 1; i >= 0; i--) 
-//    	{ 
-//    		ISIK_INTSIDENDIS ints = isik_ins.get(i);
-//    		
-//    		System.out.println("(Helper.isClosed: " + Helper.isClosed(ints.getSuletud()) + " ja ints.getIntsident().getId()" + ints.getIntsident().getId() + "!= id " + id);
-//    		
-//    	    if (Helper.isClosed(ints.getSuletud())|| ints.getIntsident().getId() != id){ 
-//    	    		
-//    	    	System.out.println("Piiririkkuja " + ints.getPiiririkkuja().getEesnimi() + " Triggeris remove");
-//    	    	isik_ins.remove(i); 
-//    	    } else {
-//    	    	
-//    	    	System.out.println("Piiririkkuja " + ints.getPiiririkkuja().getEesnimi() + " Ei triggerinud remove");	    	
-//    	    }   	
-//    	} 
-
-    	uiModel.addAttribute("isik_ins", isik_ins);
-  
-    	
-    	List<OBJEKT_INTSIDENDIS> legalObjects = new ArrayList<OBJEKT_INTSIDENDIS>();
-    	  	 
-    	
-    	for (OBJEKT_INTSIDENDIS current_object_intsidendis : OBJEKT_INTSIDENDIS.findAllOBJEKT_INTSIDENDISs()) {
-    		
-
-    		if (testAddAll) {
-    			
-    				legalObjects.add(current_object_intsidendis);
-    				
-    		} else {
-		    		 if (current_object_intsidendis.getIntsident().getId() == id){
-		    			 
-		    			 System.out.println("Triggeris legalObjects.add(current_object_intsidendis)");
-		    			 
-		    			 legalObjects.add(current_object_intsidendis);			 
-		    		 } // end if (!Helper.isClosed(
-		    		 
-    		} // end if (testAddAll)
-    		
-    	} // end for
-    	
-    	uiModel.addAttribute("obj_ins", legalObjects);
-    	
+ 	
     }
 
     @RequestMapping
