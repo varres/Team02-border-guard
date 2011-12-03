@@ -556,6 +556,26 @@ public class Helper {
 	    	uusSEADUS1.setKommentaar("Piiri kontrollivärk");
 	    	///11 END
 	    	
+	    	///11 START
+	    	SEADUS pyhiSEADUS1 = new SEADUS();
+	    	
+//	    	uusSEADUS1.setAvaja("Vilja Põld"); 
+//	    	uusSEADUS1.setAvatud(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
+//	    	  	
+//	    	uusSEADUS1.setMuutja("test2");
+//	    	uusSEADUS1.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+//	    	
+//	    	uusSEADUS1.setSulgeja("test3");
+//	    	uusSEADUS1.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
+	    	
+	    	pyhiSEADUS1.setKood("AIAI");
+	    	pyhiSEADUS1.setKehtiv_alates("1.1.1921");
+	    	pyhiSEADUS1.setKehtiv_kuni("2.3.2999");   	
+	    	pyhiSEADUS1.setNimetus("Põhiseadus");
+	    	pyhiSEADUS1.setKommentaar("Vabariigi põhiseadus");
+	    	///11 END
+	    	
+	    	
 	    	
 	    	///11 START
 	    	SEADUS uusSEADUS2 = new SEADUS();
@@ -579,6 +599,19 @@ public class Helper {
 	    	///11 END
 	    	
 	    	///12 START
+	    	SEADUSE_PUNKT ylemusSEADUSE_PUNKT = new SEADUSE_PUNKT();
+	    	ylemusSEADUSE_PUNKT.setKehtiv_alates("2.7.1921");
+	    	ylemusSEADUSE_PUNKT.setKehtiv_kuni("5.3.2045");
+	    	ylemusSEADUSE_PUNKT.setPais("4.3");
+	    	ylemusSEADUSE_PUNKT.setParagrahv("4");
+	    	ylemusSEADUSE_PUNKT.setSeadus(uusSEADUS2); //SEOS! 
+//	    	ylemusSEADUSE_PUNKT.setYlemus_seaduse_punkt(uusSEADUS1); //SEOS! 
+	    	ylemusSEADUSE_PUNKT.setKommentaar("Põhiseadus");
+	    	ylemusSEADUSE_PUNKT.setTekst("Tõeline bossseadus");
+	    	///12 END
+	    	
+	    	
+	    	///12 START
 	    	SEADUSE_PUNKT uusSEADUSE_PUNKT = new SEADUSE_PUNKT();
 //	    	uusSEADUSE_PUNKT.setAvaja("Külli Li Käru"); 
 //	    	uusSEADUSE_PUNKT.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
@@ -593,7 +626,7 @@ public class Helper {
 	    	uusSEADUSE_PUNKT.setPais("4.3");
 	    	uusSEADUSE_PUNKT.setParagrahv("4");
 	    	uusSEADUSE_PUNKT.setSeadus(uusSEADUS2); //SEOS! 
-	    	uusSEADUSE_PUNKT.setYlemus_seaduse_punkt(uusSEADUS); //SEOS! 
+	    	uusSEADUSE_PUNKT.setYlemus_seaduse_punkt(ylemusSEADUSE_PUNKT); //SEOS! 
 	    	uusSEADUSE_PUNKT.setKommentaar("Põtra ei tohi lasta");
 	    	uusSEADUSE_PUNKT.setTekst("Põdrad on lahedad");
 	    	///12 END
@@ -613,30 +646,46 @@ public class Helper {
 	    	uusSEADUSE_PUNKT2.setKehtiv_kuni("5.3.2045");
 	    	uusSEADUSE_PUNKT2.setPais("2.3");
 	    	uusSEADUSE_PUNKT2.setParagrahv("5");
-	    	uusSEADUSE_PUNKT2.setSeadus(uusSEADUS2); //SEOS! 
-	    	uusSEADUSE_PUNKT2.setYlemus_seaduse_punkt(uusSEADUS); //SEOS! 
+	    	uusSEADUSE_PUNKT2.setSeadus(uusSEADUS); //SEOS! 
+	    	uusSEADUSE_PUNKT2.setYlemus_seaduse_punkt(ylemusSEADUSE_PUNKT); //SEOS! 
 	    	uusSEADUSE_PUNKT2.setKommentaar("Karu ei tohi lasta");
 	    	uusSEADUSE_PUNKT2.setTekst("Karud ka lahedad");
 	    	///13 END
 	    	
 	    	///14 START
 	    	SEADUSE_PUNKT uusSEADUSE_PUNKT3 = new SEADUSE_PUNKT();
-//	    	uusSEADUSE_PUNKT3.setAvaja("Kusti Põlev"); 
-//	    	uusSEADUSE_PUNKT3.setAvatud(new GregorianCalendar(2010, 04, 06, 10, 00).getTime());
-//	    	  	
-//	    	uusSEADUSE_PUNKT3.setMuutja("test2");
-//	    	uusSEADUSE_PUNKT3.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
-//	    	
-//	    	uusSEADUSE_PUNKT3.setSulgeja("test3");
-//	    	uusSEADUSE_PUNKT3.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	uusSEADUSE_PUNKT3.setKehtiv_alates("1.1.1935");
 	    	uusSEADUSE_PUNKT3.setKehtiv_kuni("4.12.2025");
-	    	uusSEADUSE_PUNKT3.setPais("6.3");
+	    	uusSEADUSE_PUNKT3.setPais("1.3");
 	    	uusSEADUSE_PUNKT3.setParagrahv("7");
 	    	uusSEADUSE_PUNKT3.setSeadus(uusSEADUS1); //SEOS! 
-	    	uusSEADUSE_PUNKT3.setYlemus_seaduse_punkt(uusSEADUS); //SEOS! 
+	    	uusSEADUSE_PUNKT3.setYlemus_seaduse_punkt(ylemusSEADUSE_PUNKT); //SEOS! 
 	    	uusSEADUSE_PUNKT3.setKommentaar("Relvaga ei tohi");
 	    	uusSEADUSE_PUNKT3.setTekst("Relvata ka ei tohi");
+	    	///14 END
+
+	    	///14 START
+	    	SEADUSE_PUNKT uusSEADUSE_PUNKT4 = new SEADUSE_PUNKT();
+	    	uusSEADUSE_PUNKT4.setKehtiv_alates("1.1.1925");
+	    	uusSEADUSE_PUNKT4.setKehtiv_kuni("4.12.2025");
+	    	uusSEADUSE_PUNKT4.setPais("2.3");
+	    	uusSEADUSE_PUNKT4.setParagrahv("8");
+	    	uusSEADUSE_PUNKT4.setSeadus(uusSEADUS1); //SEOS! 
+	    	uusSEADUSE_PUNKT4.setYlemus_seaduse_punkt(ylemusSEADUSE_PUNKT); //SEOS! 
+	    	uusSEADUSE_PUNKT4.setKommentaar("Viinaga ei tohi");
+	    	uusSEADUSE_PUNKT4.setTekst("Üle piiri minna");
+	    	///14 END
+
+	    	///14 START
+	    	SEADUSE_PUNKT uusSEADUSE_PUNKT5 = new SEADUSE_PUNKT();
+	    	uusSEADUSE_PUNKT5.setKehtiv_alates("1.1.1995");
+	    	uusSEADUSE_PUNKT5.setKehtiv_kuni("4.12.2025");
+	    	uusSEADUSE_PUNKT5.setPais("6.3");
+	    	uusSEADUSE_PUNKT5.setParagrahv("12");
+	    	uusSEADUSE_PUNKT5.setSeadus(uusSEADUS); //SEOS! 
+	    	uusSEADUSE_PUNKT5.setYlemus_seaduse_punkt(ylemusSEADUSE_PUNKT); //SEOS! 
+	    	uusSEADUSE_PUNKT5.setKommentaar("Tankiga ei tohi");
+	    	uusSEADUSE_PUNKT5.setTekst("Valvurit tulistada");
 	    	///14 END
 	    	
 	    	
@@ -964,24 +1013,31 @@ public class Helper {
 	    	
 	    	
 	    	//31 START
-	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS4 = new ISIKU_SEADUS_INTSIDENDIS();
-//	    	uusISIKU_SEADUS_INTSIDENDIS4.setAvaja("Viktor Räim"); 
-//	    	uusISIKU_SEADUS_INTSIDENDIS4.setAvatud(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-//	    	  	
-//	    	uusISIKU_SEADUS_INTSIDENDIS4.setMuutja("Epp Loom");
-//	    	uusISIKU_SEADUS_INTSIDENDIS4.setSuletud(new GregorianCalendar(9999, 12, 31, 11, 00).getTime());
-//	    	
-//	    	uusISIKU_SEADUS_INTSIDENDIS4.setSulgeja("test3");
-//	    	uusISIKU_SEADUS_INTSIDENDIS4.setMuudetud(new GregorianCalendar(2006, 02, 02, 20, 00).getTime());
-	    	
+	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS4 = new ISIKU_SEADUS_INTSIDENDIS();	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
-	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS4.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setIsik_intsidendis(uusISIK_INTSIDENDIS);
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setSeaduse_punkt(uusSEADUSE_PUNKT);
-	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS4.setSeaduse_punkt(uusSEADUSE_PUNKT);	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setKirjeldus("Raske rakendada");
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setKommentaar("Aga rakendasime ikkagi");
+	    	//31 END
+	    	
+	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS5 = new ISIKU_SEADUS_INTSIDENDIS();	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS5.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
+	    	uusISIKU_SEADUS_INTSIDENDIS5.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS5.setIsik_intsidendis(uusISIK_INTSIDENDIS);
+	    	uusISIKU_SEADUS_INTSIDENDIS5.setSeaduse_punkt(uusSEADUSE_PUNKT);	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS5.setKirjeldus("Raske rakendada");
+	    	uusISIKU_SEADUS_INTSIDENDIS5.setKommentaar("Aga rakendasime ikkagi");
+	    	//31 END
+	    	
+	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS6 = new ISIKU_SEADUS_INTSIDENDIS();	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS6.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
+	    	uusISIKU_SEADUS_INTSIDENDIS6.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS6.setIsik_intsidendis(uusISIK_INTSIDENDIS);
+	    	uusISIKU_SEADUS_INTSIDENDIS6.setSeaduse_punkt(uusSEADUSE_PUNKT);	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS6.setKirjeldus("Raske rakendada");
+	    	uusISIKU_SEADUS_INTSIDENDIS6.setKommentaar("Aga rakendasime ikkagi");
 	    	//31 END
 	    	
 	    	
@@ -1022,13 +1078,18 @@ public class Helper {
 	    	uusSEADUS.persist();
 	    	uusSEADUS1.persist();
 	    	uusSEADUS2.persist();
+	    	pyhiSEADUS1.persist();
+	    	ylemusSEADUSE_PUNKT.persist();
 	    	uusSEADUSE_PUNKT.persist();
 	    	uusSEADUSE_PUNKT2.persist();
 	    	uusSEADUSE_PUNKT3.persist();
+	    	uusSEADUSE_PUNKT4.persist();
+	    	uusSEADUSE_PUNKT5.persist();
 	    	uusPIIRILOIK1.persist();  
 	    	uusPIIRILOIK2.persist();
 	    	uusPIIRILOIK3.persist();
 	    	uusPIIRILOIK4.persist();
+	    	
 
 	    	uusRIIK.persist();
 	    	uusRIIK1.persist();
@@ -1051,7 +1112,6 @@ public class Helper {
 	    	uusVAHTKOND.persist();
 	    	uusVAHTKOND1.persist();
 	    	
-	    	// SEOS VAHTKONNA ja VAHTKOND_INTSIDENDIS vahel puudub?
 	    	uusVAHTKOND_INTSIDENDIS.persist();
 	    	uusVAHTKOND_INTSIDENDIS1.persist();
 	    	uusVAHTKOND_INTSIDENDIS2.persist();
@@ -1066,6 +1126,8 @@ public class Helper {
 	    	uusISIKU_SEADUS_INTSIDENDIS2.persist();
 	    	uusISIKU_SEADUS_INTSIDENDIS3.persist();
 	    	uusISIKU_SEADUS_INTSIDENDIS4.persist();
+	    	uusISIKU_SEADUS_INTSIDENDIS5.persist();
+	    	uusISIKU_SEADUS_INTSIDENDIS6.persist();
 	    	
 	    	uusOBJEKT_INTSIDENDIS.persist();
 	    	uusOBJEKT_INTSIDENDIS1.persist();
