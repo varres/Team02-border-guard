@@ -67,9 +67,9 @@ public class IntsidendiRegistreerimineController {
     	newIntsident.setAvaja("test");
     	newIntsident.setAvatud(new Date());
     	newIntsident.setMuutja("test2");
-    	newIntsident.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	newIntsident.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
     	newIntsident.setSulgeja("test3");
-    	newIntsident.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+    	newIntsident.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
     	
     	newIntsident.persist();
     	

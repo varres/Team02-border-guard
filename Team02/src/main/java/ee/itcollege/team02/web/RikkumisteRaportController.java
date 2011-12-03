@@ -90,27 +90,38 @@ public class RikkumisteRaportController {
     	}
     	
     	List<PIIRILOIK> piiriloigud = PIIRILOIK.findAllPIIRILOIKS();
-    	for (int i = piiriloigud.size() - 1; i >= 0; i--) 
-    	{ 
-    		PIIRILOIK loik = piiriloigud.get(i);
-    	    if (!Helper.IsSurrogateDate(loik.getSuletud())){ 
-    	    	piiriloigud.remove(i); 
-    	    }    	
-    	} 
+   		for (int i = piiriloigud.size() - 1; i >= 0; i--) 
+   		{ 
+   			PIIRILOIK loik = piiriloigud.get(i);
+   			if (!Helper.IsSurrogateDate(loik.getSuletud())){ 
+   				piiriloigud.remove(i); 
+   			}    	
+   		} 
     	uiModel.addAttribute("piiriloigud", piiriloigud);
     	
     	List<Raport> raps = new ArrayList<Raport>();
     	Raport rap = new Raport();
     	List<SEADUS> seadus = SEADUS.findAllSEADUS();
     	for (int i = seadus.size() - 1; i >= 0; i--) 
-    	{ 
-    		SEADUS tempSeadus = seadus.get(i);
-    	    if (!Helper.IsSurrogateDate(tempSeadus.getSuletud())){ 
-    	    	seadus.remove(i); 
-    	    }    	
+   		{ 
+   			SEADUS tempSeadus = seadus.get(i);
+   	    	if (!Helper.IsSurrogateDate(tempSeadus.getSuletud())){ 
+   	    		seadus.remove(i); 
+        	}    	
     	} 
     	
-    	rap.seadus = seadus.get(0);
+    	if(seadus.size() != 0){
+    		rap.seadus = seadus.get(0);
+    	}
+    	
+    	for (int i = intsidendid.size() - 1; i >= 0; i--) 
+   		{ 
+   			INTSIDENT tempIntsident = intsidendid.get(i);
+   	    	if (!Helper.IsSurrogateDate(tempIntsident.getSuletud())){ 
+   	    		intsidendid.remove(i); 
+        	}    	
+    	} 
+    	
     	rap.intsidendid = intsidendid;
     	raps.add(rap);
     	uiModel.addAttribute("rap", raps);

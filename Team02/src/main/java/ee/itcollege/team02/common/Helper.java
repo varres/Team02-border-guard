@@ -21,10 +21,16 @@ import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
 
 public class Helper {
 	public static boolean IsSurrogateDate(Date date){
-		SimpleDateFormat simpleDateformat=new SimpleDateFormat("yyyy");
-		String i = simpleDateformat.format(date);
-		int year = Integer.valueOf(i);
-		if(year > 9000){
+		SimpleDateFormat simpleDateformatYear = new SimpleDateFormat("yyyy");
+		SimpleDateFormat simpleDateformatMonth = new SimpleDateFormat("MM");
+		SimpleDateFormat simpleDateformatDay = new SimpleDateFormat("d");
+		
+		String year = simpleDateformatYear.format(date);
+		String month = simpleDateformatMonth.format(date);
+		String day = simpleDateformatDay.format(date);
+		System.out.println(year + "/" + month + "/" + day);
+		
+		if(year.equals("9999") && month.equals("12") && day.equals("31")){
 			return true;
 		}else{
 			return false;
@@ -41,10 +47,10 @@ public class Helper {
 	    	uusINTSIDENDI_LIIK.setAvatud(new GregorianCalendar(2001, 02, 05, 00, 00).getTime());    
 	    	  
 	    	uusINTSIDENDI_LIIK.setMuutja("test2");
-	    	uusINTSIDENDI_LIIK.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+	    	uusINTSIDENDI_LIIK.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	
 	    	uusINTSIDENDI_LIIK.setSulgeja("test3");
-	    	uusINTSIDENDI_LIIK.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
+	    	uusINTSIDENDI_LIIK.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
 	    	  	
 	    	uusINTSIDENDI_LIIK.setKommentaar("Mittedeklareeritud reisijate/ainete üleveo üritus");
 	    	uusINTSIDENDI_LIIK.setKood("38E");
