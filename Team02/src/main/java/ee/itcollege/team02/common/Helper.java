@@ -28,7 +28,6 @@ public class Helper {
 		String year = simpleDateformatYear.format(date);
 		String month = simpleDateformatMonth.format(date);
 		String day = simpleDateformatDay.format(date);
-		System.out.println(year + "/" + month + "/" + day);
 		
 		if(year.equals("9999") && month.equals("12") && day.equals("31")){
 			return true;

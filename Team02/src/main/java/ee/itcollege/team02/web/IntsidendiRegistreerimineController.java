@@ -2,6 +2,7 @@ package ee.itcollege.team02.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.Principal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,7 +34,7 @@ public class IntsidendiRegistreerimineController {
     }
     
     @RequestMapping(method = RequestMethod.POST)
-    public String post(ModelMap modelMap, HttpServletRequest request, HttpServletResponse response) 
+    public String post(ModelMap modelMap,Principal principal, HttpServletRequest request, HttpServletResponse response) 
     {
     	String kood = request.getParameter("kood")==null ? "" : request.getParameter("kood");
      	Long intsidendi_liik_ID = Long.parseLong(request.getParameter("liik")==null ? "0" : request.getParameter("liik"));
@@ -64,11 +65,11 @@ public class IntsidendiRegistreerimineController {
     	newIntsident.setToimumise_lopp(lopp);
     	newIntsident.setKirjeldus(kirjeldus);
     	newIntsident.setKommentaar(kommentaar);
-    	newIntsident.setAvaja("test");
+    	newIntsident.setAvaja(principal.getName());
     	newIntsident.setAvatud(new Date());
-    	newIntsident.setMuutja("test2");
+    	newIntsident.setMuutja("username");
     	newIntsident.setMuudetud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
-    	newIntsident.setSulgeja("test3");
+    	newIntsident.setSulgeja("username");
     	newIntsident.setSuletud(new GregorianCalendar(9999, 12, 31, 00, 00).getTime());
     	
     	newIntsident.persist();
