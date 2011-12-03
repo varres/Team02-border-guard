@@ -25,8 +25,7 @@ privileged aspect SEADUSE_PUNKT_Roo_ToString {
         sb.append("Suletud: ").append(getSuletud()).append(", ");
         sb.append("Sulgeja: ").append(getSulgeja()).append(", ");
         sb.append("Tekst: ").append(getTekst()).append(", ");
-        sb.append("Version: ").append(getVersion()).append(", ");
-        sb.append("Ylemus_seaduse_punkt: ").append(getYlemus_seaduse_punkt());
+        sb.append("Version: ").append(getVersion());
         return sb.toString();
     }
     

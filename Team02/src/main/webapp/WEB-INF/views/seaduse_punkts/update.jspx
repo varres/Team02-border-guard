@@ -15,7 +15,7 @@
         <field:datetime dateTimePattern="${SEADUSE_PUNKT_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_muudetud" required="true" z="j03v7NQac6+5PKvGQ4uckHPn9Cw="/>
         <field:textarea field="sulgeja" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_sulgeja" required="true" z="7+vekW6toaxbzb0ozFXdokIit8c="/>
         <field:simple field="SEADUSE_PUNKTs" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_SEADUSE_PUNKTs" messageCode="entity_reference_not_managed" messageCodeAttribute="S E A D U S E_ P U N K T" z="xamhwJpQgkrdnRwtVFIQ0dZBWY8="/>
-        <field:select field="ylemus_seaduse_punkt" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_ylemus_seaduse_punkt" itemValue="id" items="${seadus}" path="/seadus" z="wsjGZ05zjgE+r+XACPXeaTAT4M4="/>
+        <field:select field="ylemus_seaduse_punkt" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_ylemus_seaduse_punkt" itemValue="id" items="${seaduse_punkts}" path="/seaduse_punkts" z="wzR/t8czSZ1spWKTNZMi6tvbcsg="/>
         <field:simple field="ISIKU_SEADUS_INTSIDENDISs" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_ISIKU_SEADUS_INTSIDENDISs" messageCode="entity_reference_not_managed" messageCodeAttribute="I S I K U_ S E A D U S_ I N T S I D E N D I S" z="tUmAAEKcbm8AXp2qqVrV/xFhgKQ="/>
         <field:datetime dateTimePattern="${SEADUSE_PUNKT_suletud_date_format}" field="suletud" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_suletud" required="true" z="Z0GCPBrB9cdUsgLbqMeoyphXt7E="/>
         <field:textarea field="avaja" id="c_ee_itcollege_team02_entities_SEADUSE_PUNKT_avaja" required="true" z="H9RDkidW4P62RHTf/CihmiT9tnY="/>

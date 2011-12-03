@@ -75,11 +75,11 @@ privileged aspect SEADUSE_PUNKT_Roo_JavaBean {
         this.SEADUSE_PUNKTs = SEADUSE_PUNKTs;
     }
     
-    public SEADUS SEADUSE_PUNKT.getYlemus_seaduse_punkt() {
+    public SEADUSE_PUNKT SEADUSE_PUNKT.getYlemus_seaduse_punkt() {
         return this.ylemus_seaduse_punkt;
     }
     
-    public void SEADUSE_PUNKT.setYlemus_seaduse_punkt(SEADUS ylemus_seaduse_punkt) {
+    public void SEADUSE_PUNKT.setYlemus_seaduse_punkt(SEADUSE_PUNKT ylemus_seaduse_punkt) {
         this.ylemus_seaduse_punkt = ylemus_seaduse_punkt;
     }
     

@@ -6,39 +6,12 @@
 	<spring:message code="label_intsidendiredaktor_index" htmlEscape="false" var="title" />
 	<util:panel id="title" title="${title}">
 		<spring:message code="application_name" htmlEscape="false" var="app_name" />
-		
-		<!-- 
+		<h3>Intsidendi redaktor</h3>
+
 		
 		<p>Intsident ${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</p>
 
-
-		<c:set var="upperCount" scope="page" value="${isik_ins.size()}"/>
 		
-			
-		<c:choose>
-		
-          	<c:when test='${isik_ins.size() > intsident.OBJEKT_INTSIDENDISs.size()}'>
-          
-          		<c:set var="upperCount" value="${isik_ins.size()}"/>
-          		      
-        	</c:when>
-        	
-		      <c:otherwise>
-		      
-		       <c:set var="upperCount" value="${intsident.OBJEKT_INTSIDENDISs.size()}"/>
-		       
-		      </c:otherwise>
-      	
-      	</c:choose>
-      	   	    		
-      		
-      	<c:out value='${upperCount}'>
-      	
-      	</c:out>
-      	
-      	--> 
-
-		<h3>Intsidendi redaktor</h3>
 		<table>
 		<tr>
 		<td>
@@ -50,13 +23,22 @@
 				<c:forEach items="${isik_ins}" var="i">
 				<tr>
 					<td width='140'>${i.piiririkkuja.perek_nimi}, ${i.piiririkkuja.eesnimi}</td>
-					<td><input type='button' onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?modify=${i.id}'" value='Info' /></td>
-					<td><input type='button' onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?delete=${i.id}'" value='Eemalda' /></td>
+					<spring:url value="/intsidendigaseotudisikudetailideredaktor/index" var="ModifyUrl">
+    				<spring:param name="modify" value="${i.id}" />
+  				    </spring:url>
+					<td><input type='button' onClick="location.href='${ModifyUrl}'" value='Info' /></td>
+					<spring:url value="/intsidendigaseotudisikudetailideredaktor/index" var="DeleteUrl">
+    				<spring:param name="delete" value="${i.id}" />
+  				    </spring:url>
+					<td><input type='button' onClick="location.href='${DeleteUrl}'" value='Eemalda' /></td>
 				</tr>
 				</c:forEach>
 				<tr>
 					<td colspan='2'></td>
-					<td><input type='button' name='lisa_isik' value='Lisa' style='float:right;' onClick="location.href='/Team02/piiririkkujalisamine/index?id=${intsident.id}'" /></td>
+					<spring:url value="/piiririkkujalisamine/index" var="LisaUrl">
+    				<spring:param name="id" value="${intsident.id}" />
+  				    </spring:url>
+					<td><input type='button' name='lisa_isik' value='Lisa' style='float:right;' onClick="location.href='${LisaUrl}'" /></td>
 				</tr>
 			</table>
 </td>
@@ -66,7 +48,7 @@
 				<tr>
 					<th colspan='3'>Objektid</th>
 				</tr>
-				<c:forEach items="${intsident.OBJEKT_INTSIDENDISs}" var="o">
+				<c:forEach items="${obj_ins}" var="o">
 				<tr>
 					<td width='140'>${o.objekt.nimetus}</td>
 					<td><input type='button' onClick='alert("Seda funktsionaalsust ei pidanud me antud projekti raames realiseerima.")' value='Info' /></td>
@@ -88,7 +70,7 @@
 				<tr>
 					<th colspan='3'>Vahtkond</th>
 				</tr>
-				<c:forEach items="${intsident.VAHTKOND_INTSIDENDISs}" var="v">
+				<c:forEach items="${vaht_ins}" var="v">
 					<td width='140'>${v.vahtkond.nimetus}</td>
 					<td><input type='button' onClick='alert("Seda funktsionaalsust ei pidanud me antud projekti raames realiseerima.")' value='Info' /></td>
 					<td><input type='button' onClick='alert("Seda funktsionaalsust ei pidanud me antud projekti raames realiseerima.")' value='Eemalda' /></td>
@@ -105,7 +87,7 @@
 				<tr>
 					<th colspan='3'>Piirivalvurid</th>
 				</tr>
-				<c:forEach items="${intsident.PIIRIVALVUR_INTSIDENDISs}" var="p">
+				<c:forEach items="${piiriv_ins}" var="p">
 				<tr>
 					<td width='140'>${p.piirivalvur.perekonnanimi}, ${p.piirivalvur.eesnimed}</td>
 					<td><input type='button' onClick='alert("Seda funktsionaalsust ei pidanud me antud projekti raames realiseerima.")' value='Info' /></td>
@@ -125,7 +107,9 @@
 		<tr>
 		<td />
 		<td />
-		<td><input type='button' name='tagasi_nupp' value='Tagasi raportite lehele' style='float:right;' onClick="location.href='/Team02/rikkumisteraport/index'" /></td>
+					<spring:url value="/rikkumisteraport/index" var="backUrl">
+  				    </spring:url>
+		<td><input type='button' name='tagasi_nupp' value='Tagasi raportite lehele' style='float:right;' onClick="location.href='${backUrl}'" /></td>
 		</tr>
 		</table>
 	</util:panel>

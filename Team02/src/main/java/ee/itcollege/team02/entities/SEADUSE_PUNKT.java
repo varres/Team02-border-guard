@@ -71,7 +71,7 @@ public class SEADUSE_PUNKT extends BaseEntity {
     private Set<ee.itcollege.team02.entities.SEADUSE_PUNKT> SEADUSE_PUNKTs = new HashSet<ee.itcollege.team02.entities.SEADUSE_PUNKT>();
 
     @ManyToOne
-    private SEADUS ylemus_seaduse_punkt;
+    private SEADUSE_PUNKT ylemus_seaduse_punkt;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "seaduse_punkt")
     private Set<ISIKU_SEADUS_INTSIDENDIS> ISIKU_SEADUS_INTSIDENDISs = new HashSet<ISIKU_SEADUS_INTSIDENDIS>();

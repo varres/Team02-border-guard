@@ -20,6 +20,8 @@ import ee.itcollege.team02.entities.INTSIDENT;
 import ee.itcollege.team02.entities.ISIK_INTSIDENDIS;
 import ee.itcollege.team02.entities.OBJEKT_INTSIDENDIS;
 import ee.itcollege.team02.entities.PIIRILOIK;
+import ee.itcollege.team02.entities.PIIRIVALVUR_INTSIDENDIS;
+import ee.itcollege.team02.entities.VAHTKOND_INTSIDENDIS;
 
 @RequestMapping("/intsidendiredaktor/**")
 @Controller
@@ -44,18 +46,36 @@ public class IntsidendiRedaktorController {
         uiModel.addAttribute("intsident", intsident);
         
         List<ISIK_INTSIDENDIS> isik_ins =  new ArrayList<ISIK_INTSIDENDIS>();
-
         for (ISIK_INTSIDENDIS current_isik_intsidendis : ISIK_INTSIDENDIS.findAllISIK_INTSIDENDISs()) {
-   	
-	        		if (current_isik_intsidendis.getIntsident().getId() == id){	           		 	           		
-	           		 
-	           		 isik_ins.add(current_isik_intsidendis);
-	           		 
-	        		}
-		
-        } // end for 
- 	
+     		if (current_isik_intsidendis.getIntsident().getId() == id){	        		
+     			isik_ins.add(current_isik_intsidendis);	           		 
+	       	}		
+        } 	
         uiModel.addAttribute("isik_ins", isik_ins);
+        
+        List<OBJEKT_INTSIDENDIS> obj_ins =  new ArrayList<OBJEKT_INTSIDENDIS>();
+        for (OBJEKT_INTSIDENDIS current_objekt_intsidendis : OBJEKT_INTSIDENDIS.findAllOBJEKT_INTSIDENDISs()) {
+     		if (current_objekt_intsidendis.getIntsident().getId() == id){	        		
+     			obj_ins.add(current_objekt_intsidendis);	           		 
+	       	}		
+        } 	
+        uiModel.addAttribute("obj_ins", obj_ins);
+        
+        List<VAHTKOND_INTSIDENDIS> vaht_ins =  new ArrayList<VAHTKOND_INTSIDENDIS>();
+        for (VAHTKOND_INTSIDENDIS current_vaht_intsidendis : VAHTKOND_INTSIDENDIS.findAllVAHTKOND_INTSIDENDISs()) {
+     		if (current_vaht_intsidendis.getIntsident().getId() == id){	        		
+     			vaht_ins.add(current_vaht_intsidendis);	           		 
+	       	}		
+        } 	
+        uiModel.addAttribute("vaht_ins", vaht_ins);
+        
+        List<PIIRIVALVUR_INTSIDENDIS> piiriv_ins =  new ArrayList<PIIRIVALVUR_INTSIDENDIS>();
+        for (PIIRIVALVUR_INTSIDENDIS current_piiriv_intsidendis : PIIRIVALVUR_INTSIDENDIS.findAllPIIRIVALVUR_INTSIDENDISs()) {
+     		if (current_piiriv_intsidendis.getIntsident().getId() == id){	        		
+     			piiriv_ins.add(current_piiriv_intsidendis);	           		 
+	       	}		
+        } 	
+        uiModel.addAttribute("piiriv_ins", piiriv_ins);
         
     }
     
