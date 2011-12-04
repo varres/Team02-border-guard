@@ -77,20 +77,22 @@
 				<tr>
 					<td>${coords}</td>
 					
-					<td><input type='text' id='latitude' name='latitude' /></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
- 					elementId : 'latitude',
- 					widgetType : 'dijit.form.NumberTextBox',
- 					widgetAttrs : {promptMessage: "${insert} number", required : true}}));
-					</script>
-					<td><input type='text' id='longitude' name='longitude'/></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
- 					elementId : 'longitude',
- 					widgetType : 'dijit.form.NumberTextBox',
- 					widgetAttrs : {promptMessage: "${insert} number", required : true}}));
-					</script>
+					<td colspan="2"><input type='text' id='latitude' name='latitude' style="margin-bottom:5px;" />
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+ 						elementId : 'latitude',
+ 						widgetType : 'dijit.form.NumberTextBox',
+ 						widgetAttrs : {promptMessage: "${insert} number", required : true}}));
+						</script>
+						<br />
+						<input type='text' id='longitude' name='longitude'/>
+						<script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+ 						elementId : 'longitude',
+ 						widgetType : 'dijit.form.NumberTextBox',
+ 						widgetAttrs : {promptMessage: "${insert} number", required : true}}));
+						</script>
+					</td>
 					<td>${comment}</td>
 				</tr>
 				<tr>

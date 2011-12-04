@@ -16,14 +16,14 @@ body {
 }
 
 #wrapper {
-	width:1200px;
-	min-width: 1200px;
-	max-width: 1200px;
+	width:1000px;
+	min-width: 1000px;
+	max-width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
 
 	/* fix max-width incompatibility in IE6 */
-	width:expression(document.body.clientWidth > 1200? "1200px": "auto" );
+	width:expression(document.body.clientWidth > 1000? "1000px": "auto" );
 	
 	overflow:hidden;
 	display:block;
