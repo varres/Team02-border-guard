@@ -121,8 +121,11 @@
 				</tr>
 				<tr>
 					<td colspan='3'></td>
-					<td><input type='submit' name='salvesta' value='${button_save}' />
-						<input type='button' name='loobu' value='${button_cancel}' /></td>
+						<td><input type='submit' name='salvesta' value='${button_save}' />
+						<spring:url value="/" var="loobuUrl">
+  				    	</spring:url>
+						<input type='button' name='loobu' onClick="location.href='${loobuUrl}'"	
+						value='${button_cancel}' /></td>
 				</tr>
 			</table>
 

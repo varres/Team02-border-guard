@@ -13,6 +13,7 @@
     <spring:message code="custom_gender" var="gender" />
     <spring:message code="custom_birthdate" var="birthdate" />
     <spring:message code="custom_comment" var="comment" />
+    <spring:message code="button_cancel" var="button_cancel" />
     
     <form action="" id='proceed' method='POST'>
 		<script type="text/javascript">
@@ -93,28 +94,24 @@
 				</tr>
 				<tr>
 					<td><spring:message code="custom_citizenship" /></td>
-					<td><!-- <input type="checkbox" name="riik" value="EST" id="est" />
-					    <label for="est">EST</label>
-					    <br />
-					    <input type="checkbox" name="riik" value="RUS" id="rus" />
-					    <label for="rus">RUS</label>
-					    <br />  -->
-					    <c:forEach items="${riigid}" var="riik">
-					      <input type="checkbox" name="riik" value="${riik.ISO_kood}" id="riik_${riik.id}" />
-					      <label for="riik_${riik.id}">${riik.ISO_kood}</label>
-					      <br />
-					    </c:forEach>
-					    <br />
+					<td>
 					    <select name="riik" >
 					    <c:forEach items="${riigid}" var="riik">
-					      <option value="${riik.id}">${riik.ISO_kood}</option>
+					      <option value="${riik.id}">${riik.ANSI_kood}</option>
 					    </c:forEach>
 					    </select>
 					</td>
 				</tr>
 				<tr><td><input type="hidden" name="id" value="${id}" /></td></tr>
 				<tr><spring:message code="custom_button_add" var="custom_button_add" />
-					<td colspan='2'><input type='submit' name='Lisa' value='${custom_button_add}' /></td>
+					<td colspan='2'><input type='submit' name='Lisa' value='${custom_button_add}' />
+						<spring:url value="/intsidendiredaktor/index" var="loobuUrl">
+    					<spring:param name="id" value="${id}" />
+  				    	</spring:url>
+						<input type='button'
+							name='loobu' value='${button_cancel}' 
+							onClick="location.href='${loobuUrl}'" />
+					</td>
 				</tr>
 			</table>
 			

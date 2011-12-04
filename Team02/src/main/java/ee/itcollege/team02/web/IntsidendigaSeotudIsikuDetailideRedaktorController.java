@@ -52,6 +52,7 @@ public class IntsidendigaSeotudIsikuDetailideRedaktorController {
     {
     		ISIK_INTSIDENDIS isiku_intsident = ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id);
     		Long intsidentID = isiku_intsident.getIntsident().getId();
+    		isiku_intsident.setKuni(new Date());
     		isiku_intsident.setSuletud(new Date());
     		isiku_intsident.merge();
     		
@@ -76,7 +77,7 @@ public class IntsidendigaSeotudIsikuDetailideRedaktorController {
 	    	for (int i = seadused.size() - 1; i >= 0; i--) 
 	    	{ 
 	    		ISIKU_SEADUS_INTSIDENDIS s = seadused.get(i);
-	    	    if (s.getIsik_intsidendis().getId() != id){ 
+	    	    if (s.getIsik_intsidendis().getId() != id || !Helper.IsSurrogateDate(s.getKuni())){ 
 	    	    	seadused.remove(i); 
 	    	    }    	
 	    	} 

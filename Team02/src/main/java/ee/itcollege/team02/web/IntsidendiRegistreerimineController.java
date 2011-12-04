@@ -74,29 +74,15 @@ public class IntsidendiRegistreerimineController {
     public String index(Model uiModel) {		
     	List<INTSIDENT> intsidendid = INTSIDENT.findAllINTSIDENTS();
     	if(intsidendid.size() == 0){
-    		//Helper.addAndmed();
+    		Helper.addAndmed();
     	}
     	
     	List<PIIRILOIK> piiriloigud = PIIRILOIK.findAllPIIRILOIKS();
-    	for (int i = piiriloigud.size() - 1; i >= 0; i--) 
-    	{ 
-    		PIIRILOIK loik = piiriloigud.get(i);
-    	    if (!Helper.IsSurrogateDate(loik.getSuletud())){ 
-    	    	piiriloigud.remove(i); 
-    	    }    	
-    	} 
-
     	uiModel.addAttribute("piiriloigud", piiriloigud);
     	
     	List<INTSIDENDI_LIIK> liigid = INTSIDENDI_LIIK.findAllINTSIDENDI_LIIKs();
-    	for (int i = liigid.size() - 1; i >= 0; i--) 
-    	{ 
-    		INTSIDENDI_LIIK liik = liigid.get(i);
-    	    if (!Helper.IsSurrogateDate(liik.getSuletud())){ 
-    	    	liigid.remove(i); 
-    	    }    	
-    	} 
     	uiModel.addAttribute("liik", liigid);
+    	
         return "intsidendiregistreerimine/index";
     }
 }

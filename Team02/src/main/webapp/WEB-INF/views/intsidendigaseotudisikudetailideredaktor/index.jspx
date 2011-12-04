@@ -47,7 +47,7 @@
 						</tr>
 						<c:forEach items="${kodakons}" var="k">
 							<tr>
-								<td>${k.riik.ISO_kood}</td>
+								<td>${k.riik.ANSI_kood}</td>
 							</tr>
 						</c:forEach>
 					</table>

@@ -47,7 +47,7 @@ public class IntsidendiRedaktorController {
         
         List<ISIK_INTSIDENDIS> isik_ins =  new ArrayList<ISIK_INTSIDENDIS>();
         for (ISIK_INTSIDENDIS current_isik_intsidendis : ISIK_INTSIDENDIS.findAllISIK_INTSIDENDISs()) {
-     		if (current_isik_intsidendis.getIntsident().getId() == id){	        		
+     		if (current_isik_intsidendis.getIntsident().getId() == id && Helper.IsSurrogateDate(current_isik_intsidendis.getKuni())){	        		
      			isik_ins.add(current_isik_intsidendis);	           		 
 	       	}		
         } 	
@@ -55,7 +55,7 @@ public class IntsidendiRedaktorController {
         
         List<OBJEKT_INTSIDENDIS> obj_ins =  new ArrayList<OBJEKT_INTSIDENDIS>();
         for (OBJEKT_INTSIDENDIS current_objekt_intsidendis : OBJEKT_INTSIDENDIS.findAllOBJEKT_INTSIDENDISs()) {
-     		if (current_objekt_intsidendis.getIntsident().getId() == id){	        		
+     		if (current_objekt_intsidendis.getIntsident().getId() == id && Helper.IsSurrogateDate(current_objekt_intsidendis.getKuni())){	        		
      			obj_ins.add(current_objekt_intsidendis);	           		 
 	       	}		
         } 	
@@ -63,7 +63,7 @@ public class IntsidendiRedaktorController {
         
         List<VAHTKOND_INTSIDENDIS> vaht_ins =  new ArrayList<VAHTKOND_INTSIDENDIS>();
         for (VAHTKOND_INTSIDENDIS current_vaht_intsidendis : VAHTKOND_INTSIDENDIS.findAllVAHTKOND_INTSIDENDISs()) {
-     		if (current_vaht_intsidendis.getIntsident().getId() == id){	        		
+     		if (current_vaht_intsidendis.getIntsident().getId() == id && Helper.IsSurrogateDate(current_vaht_intsidendis.getKuni())){	        		
      			vaht_ins.add(current_vaht_intsidendis);	           		 
 	       	}		
         } 	
@@ -71,7 +71,7 @@ public class IntsidendiRedaktorController {
         
         List<PIIRIVALVUR_INTSIDENDIS> piiriv_ins =  new ArrayList<PIIRIVALVUR_INTSIDENDIS>();
         for (PIIRIVALVUR_INTSIDENDIS current_piiriv_intsidendis : PIIRIVALVUR_INTSIDENDIS.findAllPIIRIVALVUR_INTSIDENDISs()) {
-     		if (current_piiriv_intsidendis.getIntsident().getId() == id){	        		
+     		if (current_piiriv_intsidendis.getIntsident().getId() == id && Helper.IsSurrogateDate(current_piiriv_intsidendis.getKuni())){	        		
      			piiriv_ins.add(current_piiriv_intsidendis);	           		 
 	       	}		
         } 	

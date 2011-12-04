@@ -33,43 +33,20 @@
 				</td>
 			</tr>
 			<tr>
-				<td>${from}</td>
-				<td colspan='2'><input id="alates" type="text" value='${isk_seadus.alates}' name="alates" /></td>
-<!--      				<script type="text/javascript">
-//      				Spring.addDecoration(new Spring.ElementDecoration({
-//          			elementId  : 'alates',
-//          			widgetType : 'dijit.form.DateTextBox',
-//          			widgetAttrs : {promptMessage: "Alates", required : true}}));
- 					</script> -->
-			</tr>
-			<tr>
-				<td>${to}</td>
-				<td colspan='2'><input id="kuni" type="text" value='${isk_seadus.kuni}' name="kuni" /></td>
-<!--      				<script type="text/javascript">
-//      				Spring.addDecoration(new Spring.ElementDecoration({
-//          			elementId  : 'kuni',
-//          			widgetType : 'dijit.form.DateTextBox',
-//          			widgetAttrs : {promptMessage: "Kuni", required : true}}));
-  					</script> -->
-			</tr>
-			<tr>
 				<td>${law}</td>
 				<td colspan='2'><select id='seadus' name="seadus">
 			        <c:forEach items="${seadus}" var="s">
 				        <option value="${s.id}">${s.seadus.nimetus}-${s.paragrahv}-${s.pais}</option>	  
 					</c:forEach>
 					</select></td>
-<!-- 					<script type="text/javascript">
-// 					Spring.addDecoration(new Spring.ElementDecoration({
-//  					elementId : 'seadus',
-//  					widgetType : 'dijit.form.ComboBox',
-//  					widgetAttrs : {promptMessage: "Vali seadus", required : true}}));
-					</script> -->
 			</tr>
 			<tr>
 				<td><input type="hidden" name="id" value="${id}" /></td>
 				<td>
-					<input type='button' name='loobu' value='${button_cancel}' style='float: right;' onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?modify=${backID}'" />
+				    <spring:url value="/intsidendigaseotudisikudetailideredaktor/index" var="url">
+    				<spring:param name="modify" value="${backID}" />
+  				    </spring:url>	
+					<input type='button' name='loobu' value='${button_cancel}' style='float: right;' onClick="location.href='${url}'" />
 					<input type='submit' name='salvesta' value='${button_save}' style='float: right;' />
 				</td>
 			</tr>

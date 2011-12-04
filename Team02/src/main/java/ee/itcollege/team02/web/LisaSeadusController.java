@@ -1,5 +1,6 @@
 package ee.itcollege.team02.web;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -35,22 +36,18 @@ public class LisaSeadusController {
     {
     	String kirjeldus = request.getParameter("kirjeldus")==null ? "" : request.getParameter("kirjeldus");
     	String kommentaar = request.getParameter("kommentaar")==null ? "" : request.getParameter("kommentaar");
-    	Date alates = null, kuni = null;
-		try {
-			alates = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("alates")==null ? "" : request.getParameter("alates"));
-			kuni = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("kuni")==null ? "" : request.getParameter("kuni"));
-		}catch(Exception e){
-			alates = new Date();
-			kuni = new Date();
-		}
 		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
 		Long seadus_ID = Long.parseLong(request.getParameter("seadus")==null ? "0" : request.getParameter("seadus"));
     	
 		ISIKU_SEADUS_INTSIDENDIS uusSeadus = new ISIKU_SEADUS_INTSIDENDIS();
 		uusSeadus.setKirjeldus(kirjeldus);
 		uusSeadus.setKommentaar(kommentaar);
-		uusSeadus.setAlates(alates);
-		uusSeadus.setKuni(kuni);
+		uusSeadus.setAlates(new Date());
+		try {
+			uusSeadus.setKuni(new SimpleDateFormat("yyyy-MM-dd").parse("9999-12-31"));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		uusSeadus.setIsik_intsidendis(ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id));
 		uusSeadus.setSeaduse_punkt(SEADUSE_PUNKT.findSEADUSE_PUNKT(seadus_ID));
 		uusSeadus.persist();

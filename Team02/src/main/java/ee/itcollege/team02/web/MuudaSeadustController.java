@@ -1,5 +1,6 @@
 package ee.itcollege.team02.web;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -33,25 +34,19 @@ public class MuudaSeadustController {
     {
     	String kirjeldus = request.getParameter("kirjeldus")==null ? "" : request.getParameter("kirjeldus");
     	String kommentaar = request.getParameter("kommentaar")==null ? "" : request.getParameter("kommentaar");
-    	Date alates = null, kuni = null;
-		try {
-			alates = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("alates")==null ? "" : request.getParameter("alates"));
-			kuni = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("kuni")==null ? "" : request.getParameter("kuni"));
-		}catch(Exception e){
-			alates = new Date();
-			kuni = new Date();
-		}
 		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
 		Long seadus_ID = Long.parseLong(request.getParameter("seadus")==null ? "0" : request.getParameter("seadus"));
    
 		ISIKU_SEADUS_INTSIDENDIS seadus = ISIKU_SEADUS_INTSIDENDIS.findISIKU_SEADUS_INTSIDENDIS(id);
 		seadus.setKirjeldus(kirjeldus);
 		seadus.setKommentaar(kommentaar);
-		seadus.setAlates(alates);
-		seadus.setKuni(kuni);
+		seadus.setAlates(new Date());
+		try {
+			seadus.setKuni(new SimpleDateFormat("yyyy-MM-dd").parse("9999-12-31"));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		seadus.setSeaduse_punkt(SEADUSE_PUNKT.findSEADUSE_PUNKT(seadus_ID));
-		seadus.setMuutja("test2");
-		seadus.setMuudetud(new Date());
 		seadus.merge();
 		
     	
@@ -63,6 +58,7 @@ public class MuudaSeadustController {
     {
     		ISIKU_SEADUS_INTSIDENDIS seadus = ISIKU_SEADUS_INTSIDENDIS.findISIKU_SEADUS_INTSIDENDIS(id);
     		Long intsidentID = seadus.getIsik_intsidendis().getId();
+    		seadus.setKuni(new Date());
     		seadus.setSuletud(new Date());
     		seadus.merge();
     		
