@@ -39,7 +39,10 @@ public class LisaSeadusController {
 		try {
 			alates = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("alates")==null ? "" : request.getParameter("alates"));
 			kuni = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("kuni")==null ? "" : request.getParameter("kuni"));
-		}catch(Exception e){}
+		}catch(Exception e){
+			alates = new Date();
+			kuni = new Date();
+		}
 		Long id = Long.parseLong(request.getParameter("id")==null ? "0" : request.getParameter("id"));
 		Long seadus_ID = Long.parseLong(request.getParameter("seadus")==null ? "0" : request.getParameter("seadus"));
     	
@@ -50,12 +53,6 @@ public class LisaSeadusController {
 		uusSeadus.setKuni(kuni);
 		uusSeadus.setIsik_intsidendis(ISIK_INTSIDENDIS.findISIK_INTSIDENDIS(id));
 		uusSeadus.setSeaduse_punkt(SEADUSE_PUNKT.findSEADUSE_PUNKT(seadus_ID));
-		uusSeadus.setAvaja("test");
-		uusSeadus.setAvatud(new Date());
-		uusSeadus.setMuutja("test2");
-		uusSeadus.setMuudetud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
-		uusSeadus.setSulgeja("test3");
-		uusSeadus.setSuletud(new GregorianCalendar(9999, 01, 01, 00, 00).getTime());
 		uusSeadus.persist();
 		
     	
@@ -67,13 +64,6 @@ public class LisaSeadusController {
     public void InsertRule(@RequestParam("id") Long id, Model uiModel)
     {
     	List<SEADUSE_PUNKT> seadus = SEADUSE_PUNKT.findAllSEADUSE_PUNKTs();
-    	for (int i = seadus.size() - 1; i >= 0; i--) 
-    	{ 
-    		SEADUSE_PUNKT punkt = seadus.get(i);
-    	    if (!Helper.IsSurrogateDate(punkt.getSuletud())){ 
-    	    	seadus.remove(i); 
-    	    }    	
-    	} 
 
     	uiModel.addAttribute("seadus", seadus);
     	uiModel.addAttribute("id", id);

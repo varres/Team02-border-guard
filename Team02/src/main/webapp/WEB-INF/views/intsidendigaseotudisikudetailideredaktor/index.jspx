@@ -32,9 +32,12 @@
 			</tr>
 			<tr>
 				<td><spring:message code="custom_gender" /></td>
+						<spring:url value="/isikuandmed/index" var="modifyUrl">
+    					<spring:param name="id" value="${id}" />
+  						</spring:url>
 				<td>${sugu}<input style='float: right;' type='button'
 					name='muuda_isiku_andmeid' value='${custom_button_edit}'
-					onClick="location.href='/Team02/isikuandmed/index?id=${id}'" />
+					onClick="location.href='${modifyUrl}'" />
 				</td>
 			</tr>
 			<tr>
@@ -58,19 +61,31 @@
 						</tr>
 						<c:forEach items="${seadused}" var="s">
 							<tr>
-								<td>${s.seaduse_punkt.paragrahv}</td>
-								<td><input style='float: right;' type='button'
-									onClick="location.href='/Team02/muudaseadust/index?id=${s.id}'"
-									value='${custom_button_add}' /></td>
-								<td><input style='float: right;' type='button'
-									onClick="location.href='/Team02/muudaseadust/index?delete=${s.id}'"
+								<td>${s.seaduse_punkt.paragrahv}-${s.seaduse_punkt.pais}</td>
+								<td>
+								 	<spring:url value="/muudaseadust/index" var="muudaUrl">
+    								<spring:param name="id" value="${s.id}" />
+  				    				</spring:url>
+								<input style='float: right;' type='button'
+									onClick="location.href='${muudaUrl}'"
+									value='${custom_button_edit}' /></td>
+								<td>
+									<spring:url value="/muudaseadust/index" var="deleteUrl">
+    								<spring:param name="delete" value="${s.id}" />
+  				    				</spring:url>
+								<input style='float: right;' type='button'
+									onClick="location.href='${deleteUrl}'"
 									value='${custom_button_remove}' /></td>
 							</tr>
 						</c:forEach>
 						<tr>
-							<td colspan="3"><input style="float: right;" type='button'
+							<td colspan="3">
+									<spring:url value="/lisaseadus/index" var="lisaUrl">
+    								<spring:param name="id" value="${id}" />
+  				    				</spring:url>
+							<input style="float: right;" type='button'
 								name='lisa_seadus'
-								onClick="location.href='/Team02/lisaseadus/index?id=${id}'"
+								onClick="location.href='${lisaUrl}'"
 								value='${custom_button_add}' /></td>
 						</tr>
 					</table>
@@ -94,9 +109,13 @@
 						</td>
 						<td><input type="hidden" name="id"
 							value="${isik_intsident.id}" /></td>
-						<td style='vertical-align: bottom;'><input type='button'
+						<td style='vertical-align: bottom;'>
+						<spring:url value="/intsidendiredaktor/index" var="loobuUrl">
+    					<spring:param name="id" value="${ints.id}" />
+  				    	</spring:url>
+						<input type='button'
 							name='loobu' value='${button_cancel}' style='float: right;'
-							onClick="location.href='/Team02/intsidendiredaktor/index?id=${ints.id}'" />
+							onClick="location.href='${loobuUrl}'" />
 							<input type='submit' name='salvesta' value='${button_save}'
 							style='float: right;' />
 						</td>

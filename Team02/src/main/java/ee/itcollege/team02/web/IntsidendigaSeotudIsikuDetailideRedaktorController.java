@@ -76,7 +76,7 @@ public class IntsidendigaSeotudIsikuDetailideRedaktorController {
 	    	for (int i = seadused.size() - 1; i >= 0; i--) 
 	    	{ 
 	    		ISIKU_SEADUS_INTSIDENDIS s = seadused.get(i);
-	    	    if (!Helper.IsSurrogateDate(s.getSuletud())|| s.getIsik_intsidendis().getId() != id){ 
+	    	    if (s.getIsik_intsidendis().getId() != id){ 
 	    	    	seadused.remove(i); 
 	    	    }    	
 	    	} 
