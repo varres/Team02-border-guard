@@ -3,10 +3,12 @@
      xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
-  <spring:message code="label_piiririkkujalisamine_index" htmlEscape="false" var="title"/>
+  <spring:message code="custom_borderviolator_add" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>Piiririkkuja lisamine</h3>
+    <h3><spring:message code="custom_borderviolator_add" /></h3>
+    <spring:message code="custom_prompt_insert" var="insert" />
+    <spring:message code="custom_ID_code" var="idcode" />
     <form action="" id='proceed' method='POST'>
 		<script type="text/javascript">
 		Spring.addDecoration(new Spring.ValidateAllDecoration({
@@ -15,18 +17,18 @@
 		</script>
 			<table>
 				<tr>
-					<td>Isikukood</td>
+					<td>${idcode}</td>
 					<td><input type='text' id='isikukood' name='isikukood' />
 						<script type="text/javascript">
 						Spring.addDecoration(new Spring.ElementDecoration({
 						elementId : 'isikukood', 
 						widgetType : 'dijit.form.ValidationTextBox', 
-						widgetAttrs : {promptMessage: "Sisesta isikukood", required : true}})); 
+						widgetAttrs : {promptMessage: "${insert} ${idcode}", required : true}})); 
 						</script>
 					</td>
 				</tr>
 				<tr>
-					<td>Eesnimi</td>
+					<td><spring:message code="custom_firstname" /></td>
 					<td><input type='text' id='eesnimi' name='eesnimi' />
 						<script type="text/javascript">
 						Spring.addDecoration(new Spring.ElementDecoration({
@@ -37,7 +39,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Perenimi</td>
+					<td><spring:message code="custom_lastname" /></td>
 					<td><input type='text' id='perenimi' name='perenimi' />
 						<script type="text/javascript">
 						Spring.addDecoration(new Spring.ElementDecoration({
@@ -48,7 +50,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Sugu</td>
+					<td><spring:message code="custom_gender" /></td>
 					<td><select id='sugu' name='sugu'>
 						  <option value='M'>M</option>
 						  <option value='N'>N</option>
@@ -56,7 +58,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Sünniaeg</td>
+					<td><spring:message code="custom_birthdate" /></td>
 					<td><input id="synniaeg" type="text" name="synniaeg" />
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
@@ -66,7 +68,7 @@
   					</script></td>
 				</tr>
 				<tr>
-					<td>Objekt</td>
+					<td><spring:message code="custom_object" /></td>
 					<td><select id='objekt' name='objekt'>
 						<c:forEach items="${objektid}" var="o">
 					       <option value="${o.id}">${o.nimetus}</option>	  
@@ -81,11 +83,11 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Kommentaar</td>
+					<td><spring:message code="custom_comment" /></td>
 					<td><textarea cols='20' rows='3' title='kommentaar' name='kommentaar' ><jsp:text/></textarea></td>
 				</tr>
 				<tr>
-					<td>Avaja</td>
+					<td><spring:message code="custom_opener" /></td>
 					<td><input type='text' id='avaja' name='avaja' />
 						<script type="text/javascript">
 						Spring.addDecoration(new Spring.ElementDecoration({
@@ -96,7 +98,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Avatud</td>
+					<td><spring:message code="custom_opened" /></td>
 					<td><input id='avatud' type='text' name='avatud' />
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
@@ -106,7 +108,7 @@
   					</script></td>
 				</tr>
 				<tr>
-					<td>Muutja</td>
+					<td><spring:message code="custom_editor" /></td>
 					<td><input type='text' id='muutja' name='muutja' />
 						<script type="text/javascript">
 						Spring.addDecoration(new Spring.ElementDecoration({
@@ -117,7 +119,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Muudetud</td>
+					<td><spring:message code="custom_edited" /></td>
 					<td><input id='muudetud' type='text' name='muudetud' />
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
@@ -127,7 +129,7 @@
   					</script></td>
 				</tr>
 				<tr>
-					<td>Sulgeja</td>
+					<td><spring:message code="custom_closer" /></td>
 					<td><input type='text' id='sulgeja' name='sulgeja' />
 						<script type="text/javascript">
 						Spring.addDecoration(new Spring.ElementDecoration({
@@ -138,7 +140,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Suletud</td>
+					<td><spring:message code="custom_closed" /></td>
 					<td><input id='suletud' type='text' name='suletud' />
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
@@ -148,7 +150,7 @@
   					</script></td>
 				</tr>
 				<tr>
-					<td>Kodakondsus</td>
+					<td><spring:message code="custom_citizenship" /></td>
 					<td><!-- <input type="checkbox" name="riik" value="EST" id="est" />
 					    <label for="est">EST</label>
 					    <br />
@@ -156,7 +158,7 @@
 					    <label for="rus">RUS</label>
 					    <br />  -->
 					    <c:forEach items="${riigid}" var="riik">
-					      <input type="checkbox" name="${riik.id}" value="${riik.ISO_kood}" id="riik_${riik.id}" />
+					      <input type="checkbox" name="riik" value="${riik.ISO_kood}" id="riik_${riik.id}" />
 					      <label for="riik_${riik.id}">${riik.ISO_kood}</label>
 					      <br />
 					    </c:forEach>
@@ -169,8 +171,8 @@
 					</td>
 				</tr>
 				<tr><td><input type="hidden" name="id" value="${id}" /></td></tr>
-				<tr>
-					<td colspan='2'><input type='submit' name='Lisa' value='Lisa' /></td>
+				<tr><spring:message code="custom_button_add" var="custom_button_add" />
+					<td colspan='2'><input type='submit' name='Lisa' value='${custom_button_add}' /></td>
 				</tr>
 			</table>
 			

@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_ee_itcollege_team02_entities_PIIRILOIK" items="${piiriloiks}" z="dZA9GrXBw50HMiwvSYGfYvrcf2g=">
         <table:table data="${piiriloiks}" id="l_ee_itcollege_team02_entities_PIIRILOIK" path="/piiriloiks" z="6OI5/AEdenVbpGaTNZ11C4CkeDY=">
+            <table:column id="c_ee_itcollege_team02_entities_PIIRILOIK_avaja" property="avaja" z="EFKvBfo0liXw3YpPUvYSI4cp29I="/>
             <table:column date="true" dateTimePattern="${PIIRILOIK_avatud_date_format}" id="c_ee_itcollege_team02_entities_PIIRILOIK_avatud" property="avatud" z="0f07xciSyhVH7ng5ps9n9WLL/Xk="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRILOIK_muutja" property="muutja" z="ccNuqCUMX7uiE0M9/CpMdlXum3Q="/>
             <table:column date="true" dateTimePattern="${PIIRILOIK_muudetud_date_format}" id="c_ee_itcollege_team02_entities_PIIRILOIK_muudetud" property="muudetud" z="6CI5FgMRpfLp5aRzBMaT2uB6cjo="/>
             <table:column id="c_ee_itcollege_team02_entities_PIIRILOIK_sulgeja" property="sulgeja" z="eWsvJN7GagfbE4jh2/b2XWBP+vM="/>
             <table:column date="true" dateTimePattern="${PIIRILOIK_suletud_date_format}" id="c_ee_itcollege_team02_entities_PIIRILOIK_suletud" property="suletud" z="3jrpmpoXTgEGc0wNCLLv1ujxi5Q="/>
-            <table:column id="c_ee_itcollege_team02_entities_PIIRILOIK_avaja" property="avaja" z="EFKvBfo0liXw3YpPUvYSI4cp29I="/>
         </table:table>
     </page:list>
 </div>

@@ -1,89 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" 
-	xmlns:spring="http://www.springframework.org/tags" 
-	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" 
-	xmlns:c="http://java.sun.com/jsp/jstl/core" 
-	version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:c="http://java.sun.com/jsp/jstl/core" version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	<spring:message code="label_intsidendigaseotudisikudetailideredaktor_index" htmlEscape="false" var="title" />
+	<spring:message code="custom_incident_individual_editor" htmlEscape="false" var="title" />
 	<util:panel id="title" title="${title}">
 		<spring:message code="application_name" htmlEscape="false" var="app_name" />
-		<h3>Intsidendiga seotud isiku detailide redaktor</h3>
+		<h3>
+			<spring:message code="custom_incident_individual_editor" />
+		</h3>
 
-		<p>Intsident ${ints.kood} - ${ints.piiriloik.nimetus} - ${ints.nimetus}</p>		
-			<table>
+		<spring:message code="custom_button_add" var="custom_button_add" />
+		<spring:message code="custom_button_edit" var="custom_button_edit" />
+		<spring:message code="custom_button_remove" var="custom_button_remove" />
+		<spring:message code="button_save" var="button_save" />
+		<spring:message code="button_cancel" var="button_cancel" />
+
+		<p>
+			<spring:message code="custom_incident" />
+			${ints.kood} - ${ints.piiriloik.nimetus} - ${ints.nimetus}
+		</p>
+		<table>
 			<tr>
 				<td>
-					<tr>
-						<td>Nimi</td>
-						<td>${piiririkkuja.perek_nimi}, ${piiririkkuja.eesnimi}</td>
-					</tr>
-					<tr>
-						<td>Sünniaeg</td>
-						<td>${piiririkkuja.synniaeg}</td>
-					</tr>
-					<tr>
-						<td>Sugu</td>
-						<td>${sugu}<input style='float: right;' type='button' name='muuda_isiku_andmeid' value='Muuda' onClick="location.href='/Team02/isikuandmed/index?id=${id}'" /> </td>
-					</tr>					
-					<tr>
-						<td>Kodakondsused</td>
-						<td>
-							<table border='1' width='25' rules='rows' frame='box'>
-								<tr><th>Riik</th></tr>
-								<c:forEach items="${kodakons}" var="k">
-									<tr><td>${k.riik.ISO_kood}</td></tr>
-								</c:forEach>
-							</table>
-						</td>
-						<td>
-		      			<table style='background-color: #dddddd'>
+			<tr>
+				<td><spring:message code="custom_name" /></td>
+				<td>${piiririkkuja.perek_nimi}, ${piiririkkuja.eesnimi}</td>
+			</tr>
+			<tr>
+				<td><spring:message code="custom_birthdate" /></td>
+				<td>${piiririkkuja.synniaeg}</td>
+			</tr>
+			<tr>
+				<td><spring:message code="custom_gender" /></td>
+				<td>${sugu}<input style='float: right;' type='button'
+					name='muuda_isiku_andmeid' value='${custom_button_edit}'
+					onClick="location.href='/Team02/isikuandmed/index?id=${id}'" />
+				</td>
+			</tr>
+			<tr>
+				<td><spring:message code="custom_citizenship" /></td>
+				<td>
+					<table>
+						<tr>
+							<th><spring:message code="custom_country" /></th>
+						</tr>
+						<c:forEach items="${kodakons}" var="k">
 							<tr>
-								<th>Seadus</th>
+								<td>${k.riik.ISO_kood}</td>
 							</tr>
-							<c:forEach items="${seadused}" var="s">
-								<tr>
-							    	<td>${s.seaduse_punkt.paragrahv}</td>
-									<td><input style='float: right;' type='button' onClick="location.href='/Team02/muudaseadust/index?id=${s.id}'" value='Info' /></td>
-									<td><input style='float: right;' type='button' onClick="location.href='/Team02/muudaseadust/index?delete=${s.id}'" value='Eemalda' /></td>
-								</tr>
-							</c:forEach>
-								<tr>
-									<td colspan="3">
-										<input style="float: right;" type='button' name='lisa_seadus' onClick="location.href='/Team02/lisaseadus/index?id=${id}'" value='Lisa' />
-									</td>
-							    </tr>
-						</table>
-		                 </td>
-				 </tr>
-           	  </td>
-              
-		</tr>
-		<tr>
-		<form action="" id='proceed' method='POST'>
-			<td>
-				<tr>
-					<td>Kirjeldus</td>
-					<td>
-						<textarea name='kirjeldus'  rows='4' cols='20'><jsp:text>${isik_intsident.kirjeldus}</jsp:text></textarea>
-					</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>Kommentaar</td>
-					<td>
-						<textarea name='kommentaar' rows='4' cols='20'><jsp:text>${isik_intsident.kommentaar}</jsp:text></textarea>
-					</td>
-					<td><input type="hidden" name="id" value="${isik_intsident.id}" /></td>
-						<td style='vertical-align: bottom;'>
-							<input type='button' name='loobu' value='Loobu' style='float: right;' onClick="location.href='/Team02/intsidendiredaktor/index?id=${ints.id}'" />
-							<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
-					</td>
-				</tr>
+						</c:forEach>
+					</table>
+				</td>
+				<td>
+					<table style='background-color: #dddddd'>
+						<tr>
+							<th><spring:message code="custom_law" /></th>
+						</tr>
+						<c:forEach items="${seadused}" var="s">
+							<tr>
+								<td>${s.seaduse_punkt.paragrahv}</td>
+								<td><input style='float: right;' type='button'
+									onClick="location.href='/Team02/muudaseadust/index?id=${s.id}'"
+									value='${custom_button_add}' /></td>
+								<td><input style='float: right;' type='button'
+									onClick="location.href='/Team02/muudaseadust/index?delete=${s.id}'"
+									value='${custom_button_remove}' /></td>
+							</tr>
+						</c:forEach>
+						<tr>
+							<td colspan="3"><input style="float: right;" type='button'
+								name='lisa_seadus'
+								onClick="location.href='/Team02/lisaseadus/index?id=${id}'"
+								value='${custom_button_add}' /></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
 			</td>
-		</form>
-		</tr>
-	</table>
+
+			</tr>
+			<tr>
+				<form action="" id='proceed' method='POST'>
+					<td>
+					<tr>
+						<td><spring:message code="custom_description" /></td>
+						<td><textarea name='kirjeldus' rows='4' cols='20'><jsp:text>${isik_intsident.kirjeldus}</jsp:text></textarea>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><spring:message code="custom_comment" /></td>
+						<td><textarea name='kommentaar' rows='4' cols='20'><jsp:text>${isik_intsident.kommentaar}</jsp:text></textarea>
+						</td>
+						<td><input type="hidden" name="id"
+							value="${isik_intsident.id}" /></td>
+						<td style='vertical-align: bottom;'><input type='button'
+							name='loobu' value='${button_cancel}' style='float: right;'
+							onClick="location.href='/Team02/intsidendiredaktor/index?id=${ints.id}'" />
+							<input type='submit' name='salvesta' value='${button_save}'
+							style='float: right;' />
+						</td>
+					</tr>
+					</td>
+				</form>
+			</tr>
+		</table>
 	</util:panel>
 </div>
