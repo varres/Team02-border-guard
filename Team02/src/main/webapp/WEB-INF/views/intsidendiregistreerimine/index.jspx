@@ -3,10 +3,21 @@
      xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
-	<spring:message code="label_intsidendiregistreerimine_index" htmlEscape="false" var="title" />
+	<spring:message code="custom_incident_reg" htmlEscape="false" var="title" />
 	<util:panel id="title" title="${title}">
-		<spring:message code="application_name" htmlEscape="false" var="app_name" />
-		<h3>Intsidendi registreerimine</h3>
+		<h3>${title}</h3>
+		<spring:message code="custom_prompt_insert" var="insert" />
+		<spring:message code="custom_incident_code" var="code" />
+		<spring:message code="custom_incident_name" var="name" />
+		<spring:message code="custom_incident_type" var="type" />
+		<spring:message code="custom_description" var="description" />
+		<spring:message code="custom_border_section" var="section" />
+		<spring:message code="custom_border_coords" var="coords" />
+		<spring:message code="custom_incident_start" var="start" />
+		<spring:message code="custom_incident_end" var="end" />
+		<spring:message code="button_save" var="button_save" />
+		<spring:message code="button_cancel" var="button_cancel" />
+		<spring:message code="custom_comment" var="comment" />
 		<form action="" id='proceed' method='POST'>
 		<script type="text/javascript">
 		Spring.addDecoration(new Spring.ValidateAllDecoration({
@@ -15,15 +26,15 @@
 		</script>
 			<table>
 				<tr>
-					<td>Kood</td>
+					<td>${code}</td>
 					<td colspan='2'><input type='text' id='kood' name='kood' size='9' />
 					<script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
 					elementId : 'kood', 
 					widgetType : 'dijit.form.ValidationTextBox', 
-					widgetAttrs : {promptMessage: "Sisesta kood", required : true}})); 
+					widgetAttrs : {promptMessage: "${insert} ${code}", required : true}})); 
 					</script>
-					  Liik <select id='liik' name="liik">
+					  ${type} <select id='liik' name="liik">
 							<c:forEach items="${liik}" var="l">
 					        <option value="${l.id}">${l.nimetus}</option>	  
      						</c:forEach>
@@ -34,23 +45,23 @@
 //  					widgetType : 'dijit.form.ComboBox',
 //  					widgetAttrs : {promptMessage: "Vali liik", required : true}}));
  					</script> -->
-					<td>Kirjeldus</td>
+					<td>${description}</td>
 				</tr>
 				<tr>
-					<td>Nimetus</td>
+					<td>${name}</td>
 					<td colspan='2'><input id='nimetus' type='text' name='nimetus' size='25' /></td>
 					<script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
 					elementId : "nimetus", 
 					widgetType : "dijit.form.ValidationTextBox", 
-					widgetAttrs : {promptMessage: "Sisesta nimetus", required : true}})); 
+					widgetAttrs : {promptMessage: "${insert} ${name}", required : true}})); 
 					</script>
 					<td colspan='2' rowspan='2'> 
-					  <textarea cols='30' rows='5' id='kirjeldus' title='kirjeldus' name='kirjeldus' ><jsp:text /></textarea>
+					  <textarea cols='30' rows='5' id='kirjeldus' title='${description}' name='kirjeldus' ><jsp:text /></textarea>
 					</td>
 				</tr>
 				<tr>
-					<td>Piirilõik</td>
+					<td>${section}</td>
 					<td colspan='2'><select id='piiriloik' name="piiriloik">
 					        <c:forEach items="${piiriloigud}" var="p">
 					        <option value="${p.id}">${p.nimetus}</option>	  
@@ -64,52 +75,52 @@
  					</script> -->
 				</tr>
 				<tr>
-					<td>Koordinaadid</td>
+					<td>${coords}</td>
 					
 					<td><input type='text' id='latitude' name='latitude' /></td>
 					<script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
  					elementId : 'latitude',
  					widgetType : 'dijit.form.NumberTextBox',
- 					widgetAttrs : {promptMessage: "Sisesta number", required : true}}));
+ 					widgetAttrs : {promptMessage: "${insert} number", required : true}}));
 					</script>
 					<td><input type='text' id='longitude' name='longitude'/></td>
 					<script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
  					elementId : 'longitude',
  					widgetType : 'dijit.form.NumberTextBox',
- 					widgetAttrs : {promptMessage: "Sisesta number", required : true}}));
+ 					widgetAttrs : {promptMessage: "${insert} number", required : true}}));
 					</script>
-					<td>Kommentaar</td>
+					<td>${comment}</td>
 				</tr>
 				<tr>
-					<td>Algus</td>
+					<td>${start}</td>
 					<td colspan='2'><input id="startDate" type="text" name="startDate" />
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'startDate',
          			widgetType : 'dijit.form.DateTextBox',
-         			widgetAttrs : {promptMessage: "Sisesta algus", required : true}}));
+         			widgetAttrs : {promptMessage: "${insert} ${start}", required : true}}));
   					</script>
   					</td>
 					<td colspan='2' rowspan='2'> 
-						<textarea cols='30' rows='5' title='kommentaar' name='kommentaar' ><jsp:text/></textarea>
+						<textarea cols='30' rows='5' title='${comment}' name='kommentaar' ><jsp:text/></textarea>
 					</td>
 				</tr>
 				<tr>
-					<td>Lõpp</td>
+					<td>${end}</td>
 					<td colspan='2'><input id="endDate" type="text" name="endDate" />
      				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'endDate',
          			widgetType : 'dijit.form.DateTextBox',
-         			widgetAttrs : {promptMessage: "Sisesta lõpp", required : true}}));
+         			widgetAttrs : {promptMessage: "${insert} ${end}", required : true}}));
   					</script></td>
 				</tr>
 				<tr>
 					<td colspan='3'></td>
-					<td><input type='submit' name='salvesta' value='Salvesta' />
-						<input type='button' name='loobu' value='Loobu' /></td>
+					<td><input type='submit' name='salvesta' value='${button_save}' />
+						<input type='button' name='loobu' value='${button_cancel}' /></td>
 				</tr>
 			</table>
 

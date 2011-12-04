@@ -3,56 +3,61 @@
 xmlns:c="http://java.sun.com/jsp/jstl/core"  version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
-  <spring:message code="label_lisaseadus_index" htmlEscape="false" var="title"/>
+  <spring:message code="custom_law_add" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
-    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-      <h3>Lisa seadus</h3>
-    	<form action="" id='proceed' method='POST'>
+  <h3>${title}</h3>
+  <spring:message code="custom_description" var="description" />
+  <spring:message code="custom_comment" var="comment" />
+  <spring:message code="custom_law_from" var="from" />
+  <spring:message code="custom_law_to" var="to" />
+  <spring:message code="custom_law" var="law" />
+  <spring:message code="button_save" var="button_save" />
+  <spring:message code="button_cancel" var="button_cancel" />
+    <form action="" id='proceed' method='POST'>
 		<script type="text/javascript">
 		Spring.addDecoration(new Spring.ValidateAllDecoration({
 		elementId:'proceed',
 		event:'onclick'}));
 		</script>
-			<table>
-				<tr>
-					<td>Kirjeldus</td>
-					 <td colspan='2' rowspan='1'> 
-					  <textarea cols='30' rows='2' id='kirjeldus' title='kirjeldus' name='kirjeldus' ><jsp:text /></textarea>
-					</td>
-				</tr>
-				<tr>
-					<td>Kommentaar</td>
-					 <td colspan='2' rowspan='1'> 
-					  <textarea cols='30' rows='2' id='kommentaar' title='kommentaar' name='kommentaar' ><jsp:text /></textarea>
-					</td>
-				</tr>
-				
-				<tr>
-					<td>Alates</td>
-					<td colspan='2'><input id="alates" type="text" name="alates" /></td>
-     				<script type="text/javascript">
+		<table>
+			<tr>
+				<td>${description}</td>
+				<td colspan='2' rowspan='1'>
+					<textarea cols='30' rows='2' id='kirjeldus' title='${description}' name='kirjeldus' ><jsp:text /></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>${comment}</td>
+				 <td colspan='2' rowspan='1'>
+					<textarea cols='30' rows='2' id='kommentaar' title='${comment}' name='kommentaar' ><jsp:text /></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>${from}</td>
+				<td colspan='2'><input id="alates" type="text" name="alates" /></td>
+     			<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'alates',
          			widgetType : 'dijit.form.DateTextBox',
-         			widgetAttrs : {promptMessage: "Alates", required : true}}));
-  					</script>
-				</tr>
-				<tr>
-					<td>Kuni</td>
-					<td colspan='2'><input id="kuni" type="text" name="kuni" /></td>
-     				<script type="text/javascript">
+         			widgetAttrs : {promptMessage: "${from}", required : true}}));
+  				</script>
+			</tr>
+			<tr>
+				<td>${to}</td>
+				<td colspan='2'><input id="kuni" type="text" name="kuni" /></td>
+     			<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'kuni',
          			widgetType : 'dijit.form.DateTextBox',
-         			widgetAttrs : {promptMessage: "Kuni", required : true}}));
-  					</script>
-				</tr>
-				<tr>
-					<td>Seadus</td>
-					<td colspan='2'><select id='seadus' name="seadus">
-					        <c:forEach items="${seadus}" var="s">
-					        <option value="${s.id}">${s.seadus.nimetus}-${s.paragrahv}-${s.pais}</option>	  
-     						</c:forEach>
+         			widgetAttrs : {promptMessage: "${to}", required : true}}));
+  				</script>
+			</tr>
+			<tr>
+				<td>${law}</td>
+				<td colspan='2'><select id='seadus' name="seadus">
+			        <c:forEach items="${seadus}" var="s">
+				        <option value="${s.id}">${s.seadus.nimetus}-${s.paragrahv}-${s.pais}</option>
+     				</c:forEach>
 					</select></td>
 <!-- 					<script type="text/javascript">
 // 					Spring.addDecoration(new Spring.ElementDecoration({
@@ -60,18 +65,18 @@ xmlns:c="http://java.sun.com/jsp/jstl/core"  version="2.0">
 //  					widgetType : 'dijit.form.ComboBox',
 //  					widgetAttrs : {promptMessage: "Vali seadus", required : true}}));
 					</script> -->
-				</tr>
-				<tr>
+			</tr>
+			<tr>
 				<td><input type="hidden" name="id" value="${id}" /></td>
 				<td>
 					<spring:url value="/intsidendigaseotudisikudetailideredaktor/index" var="url">
     				<spring:param name="modify" value="${id}" />
   				    </spring:url>	
-					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='${url}'"/>
-					<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
+					<input type='button' name='loobu' value='${button_cancel}' style='float: right;' onClick="location.href='${url}'" />
+					<input type='submit' name='salvesta' value='${button_save}' style='float: right;' />
 				</td>
-				</tr>
-			</table>
-		</form>
+			</tr>
+		</table>
+	</form>
   </util:panel>
 </div>

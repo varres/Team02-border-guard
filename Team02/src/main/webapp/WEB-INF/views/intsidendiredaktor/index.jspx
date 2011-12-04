@@ -5,15 +5,14 @@
 	<jsp:output omit-xml-declaration="yes" />
 	<spring:message code="custom_incident_editor" htmlEscape="false" var="title" />
 	<util:panel id="title" title="${title}">
-		<spring:message code="application_name" htmlEscape="false" var="app_name" />
-		<h3><spring:message code="custom_incident_editor" /></h3>
-
+		<h3>${title}</h3>
+		<spring:message code="custom_incident" var="incident" />
 		<spring:message code="custom_button_add" var="custom_button_add" />
 		<spring:message code="custom_button_remove" var="custom_button_remove" />
 		<spring:message code="custom_button_info" var="custom_button_info" />
 		<spring:message code="custom_button_backtoreports" var="custom_button_backtoreports" />
 
-		<p>Intsident ${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</p>
+		<p>${incident} ${intsident.kood} - ${intsident.piiriloik.nimetus} - ${intsident.nimetus}</p>
 
 		<table>
 		<tr>

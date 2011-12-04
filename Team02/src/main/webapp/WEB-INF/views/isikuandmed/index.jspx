@@ -2,68 +2,74 @@
 <div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
-  <spring:message code="label_isikuandmed_index" htmlEscape="false" var="title"/>
+  <spring:message code="custom_individual_edit" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
-    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>Isiku andmete muutmine</h3>
-		<form action="" id='proceed' method='POST'>
+    <h3>${title}</h3>
+    <spring:message code="custom_prompt_insert" var="insert" />
+    <spring:message code="custom_firstname" var="firstname" />
+    <spring:message code="custom_lastname" var="lastname" />
+    <spring:message code="custom_gender" var="gender" />
+    <spring:message code="custom_birthdate" var="birthdate" />
+    <spring:message code="custom_button_edit" var="edit" />
+	<spring:message code="button_save" var="button_save" />
+	<spring:message code="button_cancel" var="button_cancel" />
+	<form action="" id='proceed' method='POST'>
 		<script type="text/javascript">
 		Spring.addDecoration(new Spring.ValidateAllDecoration({
 		elementId:'proceed',
 		event:'onclick'}));
 		</script>
-			<table>
-				<tr>
-					<td>Eesnimi</td>
-					<td colspan='2'><input type='text' id='eesnimi' name='eesnimi' value='${r.eesnimi}' size='9' /></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
-					elementId : 'eesnimi', 
-					widgetType : 'dijit.form.ValidationTextBox', 
-					widgetAttrs : {promptMessage: "Muuda eesnimi", required : true}})); 
-					</script>
-				</tr>
-				<tr>
-					<td>Perenimi</td>
-					<td colspan='2'><input type='text' id='perenimi' name='perenimi' value='${r.perek_nimi}' size='9' /></td>
-					<script type="text/javascript">
-					Spring.addDecoration(new Spring.ElementDecoration({
-					elementId : 'perenimi', 
-					widgetType : 'dijit.form.ValidationTextBox', 
-					widgetAttrs : {promptMessage: "Muuda perenime", required : true}})); 
-					</script>
-				</tr>
-				
-				<tr>
-					<td>Sünniaeg</td>
-					<td colspan='2'><input id="birthDate" type="text" name="birthDate" value='${r.synniaeg}' /></td>
-     				<script type="text/javascript">
+		<table>
+			<tr>
+				<td>${firstname}</td>
+				<td colspan='2'><input type='text' id='eesnimi' name='eesnimi' value='${r.eesnimi}' size='9' /></td>
+				<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+				elementId : 'eesnimi', 
+				widgetType : 'dijit.form.ValidationTextBox', 
+				widgetAttrs : {promptMessage: "${edit} ${firstname}", required : true}})); 
+				</script>
+			</tr>
+			<tr>
+				<td>${lastname}</td>
+				<td colspan='2'><input type='text' id='perenimi' name='perenimi' value='${r.perek_nimi}' size='9' /></td>
+				<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+				elementId : 'perenimi', 
+				widgetType : 'dijit.form.ValidationTextBox', 
+				widgetAttrs : {promptMessage: "${edit} ${lastname}", required : true}})); 
+				</script>
+			</tr>
+			<tr>
+				<td>${birthdate}</td>
+				<td colspan='2'><input id="birthDate" type="text" name="birthDate" value='${r.synniaeg}' /></td>
+    				<script type="text/javascript">
      				Spring.addDecoration(new Spring.ElementDecoration({
          			elementId  : 'birthDate',
          			widgetType : 'dijit.form.DateTextBox',
-         			widgetAttrs : {promptMessage: "Sisesta sünnikuupäev", required : true}}));
+         			widgetAttrs : {promptMessage: "${insert} ${birthdate}", required : true}}));
   					</script>
-				</tr>
-				<tr>
-					 <td> Sugu</td><td> <select id='sugu' name="sugu">
-					        <option selected='true' value="Mees">Mees</option>
-					        <option value="Naine">Naine</option>
+			</tr>
+			<tr>
+				 <td>${gender}</td><td> <select id='sugu' name="sugu">
+				        <option selected='true' value="M">M</option>
+				        <option value="N">N</option>
 					</select></td>
-					<script type="text/javascript">
+					<!-- <script type="text/javascript">
 					Spring.addDecoration(new Spring.ElementDecoration({
  					elementId : 'sugu',
  					widgetType : 'dijit.form.ComboBox',
  					widgetAttrs : {promptMessage: "Vali sugu", required : true}}));
-					</script>
-				</tr>
-				<tr>
+					</script> -->
+			</tr>
+			<tr>
 				<td><input type="hidden" name="id" value="${id}" /></td>
 				<td>
-					<input type='button' name='loobu' value='Loobu' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?modify=${id}'"/>
-					<input type='submit' name='salvesta' value='Salvesta' style='float: right;' />
+					<input type='button' name='loobu' value='${button_cancel}' style='float: right;'  onClick="location.href='/Team02/intsidendigaseotudisikudetailideredaktor/index?modify=${id}'" />
+					<input type='submit' name='salvesta' value='${button_save}' style='float: right;' />
 				</td>
-				</tr>
-			</table>
-		</form>
+			</tr>
+		</table>
+	</form>
   </util:panel>
 </div>

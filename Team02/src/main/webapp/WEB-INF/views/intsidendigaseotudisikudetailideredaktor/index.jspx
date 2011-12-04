@@ -5,9 +5,7 @@
 	<spring:message code="custom_incident_individual_editor" htmlEscape="false" var="title" />
 	<util:panel id="title" title="${title}">
 		<spring:message code="application_name" htmlEscape="false" var="app_name" />
-		<h3>
-			<spring:message code="custom_incident_individual_editor" />
-		</h3>
+		<h3>${title}</h3>
 
 		<spring:message code="custom_button_add" var="custom_button_add" />
 		<spring:message code="custom_button_edit" var="custom_button_edit" />

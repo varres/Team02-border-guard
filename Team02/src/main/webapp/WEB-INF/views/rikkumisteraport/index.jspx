@@ -1,89 +1,94 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" 
-xmlns:spring="http://www.springframework.org/tags" 
-xmlns:c="http://java.sun.com/jsp/jstl/core" 
-xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <jsp:output omit-xml-declaration="yes"/>
-  <spring:message code="label_rikkumisteraport_index" htmlEscape="false" var="title"/>
+  <spring:message code="custom_violation_report" htmlEscape="false" var="title"/>
   <util:panel id="title" title="${title}">
-    <spring:message code="application_name" htmlEscape="false" var="app_name"/>
-    <h3>Rikkumiste raport</h3>
-    
+    <!-- <spring:message code="application_name" htmlEscape="false" var="app_name"/> -->
+    <h3>${title}</h3>
+      <spring:message code="custom_prompt_insert" var="insert" />
+      <spring:message code="custom_law_from" var="from" />
+      <spring:message code="custom_incident_start" var="start" />
+      <spring:message code="custom_incident_end" var="end" />
+      <spring:message code="custom_law_to" var="to" />
+      <spring:message code="custom_border_section" var="section" />
+      <spring:message code="button_update" var="button_update" />
+      <spring:message code="custom_button_see" var="look" />
     <script type="text/javascript">
 		Spring.addDecoration(new Spring.ValidateAllDecoration({
 		elementId:'proceed',
 		event:'onclick'}));
 	</script>
-	
-    <form action="" id='proceed' method='POST'>
-    <table>
-      <tr>
-        <td>Alates </td>
-        <td>Kuni </td>
-        <td>Piirilõik </td>
-      </tr>
-      <tr>
-      			
-				<td colspan='0.5'><input id="startDate" type="text" name="startDate" />
-     				<script type="text/javascript">
-	     				Spring.addDecoration(new Spring.ElementDecoration({
-	         			elementId  : 'startDate',
-	         			widgetType : 'dijit.form.DateTextBox',
-	         			widgetAttrs : {promptMessage: "Sisesta algus", required : true}}));
-  					</script>
-  				</td>
-  					
-       
-		  		
-				<td colspan='0.5'><input id="endDate" type="text" name="endDate" />
-		     				<script type="text/javascript">
-			     				Spring.addDecoration(new Spring.ElementDecoration({
-			         			elementId  : 'endDate',
-			         			widgetType : 'dijit.form.DateTextBox',
-			         			widgetAttrs : {promptMessage: "Sisesta lõpp", required : true}}));
-		  					</script>
-		  		</td>
-        	
+
+	<form action="" id='proceed' method='POST'>
+		<table>
+			<tr>
+				<td>${from}</td>
+				<td>${to}</td>
+				<td>${section}</td>
+			</tr>
+			<tr>
+				<td colspan='0.5'><input id="startDate" type="text"
+					name="startDate" /> <script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+							elementId : 'startDate',
+							widgetType : 'dijit.form.DateTextBox',
+							widgetAttrs : {
+								promptMessage : "${insert} ${start}",
+								required : true
+							}
+						}));
+					</script></td>
+
+					<td colspan='0.5'><input id="endDate" type="text"
+					name="endDate" /> <script type="text/javascript">
+						Spring.addDecoration(new Spring.ElementDecoration({
+							elementId : 'endDate',
+							widgetType : 'dijit.form.DateTextBox',
+							widgetAttrs : {
+								promptMessage : "${insert} ${end}",
+								required : true
+							}
+						}));
+					</script></td>
 					<td colspan='0.5'><select id='piiriloik' name="piiriloik">
-					        <c:forEach items="${piiriloigud}" var="p">
-					        <option value="${p.id}">${p.nimetus}</option>	  
-     						</c:forEach>
-					</select></td>
-<!-- 					<script type="text/javascript">
-// 					Spring.addDecoration(new Spring.ElementDecoration({
-//  					elementId : 'piiriloik',
-//  					widgetType : 'dijit.form.ComboBox',
-//  					widgetAttrs : {promptMessage: "Vali piirilõik", required : true}}));
-					</script>                -->
-        <td><input type="submit" value="Värskenda" /></td>
-      </tr>
-    </table>
-  </form>
-  
-     <c:forEach items="${rap}" var="s">					        
-			<table border="1">
-		      <tr>
-		        <th>${s.seadus.nimetus}</th>
-		        <th></th>
-		      </tr>	      
-		      <c:forEach items="${s.intsidendid}" var="intsi">		      
-		      			<tr>
-					        <td>${intsi.nimetus}</td>	
+						<c:forEach items="${piiriloigud}" var="p">
+							<option value="${p.id}">${p.nimetus}</option>
+						</c:forEach>
+				</select></td>
+				<!-- <script type="text/javascript">
+ 					Spring.addDecoration(new Spring.ElementDecoration({
+  					elementId : 'piiriloik',
+  					widgetType : 'dijit.form.ComboBox',
+  					widgetAttrs : {promptMessage: "Vali piirilõik", required : true}}));
+				</script>   -->
+				<td><input type="submit" value="${button_update}" /></td>
+			</tr>
+		</table>
+	</form>
+	<c:forEach items="${rap}" var="s">
+		<table border="1">
+			<tr>
+				<th>${s.seadus.nimetus}</th>
+				<th></th>
+			</tr>
+			<c:forEach items="${s.intsidendid}" var="intsi">
+				<tr>
+					<td>${intsi.nimetus}</td>
 					<spring:url value="/intsidendiredaktor/index" var="url">
-    				<spring:param name="id" value="${intsi.id}" />
-  				    </spring:url>				        			        
-					        <td><input type="submit" onClick="location.href='${url}'" value="Vaata" /></td>					      
-					      </tr>		     			      
-		      </c:forEach>		      
-		      <tr>
-		        <td>Intsidentide arv kokku - ${s.count}</td>
-		        <td></td>
-		      </tr>
-		    </table>
-		    	  
-     		 <br />
-     </c:forEach>
- 
-  </util:panel>
+						<spring:param name="id" value="${intsi.id}" />
+					</spring:url>
+					<td><input type="submit" onClick="location.href='${url}'"
+						value="${look}" /></td>
+				</tr>
+			</c:forEach>
+			<tr>
+				<td><spring:message code="custom_incidents_total" /> - ${s.count}</td>
+				<td></td>
+			</tr>
+		</table>
+			<br />
+	</c:forEach>
+
+	</util:panel>
 </div>
