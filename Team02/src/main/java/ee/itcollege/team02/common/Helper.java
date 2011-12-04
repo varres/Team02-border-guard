@@ -1,5 +1,6 @@
 package ee.itcollege.team02.common;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -28,6 +29,15 @@ public class Helper {
 	
 	 public static void addAndmed() {
 	    	
+		 	Date kuniDate = new Date();
+		   
+		 	try {
+				kuniDate =  new SimpleDateFormat("yyyy-MM-dd").parse("9999-12-31");
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		 
 	    	///1 START
 	    	INTSIDENDI_LIIK uusINTSIDENDI_LIIK = new INTSIDENDI_LIIK();
 	    	uusINTSIDENDI_LIIK.setKommentaar("Mittedeklareeritud reisijate/ainete üleveo üritus");
@@ -122,7 +132,7 @@ public class Helper {
 	    	uusKODAKONDSUS.setPiiririkkuja(uusPIIRIRIKKUJA);  //SEOS!
 	    	uusKODAKONDSUS.setIsikukood("327232372");   	
 	    	uusKODAKONDSUS.setAlates(new GregorianCalendar(1950, 01, 01, 00, 00).getTime());
-	    	uusKODAKONDSUS.setKuni(new GregorianCalendar(2020, 01, 01, 00, 00).getTime());
+	    	uusKODAKONDSUS.setKuni(kuniDate);
 	    	uusKODAKONDSUS.setRiik(uusRIIK1); //SEOS!
 	    	/// 7 END
 	    	
@@ -419,7 +429,7 @@ public class Helper {
 	    	uusVAHTKOND.setKommentaar("Vihased vennad");
 	    	uusVAHTKOND.setKood("ZZBBZZ");
 	    	uusVAHTKOND.setAlates(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	uusVAHTKOND.setKuni(new GregorianCalendar(2012, 05, 06, 10, 00).getTime());
+	    	uusVAHTKOND.setKuni(kuniDate);
 	    	uusVAHTKOND.setNimetus("Jäärgibrigaad");
 	    	///18 END
 	    	
@@ -429,7 +439,7 @@ public class Helper {
 	    	uusVAHTKOND1.setKommentaar("Vajab lisamehi");
 	    	uusVAHTKOND1.setKood("T82KILL");
 	    	uusVAHTKOND1.setAlates(new GregorianCalendar(2004, 05, 06, 10, 00).getTime());
-	    	uusVAHTKOND1.setKuni(new GregorianCalendar(2012, 05, 06, 10, 00).getTime());
+	    	uusVAHTKOND1.setKuni(kuniDate);
 	    	uusVAHTKOND1.setNimetus("Tankipatrull");
 	    	///19 END
 	    	
@@ -441,7 +451,7 @@ public class Helper {
 	    	
 	    	uusVAHTKOND_INTSIDENDIS.setKirjeldus("Kõik olid väga vaprad");
 	    	uusVAHTKOND_INTSIDENDIS.setVahtkond(uusVAHTKOND1);
-	    	uusVAHTKOND_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
+	    	uusVAHTKOND_INTSIDENDIS.setKuni(kuniDate);
 	    	///20 END
 	    	
 	    	///21 START
@@ -450,7 +460,7 @@ public class Helper {
 	    	uusVAHTKOND_INTSIDENDIS1.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
 	    	uusVAHTKOND_INTSIDENDIS1.setVahtkond(uusVAHTKOND);
 	    	uusVAHTKOND_INTSIDENDIS1.setKirjeldus("Kus, mis, kes?");
-	    	uusVAHTKOND_INTSIDENDIS1.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
+	    	uusVAHTKOND_INTSIDENDIS1.setKuni(kuniDate);
 	    	///21 END
 	    	
 	    	///22 START
@@ -459,7 +469,7 @@ public class Helper {
 	    	uusVAHTKOND_INTSIDENDIS2.setAlates(new GregorianCalendar(2010, 03, 03, 20, 00).getTime());
 	    	uusVAHTKOND_INTSIDENDIS2.setVahtkond(uusVAHTKOND);
 	    	uusVAHTKOND_INTSIDENDIS2.setKirjeldus("Relvad ei töödanud");
-	    	uusVAHTKOND_INTSIDENDIS2.setKuni(new GregorianCalendar(2011, 03, 03, 20, 00).getTime());
+	    	uusVAHTKOND_INTSIDENDIS2.setKuni(kuniDate);
 	    	///22 END
 	    	
 	    	
@@ -469,7 +479,7 @@ public class Helper {
 	    	uusISIK_INTSIDENDIS.setKirjeldus("Tuuker võitis");
 	    	uusISIK_INTSIDENDIS.setPiiririkkuja(uusPIIRIRIKKUJA1); //SEOS
 	    	uusISIK_INTSIDENDIS.setAlates(new GregorianCalendar(2010, 03, 03, 5, 00).getTime());
-	    	uusISIK_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 02, 02, 12, 00).getTime());
+	    	uusISIK_INTSIDENDIS.setKuni(kuniDate);
 	    	uusISIK_INTSIDENDIS.setKommentaar("Tuleb allveelaev muretseda");
 	    	//23 END
 	    	
@@ -480,7 +490,7 @@ public class Helper {
 	    	uusISIK_INTSIDENDIS1.setKirjeldus("Laulsid koos");
 	    	uusISIK_INTSIDENDIS1.setPiiririkkuja(uusPIIRIRIKKUJA2); //SEOS
 	    	uusISIK_INTSIDENDIS1.setAlates(new GregorianCalendar(2010, 03, 03, 5, 00).getTime());
-	    	uusISIK_INTSIDENDIS1.setKuni(new GregorianCalendar(2011, 02, 02, 12, 00).getTime());
+	    	uusISIK_INTSIDENDIS1.setKuni(kuniDate);
 	    	uusISIK_INTSIDENDIS1.setKommentaar("Tuleb laulma õpetada");
 	    	//24 END
 	    	
@@ -490,7 +500,7 @@ public class Helper {
 	    	uusISIK_INTSIDENDIS2.setKirjeldus("Jälle ta oma salaviinaga");
 	    	uusISIK_INTSIDENDIS2.setPiiririkkuja(uusPIIRIRIKKUJA1); //SEOS
 	    	uusISIK_INTSIDENDIS2.setAlates(new GregorianCalendar(2009, 03, 03, 5, 00).getTime());
-	    	uusISIK_INTSIDENDIS2.setKuni(new GregorianCalendar(2009, 03, 03, 12, 00).getTime());
+	    	uusISIK_INTSIDENDIS2.setKuni(kuniDate);
 	    	uusISIK_INTSIDENDIS2.setKommentaar("Saime ta õnneks kätte. *HIC*!");
 	    	//25 END
 	    	
@@ -500,7 +510,7 @@ public class Helper {
 	    	uusISIK_INTSIDENDIS3.setKirjeldus("Kus suitsu, seal tuld");
 	    	uusISIK_INTSIDENDIS3.setPiiririkkuja(uusPIIRIRIKKUJA1); //SEOS
 	    	uusISIK_INTSIDENDIS3.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIK_INTSIDENDIS3.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
+	    	uusISIK_INTSIDENDIS3.setKuni(kuniDate);
 	    	uusISIK_INTSIDENDIS3.setKommentaar("Seekord oli vaid suitsu");
 	    	//26 END
 	    	
@@ -510,7 +520,7 @@ public class Helper {
 	    	uusISIK_INTSIDENDIS4.setKirjeldus("Kus koerad, seal kits");
 	    	uusISIK_INTSIDENDIS4.setPiiririkkuja(uusPIIRIRIKKUJA2); //SEOS
 	    	uusISIK_INTSIDENDIS4.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIK_INTSIDENDIS4.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
+	    	uusISIK_INTSIDENDIS4.setKuni(kuniDate);
 	    	uusISIK_INTSIDENDIS4.setKommentaar("Seekord oli vaid kits");
 	    	//26 END
 	    	
@@ -520,7 +530,7 @@ public class Helper {
 	    	uusISIK_INTSIDENDIS5.setKirjeldus("Hooletus ees, õnnetus t.");
 	    	uusISIK_INTSIDENDIS5.setPiiririkkuja(uusPIIRIRIKKUJA); //SEOS
 	    	uusISIK_INTSIDENDIS5.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIK_INTSIDENDIS5.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
+	    	uusISIK_INTSIDENDIS5.setKuni(kuniDate);
 	    	uusISIK_INTSIDENDIS5.setKommentaar("Seekord oli hooletus");
 	    	//26 END
 	    	
@@ -528,7 +538,7 @@ public class Helper {
 	    	//27 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS = new ISIKU_SEADUS_INTSIDENDIS();
 	    	uusISIKU_SEADUS_INTSIDENDIS.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());
+	    	uusISIKU_SEADUS_INTSIDENDIS.setKuni(kuniDate);
 	    	uusISIKU_SEADUS_INTSIDENDIS.setIsik_intsidendis(uusISIK_INTSIDENDIS3); //SEOS
 	    	uusISIKU_SEADUS_INTSIDENDIS.setSeaduse_punkt(uusSEADUSE_PUNKT3);  //SEOS  	
 	    	uusISIKU_SEADUS_INTSIDENDIS.setKirjeldus("Valus seadus");
@@ -538,7 +548,7 @@ public class Helper {
 	    	//28 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS1 = new ISIKU_SEADUS_INTSIDENDIS();
 	    	uusISIKU_SEADUS_INTSIDENDIS1.setAlates(new GregorianCalendar(205, 01, 01, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS1.setKuni(new GregorianCalendar(2005, 04, 04, 9, 00).getTime());  	
+	    	uusISIKU_SEADUS_INTSIDENDIS1.setKuni(kuniDate);  	
 	    	uusISIKU_SEADUS_INTSIDENDIS1.setIsik_intsidendis(uusISIK_INTSIDENDIS1);  //SEOS
 	    	uusISIKU_SEADUS_INTSIDENDIS1.setSeaduse_punkt(uusSEADUSE_PUNKT);  //SEOS    	
 	    	uusISIKU_SEADUS_INTSIDENDIS1.setKirjeldus("Tore seadus");
@@ -548,7 +558,7 @@ public class Helper {
 	    	//29 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS2 = new ISIKU_SEADUS_INTSIDENDIS();
 	    	uusISIKU_SEADUS_INTSIDENDIS2.setAlates(new GregorianCalendar(209, 01, 01, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS2.setKuni(new GregorianCalendar(209, 04, 04, 9, 00).getTime());  	
+	    	uusISIKU_SEADUS_INTSIDENDIS2.setKuni(kuniDate);  	
 	    	uusISIKU_SEADUS_INTSIDENDIS2.setIsik_intsidendis(uusISIK_INTSIDENDIS2);  //SEOS
 	    	uusISIKU_SEADUS_INTSIDENDIS2.setSeaduse_punkt(uusSEADUSE_PUNKT2);  //SEOS	
 	    	uusISIKU_SEADUS_INTSIDENDIS2.setKirjeldus("Rumal seadus");
@@ -559,7 +569,7 @@ public class Helper {
 	    	//30 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS3 = new ISIKU_SEADUS_INTSIDENDIS();
 	    	uusISIKU_SEADUS_INTSIDENDIS3.setAlates(new GregorianCalendar(2002, 02, 02, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS3.setKuni(new GregorianCalendar(2022, 03, 03, 9, 00).getTime());    	
+	    	uusISIKU_SEADUS_INTSIDENDIS3.setKuni(kuniDate);    	
 	    	uusISIKU_SEADUS_INTSIDENDIS3.setIsik_intsidendis(uusISIK_INTSIDENDIS3);  //SEOS
 	    	uusISIKU_SEADUS_INTSIDENDIS3.setSeaduse_punkt(uusSEADUSE_PUNKT3);  //SEOS	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS3.setKirjeldus("Valus seadus");
@@ -570,7 +580,7 @@ public class Helper {
 	    	//31 START
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS4 = new ISIKU_SEADUS_INTSIDENDIS();	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS4.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS4.setKuni(kuniDate);	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setIsik_intsidendis(uusISIK_INTSIDENDIS);
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setSeaduse_punkt(uusSEADUSE_PUNKT2);	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS4.setKirjeldus("Raske rakendada");
@@ -579,7 +589,7 @@ public class Helper {
 	    	
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS5 = new ISIKU_SEADUS_INTSIDENDIS();	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS5.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS5.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS5.setKuni(kuniDate);	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS5.setIsik_intsidendis(uusISIK_INTSIDENDIS2);
 	    	uusISIKU_SEADUS_INTSIDENDIS5.setSeaduse_punkt(uusSEADUSE_PUNKT3);	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS5.setKirjeldus("Raske rakendada");
@@ -588,7 +598,7 @@ public class Helper {
 	    	
 	    	ISIKU_SEADUS_INTSIDENDIS uusISIKU_SEADUS_INTSIDENDIS6 = new ISIKU_SEADUS_INTSIDENDIS();	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS6.setAlates(new GregorianCalendar(2011, 01, 01, 1, 00).getTime());
-	    	uusISIKU_SEADUS_INTSIDENDIS6.setKuni(new GregorianCalendar(2011, 04, 04, 9, 00).getTime());	    	
+	    	uusISIKU_SEADUS_INTSIDENDIS6.setKuni(kuniDate);	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS6.setIsik_intsidendis(uusISIK_INTSIDENDIS);
 	    	uusISIKU_SEADUS_INTSIDENDIS6.setSeaduse_punkt(uusSEADUSE_PUNKT4);	    	
 	    	uusISIKU_SEADUS_INTSIDENDIS6.setKirjeldus("Raske rakendada");
@@ -599,7 +609,7 @@ public class Helper {
 	    	//32 START
 	    	OBJEKT_INTSIDENDIS uusOBJEKT_INTSIDENDIS= new OBJEKT_INTSIDENDIS();
 	    	uusOBJEKT_INTSIDENDIS.setAlates(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	uusOBJEKT_INTSIDENDIS.setKuni(new GregorianCalendar(2005, 02, 05, 9, 47).getTime());	    	
+	    	uusOBJEKT_INTSIDENDIS.setKuni(kuniDate);	    	
 	    	uusOBJEKT_INTSIDENDIS.setIntsident(newIntsident2);
 	    	uusOBJEKT_INTSIDENDIS.setObjekt(uusOBJEKT);
 	    	uusOBJEKT_INTSIDENDIS.setKirjeldus("");
@@ -610,7 +620,7 @@ public class Helper {
 	    	//33 START
 	    	OBJEKT_INTSIDENDIS uusOBJEKT_INTSIDENDIS1= new OBJEKT_INTSIDENDIS();	    	
 	    	uusOBJEKT_INTSIDENDIS1.setAlates(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	uusOBJEKT_INTSIDENDIS1.setKuni(new GregorianCalendar(2005, 02, 05, 9, 47).getTime());
+	    	uusOBJEKT_INTSIDENDIS1.setKuni(kuniDate);
 	    	uusOBJEKT_INTSIDENDIS1.setIntsident(newIntsident1);
 	    	uusOBJEKT_INTSIDENDIS1.setObjekt(uusOBJEKT2);
 	    	uusOBJEKT_INTSIDENDIS1.setKirjeldus("");
@@ -620,7 +630,7 @@ public class Helper {
 	    	
 	    	PIIRIVALVUR_INTSIDENDIS uusPIIRIVALVUR_INTSIDENDIS = new PIIRIVALVUR_INTSIDENDIS();
 	    	uusPIIRIVALVUR_INTSIDENDIS.setAlates(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
-	    	uusPIIRIVALVUR_INTSIDENDIS.setKuni(new GregorianCalendar(2005, 02, 05, 9, 47).getTime());	
+	    	uusPIIRIVALVUR_INTSIDENDIS.setKuni(kuniDate);	
 	    	uusPIIRIVALVUR_INTSIDENDIS.setIntsident(newIntsident1);
 	    	uusPIIRIVALVUR_INTSIDENDIS.setKirjeldus("Tubli oli, tuukri vastu");
 	    	uusPIIRIVALVUR_INTSIDENDIS.setKommentaar("Tuuker hirmutas valvuri ära");
