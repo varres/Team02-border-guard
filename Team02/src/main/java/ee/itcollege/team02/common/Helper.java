@@ -618,7 +618,15 @@ public class Helper {
 	    	//33 END
 	    	
 	    	
-	    	
+	    	PIIRIVALVUR_INTSIDENDIS uusPIIRIVALVUR_INTSIDENDIS = new PIIRIVALVUR_INTSIDENDIS();
+	    	uusPIIRIVALVUR_INTSIDENDIS.setAlates(new GregorianCalendar(2005, 02, 05, 9, 37).getTime());
+	    	uusPIIRIVALVUR_INTSIDENDIS.setKuni(new GregorianCalendar(2005, 02, 05, 9, 47).getTime());	
+	    	uusPIIRIVALVUR_INTSIDENDIS.setIntsident(newIntsident1);
+	    	uusPIIRIVALVUR_INTSIDENDIS.setKirjeldus("Tubli oli, tuukri vastu");
+	    	uusPIIRIVALVUR_INTSIDENDIS.setKommentaar("Tuuker hirmutas valvuri ära");
+	    	uusPIIRIVALVUR_INTSIDENDIS.setPiirivalvur(uusPIIRIVALVUR2);
+	    	uusPIIRIVALVUR_INTSIDENDIS.setVahtkond_intsidendis(uusVAHTKOND_INTSIDENDIS);
+
 	    	
 	    	
 	    	
@@ -686,6 +694,7 @@ public class Helper {
 	    	
 	    	uusOBJEKT_INTSIDENDIS.persist();
 	    	uusOBJEKT_INTSIDENDIS1.persist();
+	    	uusPIIRIVALVUR_INTSIDENDIS.persist();
 	    	
 	    }
 
