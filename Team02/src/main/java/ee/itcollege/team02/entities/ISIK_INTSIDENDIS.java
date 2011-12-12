@@ -67,4 +67,8 @@ public class ISIK_INTSIDENDIS extends BaseEntity {
     	return items;
     }
     
+    public static List<ISIK_INTSIDENDIS> findIntsidentIsiks(Long intsidentId) {
+    	return entityManager().createQuery("SELECT o FROM ISIK_INTSIDENDIS o WHERE o.intsident.id = :intsidentId", ISIK_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).getResultList();
+    }
+    
 }

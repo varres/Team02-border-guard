@@ -59,4 +59,8 @@ public class OBJEKT_INTSIDENDIS extends BaseEntity{
     	return items;
     }
 
+    public static List<OBJEKT_INTSIDENDIS> findIntsidentObjects(Long intsidentId) {
+    	return entityManager().createQuery("SELECT o FROM OBJEKT_INTSIDENDIS o WHERE o.intsident.id = :intsidentId", OBJEKT_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).getResultList();
+    }
+
 }
