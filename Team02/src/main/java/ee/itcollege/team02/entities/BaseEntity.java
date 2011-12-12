@@ -179,7 +179,10 @@ public abstract class BaseEntity {
 	            //BaseEntity attached = BaseEntity.findBaseEntity(this.id);
 	            //this.entityManager.remove(attached);
 	        }		
+    }
+    
+	protected static  Date getDate() {
+		return new Date();
 	}
     
-
 }

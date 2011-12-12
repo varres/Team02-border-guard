@@ -55,7 +55,7 @@ public class VAHTKOND_INTSIDENDIS  extends BaseEntity{
     }
 	
     public static List<VAHTKOND_INTSIDENDIS> findIntsidentVahtkonds(Long intsidentId) {
-    	return entityManager().createQuery("SELECT o FROM VAHTKOND_INTSIDENDIS o WHERE o.intsident.id = :intsidentId", VAHTKOND_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).getResultList();
+    	return entityManager().createQuery("SELECT o FROM VAHTKOND_INTSIDENDIS o WHERE o.intsident.id = :intsidentId AND o.suletud > :date", VAHTKOND_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).setParameter("date", getDate()).getResultList();
     }
 	
 	

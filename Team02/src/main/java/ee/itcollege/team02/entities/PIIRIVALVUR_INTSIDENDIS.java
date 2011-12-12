@@ -62,6 +62,6 @@ public class PIIRIVALVUR_INTSIDENDIS extends BaseEntity{
     }
 	
     public static List<PIIRIVALVUR_INTSIDENDIS> findIntsidentPiirivalvurs(Long intsidentId) {
-    	return entityManager().createQuery("SELECT o FROM PIIRIVALVUR_INTSIDENDIS o WHERE o.intsident.id = :intsidentId", PIIRIVALVUR_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).getResultList();
+    	return entityManager().createQuery("SELECT o FROM PIIRIVALVUR_INTSIDENDIS o WHERE o.intsident.id = :intsidentId AND o.suletud > :date", PIIRIVALVUR_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).setParameter("date", getDate()).getResultList();
     }
 }

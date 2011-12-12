@@ -68,7 +68,7 @@ public class ISIK_INTSIDENDIS extends BaseEntity {
     }
     
     public static List<ISIK_INTSIDENDIS> findIntsidentIsiks(Long intsidentId) {
-    	return entityManager().createQuery("SELECT o FROM ISIK_INTSIDENDIS o WHERE o.intsident.id = :intsidentId", ISIK_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).getResultList();
+    	return entityManager().createQuery("SELECT o FROM ISIK_INTSIDENDIS o WHERE o.intsident.id = :intsidentId AND o.suletud > :date", ISIK_INTSIDENDIS.class).setParameter("intsidentId", intsidentId).setParameter("date", getDate()).getResultList();
     }
     
 }
